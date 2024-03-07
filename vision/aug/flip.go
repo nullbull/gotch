@@ -1,8 +1,8 @@
 package aug
 
 import (
-	"github.com/sugarme/gotch"
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch"
+	"github.com/nullbull/gotch/ts"
 )
 
 // RandomHorizontalFlip horizontally flips the given image randomly with a given probability.

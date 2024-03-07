@@ -13,7 +13,7 @@ Benchmark tensor operation `conv2d` forward propagation:
 ```bash
 goos: linux
 goarch: amd64
-pkg: github.com/sugarme/gotch/ts
+pkg: github.com/nullbull/gotch/ts
 cpu: Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz
 BenchmarkConv2dCPU-8                 100          21198303 ns/op
 BenchmarkConv2dCUDA-8                100           2201213 ns/op

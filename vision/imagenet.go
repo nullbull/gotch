@@ -10,8 +10,8 @@ import (
 	"reflect"
 	"sync"
 
-	"github.com/sugarme/gotch"
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch"
+	"github.com/nullbull/gotch/ts"
 )
 
 // Helper functions for ImageNet like datasets.

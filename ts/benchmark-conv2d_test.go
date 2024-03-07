@@ -3,8 +3,8 @@ package ts_test
 import (
 	"testing"
 
-	"github.com/sugarme/gotch"
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch"
+	"github.com/nullbull/gotch/ts"
 )
 
 // GOMAXPROCS=8 go test -bench=BenchmarkConv2d -benchtime=100x -run=^a | tee op-conv-bench.txt

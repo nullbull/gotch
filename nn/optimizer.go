@@ -7,7 +7,7 @@ import (
 	"log"
 	"math"
 
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch/ts"
 )
 
 // Optimizer is a struct object to run gradient descent.

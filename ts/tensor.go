@@ -17,8 +17,8 @@ import (
 	"time"
 	"unsafe"
 
-	gotch "github.com/sugarme/gotch"
-	lib "github.com/sugarme/gotch/libtch"
+	gotch "github.com/nullbull/gotch"
+	lib "github.com/nullbull/gotch/libtch"
 )
 
 var (

@@ -6,8 +6,8 @@ import (
 	"runtime"
 	"sync/atomic"
 
-	"github.com/sugarme/gotch"
-	lib "github.com/sugarme/gotch/libtch"
+	"github.com/nullbull/gotch"
+	lib "github.com/nullbull/gotch/libtch"
 )
 
 type Scalar struct {

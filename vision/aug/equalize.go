@@ -1,7 +1,7 @@
 package aug
 
 import (
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch/ts"
 )
 
 // RandomEqualize equalizes the histogram of the given image randomly with a given probability.

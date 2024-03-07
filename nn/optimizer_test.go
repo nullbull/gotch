@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/sugarme/gotch"
-	"github.com/sugarme/gotch/nn"
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch"
+	"github.com/nullbull/gotch/nn"
+	"github.com/nullbull/gotch/ts"
 )
 
 func TestOptimizer(t *testing.T) {

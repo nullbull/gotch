@@ -6,9 +6,9 @@ package vision
 import (
 	"fmt"
 
-	"github.com/sugarme/gotch"
-	"github.com/sugarme/gotch/nn"
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch"
+	"github.com/nullbull/gotch/nn"
+	"github.com/nullbull/gotch/ts"
 )
 
 // Conv2D + BatchNorm2D + ReLU6

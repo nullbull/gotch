@@ -14,8 +14,8 @@ import (
 	"reflect"
 	"unsafe"
 
-	"github.com/sugarme/gotch"
-	lib "github.com/sugarme/gotch/libtch"
+	"github.com/nullbull/gotch"
+	lib "github.com/nullbull/gotch/libtch"
 )
 
 type CIValue struct {

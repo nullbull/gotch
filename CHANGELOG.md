@@ -217,21 +217,21 @@ Same as [0.3.10]
 - [#10]: `ts.Drop()` and `ts.MustDrop()` now can call multiple times without panic
 
 
-[#10]: https://github.com/sugarme/gotch/issues/10
-[#6]: https://github.com/sugarme/gotch/issues/6
-[#4]: https://github.com/sugarme/gotch/issues/4
-[#20]: https://github.com/sugarme/gotch/issues/20
-[#24]: https://github.com/sugarme/gotch/issues/24
-[#26]: https://github.com/sugarme/gotch/issues/26
-[#30]: https://github.com/sugarme/gotch/issues/30
-[#32]: https://github.com/sugarme/gotch/issues/32
-[#44]: https://github.com/sugarme/gotch/issues/44
-[#45]: https://github.com/sugarme/gotch/issues/45
-[#48]: https://github.com/sugarme/gotch/issues/48
-[#58]: https://github.com/sugarme/gotch/issues/58
-[#100]: https://github.com/sugarme/gotch/issues/100
-[#102]: https://github.com/sugarme/gotch/issues/102
-[#111]: https://github.com/sugarme/gotch/issues/111
-[#112]: https://github.com/sugarme/gotch/issues/112
-[#113]: https://github.com/sugarme/gotch/issues/113
-[#118]: https://github.com/sugarme/gotch/issues/118
+[#10]: https://github.com/nullbull/gotch/issues/10
+[#6]: https://github.com/nullbull/gotch/issues/6
+[#4]: https://github.com/nullbull/gotch/issues/4
+[#20]: https://github.com/nullbull/gotch/issues/20
+[#24]: https://github.com/nullbull/gotch/issues/24
+[#26]: https://github.com/nullbull/gotch/issues/26
+[#30]: https://github.com/nullbull/gotch/issues/30
+[#32]: https://github.com/nullbull/gotch/issues/32
+[#44]: https://github.com/nullbull/gotch/issues/44
+[#45]: https://github.com/nullbull/gotch/issues/45
+[#48]: https://github.com/nullbull/gotch/issues/48
+[#58]: https://github.com/nullbull/gotch/issues/58
+[#100]: https://github.com/nullbull/gotch/issues/100
+[#102]: https://github.com/nullbull/gotch/issues/102
+[#111]: https://github.com/nullbull/gotch/issues/111
+[#112]: https://github.com/nullbull/gotch/issues/112
+[#113]: https://github.com/nullbull/gotch/issues/113
+[#118]: https://github.com/nullbull/gotch/issues/118

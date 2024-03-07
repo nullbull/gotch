@@ -3,7 +3,7 @@ package dutil_test
 import (
 	"testing"
 
-	"github.com/sugarme/gotch/dutil"
+	"github.com/nullbull/gotch/dutil"
 )
 
 func TestNewKFold(t *testing.T) {

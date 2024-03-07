@@ -6,7 +6,7 @@ import (
 	"math"
 	"testing"
 
-	float16 "github.com/sugarme/gotch/half"
+	float16 "github.com/nullbull/gotch/half"
 )
 
 // prevent compiler optimizing out code by assigning to these

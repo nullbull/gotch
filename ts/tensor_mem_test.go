@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sugarme/gotch"
+	"github.com/nullbull/gotch"
 )
 
 var n int = 10

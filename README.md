@@ -1,4 +1,4 @@
-# Gotch [![License](https://img.shields.io/:license-apache-blue.svg)](https://opensource.org/licenses/Apache-2.0)[![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/sugarme/gotch?tab=doc) 
+# Gotch [![License](https://img.shields.io/:license-apache-blue.svg)](https://opensource.org/licenses/Apache-2.0)[![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/nullbull/gotch?tab=doc) 
 
 
 ## Overview
@@ -35,7 +35,7 @@
 #### Step 1: Setup libtorch (skip this step if a valid libtorch already installed in your machine!)
 
 ```bash
-    wget https://github.com/sugarme/gotch/releases/download/v0.9.0/setup-libtorch.sh
+    wget https://github.com/nullbull/gotch/releases/download/v0.9.0/setup-libtorch.sh
     chmod +x setup-libtorch.sh
     export CUDA_VER=cpu && bash setup-libtorch.sh
 ```
@@ -52,7 +52,7 @@
 #### Step 2: Setup gotch
 
 ```bash
-    wget https://github.com/sugarme/gotch/releases/download/v0.9.0/setup-gotch.sh
+    wget https://github.com/nullbull/gotch/releases/download/v0.9.0/setup-gotch.sh
     chmod +x setup-gotch.sh
     export CUDA_VER=cpu && export GOTCH_VER=v0.9.1 && bash setup-gotch.sh
 ```
@@ -68,7 +68,7 @@
 #### Step 1: Setup libtorch (skip this step if a valid libtorch already installed in your machine!)
 
 ```bash
-    wget https://github.com/sugarme/gotch/releases/download/v0.9.0/setup-libtorch.sh
+    wget https://github.com/nullbull/gotch/releases/download/v0.9.0/setup-libtorch.sh
     chmod +x setup-libtorch.sh
 
     export CUDA_VER=11.8 && bash setup-libtorch.sh
@@ -86,7 +86,7 @@
 #### Step 2: Setup gotch
 
 ```bash
-    wget https://github.com/sugarme/gotch/releases/download/v0.9.0/setup-gotch.sh
+    wget https://github.com/nullbull/gotch/releases/download/v0.9.0/setup-gotch.sh
     chmod +x setup-gotch.sh
     export CUDA_VER=11.8 && export GOTCH_VER=v0.9.1 && bash setup-gotch.sh
 ```
@@ -99,8 +99,8 @@
 import (
 	"fmt"
 
-	"github.com/sugarme/gotch"
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch"
+	"github.com/nullbull/gotch/ts"
 )
 
 func basicOps() {
@@ -193,9 +193,9 @@ After (ts3 + 2.0):
 import (
     "fmt"
 
-    "github.com/sugarme/gotch"
-    "github.com/sugarme/gotch/nn"
-    "github.com/sugarme/gotch/ts"
+    "github.com/nullbull/gotch"
+    "github.com/nullbull/gotch/nn"
+    "github.com/nullbull/gotch/ts"
 )
 
 type Net struct {
@@ -264,7 +264,7 @@ func main() {
 
 ## Getting Started
 
-- See [pkg.go.dev](https://pkg.go.dev/github.com/sugarme/gotch?tab=doc) for APIs detail.
+- See [pkg.go.dev](https://pkg.go.dev/github.com/nullbull/gotch?tab=doc) for APIs detail.
 
 ## License
 

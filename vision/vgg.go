@@ -5,8 +5,8 @@ package vision
 import (
 	"fmt"
 
-	"github.com/sugarme/gotch/nn"
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch/nn"
+	"github.com/nullbull/gotch/ts"
 )
 
 // NOTE: each list element contains multiple convolutions with some specified number

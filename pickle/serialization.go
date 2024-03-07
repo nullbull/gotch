@@ -20,9 +20,9 @@ import (
 	"reflect"
 	"sort"
 
-	"github.com/sugarme/gotch"
-	"github.com/sugarme/gotch/nn"
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch"
+	"github.com/nullbull/gotch/nn"
+	"github.com/nullbull/gotch/ts"
 )
 
 const hexMagicNumber = "1950a86a20f9469cfc6c"

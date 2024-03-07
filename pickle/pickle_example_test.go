@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/sugarme/gotch"
-	"github.com/sugarme/gotch/pickle"
+	"github.com/nullbull/gotch"
+	"github.com/nullbull/gotch/pickle"
 )
 
 func ExampleLoadInfo() {

@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sugarme/gotch"
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch"
+	"github.com/nullbull/gotch/ts"
 )
 
 // Test whether InitTensor() can cause memory blow-up due to accumulate gradient.

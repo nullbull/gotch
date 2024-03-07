@@ -6,8 +6,8 @@ import (
 	"math"
 	"strings"
 
-	"github.com/sugarme/gotch"
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch"
+	"github.com/nullbull/gotch/ts"
 )
 
 type Init interface {

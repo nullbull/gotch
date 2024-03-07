@@ -8,7 +8,7 @@ import (
 	"runtime/debug"
 	"unsafe"
 
-	lib "github.com/sugarme/gotch/libtch"
+	lib "github.com/nullbull/gotch/libtch"
 )
 
 // ptrToString check C pointer for null. If not null, get value

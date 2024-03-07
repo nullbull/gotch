@@ -8,7 +8,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch/ts"
 )
 
 type Dataset struct {

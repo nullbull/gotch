@@ -3,8 +3,8 @@ package vision
 import (
 	"fmt"
 
-	nn "github.com/sugarme/gotch/nn"
-	"github.com/sugarme/gotch/ts"
+	nn "github.com/nullbull/gotch/nn"
+	"github.com/nullbull/gotch/ts"
 )
 
 // ResNet implementation.

@@ -1,7 +1,7 @@
 package nn
 
 import (
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch/ts"
 )
 
 // Dropout:

@@ -1,8 +1,8 @@
 package aug
 
 import (
-	"github.com/sugarme/gotch"
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch"
+	"github.com/nullbull/gotch/ts"
 )
 
 // RandomAffine is transformation of the image keeping center invariant.
@@ -25,12 +25,12 @@ import (
 // a x-axis shear in (shear[0], shear[1]) and y-axis shear in (shear[2], shear[3]) will be applied.
 // Will not apply shear by default.
 // - interpolation (InterpolationMode): Desired interpolation enum defined by
-// :class:`torchvision.transforms.InterpolationMode`. Default is ``InterpolationMode.NEAREST``.
-// If input is Tensor, only ``InterpolationMode.NEAREST``, ``InterpolationMode.BILINEAR`` are supported.
-// For backward compatibility integer values (e.g. ``PIL.Image.NEAREST``) are still acceptable.
+// :class:`torchvision.transforms.InterpolationMode`. Default is “InterpolationMode.NEAREST“.
+// If input is Tensor, only “InterpolationMode.NEAREST“, “InterpolationMode.BILINEAR“ are supported.
+// For backward compatibility integer values (e.g. “PIL.Image.NEAREST“) are still acceptable.
 // - fill (sequence or number): Pixel fill value for the area outside the transformed
-// image. Default is ``0``. If given a number, the value is used for all bands respectively.
-// Please use the ``interpolation`` parameter instead.
+// image. Default is “0“. If given a number, the value is used for all bands respectively.
+// Please use the “interpolation“ parameter instead.
 // .. _filters: https://pillow.readthedocs.io/en/latest/handbook/concepts.html#filters
 type RandomAffine struct {
 	degree            []int64 // degree range

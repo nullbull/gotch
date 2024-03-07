@@ -3,8 +3,8 @@ package aug
 import (
 	// "fmt"
 
-	"github.com/sugarme/gotch"
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch"
+	"github.com/nullbull/gotch/ts"
 )
 
 // RandomPerspective performs a random perspective transformation of the given image with a given probability.
@@ -15,11 +15,11 @@ import (
 // Default is 0.5.
 // p (float): probability of the image being transformed. Default is 0.5.
 // interpolation (InterpolationMode): Desired interpolation enum defined by
-// :class:`torchvision.transforms.InterpolationMode`. Default is ``InterpolationMode.BILINEAR``.
-// If input is Tensor, only ``InterpolationMode.NEAREST``, ``InterpolationMode.BILINEAR`` are supported.
-// For backward compatibility integer values (e.g. ``PIL.Image.NEAREST``) are still acceptable.
+// :class:`torchvision.transforms.InterpolationMode`. Default is “InterpolationMode.BILINEAR“.
+// If input is Tensor, only “InterpolationMode.NEAREST“, “InterpolationMode.BILINEAR“ are supported.
+// For backward compatibility integer values (e.g. “PIL.Image.NEAREST“) are still acceptable.
 // fill (sequence or number): Pixel fill value for the area outside the transformed
-// image. Default is ``0``. If given a number, the value is used for all bands respectively.
+// image. Default is “0“. If given a number, the value is used for all bands respectively.
 type RandomPerspective struct {
 	distortionScale   float64 // range [0, 1]
 	pvalue            float64 //  range [0, 1]
@@ -83,7 +83,7 @@ func newRandomPerspective(opts ...PerspectiveOption) *RandomPerspective {
 	}
 }
 
-// Get parameters for ``perspective`` for a random perspective transform.
+// Get parameters for “perspective“ for a random perspective transform.
 //
 // Args:
 // - width (int): width of the image.

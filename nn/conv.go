@@ -7,7 +7,7 @@ import (
 	"math"
 	"reflect"
 
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch/ts"
 )
 
 // Conv1DConfig:

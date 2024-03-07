@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch/ts"
 )
 
 // LinearConfig is a configuration for a linear layer

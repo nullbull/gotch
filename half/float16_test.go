@@ -11,7 +11,7 @@ import (
 	"math"
 	"testing"
 
-	float16 "github.com/sugarme/gotch/half"
+	float16 "github.com/nullbull/gotch/half"
 )
 
 // wantF32toF16bits is a tiny subset of expected values

@@ -1,14 +1,14 @@
 package aug
 
 import (
-	"github.com/sugarme/gotch/ts"
+	"github.com/nullbull/gotch/ts"
 )
 
 // Normalize normalizes a tensor image with mean and standard deviation.
-// Given mean: ``(mean[1],...,mean[n])`` and std: ``(std[1],..,std[n])`` for ``n``
+// Given mean: “(mean[1],...,mean[n])“ and std: “(std[1],..,std[n])“ for “n“
 // channels, this transform will normalize each channel of the input
-// ``torch.*Tensor`` i.e.,
-// ``output[channel] = (input[channel] - mean[channel]) / std[channel]``
+// “torch.*Tensor“ i.e.,
+// “output[channel] = (input[channel] - mean[channel]) / std[channel]“
 // .. note::
 // This transform acts out of place, i.e., it does not mutate the input tensor.
 // Args:
