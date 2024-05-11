@@ -160,6 +160,7 @@ func freeCTensor(ts *Tensor) error {
 	}
 
 	lib.AtFree(ts.ctensor)
+	C.free(unsafe.Pointer(ts.ctensor))
 	if err := TorchErr(); err != nil {
 		err := fmt.Errorf("ERROR: failed to release tensor %q - %w", ts.name, err)
 		return err
