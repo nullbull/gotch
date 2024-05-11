@@ -84,7 +84,7 @@ func newTensor(ctensor lib.Ctensor, nameOpt ...string) *Tensor {
 
 	x.calledFrom = "newTensor()"
 
-	runtime.SetFinalizer(x, freeCTensor)
+	//runtime.SetFinalizer(x, freeCTensor)
 
 	return x
 }
@@ -148,8 +148,8 @@ func freeCTensor(ts *Tensor) error {
 		shape, err := ts.Size()
 		if err != nil {
 			err = fmt.Errorf("ERROR: failed to release tensor %q: %w\n", ts.name, err)
+			log.Printf(err.Error())
 		}
-		log.Printf(err.Error())
 
 		numel := uint(FlattenDim(shape))
 		dtype := ts.DType()
