@@ -160,7 +160,6 @@ func freeCTensor(ts *Tensor) error {
 	}
 
 	lib.AtFree(ts.ctensor)
-	C.free(unsafe.Pointer(ts.ctensor))
 	if err := TorchErr(); err != nil {
 		err := fmt.Errorf("ERROR: failed to release tensor %q - %w", ts.name, err)
 		return err
@@ -173,7 +172,7 @@ func freeCTensor(ts *Tensor) error {
 
 	// Clear SetFinalizer on ts so no double free tensor.
 	// Ref. https://pkg.go.dev/runtime#SetFinalizer
-	runtime.SetFinalizer(ts, nil)
+	//runtime.SetFinalizer(ts, nil)
 
 	return nil
 }
