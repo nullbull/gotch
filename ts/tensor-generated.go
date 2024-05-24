@@ -36865,8 +36865,10 @@ func (ts *Tensor) Rad2degOut(out *Tensor, del bool) (retVal *Tensor, err error) 
 // --------------------------
 
 func Rand(size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
+	//ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
 
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgRand(ptr, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -49693,7 +49695,10 @@ func (ts *Tensor) View(size []int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
+
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
+	// ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
 
 	sizeLen := len(size)
 	lib.AtgView(ptr, ts.ctensor, size, sizeLen)
