@@ -17,8 +17,8 @@ import (
 // --------------------------
 
 func (ts *Tensor) __And_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__And_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__And_() failed: %w", err)
@@ -33,8 +33,8 @@ func (ts *Tensor) __And_(other *Scalar) (err error) {
 // --------------------------
 
 func (ts *Tensor) __AndTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__AndTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__AndTensor_() failed: %w", err)
@@ -49,8 +49,8 @@ func (ts *Tensor) __AndTensor_(other *Tensor) (err error) {
 // --------------------------
 
 func (ts *Tensor) __Iand_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__Iand_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__Iand_() failed: %w", err)
@@ -65,8 +65,8 @@ func (ts *Tensor) __Iand_(other *Scalar) (err error) {
 // --------------------------
 
 func (ts *Tensor) __IandTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__IandTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__IandTensor_() failed: %w", err)
@@ -81,8 +81,8 @@ func (ts *Tensor) __IandTensor_(other *Tensor) (err error) {
 // --------------------------
 
 func (ts *Tensor) __Ilshift_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__Ilshift_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__Ilshift_() failed: %w", err)
@@ -97,8 +97,8 @@ func (ts *Tensor) __Ilshift_(other *Scalar) (err error) {
 // --------------------------
 
 func (ts *Tensor) __IlshiftTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__IlshiftTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__IlshiftTensor_() failed: %w", err)
@@ -113,8 +113,8 @@ func (ts *Tensor) __IlshiftTensor_(other *Tensor) (err error) {
 // --------------------------
 
 func (ts *Tensor) __Ior_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__Ior_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__Ior_() failed: %w", err)
@@ -129,8 +129,8 @@ func (ts *Tensor) __Ior_(other *Scalar) (err error) {
 // --------------------------
 
 func (ts *Tensor) __IorTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__IorTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__IorTensor_() failed: %w", err)
@@ -145,8 +145,8 @@ func (ts *Tensor) __IorTensor_(other *Tensor) (err error) {
 // --------------------------
 
 func (ts *Tensor) __Irshift_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__Irshift_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__Irshift_() failed: %w", err)
@@ -161,8 +161,8 @@ func (ts *Tensor) __Irshift_(other *Scalar) (err error) {
 // --------------------------
 
 func (ts *Tensor) __IrshiftTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__IrshiftTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__IrshiftTensor_() failed: %w", err)
@@ -177,8 +177,8 @@ func (ts *Tensor) __IrshiftTensor_(other *Tensor) (err error) {
 // --------------------------
 
 func (ts *Tensor) __Ixor_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__Ixor_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__Ixor_() failed: %w", err)
@@ -193,8 +193,8 @@ func (ts *Tensor) __Ixor_(other *Scalar) (err error) {
 // --------------------------
 
 func (ts *Tensor) __IxorTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__IxorTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__IxorTensor_() failed: %w", err)
@@ -209,8 +209,8 @@ func (ts *Tensor) __IxorTensor_(other *Tensor) (err error) {
 // --------------------------
 
 func (ts *Tensor) __Lshift_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__Lshift_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__Lshift_() failed: %w", err)
@@ -228,8 +228,8 @@ func (ts *Tensor) __LshiftScalarOut_(out *Tensor, other *Scalar, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__LshiftScalarOut_(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__LshiftScalarOut_() failed: %w", err)
@@ -244,8 +244,8 @@ func (ts *Tensor) __LshiftScalarOut_(out *Tensor, other *Scalar, del bool) (retV
 // --------------------------
 
 func (ts *Tensor) __LshiftTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__LshiftTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__LshiftTensor_() failed: %w", err)
@@ -263,8 +263,8 @@ func (ts *Tensor) __LshiftTensorOut_(out *Tensor, other *Tensor, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__LshiftTensorOut_(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__LshiftTensorOut_() failed: %w", err)
@@ -279,8 +279,8 @@ func (ts *Tensor) __LshiftTensorOut_(out *Tensor, other *Tensor, del bool) (retV
 // --------------------------
 
 func (ts *Tensor) __Or_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__Or_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__Or_() failed: %w", err)
@@ -295,8 +295,8 @@ func (ts *Tensor) __Or_(other *Scalar) (err error) {
 // --------------------------
 
 func (ts *Tensor) __OrTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__OrTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__OrTensor_() failed: %w", err)
@@ -311,8 +311,8 @@ func (ts *Tensor) __OrTensor_(other *Tensor) (err error) {
 // --------------------------
 
 func (ts *Tensor) __Rshift_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__Rshift_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__Rshift_() failed: %w", err)
@@ -330,8 +330,8 @@ func (ts *Tensor) __RshiftScalarOut_(out *Tensor, other *Scalar, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__RshiftScalarOut_(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__RshiftScalarOut_() failed: %w", err)
@@ -346,8 +346,8 @@ func (ts *Tensor) __RshiftScalarOut_(out *Tensor, other *Scalar, del bool) (retV
 // --------------------------
 
 func (ts *Tensor) __RshiftTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__RshiftTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__RshiftTensor_() failed: %w", err)
@@ -365,8 +365,8 @@ func (ts *Tensor) __RshiftTensorOut_(out *Tensor, other *Tensor, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__RshiftTensorOut_(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__RshiftTensorOut_() failed: %w", err)
@@ -381,8 +381,8 @@ func (ts *Tensor) __RshiftTensorOut_(out *Tensor, other *Tensor, del bool) (retV
 // --------------------------
 
 func (ts *Tensor) __Xor_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__Xor_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__Xor_() failed: %w", err)
@@ -397,8 +397,8 @@ func (ts *Tensor) __Xor_(other *Scalar) (err error) {
 // --------------------------
 
 func (ts *Tensor) __XorTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg__XorTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("__XorTensor_() failed: %w", err)
@@ -416,8 +416,8 @@ func (ts *Tensor) _AdaptiveAvgPool2d(outputSize []int64, del bool) (retVal *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	lib.Atg_AdaptiveAvgPool2d(ptr, ts.ctensor, outputSize, outputSizeLen)
 	if err = TorchErr(); err != nil {
@@ -436,8 +436,8 @@ func (ts *Tensor) _AdaptiveAvgPool2dBackward(gradOutput *Tensor, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_AdaptiveAvgPool2dBackward(ptr, gradOutput.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_AdaptiveAvgPool2dBackward() failed: %w", err)
@@ -455,8 +455,8 @@ func (ts *Tensor) _AdaptiveAvgPool2dBackwardOut(out *Tensor, gradOutput *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_AdaptiveAvgPool2dBackwardOut(ptr, out.ctensor, gradOutput.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_AdaptiveAvgPool2dBackwardOut() failed: %w", err)
@@ -474,8 +474,8 @@ func (ts *Tensor) _AdaptiveAvgPool2dOut(out *Tensor, outputSize []int64, del boo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	lib.Atg_AdaptiveAvgPool2dOut(ptr, out.ctensor, ts.ctensor, outputSize, outputSizeLen)
 	if err = TorchErr(); err != nil {
@@ -494,8 +494,8 @@ func (ts *Tensor) _AdaptiveAvgPool3d(outputSize []int64, del bool) (retVal *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	lib.Atg_AdaptiveAvgPool3d(ptr, ts.ctensor, outputSize, outputSizeLen)
 	if err = TorchErr(); err != nil {
@@ -514,8 +514,8 @@ func (ts *Tensor) _AdaptiveAvgPool3dBackward(gradOutput *Tensor, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_AdaptiveAvgPool3dBackward(ptr, gradOutput.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_AdaptiveAvgPool3dBackward() failed: %w", err)
@@ -533,8 +533,8 @@ func (ts *Tensor) _AdaptiveAvgPool3dBackwardOut(out *Tensor, gradOutput *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_AdaptiveAvgPool3dBackwardOut(ptr, out.ctensor, gradOutput.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_AdaptiveAvgPool3dBackwardOut() failed: %w", err)
@@ -552,8 +552,8 @@ func (ts *Tensor) _AdaptiveAvgPool3dOut(out *Tensor, outputSize []int64, del boo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	lib.Atg_AdaptiveAvgPool3dOut(ptr, out.ctensor, ts.ctensor, outputSize, outputSizeLen)
 	if err = TorchErr(); err != nil {
@@ -572,8 +572,8 @@ func (ts *Tensor) _AddBatchDim(batchDim int64, level int64, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_AddBatchDim(ptr, ts.ctensor, batchDim, level)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_AddBatchDim() failed: %w", err)
@@ -591,8 +591,8 @@ func (ts *Tensor) _AddRelu(other *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_AddRelu(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_AddRelu() failed: %w", err)
@@ -607,8 +607,8 @@ func (ts *Tensor) _AddRelu(other *Tensor, del bool) (retVal *Tensor, err error) 
 // --------------------------
 
 func (ts *Tensor) _AddRelu_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_AddRelu_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_AddRelu_() failed: %w", err)
@@ -626,8 +626,8 @@ func (ts *Tensor) _AddReluOut(out *Tensor, other *Tensor, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_AddReluOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_AddReluOut() failed: %w", err)
@@ -645,8 +645,8 @@ func (ts *Tensor) _AddReluScalar(other *Scalar, del bool) (retVal *Tensor, err e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_AddReluScalar(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_AddReluScalar() failed: %w", err)
@@ -661,8 +661,8 @@ func (ts *Tensor) _AddReluScalar(other *Scalar, del bool) (retVal *Tensor, err e
 // --------------------------
 
 func (ts *Tensor) _AddReluScalar_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_AddReluScalar_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_AddReluScalar_() failed: %w", err)
@@ -680,8 +680,8 @@ func (ts *Tensor) _AddReluScalarOut(out *Tensor, other *Scalar, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_AddReluScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_AddReluScalarOut() failed: %w", err)
@@ -699,8 +699,8 @@ func (ts *Tensor) _AddmmActivation(mat1 *Tensor, mat2 *Tensor, useGelu bool, del
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cuseGelu := int32(0)
 	if useGelu {
 		cuseGelu = int32(1)
@@ -722,8 +722,8 @@ func (ts *Tensor) _AddmmActivationOut(out *Tensor, mat1 *Tensor, mat2 *Tensor, u
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cuseGelu := int32(0)
 	if useGelu {
 		cuseGelu = int32(1)
@@ -850,8 +850,8 @@ func (ts *Tensor) _AmpUpdateScale(growthTracker *Tensor, foundInf *Tensor, scale
 // --------------------------
 
 func (ts *Tensor) _AmpUpdateScale_(growthTracker *Tensor, foundInf *Tensor, scaleGrowthFactor float64, scaleBackoffFactor float64, growthInterval int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_AmpUpdateScale_(ptr, ts.ctensor, growthTracker.ctensor, foundInf.ctensor, scaleGrowthFactor, scaleBackoffFactor, growthInterval)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_AmpUpdateScale_() failed: %w", err)
@@ -869,8 +869,8 @@ func (ts *Tensor) _AmpUpdateScaleOut(out *Tensor, growthTracker *Tensor, foundIn
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_AmpUpdateScaleOut(ptr, out.ctensor, ts.ctensor, growthTracker.ctensor, foundInf.ctensor, scaleGrowthFactor, scaleBackoffFactor, growthInterval)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_AmpUpdateScaleOut() failed: %w", err)
@@ -888,8 +888,8 @@ func (ts *Tensor) _AutocastToFullPrecision(cudaEnabled bool, cpuEnabled bool, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ccudaEnabled := int32(0)
 	if cudaEnabled {
 		ccudaEnabled = int32(1)
@@ -915,8 +915,8 @@ func (ts *Tensor) _AutocastToReducedPrecision(cudaEnabled bool, cpuEnabled bool,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ccudaEnabled := int32(0)
 	if cudaEnabled {
 		ccudaEnabled = int32(1)
@@ -942,8 +942,8 @@ func (ts *Tensor) _CastByte(nonBlocking bool, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -965,8 +965,8 @@ func (ts *Tensor) _CastChar(nonBlocking bool, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -988,8 +988,8 @@ func (ts *Tensor) _CastDouble(nonBlocking bool, del bool) (retVal *Tensor, err e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -1011,8 +1011,8 @@ func (ts *Tensor) _CastFloat(nonBlocking bool, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -1034,8 +1034,8 @@ func (ts *Tensor) _CastHalf(nonBlocking bool, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -1057,8 +1057,8 @@ func (ts *Tensor) _CastInt(nonBlocking bool, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -1080,8 +1080,8 @@ func (ts *Tensor) _CastLong(nonBlocking bool, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -1103,8 +1103,8 @@ func (ts *Tensor) _CastShort(nonBlocking bool, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -1123,8 +1123,8 @@ func (ts *Tensor) _CastShort(nonBlocking bool, del bool) (retVal *Tensor, err er
 // --------------------------
 
 func _CdistBackward(grad *Tensor, x1 *Tensor, x2 *Tensor, p float64, cdist *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_CdistBackward(ptr, grad.ctensor, x1.ctensor, x2.ctensor, p, cdist.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_CdistBackward() failed: %w", err)
@@ -1139,8 +1139,8 @@ func _CdistBackward(grad *Tensor, x1 *Tensor, x2 *Tensor, p float64, cdist *Tens
 // --------------------------
 
 func _CdistBackwardOut(out *Tensor, grad *Tensor, x1 *Tensor, x2 *Tensor, p float64, cdist *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_CdistBackwardOut(ptr, out.ctensor, grad.ctensor, x1.ctensor, x2.ctensor, p, cdist.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_CdistBackwardOut() failed: %w", err)
@@ -1158,8 +1158,8 @@ func (ts *Tensor) _CholeskySolveHelper(a *Tensor, upper bool, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cupper := int32(0)
 	if upper {
 		cupper = int32(1)
@@ -1181,8 +1181,8 @@ func (ts *Tensor) _CholeskySolveHelperOut(out *Tensor, a *Tensor, upper bool, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cupper := int32(0)
 	if upper {
 		cupper = int32(1)
@@ -1204,8 +1204,8 @@ func (ts *Tensor) _Coalesce(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_Coalesce(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_Coalesce() failed: %w", err)
@@ -1223,8 +1223,8 @@ func (ts *Tensor) _CoalesceOut(out *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_CoalesceOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_CoalesceOut() failed: %w", err)
@@ -1242,8 +1242,8 @@ func (ts *Tensor) _Coalesced(coalesced bool, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ccoalesced := int32(0)
 	if coalesced {
 		ccoalesced = int32(1)
@@ -1262,8 +1262,8 @@ func (ts *Tensor) _Coalesced(coalesced bool, del bool) (retVal *Tensor, err erro
 // --------------------------
 
 func (ts *Tensor) _Coalesced_(coalesced bool) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ccoalesced := int32(0)
 	if coalesced {
 		ccoalesced = int32(1)
@@ -1285,8 +1285,8 @@ func (ts *Tensor) _CoalescedOut(out *Tensor, coalesced bool, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ccoalesced := int32(0)
 	if coalesced {
 		ccoalesced = int32(1)
@@ -1305,8 +1305,8 @@ func (ts *Tensor) _CoalescedOut(out *Tensor, coalesced bool, del bool) (retVal *
 // --------------------------
 
 func _ComputeLinearCombination(input *Tensor, coefficients *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_ComputeLinearCombination(ptr, input.ctensor, coefficients.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_ComputeLinearCombination() failed: %w", err)
@@ -1321,8 +1321,8 @@ func _ComputeLinearCombination(input *Tensor, coefficients *Tensor) (retVal *Ten
 // --------------------------
 
 func _ComputeLinearCombinationOut(out *Tensor, input *Tensor, coefficients *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_ComputeLinearCombinationOut(ptr, out.ctensor, input.ctensor, coefficients.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_ComputeLinearCombinationOut() failed: %w", err)
@@ -1340,8 +1340,8 @@ func (ts *Tensor) _Conj(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_Conj(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_Conj() failed: %w", err)
@@ -1359,8 +1359,8 @@ func (ts *Tensor) _ConjCopy(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_ConjCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_ConjCopy() failed: %w", err)
@@ -1378,8 +1378,8 @@ func (ts *Tensor) _ConjCopyOut(out *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_ConjCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_ConjCopyOut() failed: %w", err)
@@ -1397,8 +1397,8 @@ func (ts *Tensor) _ConjPhysical(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_ConjPhysical(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_ConjPhysical() failed: %w", err)
@@ -1416,8 +1416,8 @@ func (ts *Tensor) _ConjPhysicalOut(out *Tensor, del bool) (retVal *Tensor, err e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_ConjPhysicalOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_ConjPhysicalOut() failed: %w", err)
@@ -1435,8 +1435,8 @@ func (ts *Tensor) _ConvDepthwise2d(weight *Tensor, kernelSize []int64, bias *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -1458,8 +1458,8 @@ func (ts *Tensor) _ConvDepthwise2dOut(out *Tensor, weight *Tensor, kernelSize []
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -1481,8 +1481,8 @@ func (ts *Tensor) _ConvertIndicesFromCooToCsr(size int64, outInt32 bool, del boo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	coutInt32 := int32(0)
 	if outInt32 {
 		coutInt32 = int32(1)
@@ -1504,8 +1504,8 @@ func (ts *Tensor) _ConvertIndicesFromCooToCsrOut(out *Tensor, size int64, outInt
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	coutInt32 := int32(0)
 	if outInt32 {
 		coutInt32 = int32(1)
@@ -1524,8 +1524,8 @@ func (ts *Tensor) _ConvertIndicesFromCooToCsrOut(out *Tensor, size int64, outInt
 // --------------------------
 
 func _ConvertIndicesFromCsrToCoo(crowIndices *Tensor, colIndices *Tensor, outInt32 bool, transpose bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	coutInt32 := int32(0)
 	if outInt32 {
 		coutInt32 = int32(1)
@@ -1548,8 +1548,8 @@ func _ConvertIndicesFromCsrToCoo(crowIndices *Tensor, colIndices *Tensor, outInt
 // --------------------------
 
 func _ConvertIndicesFromCsrToCooOut(out *Tensor, crowIndices *Tensor, colIndices *Tensor, outInt32 bool, transpose bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	coutInt32 := int32(0)
 	if outInt32 {
 		coutInt32 = int32(1)
@@ -1572,8 +1572,8 @@ func _ConvertIndicesFromCsrToCooOut(out *Tensor, crowIndices *Tensor, colIndices
 // --------------------------
 
 func _Convolution(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding []int64, dilation []int64, transposed bool, outputPadding []int64, groups int64, benchmark bool, deterministic bool, cudnnEnabled bool, allowTf32 bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	dilationLen := len(dilation)
@@ -1612,8 +1612,8 @@ func _Convolution(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, p
 // --------------------------
 
 func _ConvolutionDeprecated(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding []int64, dilation []int64, transposed bool, outputPadding []int64, groups int64, benchmark bool, deterministic bool, cudnnEnabled bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	dilationLen := len(dilation)
@@ -1648,8 +1648,8 @@ func _ConvolutionDeprecated(input *Tensor, weight *Tensor, bias *Tensor, stride 
 // --------------------------
 
 func _ConvolutionMode(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding string, dilation []int64, groups int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	dilationLen := len(dilation)
 	lib.Atg_ConvolutionMode(ptr, input.ctensor, weight.ctensor, bias.ctensor, stride, strideLen, padding, dilation, dilationLen, groups)
@@ -1666,8 +1666,8 @@ func _ConvolutionMode(input *Tensor, weight *Tensor, bias *Tensor, stride []int6
 // --------------------------
 
 func _ConvolutionOut(out *Tensor, input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding []int64, dilation []int64, transposed bool, outputPadding []int64, groups int64, benchmark bool, deterministic bool, cudnnEnabled bool, allowTf32 bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	dilationLen := len(dilation)
@@ -1709,8 +1709,8 @@ func (ts *Tensor) _CopyFrom(dst *Tensor, nonBlocking bool, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -1732,8 +1732,8 @@ func (ts *Tensor) _CopyFromAndResize(dst *Tensor, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_CopyFromAndResize(ptr, ts.ctensor, dst.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_CopyFromAndResize() failed: %w", err)
@@ -1751,8 +1751,8 @@ func (ts *Tensor) _CopyFromAndResizeOut(out *Tensor, dst *Tensor, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_CopyFromAndResizeOut(ptr, out.ctensor, ts.ctensor, dst.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_CopyFromAndResizeOut() failed: %w", err)
@@ -1770,8 +1770,8 @@ func (ts *Tensor) _CopyFromOut(out *Tensor, dst *Tensor, nonBlocking bool, del b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -1790,8 +1790,8 @@ func (ts *Tensor) _CopyFromOut(out *Tensor, dst *Tensor, nonBlocking bool, del b
 // --------------------------
 
 func _CsltCompress(input *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_CsltCompress(ptr, input.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_CsltCompress() failed: %w", err)
@@ -1806,8 +1806,8 @@ func _CsltCompress(input *Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func _CsltSparseMm(compressedA *Tensor, denseB *Tensor, bias *Tensor, transposeResult bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctransposeResult := int32(0)
 	if transposeResult {
 		ctransposeResult = int32(1)
@@ -1849,8 +1849,8 @@ func _CtcLoss(logProbs *Tensor, targets *Tensor, inputLengths []int64, targetLen
 // --------------------------
 
 func _CtcLossBackward(grad *Tensor, logProbs *Tensor, targets *Tensor, inputLengths []int64, targetLengths []int64, negLogLikelihood *Tensor, logAlpha *Tensor, blank int64, zeroInfinity bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	inputLengthsLen := len(inputLengths)
 	targetLengthsLen := len(targetLengths)
 	czeroInfinity := int32(0)
@@ -1871,8 +1871,8 @@ func _CtcLossBackward(grad *Tensor, logProbs *Tensor, targets *Tensor, inputLeng
 // --------------------------
 
 func _CtcLossBackwardOut(out *Tensor, grad *Tensor, logProbs *Tensor, targets *Tensor, inputLengths []int64, targetLengths []int64, negLogLikelihood *Tensor, logAlpha *Tensor, blank int64, zeroInfinity bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	inputLengthsLen := len(inputLengths)
 	targetLengthsLen := len(targetLengths)
 	czeroInfinity := int32(0)
@@ -1893,8 +1893,8 @@ func _CtcLossBackwardOut(out *Tensor, grad *Tensor, logProbs *Tensor, targets *T
 // --------------------------
 
 func _CtcLossBackwardTensor(grad *Tensor, logProbs *Tensor, targets *Tensor, inputLengths *Tensor, targetLengths *Tensor, negLogLikelihood *Tensor, logAlpha *Tensor, blank int64, zeroInfinity bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	czeroInfinity := int32(0)
 	if zeroInfinity {
 		czeroInfinity = int32(1)
@@ -2057,8 +2057,8 @@ func _CudnnCtcLossTensor(logProbs *Tensor, targets *Tensor, inputLengths *Tensor
 // --------------------------
 
 func _CudnnInitDropoutState(dropout float64, train bool, dropoutSeed int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctrain := int32(0)
 	if train {
 		ctrain = int32(1)
@@ -2077,8 +2077,8 @@ func _CudnnInitDropoutState(dropout float64, train bool, dropoutSeed int64, opti
 // --------------------------
 
 func _CudnnInitDropoutStateOut(out *Tensor, dropout float64, train bool, dropoutSeed int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctrain := int32(0)
 	if train {
 		ctrain = int32(1)
@@ -2137,8 +2137,8 @@ func _CudnnRnn(input *Tensor, weight []*Tensor, weightStride0 int64, weightBuf *
 // --------------------------
 
 func _CudnnRnnFlattenWeight(weightArr []*Tensor, weightStride0 int64, inputSize int64, mode int64, hiddenSize int64, projSize int64, numLayers int64, batchFirst bool, bidirectional bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cweightArr []lib.Ctensor
 	for _, t := range weightArr {
 		cweightArr = append(cweightArr, t.ctensor)
@@ -2165,8 +2165,8 @@ func _CudnnRnnFlattenWeight(weightArr []*Tensor, weightStride0 int64, inputSize 
 // --------------------------
 
 func _CudnnRnnFlattenWeightOut(out *Tensor, weightArr []*Tensor, weightStride0 int64, inputSize int64, mode int64, hiddenSize int64, projSize int64, numLayers int64, batchFirst bool, bidirectional bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cweightArr []lib.Ctensor
 	for _, t := range weightArr {
 		cweightArr = append(cweightArr, t.ctensor)
@@ -2248,8 +2248,8 @@ func (ts *Tensor) _DebugHasInternalOverlap(del bool) (retVal int64, err error) {
 // --------------------------
 
 func _DimArange(like *Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_DimArange(ptr, like.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_DimArange() failed: %w", err)
@@ -2294,8 +2294,8 @@ func (ts *Tensor) _Dimv(del bool) (retVal int64, err error) {
 // --------------------------
 
 func _DirichletGrad(x *Tensor, alpha *Tensor, total *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_DirichletGrad(ptr, x.ctensor, alpha.ctensor, total.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_DirichletGrad() failed: %w", err)
@@ -2310,8 +2310,8 @@ func _DirichletGrad(x *Tensor, alpha *Tensor, total *Tensor) (retVal *Tensor, er
 // --------------------------
 
 func _DirichletGradOut(out *Tensor, x *Tensor, alpha *Tensor, total *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_DirichletGradOut(ptr, out.ctensor, x.ctensor, alpha.ctensor, total.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_DirichletGradOut() failed: %w", err)
@@ -2363,8 +2363,8 @@ func _EfficientAttentionBackward(gradOut_ *Tensor, query *Tensor, key *Tensor, v
 // --------------------------
 
 func _Efficientzerotensor(size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_Efficientzerotensor(ptr, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -2380,8 +2380,8 @@ func _Efficientzerotensor(size []int64, optionsKind gotch.DType, optionsDevice g
 // --------------------------
 
 func _EfficientzerotensorOut(out *Tensor, size []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_EfficientzerotensorOut(ptr, out.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -2430,8 +2430,8 @@ func _EmbeddingBag(weight *Tensor, indices *Tensor, offsets *Tensor, scaleGradBy
 // --------------------------
 
 func _EmbeddingBagBackward(grad *Tensor, indices *Tensor, offsets *Tensor, offset2bag *Tensor, bagSize *Tensor, maximumIndices *Tensor, numWeights int64, scaleGradByFreq bool, mode int64, sparse bool, perSampleWeights *Tensor, paddingIdx int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cscaleGradByFreq := int32(0)
 	if scaleGradByFreq {
 		cscaleGradByFreq = int32(1)
@@ -2454,8 +2454,8 @@ func _EmbeddingBagBackward(grad *Tensor, indices *Tensor, offsets *Tensor, offse
 // --------------------------
 
 func _EmbeddingBagDenseBackward(grad *Tensor, indices *Tensor, offset2bag *Tensor, bagSize *Tensor, maximumIndices *Tensor, numWeights int64, scaleGradByFreq bool, mode int64, perSampleWeights *Tensor, paddingIdx int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cscaleGradByFreq := int32(0)
 	if scaleGradByFreq {
 		cscaleGradByFreq = int32(1)
@@ -2474,8 +2474,8 @@ func _EmbeddingBagDenseBackward(grad *Tensor, indices *Tensor, offset2bag *Tenso
 // --------------------------
 
 func _EmbeddingBagDenseBackwardOut(out *Tensor, grad *Tensor, indices *Tensor, offset2bag *Tensor, bagSize *Tensor, maximumIndices *Tensor, numWeights int64, scaleGradByFreq bool, mode int64, perSampleWeights *Tensor, paddingIdx int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cscaleGradByFreq := int32(0)
 	if scaleGradByFreq {
 		cscaleGradByFreq = int32(1)
@@ -2593,8 +2593,8 @@ func _EmbeddingBagOut(out0 *Tensor, out1 *Tensor, out2 *Tensor, out3 *Tensor, we
 // --------------------------
 
 func _EmbeddingBagPerSampleWeightsBackward(grad *Tensor, weight *Tensor, indices *Tensor, offsets *Tensor, offset2bag *Tensor, mode int64, paddingIdx int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_EmbeddingBagPerSampleWeightsBackward(ptr, grad.ctensor, weight.ctensor, indices.ctensor, offsets.ctensor, offset2bag.ctensor, mode, paddingIdx)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_EmbeddingBagPerSampleWeightsBackward() failed: %w", err)
@@ -2609,8 +2609,8 @@ func _EmbeddingBagPerSampleWeightsBackward(grad *Tensor, weight *Tensor, indices
 // --------------------------
 
 func _EmbeddingBagPerSampleWeightsBackwardOut(out *Tensor, grad *Tensor, weight *Tensor, indices *Tensor, offsets *Tensor, offset2bag *Tensor, mode int64, paddingIdx int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_EmbeddingBagPerSampleWeightsBackwardOut(ptr, out.ctensor, grad.ctensor, weight.ctensor, indices.ctensor, offsets.ctensor, offset2bag.ctensor, mode, paddingIdx)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_EmbeddingBagPerSampleWeightsBackwardOut() failed: %w", err)
@@ -2625,8 +2625,8 @@ func _EmbeddingBagPerSampleWeightsBackwardOut(out *Tensor, grad *Tensor, weight 
 // --------------------------
 
 func _EmbeddingBagSparseBackward(grad *Tensor, indices *Tensor, offsets *Tensor, offset2bag *Tensor, bagSize *Tensor, numWeights int64, scaleGradByFreq bool, mode int64, perSampleWeights *Tensor, paddingIdx int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cscaleGradByFreq := int32(0)
 	if scaleGradByFreq {
 		cscaleGradByFreq = int32(1)
@@ -2645,8 +2645,8 @@ func _EmbeddingBagSparseBackward(grad *Tensor, indices *Tensor, offsets *Tensor,
 // --------------------------
 
 func _EmptyAffineQuantized(size []int64, optionsKind gotch.DType, optionsDevice gotch.Device, scale float64, zeroPoint int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_EmptyAffineQuantized(ptr, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt(), scale, zeroPoint)
 	if err = TorchErr(); err != nil {
@@ -2662,8 +2662,8 @@ func _EmptyAffineQuantized(size []int64, optionsKind gotch.DType, optionsDevice 
 // --------------------------
 
 func _EmptyAffineQuantizedOut(out *Tensor, size []int64, scale float64, zeroPoint int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_EmptyAffineQuantizedOut(ptr, out.ctensor, size, sizeLen, scale, zeroPoint)
 	if err = TorchErr(); err != nil {
@@ -2679,8 +2679,8 @@ func _EmptyAffineQuantizedOut(out *Tensor, size []int64, scale float64, zeroPoin
 // --------------------------
 
 func _EmptyPerChannelAffineQuantized(size []int64, scales *Tensor, zeroPoints *Tensor, axis int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_EmptyPerChannelAffineQuantized(ptr, size, sizeLen, scales.ctensor, zeroPoints.ctensor, axis, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -2696,8 +2696,8 @@ func _EmptyPerChannelAffineQuantized(size []int64, scales *Tensor, zeroPoints *T
 // --------------------------
 
 func _EmptyPerChannelAffineQuantizedOut(out *Tensor, size []int64, scales *Tensor, zeroPoints *Tensor, axis int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_EmptyPerChannelAffineQuantizedOut(ptr, out.ctensor, size, sizeLen, scales.ctensor, zeroPoints.ctensor, axis)
 	if err = TorchErr(); err != nil {
@@ -2713,8 +2713,8 @@ func _EmptyPerChannelAffineQuantizedOut(out *Tensor, size []int64, scales *Tenso
 // --------------------------
 
 func _EuclideanDist(x1 *Tensor, x2 *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_EuclideanDist(ptr, x1.ctensor, x2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_EuclideanDist() failed: %w", err)
@@ -2729,8 +2729,8 @@ func _EuclideanDist(x1 *Tensor, x2 *Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func _EuclideanDistOut(out *Tensor, x1 *Tensor, x2 *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_EuclideanDistOut(ptr, out.ctensor, x1.ctensor, x2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_EuclideanDistOut() failed: %w", err)
@@ -2748,8 +2748,8 @@ func (ts *Tensor) _FakeQuantizeLearnablePerChannelAffine(scale *Tensor, zeroPoin
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_FakeQuantizeLearnablePerChannelAffine(ptr, ts.ctensor, scale.ctensor, zeroPoint.ctensor, axis, quantMin, quantMax, gradFactor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_FakeQuantizeLearnablePerChannelAffine() failed: %w", err)
@@ -2789,8 +2789,8 @@ func (ts *Tensor) _FakeQuantizeLearnablePerChannelAffineOut(out *Tensor, scale *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_FakeQuantizeLearnablePerChannelAffineOut(ptr, out.ctensor, ts.ctensor, scale.ctensor, zeroPoint.ctensor, axis, quantMin, quantMax, gradFactor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_FakeQuantizeLearnablePerChannelAffineOut() failed: %w", err)
@@ -2808,8 +2808,8 @@ func (ts *Tensor) _FakeQuantizeLearnablePerTensorAffine(scale *Tensor, zeroPoint
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_FakeQuantizeLearnablePerTensorAffine(ptr, ts.ctensor, scale.ctensor, zeroPoint.ctensor, quantMin, quantMax, gradFactor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_FakeQuantizeLearnablePerTensorAffine() failed: %w", err)
@@ -2849,8 +2849,8 @@ func (ts *Tensor) _FakeQuantizeLearnablePerTensorAffineOut(out *Tensor, scale *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_FakeQuantizeLearnablePerTensorAffineOut(ptr, out.ctensor, ts.ctensor, scale.ctensor, zeroPoint.ctensor, quantMin, quantMax, gradFactor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_FakeQuantizeLearnablePerTensorAffineOut() failed: %w", err)
@@ -2908,8 +2908,8 @@ func (ts *Tensor) _FftC2c(dim []int64, normalization int64, forward bool, del bo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	cforward := int32(0)
 	if forward {
@@ -2932,8 +2932,8 @@ func (ts *Tensor) _FftC2cOut(out *Tensor, dim []int64, normalization int64, forw
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	cforward := int32(0)
 	if forward {
@@ -2956,8 +2956,8 @@ func (ts *Tensor) _FftC2r(dim []int64, normalization int64, lastDimSize int64, d
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	lib.Atg_FftC2r(ptr, ts.ctensor, dim, dimLen, normalization, lastDimSize)
 	if err = TorchErr(); err != nil {
@@ -2976,8 +2976,8 @@ func (ts *Tensor) _FftC2rOut(out *Tensor, dim []int64, normalization int64, last
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	lib.Atg_FftC2rOut(ptr, out.ctensor, ts.ctensor, dim, dimLen, normalization, lastDimSize)
 	if err = TorchErr(); err != nil {
@@ -2996,8 +2996,8 @@ func (ts *Tensor) _FftR2c(dim []int64, normalization int64, onesided bool, del b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	conesided := int32(0)
 	if onesided {
@@ -3020,8 +3020,8 @@ func (ts *Tensor) _FftR2cOut(out *Tensor, dim []int64, normalization int64, ones
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	conesided := int32(0)
 	if onesided {
@@ -3041,8 +3041,8 @@ func (ts *Tensor) _FftR2cOut(out *Tensor, dim []int64, normalization int64, ones
 // --------------------------
 
 func (ts *Tensor) _FillMemEffDropoutMask_(dropoutP float64, seed int64, offset int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_FillMemEffDropoutMask_(ptr, ts.ctensor, dropoutP, seed, offset)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_FillMemEffDropoutMask_() failed: %w", err)
@@ -3089,8 +3089,8 @@ func (ts *Tensor) _Foobar(arg1 bool, arg2 bool, arg3 bool, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	carg1 := int32(0)
 	if arg1 {
 		carg1 = int32(1)
@@ -3120,8 +3120,8 @@ func (ts *Tensor) _FoobarOut(out *Tensor, arg1 bool, arg2 bool, arg3 bool, del b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	carg1 := int32(0)
 	if arg1 {
 		carg1 = int32(1)
@@ -3151,8 +3151,8 @@ func (ts *Tensor) _FunctionalAssertAsync(assertMsg string, depToken *Tensor, del
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_FunctionalAssertAsync(ptr, ts.ctensor, assertMsg, depToken.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_FunctionalAssertAsync() failed: %w", err)
@@ -3167,8 +3167,8 @@ func (ts *Tensor) _FunctionalAssertAsync(assertMsg string, depToken *Tensor, del
 // --------------------------
 
 func _FunctionalSymConstrainRange(size *Scalar, min []int64, max []int64, depToken *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cminVal int64 = 0
 	var cminNull int = 1
 	if len(min) > 0 {
@@ -3195,8 +3195,8 @@ func _FunctionalSymConstrainRange(size *Scalar, min []int64, max []int64, depTok
 // --------------------------
 
 func _FunctionalSymConstrainRangeForSize(size *Scalar, min []int64, max []int64, depToken *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cminVal int64 = 0
 	var cminNull int = 1
 	if len(min) > 0 {
@@ -3380,8 +3380,8 @@ func (ts *Tensor) _FwPrimal(level int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_FwPrimal(ptr, ts.ctensor, level)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_FwPrimal() failed: %w", err)
@@ -3399,8 +3399,8 @@ func (ts *Tensor) _FwPrimalCopy(level int64, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_FwPrimalCopy(ptr, ts.ctensor, level)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_FwPrimalCopy() failed: %w", err)
@@ -3418,8 +3418,8 @@ func (ts *Tensor) _FwPrimalCopyOut(out *Tensor, level int64, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_FwPrimalCopyOut(ptr, out.ctensor, ts.ctensor, level)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_FwPrimalCopyOut() failed: %w", err)
@@ -3437,8 +3437,8 @@ func (ts *Tensor) _GatherSparseBackward(dim int64, index *Tensor, grad *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_GatherSparseBackward(ptr, ts.ctensor, dim, index.ctensor, grad.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_GatherSparseBackward() failed: %w", err)
@@ -3453,8 +3453,8 @@ func (ts *Tensor) _GatherSparseBackward(dim int64, index *Tensor, grad *Tensor, 
 // --------------------------
 
 func _GridSampler2dCpuFallback(input *Tensor, grid *Tensor, interpolationMode int64, paddingMode int64, alignCorners bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	calignCorners := int32(0)
 	if alignCorners {
 		calignCorners = int32(1)
@@ -3494,8 +3494,8 @@ func _GridSampler2dCpuFallbackBackward(gradOutput *Tensor, input *Tensor, grid *
 // --------------------------
 
 func _GridSampler2dCpuFallbackOut(out *Tensor, input *Tensor, grid *Tensor, interpolationMode int64, paddingMode int64, alignCorners bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	calignCorners := int32(0)
 	if alignCorners {
 		calignCorners = int32(1)
@@ -3547,8 +3547,8 @@ func (ts *Tensor) _HistogramddFromBinCts(out *Tensor, bins []int64, rangeVals []
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	binsLen := len(bins)
 	rangeValsLen := len(rangeVals)
 	cdensity := int32(0)
@@ -3572,8 +3572,8 @@ func (ts *Tensor) _HistogramddFromBinTensors(bins []*Tensor, weight *Tensor, den
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cbins []lib.Ctensor
 	for _, t := range bins {
 		cbins = append(cbins, t.ctensor)
@@ -3599,8 +3599,8 @@ func (ts *Tensor) _HistogramddFromBinTensorsOut(out *Tensor, bins []*Tensor, wei
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cbins []lib.Ctensor
 	for _, t := range bins {
 		cbins = append(cbins, t.ctensor)
@@ -3626,8 +3626,8 @@ func (ts *Tensor) _IndexPutImpl(indices []*Tensor, values *Tensor, accumulate bo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cindices []lib.Ctensor
 	for _, t := range indices {
 		cindices = append(cindices, t.ctensor)
@@ -3657,8 +3657,8 @@ func (ts *Tensor) _IndexPutImplOut(out *Tensor, indices []*Tensor, values *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cindices []lib.Ctensor
 	for _, t := range indices {
 		cindices = append(cindices, t.ctensor)
@@ -3688,8 +3688,8 @@ func (ts *Tensor) _Indices(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_Indices(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_Indices() failed: %w", err)
@@ -3707,8 +3707,8 @@ func (ts *Tensor) _IndicesCopy(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_IndicesCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_IndicesCopy() failed: %w", err)
@@ -3726,8 +3726,8 @@ func (ts *Tensor) _IndicesCopyOut(out *Tensor, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_IndicesCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_IndicesCopyOut() failed: %w", err)
@@ -3745,8 +3745,8 @@ func (ts *Tensor) _IntMm(mat2 *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_IntMm(ptr, ts.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_IntMm() failed: %w", err)
@@ -3764,8 +3764,8 @@ func (ts *Tensor) _IntMmOut(out *Tensor, mat2 *Tensor, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_IntMmOut(ptr, out.ctensor, ts.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_IntMmOut() failed: %w", err)
@@ -3783,8 +3783,8 @@ func (ts *Tensor) _IsAllTrue(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_IsAllTrue(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_IsAllTrue() failed: %w", err)
@@ -3802,8 +3802,8 @@ func (ts *Tensor) _IsAnyTrue(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_IsAnyTrue(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_IsAnyTrue() failed: %w", err)
@@ -4070,8 +4070,8 @@ func (ts *Tensor) _LogSoftmax(dim int64, halfToFloat bool, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chalfToFloat := int32(0)
 	if halfToFloat {
 		chalfToFloat = int32(1)
@@ -4090,8 +4090,8 @@ func (ts *Tensor) _LogSoftmax(dim int64, halfToFloat bool, del bool) (retVal *Te
 // --------------------------
 
 func _LogSoftmaxBackwardData(gradOutput *Tensor, output *Tensor, dim int64, inputDtype gotch.DType) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_LogSoftmaxBackwardData(ptr, gradOutput.ctensor, output.ctensor, dim, inputDtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_LogSoftmaxBackwardData() failed: %w", err)
@@ -4106,8 +4106,8 @@ func _LogSoftmaxBackwardData(gradOutput *Tensor, output *Tensor, dim int64, inpu
 // --------------------------
 
 func _LogSoftmaxBackwardDataOut(out *Tensor, gradOutput *Tensor, output *Tensor, dim int64, inputDtype gotch.DType) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_LogSoftmaxBackwardDataOut(ptr, out.ctensor, gradOutput.ctensor, output.ctensor, dim, inputDtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_LogSoftmaxBackwardDataOut() failed: %w", err)
@@ -4125,8 +4125,8 @@ func (ts *Tensor) _LogSoftmaxOut(out *Tensor, dim int64, halfToFloat bool, del b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chalfToFloat := int32(0)
 	if halfToFloat {
 		chalfToFloat = int32(1)
@@ -4148,8 +4148,8 @@ func (ts *Tensor) _Logcumsumexp(dim int64, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_Logcumsumexp(ptr, ts.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_Logcumsumexp() failed: %w", err)
@@ -4167,8 +4167,8 @@ func (ts *Tensor) _LogcumsumexpOut(out *Tensor, dim int64, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_LogcumsumexpOut(ptr, out.ctensor, ts.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_LogcumsumexpOut() failed: %w", err)
@@ -4311,8 +4311,8 @@ func (ts *Tensor) _LuWithInfo(pivot bool, checkErrors bool, del bool) (retVal0 *
 // --------------------------
 
 func _MakeDepToken(optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_MakeDepToken(ptr, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_MakeDepToken() failed: %w", err)
@@ -4327,8 +4327,8 @@ func _MakeDepToken(optionsKind gotch.DType, optionsDevice gotch.Device) (retVal 
 // --------------------------
 
 func _MakeDual(primal *Tensor, tangent *Tensor, level int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_MakeDual(ptr, primal.ctensor, tangent.ctensor, level)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_MakeDual() failed: %w", err)
@@ -4343,8 +4343,8 @@ func _MakeDual(primal *Tensor, tangent *Tensor, level int64) (retVal *Tensor, er
 // --------------------------
 
 func _MakeDualCopy(primal *Tensor, tangent *Tensor, level int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_MakeDualCopy(ptr, primal.ctensor, tangent.ctensor, level)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_MakeDualCopy() failed: %w", err)
@@ -4359,8 +4359,8 @@ func _MakeDualCopy(primal *Tensor, tangent *Tensor, level int64) (retVal *Tensor
 // --------------------------
 
 func _MakeDualCopyOut(out *Tensor, primal *Tensor, tangent *Tensor, level int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_MakeDualCopyOut(ptr, out.ctensor, primal.ctensor, tangent.ctensor, level)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_MakeDualCopyOut() failed: %w", err)
@@ -4378,8 +4378,8 @@ func (ts *Tensor) _MakePerChannelQuantizedTensor(scale *Tensor, zeroPoint *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_MakePerChannelQuantizedTensor(ptr, ts.ctensor, scale.ctensor, zeroPoint.ctensor, axis)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_MakePerChannelQuantizedTensor() failed: %w", err)
@@ -4397,8 +4397,8 @@ func (ts *Tensor) _MakePerChannelQuantizedTensorOut(out *Tensor, scale *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_MakePerChannelQuantizedTensorOut(ptr, out.ctensor, ts.ctensor, scale.ctensor, zeroPoint.ctensor, axis)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_MakePerChannelQuantizedTensorOut() failed: %w", err)
@@ -4416,8 +4416,8 @@ func (ts *Tensor) _MakePerTensorQuantizedTensor(scale float64, zeroPoint int64, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_MakePerTensorQuantizedTensor(ptr, ts.ctensor, scale, zeroPoint)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_MakePerTensorQuantizedTensor() failed: %w", err)
@@ -4435,8 +4435,8 @@ func (ts *Tensor) _MakePerTensorQuantizedTensorOut(out *Tensor, scale float64, z
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_MakePerTensorQuantizedTensorOut(ptr, out.ctensor, ts.ctensor, scale, zeroPoint)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_MakePerTensorQuantizedTensorOut() failed: %w", err)
@@ -4454,8 +4454,8 @@ func (ts *Tensor) _MaskedScale(mask *Tensor, scale float64, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_MaskedScale(ptr, ts.ctensor, mask.ctensor, scale)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_MaskedScale() failed: %w", err)
@@ -4473,8 +4473,8 @@ func (ts *Tensor) _MaskedScaleOut(out *Tensor, mask *Tensor, scale float64, del 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_MaskedScaleOut(ptr, out.ctensor, ts.ctensor, mask.ctensor, scale)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_MaskedScaleOut() failed: %w", err)
@@ -4492,8 +4492,8 @@ func (ts *Tensor) _MaskedSoftmax(mask *Tensor, dim []int64, maskType []int64, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -4520,8 +4520,8 @@ func (ts *Tensor) _MaskedSoftmax(mask *Tensor, dim []int64, maskType []int64, de
 // --------------------------
 
 func _MaskedSoftmaxBackward(gradOutput *Tensor, output *Tensor, mask *Tensor, dim []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -4542,8 +4542,8 @@ func _MaskedSoftmaxBackward(gradOutput *Tensor, output *Tensor, mask *Tensor, di
 // --------------------------
 
 func _MaskedSoftmaxBackwardOut(out *Tensor, gradOutput *Tensor, output *Tensor, mask *Tensor, dim []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -4567,8 +4567,8 @@ func (ts *Tensor) _MaskedSoftmaxOut(out *Tensor, mask *Tensor, dim []int64, mask
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -4598,8 +4598,8 @@ func (ts *Tensor) _MkldnnReshape(shape []int64, del bool) (retVal *Tensor, err e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	shapeLen := len(shape)
 	lib.Atg_MkldnnReshape(ptr, ts.ctensor, shape, shapeLen)
 	if err = TorchErr(); err != nil {
@@ -4618,8 +4618,8 @@ func (ts *Tensor) _MkldnnReshapeOut(out *Tensor, shape []int64, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	shapeLen := len(shape)
 	lib.Atg_MkldnnReshapeOut(ptr, out.ctensor, ts.ctensor, shape, shapeLen)
 	if err = TorchErr(); err != nil {
@@ -4638,8 +4638,8 @@ func (ts *Tensor) _MkldnnTranspose(dim0 int64, dim1 int64, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_MkldnnTranspose(ptr, ts.ctensor, dim0, dim1)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_MkldnnTranspose() failed: %w", err)
@@ -4654,8 +4654,8 @@ func (ts *Tensor) _MkldnnTranspose(dim0 int64, dim1 int64, del bool) (retVal *Te
 // --------------------------
 
 func (ts *Tensor) _MkldnnTranspose_(dim0 int64, dim1 int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_MkldnnTranspose_(ptr, ts.ctensor, dim0, dim1)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_MkldnnTranspose_() failed: %w", err)
@@ -4673,8 +4673,8 @@ func (ts *Tensor) _MkldnnTransposeOut(out *Tensor, dim0 int64, dim1 int64, del b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_MkldnnTransposeOut(ptr, out.ctensor, ts.ctensor, dim0, dim1)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_MkldnnTransposeOut() failed: %w", err)
@@ -4692,8 +4692,8 @@ func (ts *Tensor) _MpsConvolution(weight *Tensor, bias *Tensor, padding []int64,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	strideLen := len(stride)
 	dilationLen := len(dilation)
@@ -4714,8 +4714,8 @@ func (ts *Tensor) _MpsConvolutionOut(out *Tensor, weight *Tensor, bias *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	strideLen := len(stride)
 	dilationLen := len(dilation)
@@ -4736,8 +4736,8 @@ func (ts *Tensor) _MpsConvolutionTranspose(weight *Tensor, padding []int64, outp
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	outputPaddingLen := len(outputPadding)
 	strideLen := len(stride)
@@ -4759,8 +4759,8 @@ func (ts *Tensor) _MpsConvolutionTransposeOut(out *Tensor, weight *Tensor, paddi
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	outputPaddingLen := len(outputPadding)
 	strideLen := len(stride)
@@ -5001,8 +5001,8 @@ func (ts *Tensor) _NegView(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_NegView(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_NegView() failed: %w", err)
@@ -5020,8 +5020,8 @@ func (ts *Tensor) _NegViewCopy(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_NegViewCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_NegViewCopy() failed: %w", err)
@@ -5039,8 +5039,8 @@ func (ts *Tensor) _NegViewCopyOut(out *Tensor, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_NegViewCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_NegViewCopyOut() failed: %w", err)
@@ -5055,8 +5055,8 @@ func (ts *Tensor) _NegViewCopyOut(out *Tensor, del bool) (retVal *Tensor, err er
 // --------------------------
 
 func _NestedFromPadded(padded *Tensor, cpuNestedShapeExample *Tensor, fuseTransform0213 bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cfuseTransform0213 := int32(0)
 	if fuseTransform0213 {
 		cfuseTransform0213 = int32(1)
@@ -5075,8 +5075,8 @@ func _NestedFromPadded(padded *Tensor, cpuNestedShapeExample *Tensor, fuseTransf
 // --------------------------
 
 func _NestedFromPaddedAndNestedExample(padded *Tensor, ntExample *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_NestedFromPaddedAndNestedExample(ptr, padded.ctensor, ntExample.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_NestedFromPaddedAndNestedExample() failed: %w", err)
@@ -5091,8 +5091,8 @@ func _NestedFromPaddedAndNestedExample(padded *Tensor, ntExample *Tensor) (retVa
 // --------------------------
 
 func _NestedFromPaddedAndNestedExampleOut(out *Tensor, padded *Tensor, ntExample *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_NestedFromPaddedAndNestedExampleOut(ptr, out.ctensor, padded.ctensor, ntExample.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_NestedFromPaddedAndNestedExampleOut() failed: %w", err)
@@ -5107,8 +5107,8 @@ func _NestedFromPaddedAndNestedExampleOut(out *Tensor, padded *Tensor, ntExample
 // --------------------------
 
 func _NestedFromPaddedOut(out *Tensor, padded *Tensor, cpuNestedShapeExample *Tensor, fuseTransform0213 bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cfuseTransform0213 := int32(0)
 	if fuseTransform0213 {
 		cfuseTransform0213 = int32(1)
@@ -5130,8 +5130,8 @@ func (ts *Tensor) _NestedSelectBackward(gradOutput *Tensor, dim int64, index int
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_NestedSelectBackward(ptr, gradOutput.ctensor, ts.ctensor, dim, index)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_NestedSelectBackward() failed: %w", err)
@@ -5149,8 +5149,8 @@ func (ts *Tensor) _NestedSumBackward(grad *Tensor, dim []int64, keepdim bool, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -5173,8 +5173,8 @@ func (ts *Tensor) _NestedViewFromBuffer(nestedSize *Tensor, nestedStrides *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_NestedViewFromBuffer(ptr, ts.ctensor, nestedSize.ctensor, nestedStrides.ctensor, offsets.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_NestedViewFromBuffer() failed: %w", err)
@@ -5192,8 +5192,8 @@ func (ts *Tensor) _NestedViewFromBufferCopy(nestedSize *Tensor, nestedStrides *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_NestedViewFromBufferCopy(ptr, ts.ctensor, nestedSize.ctensor, nestedStrides.ctensor, offsets.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_NestedViewFromBufferCopy() failed: %w", err)
@@ -5211,8 +5211,8 @@ func (ts *Tensor) _NestedViewFromBufferCopyOut(out *Tensor, nestedSize *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_NestedViewFromBufferCopyOut(ptr, out.ctensor, ts.ctensor, nestedSize.ctensor, nestedStrides.ctensor, offsets.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_NestedViewFromBufferCopyOut() failed: %w", err)
@@ -5230,8 +5230,8 @@ func (ts *Tensor) _NewZerosWithSameFeatureMeta(other *Tensor, selfNumBatchDims i
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_NewZerosWithSameFeatureMeta(ptr, ts.ctensor, other.ctensor, selfNumBatchDims)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_NewZerosWithSameFeatureMeta() failed: %w", err)
@@ -5249,8 +5249,8 @@ func (ts *Tensor) _NewZerosWithSameFeatureMetaOut(out *Tensor, other *Tensor, se
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_NewZerosWithSameFeatureMetaOut(ptr, out.ctensor, ts.ctensor, other.ctensor, selfNumBatchDims)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_NewZerosWithSameFeatureMetaOut() failed: %w", err)
@@ -5277,8 +5277,8 @@ func _NnpackAvailable() (retVal bool, err error) {
 // --------------------------
 
 func _NnpackSpatialConvolution(input *Tensor, weight *Tensor, bias *Tensor, padding []int64, stride []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	strideLen := len(stride)
 	lib.Atg_NnpackSpatialConvolution(ptr, input.ctensor, weight.ctensor, bias.ctensor, padding, paddingLen, stride, strideLen)
@@ -5295,8 +5295,8 @@ func _NnpackSpatialConvolution(input *Tensor, weight *Tensor, bias *Tensor, padd
 // --------------------------
 
 func _NnpackSpatialConvolutionOut(out *Tensor, input *Tensor, weight *Tensor, bias *Tensor, padding []int64, stride []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	strideLen := len(stride)
 	lib.Atg_NnpackSpatialConvolutionOut(ptr, out.ctensor, input.ctensor, weight.ctensor, bias.ctensor, padding, paddingLen, stride, strideLen)
@@ -5349,8 +5349,8 @@ func _PackPaddedSequence(input *Tensor, lengths *Tensor, batchFirst bool) (retVa
 // --------------------------
 
 func _PackPaddedSequenceBackward(grad *Tensor, inputSize []int64, batchSizes *Tensor, batchFirst bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	inputSizeLen := len(inputSize)
 	cbatchFirst := int32(0)
 	if batchFirst {
@@ -5394,8 +5394,8 @@ func (ts *Tensor) _PadCircular(pad []int64, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	padLen := len(pad)
 	lib.Atg_PadCircular(ptr, ts.ctensor, pad, padLen)
 	if err = TorchErr(); err != nil {
@@ -5414,8 +5414,8 @@ func (ts *Tensor) _PadEnum(pad []int64, mode int64, value []float64, del bool) (
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	padLen := len(pad)
 	var cvalueVal float64 = 0.0
 	var cvalueNull int = 1
@@ -5461,8 +5461,8 @@ func (ts *Tensor) _PdistBackward(grad *Tensor, p float64, pdist *Tensor, del boo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_PdistBackward(ptr, grad.ctensor, ts.ctensor, p, pdist.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_PdistBackward() failed: %w", err)
@@ -5480,8 +5480,8 @@ func (ts *Tensor) _PdistBackwardOut(out *Tensor, grad *Tensor, p float64, pdist 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_PdistBackwardOut(ptr, out.ctensor, grad.ctensor, ts.ctensor, p, pdist.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_PdistBackwardOut() failed: %w", err)
@@ -5499,8 +5499,8 @@ func (ts *Tensor) _PinMemory(device gotch.Device, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_PinMemory(ptr, ts.ctensor, device.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_PinMemory() failed: %w", err)
@@ -5518,8 +5518,8 @@ func (ts *Tensor) _PinMemoryOut(out *Tensor, device gotch.Device, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_PinMemoryOut(ptr, out.ctensor, ts.ctensor, device.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_PinMemoryOut() failed: %w", err)
@@ -5537,8 +5537,8 @@ func (ts *Tensor) _PreluKernel(weight *Tensor, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_PreluKernel(ptr, ts.ctensor, weight.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_PreluKernel() failed: %w", err)
@@ -5576,8 +5576,8 @@ func (ts *Tensor) _RemoveBatchDim(level int64, batchSize int64, outDim int64, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_RemoveBatchDim(ptr, ts.ctensor, level, batchSize, outDim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_RemoveBatchDim() failed: %w", err)
@@ -5595,8 +5595,8 @@ func (ts *Tensor) _ReshapeAlias(size []int64, stride []int64, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	strideLen := len(stride)
 	lib.Atg_ReshapeAlias(ptr, ts.ctensor, size, sizeLen, stride, strideLen)
@@ -5616,8 +5616,8 @@ func (ts *Tensor) _ReshapeAliasCopy(size []int64, stride []int64, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	strideLen := len(stride)
 	lib.Atg_ReshapeAliasCopy(ptr, ts.ctensor, size, sizeLen, stride, strideLen)
@@ -5637,8 +5637,8 @@ func (ts *Tensor) _ReshapeAliasCopyOut(out *Tensor, size []int64, stride []int64
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	strideLen := len(stride)
 	lib.Atg_ReshapeAliasCopyOut(ptr, out.ctensor, ts.ctensor, size, sizeLen, stride, strideLen)
@@ -5658,8 +5658,8 @@ func (ts *Tensor) _ReshapeCopy(size []int64, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_ReshapeCopy(ptr, ts.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -5678,8 +5678,8 @@ func (ts *Tensor) _ReshapeFromTensor(shape *Tensor, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_ReshapeFromTensor(ptr, ts.ctensor, shape.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_ReshapeFromTensor() failed: %w", err)
@@ -5697,8 +5697,8 @@ func (ts *Tensor) _ResizeOutput(size []int64, device gotch.Device, del bool) (re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_ResizeOutput(ptr, ts.ctensor, size, sizeLen, device.CInt())
 	if err = TorchErr(); err != nil {
@@ -5714,8 +5714,8 @@ func (ts *Tensor) _ResizeOutput(size []int64, device gotch.Device, del bool) (re
 // --------------------------
 
 func (ts *Tensor) _ResizeOutput_(size []int64, device gotch.Device) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_ResizeOutput_(ptr, ts.ctensor, size, sizeLen, device.CInt())
 	if err = TorchErr(); err != nil {
@@ -5734,8 +5734,8 @@ func (ts *Tensor) _ResizeOutputOut(out *Tensor, size []int64, device gotch.Devic
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_ResizeOutputOut(ptr, out.ctensor, ts.ctensor, size, sizeLen, device.CInt())
 	if err = TorchErr(); err != nil {
@@ -5771,8 +5771,8 @@ func (ts *Tensor) _SampleDirichlet(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SampleDirichlet(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SampleDirichlet() failed: %w", err)
@@ -5790,8 +5790,8 @@ func (ts *Tensor) _SampleDirichletOut(out *Tensor, del bool) (retVal *Tensor, er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SampleDirichletOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SampleDirichletOut() failed: %w", err)
@@ -5806,8 +5806,8 @@ func (ts *Tensor) _SampleDirichletOut(out *Tensor, del bool) (retVal *Tensor, er
 // --------------------------
 
 func _SaturateWeightToFp16(weight *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SaturateWeightToFp16(ptr, weight.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SaturateWeightToFp16() failed: %w", err)
@@ -5956,8 +5956,8 @@ func (ts *Tensor) _ScatterReduce(dim int64, index *Tensor, src *Tensor, reduce s
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cincludeSelf := int32(0)
 	if includeSelf {
 		cincludeSelf = int32(1)
@@ -5976,8 +5976,8 @@ func (ts *Tensor) _ScatterReduce(dim int64, index *Tensor, src *Tensor, reduce s
 // --------------------------
 
 func (ts *Tensor) _ScatterReduce_(dim int64, index *Tensor, src *Tensor, reduce string, includeSelf bool) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cincludeSelf := int32(0)
 	if includeSelf {
 		cincludeSelf = int32(1)
@@ -5999,8 +5999,8 @@ func (ts *Tensor) _ScatterReduceTwoOut(out *Tensor, dim int64, index *Tensor, sr
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cincludeSelf := int32(0)
 	if includeSelf {
 		cincludeSelf = int32(1)
@@ -6019,8 +6019,8 @@ func (ts *Tensor) _ScatterReduceTwoOut(out *Tensor, dim int64, index *Tensor, sr
 // --------------------------
 
 func _SegmentReduceBackward(grad *Tensor, output *Tensor, data *Tensor, reduce string, lengths *Tensor, offsets *Tensor, axis int64, initial *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SegmentReduceBackward(ptr, grad.ctensor, output.ctensor, data.ctensor, reduce, lengths.ctensor, offsets.ctensor, axis, initial.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SegmentReduceBackward() failed: %w", err)
@@ -6035,8 +6035,8 @@ func _SegmentReduceBackward(grad *Tensor, output *Tensor, data *Tensor, reduce s
 // --------------------------
 
 func _SegmentReduceBackwardOut(out *Tensor, grad *Tensor, output *Tensor, data *Tensor, reduce string, lengths *Tensor, offsets *Tensor, axis int64, initial *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SegmentReduceBackwardOut(ptr, out.ctensor, grad.ctensor, output.ctensor, data.ctensor, reduce, lengths.ctensor, offsets.ctensor, axis, initial.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SegmentReduceBackwardOut() failed: %w", err)
@@ -6054,8 +6054,8 @@ func (ts *Tensor) _ShapeAsTensor(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_ShapeAsTensor(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_ShapeAsTensor() failed: %w", err)
@@ -6112,8 +6112,8 @@ func _SobolEngineDraw(quasi *Tensor, n int64, sobolstate *Tensor, dimension int6
 // --------------------------
 
 func (ts *Tensor) _SobolEngineFf_(n int64, sobolstate *Tensor, dimension int64, numGenerated int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SobolEngineFf_(ptr, ts.ctensor, n, sobolstate.ctensor, dimension, numGenerated)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SobolEngineFf_() failed: %w", err)
@@ -6128,8 +6128,8 @@ func (ts *Tensor) _SobolEngineFf_(n int64, sobolstate *Tensor, dimension int64, 
 // --------------------------
 
 func (ts *Tensor) _SobolEngineInitializeState_(dimension int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SobolEngineInitializeState_(ptr, ts.ctensor, dimension)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SobolEngineInitializeState_() failed: %w", err)
@@ -6144,8 +6144,8 @@ func (ts *Tensor) _SobolEngineInitializeState_(dimension int64) (err error) {
 // --------------------------
 
 func (ts *Tensor) _SobolEngineScramble_(ltm *Tensor, dimension int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SobolEngineScramble_(ptr, ts.ctensor, ltm.ctensor, dimension)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SobolEngineScramble_() failed: %w", err)
@@ -6163,8 +6163,8 @@ func (ts *Tensor) _Softmax(dim int64, halfToFloat bool, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chalfToFloat := int32(0)
 	if halfToFloat {
 		chalfToFloat = int32(1)
@@ -6183,8 +6183,8 @@ func (ts *Tensor) _Softmax(dim int64, halfToFloat bool, del bool) (retVal *Tenso
 // --------------------------
 
 func _SoftmaxBackwardData(gradOutput *Tensor, output *Tensor, dim int64, inputDtype gotch.DType) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SoftmaxBackwardData(ptr, gradOutput.ctensor, output.ctensor, dim, inputDtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SoftmaxBackwardData() failed: %w", err)
@@ -6199,8 +6199,8 @@ func _SoftmaxBackwardData(gradOutput *Tensor, output *Tensor, dim int64, inputDt
 // --------------------------
 
 func _SoftmaxBackwardDataOut(gradInput *Tensor, gradOutput *Tensor, output *Tensor, dim int64, inputDtype gotch.DType) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SoftmaxBackwardDataOut(ptr, gradInput.ctensor, gradOutput.ctensor, output.ctensor, dim, inputDtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SoftmaxBackwardDataOut() failed: %w", err)
@@ -6218,8 +6218,8 @@ func (ts *Tensor) _SoftmaxOut(out *Tensor, dim int64, halfToFloat bool, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chalfToFloat := int32(0)
 	if halfToFloat {
 		chalfToFloat = int32(1)
@@ -6241,8 +6241,8 @@ func (ts *Tensor) _SparseAddmm(mat1 *Tensor, mat2 *Tensor, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SparseAddmm(ptr, ts.ctensor, mat1.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SparseAddmm() failed: %w", err)
@@ -6260,8 +6260,8 @@ func (ts *Tensor) _SparseAddmmOut(out *Tensor, mat1 *Tensor, mat2 *Tensor, del b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SparseAddmmOut(ptr, out.ctensor, ts.ctensor, mat1.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SparseAddmmOut() failed: %w", err)
@@ -6279,8 +6279,8 @@ func (ts *Tensor) _SparseBroadcastTo(size []int64, del bool) (retVal *Tensor, er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_SparseBroadcastTo(ptr, ts.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -6299,8 +6299,8 @@ func (ts *Tensor) _SparseBroadcastToCopy(size []int64, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_SparseBroadcastToCopy(ptr, ts.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -6319,8 +6319,8 @@ func (ts *Tensor) _SparseBroadcastToCopyOut(out *Tensor, size []int64, del bool)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_SparseBroadcastToCopyOut(ptr, out.ctensor, ts.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -6336,8 +6336,8 @@ func (ts *Tensor) _SparseBroadcastToCopyOut(out *Tensor, size []int64, del bool)
 // --------------------------
 
 func _SparseBscTensorUnsafe(ccolIndices *Tensor, rowIndices *Tensor, values *Tensor, size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_SparseBscTensorUnsafe(ptr, ccolIndices.ctensor, rowIndices.ctensor, values.ctensor, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -6353,8 +6353,8 @@ func _SparseBscTensorUnsafe(ccolIndices *Tensor, rowIndices *Tensor, values *Ten
 // --------------------------
 
 func _SparseBsrTensorUnsafe(crowIndices *Tensor, colIndices *Tensor, values *Tensor, size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_SparseBsrTensorUnsafe(ptr, crowIndices.ctensor, colIndices.ctensor, values.ctensor, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -6370,8 +6370,8 @@ func _SparseBsrTensorUnsafe(crowIndices *Tensor, colIndices *Tensor, values *Ten
 // --------------------------
 
 func _SparseCompressedTensorUnsafe(compressedIndices *Tensor, plainIndices *Tensor, values *Tensor, size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_SparseCompressedTensorUnsafe(ptr, compressedIndices.ctensor, plainIndices.ctensor, values.ctensor, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -6387,8 +6387,8 @@ func _SparseCompressedTensorUnsafe(compressedIndices *Tensor, plainIndices *Tens
 // --------------------------
 
 func _SparseCooTensorUnsafe(indices *Tensor, values *Tensor, size []int64, optionsKind gotch.DType, optionsDevice gotch.Device, isCoalesced bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	cisCoalesced := int32(0)
 	if isCoalesced {
@@ -6408,8 +6408,8 @@ func _SparseCooTensorUnsafe(indices *Tensor, values *Tensor, size []int64, optio
 // --------------------------
 
 func _SparseCooTensorWithDims(sparseDim int64, denseDim int64, size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_SparseCooTensorWithDims(ptr, sparseDim, denseDim, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -6425,8 +6425,8 @@ func _SparseCooTensorWithDims(sparseDim int64, denseDim int64, size []int64, opt
 // --------------------------
 
 func _SparseCooTensorWithDimsAndTensors(sparseDim int64, denseDim int64, size []int64, indices *Tensor, values *Tensor, optionsKind gotch.DType, optionsDevice gotch.Device, isCoalesced bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	cisCoalesced := int32(0)
 	if isCoalesced {
@@ -6446,8 +6446,8 @@ func _SparseCooTensorWithDimsAndTensors(sparseDim int64, denseDim int64, size []
 // --------------------------
 
 func _SparseCooTensorWithDimsAndTensorsOut(out *Tensor, sparseDim int64, denseDim int64, size []int64, indices *Tensor, values *Tensor, isCoalesced bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	cisCoalesced := int32(0)
 	if isCoalesced {
@@ -6467,8 +6467,8 @@ func _SparseCooTensorWithDimsAndTensorsOut(out *Tensor, sparseDim int64, denseDi
 // --------------------------
 
 func _SparseCooTensorWithDimsOut(out *Tensor, sparseDim int64, denseDim int64, size []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_SparseCooTensorWithDimsOut(ptr, out.ctensor, sparseDim, denseDim, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -6484,8 +6484,8 @@ func _SparseCooTensorWithDimsOut(out *Tensor, sparseDim int64, denseDim int64, s
 // --------------------------
 
 func _SparseCscTensorUnsafe(ccolIndices *Tensor, rowIndices *Tensor, values *Tensor, size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_SparseCscTensorUnsafe(ptr, ccolIndices.ctensor, rowIndices.ctensor, values.ctensor, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -6504,8 +6504,8 @@ func (ts *Tensor) _SparseCsrProd(dim []int64, keepdim bool, dtype gotch.DType, d
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -6528,8 +6528,8 @@ func (ts *Tensor) _SparseCsrProdDimDtypeOut(out *Tensor, dim []int64, keepdim bo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -6552,8 +6552,8 @@ func (ts *Tensor) _SparseCsrSum(dim []int64, keepdim bool, dtype gotch.DType, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -6576,8 +6576,8 @@ func (ts *Tensor) _SparseCsrSumDimDtypeOut(out *Tensor, dim []int64, keepdim boo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -6597,8 +6597,8 @@ func (ts *Tensor) _SparseCsrSumDimDtypeOut(out *Tensor, dim []int64, keepdim boo
 // --------------------------
 
 func _SparseCsrTensorUnsafe(crowIndices *Tensor, colIndices *Tensor, values *Tensor, size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_SparseCsrTensorUnsafe(ptr, crowIndices.ctensor, colIndices.ctensor, values.ctensor, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -6617,8 +6617,8 @@ func (ts *Tensor) _SparseLogSoftmax(dim int64, halfToFloat bool, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chalfToFloat := int32(0)
 	if halfToFloat {
 		chalfToFloat = int32(1)
@@ -6640,8 +6640,8 @@ func (ts *Tensor) _SparseLogSoftmaxBackwardData(gradOutput *Tensor, output *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SparseLogSoftmaxBackwardData(ptr, gradOutput.ctensor, output.ctensor, dim, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SparseLogSoftmaxBackwardData() failed: %w", err)
@@ -6659,8 +6659,8 @@ func (ts *Tensor) _SparseLogSoftmaxBackwardDataOut(out *Tensor, gradOutput *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SparseLogSoftmaxBackwardDataOut(ptr, out.ctensor, gradOutput.ctensor, output.ctensor, dim, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SparseLogSoftmaxBackwardDataOut() failed: %w", err)
@@ -6678,8 +6678,8 @@ func (ts *Tensor) _SparseLogSoftmaxInt(dim int64, dtype gotch.DType, del bool) (
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SparseLogSoftmaxInt(ptr, ts.ctensor, dim, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SparseLogSoftmaxInt() failed: %w", err)
@@ -6697,8 +6697,8 @@ func (ts *Tensor) _SparseLogSoftmaxOut(out *Tensor, dim int64, halfToFloat bool,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chalfToFloat := int32(0)
 	if halfToFloat {
 		chalfToFloat = int32(1)
@@ -6720,8 +6720,8 @@ func (ts *Tensor) _SparseMaskProjection(mask *Tensor, accumulateMatches bool, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	caccumulateMatches := int32(0)
 	if accumulateMatches {
 		caccumulateMatches = int32(1)
@@ -6743,8 +6743,8 @@ func (ts *Tensor) _SparseMaskProjectionOut(out *Tensor, mask *Tensor, accumulate
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	caccumulateMatches := int32(0)
 	if accumulateMatches {
 		caccumulateMatches = int32(1)
@@ -6763,8 +6763,8 @@ func (ts *Tensor) _SparseMaskProjectionOut(out *Tensor, mask *Tensor, accumulate
 // --------------------------
 
 func _SparseMm(sparse *Tensor, dense *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SparseMm(ptr, sparse.ctensor, dense.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SparseMm() failed: %w", err)
@@ -6779,8 +6779,8 @@ func _SparseMm(sparse *Tensor, dense *Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func _SparseMmReduce(sparse *Tensor, dense *Tensor, reduce string) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SparseMmReduce(ptr, sparse.ctensor, dense.ctensor, reduce)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SparseMmReduce() failed: %w", err)
@@ -6815,8 +6815,8 @@ func (ts *Tensor) _SparseMmReduceImpl(other *Tensor, reduce string, del bool) (r
 // --------------------------
 
 func _SparseSemiStructuredLinear(input *Tensor, weight *Tensor, meta *Tensor, bias *Tensor, activation string) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SparseSemiStructuredLinear(ptr, input.ctensor, weight.ctensor, meta.ctensor, bias.ctensor, activation)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SparseSemiStructuredLinear() failed: %w", err)
@@ -6834,8 +6834,8 @@ func (ts *Tensor) _SparseSoftmax(dim int64, halfToFloat bool, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chalfToFloat := int32(0)
 	if halfToFloat {
 		chalfToFloat = int32(1)
@@ -6857,8 +6857,8 @@ func (ts *Tensor) _SparseSoftmaxBackwardData(gradOutput *Tensor, output *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SparseSoftmaxBackwardData(ptr, gradOutput.ctensor, output.ctensor, dim, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SparseSoftmaxBackwardData() failed: %w", err)
@@ -6876,8 +6876,8 @@ func (ts *Tensor) _SparseSoftmaxBackwardDataOut(out *Tensor, gradOutput *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SparseSoftmaxBackwardDataOut(ptr, out.ctensor, gradOutput.ctensor, output.ctensor, dim, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SparseSoftmaxBackwardDataOut() failed: %w", err)
@@ -6895,8 +6895,8 @@ func (ts *Tensor) _SparseSoftmaxInt(dim int64, dtype gotch.DType, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SparseSoftmaxInt(ptr, ts.ctensor, dim, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SparseSoftmaxInt() failed: %w", err)
@@ -6914,8 +6914,8 @@ func (ts *Tensor) _SparseSoftmaxOut(out *Tensor, dim int64, halfToFloat bool, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chalfToFloat := int32(0)
 	if halfToFloat {
 		chalfToFloat = int32(1)
@@ -6937,8 +6937,8 @@ func (ts *Tensor) _SparseSparseMatmul(other *Tensor, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SparseSparseMatmul(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SparseSparseMatmul() failed: %w", err)
@@ -6956,8 +6956,8 @@ func (ts *Tensor) _SparseSparseMatmulOut(out *Tensor, other *Tensor, del bool) (
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SparseSparseMatmulOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SparseSparseMatmulOut() failed: %w", err)
@@ -6975,8 +6975,8 @@ func (ts *Tensor) _SparseSum(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SparseSum(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SparseSum() failed: %w", err)
@@ -6994,8 +6994,8 @@ func (ts *Tensor) _SparseSumBackward(grad *Tensor, dim []int64, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	lib.Atg_SparseSumBackward(ptr, grad.ctensor, ts.ctensor, dim, dimLen)
 	if err = TorchErr(); err != nil {
@@ -7014,8 +7014,8 @@ func (ts *Tensor) _SparseSumBackwardOut(out *Tensor, grad *Tensor, dim []int64, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	lib.Atg_SparseSumBackwardOut(ptr, out.ctensor, grad.ctensor, ts.ctensor, dim, dimLen)
 	if err = TorchErr(); err != nil {
@@ -7034,8 +7034,8 @@ func (ts *Tensor) _SparseSumDim(dim []int64, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	lib.Atg_SparseSumDim(ptr, ts.ctensor, dim, dimLen)
 	if err = TorchErr(); err != nil {
@@ -7054,8 +7054,8 @@ func (ts *Tensor) _SparseSumDimDtype(dim []int64, dtype gotch.DType, del bool) (
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	lib.Atg_SparseSumDimDtype(ptr, ts.ctensor, dim, dimLen, dtype.CInt())
 	if err = TorchErr(); err != nil {
@@ -7074,8 +7074,8 @@ func (ts *Tensor) _SparseSumDimOut(out *Tensor, dim []int64, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	lib.Atg_SparseSumDimOut(ptr, out.ctensor, ts.ctensor, dim, dimLen)
 	if err = TorchErr(); err != nil {
@@ -7094,8 +7094,8 @@ func (ts *Tensor) _SparseSumDtype(dtype gotch.DType, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_SparseSumDtype(ptr, ts.ctensor, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_SparseSumDtype() failed: %w", err)
@@ -7110,8 +7110,8 @@ func (ts *Tensor) _SparseSumDtype(dtype gotch.DType, del bool) (retVal *Tensor, 
 // --------------------------
 
 func _Spdiags(diagonals *Tensor, offsets *Tensor, shape []int64, layout Layout) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	shapeLen := len(shape)
 	lib.Atg_Spdiags(ptr, diagonals.ctensor, offsets.ctensor, shape, shapeLen, int8(layout))
 	if err = TorchErr(); err != nil {
@@ -7127,8 +7127,8 @@ func _Spdiags(diagonals *Tensor, offsets *Tensor, shape []int64, layout Layout) 
 // --------------------------
 
 func _SpdiagsOut(out *Tensor, diagonals *Tensor, offsets *Tensor, shape []int64, layout Layout) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	shapeLen := len(shape)
 	lib.Atg_SpdiagsOut(ptr, out.ctensor, diagonals.ctensor, offsets.ctensor, shape, shapeLen, int8(layout))
 	if err = TorchErr(); err != nil {
@@ -7144,8 +7144,8 @@ func _SpdiagsOut(out *Tensor, diagonals *Tensor, offsets *Tensor, shape []int64,
 // --------------------------
 
 func _Stack(tensors []*Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -7164,8 +7164,8 @@ func _Stack(tensors []*Tensor, dim int64) (retVal *Tensor, err error) {
 // --------------------------
 
 func _StackOut(out *Tensor, tensors []*Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -7187,8 +7187,8 @@ func (ts *Tensor) _StandardGamma(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_StandardGamma(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_StandardGamma() failed: %w", err)
@@ -7206,8 +7206,8 @@ func (ts *Tensor) _StandardGammaGrad(output *Tensor, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_StandardGammaGrad(ptr, ts.ctensor, output.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_StandardGammaGrad() failed: %w", err)
@@ -7225,8 +7225,8 @@ func (ts *Tensor) _StandardGammaGradOut(out *Tensor, output *Tensor, del bool) (
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_StandardGammaGradOut(ptr, out.ctensor, ts.ctensor, output.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_StandardGammaGradOut() failed: %w", err)
@@ -7244,8 +7244,8 @@ func (ts *Tensor) _StandardGammaOut(out *Tensor, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_StandardGammaOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_StandardGammaOut() failed: %w", err)
@@ -7260,8 +7260,8 @@ func (ts *Tensor) _StandardGammaOut(out *Tensor, del bool) (retVal *Tensor, err 
 // --------------------------
 
 func _TestAmbiguousDefaults(dummy *Tensor, a int64, b int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TestAmbiguousDefaults(ptr, dummy.ctensor, a, b)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TestAmbiguousDefaults() failed: %w", err)
@@ -7276,8 +7276,8 @@ func _TestAmbiguousDefaults(dummy *Tensor, a int64, b int64) (retVal *Tensor, er
 // --------------------------
 
 func _TestAmbiguousDefaultsB(dummy *Tensor, a int64, b string) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TestAmbiguousDefaultsB(ptr, dummy.ctensor, a, b)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TestAmbiguousDefaultsB() failed: %w", err)
@@ -7295,8 +7295,8 @@ func (ts *Tensor) _TestAutogradMultipleDispatch(del bool) (retVal *Tensor, err e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TestAutogradMultipleDispatch(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TestAutogradMultipleDispatch() failed: %w", err)
@@ -7314,8 +7314,8 @@ func (ts *Tensor) _TestAutogradMultipleDispatchFullcoverageOut(out *Tensor, del 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TestAutogradMultipleDispatchFullcoverageOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TestAutogradMultipleDispatchFullcoverageOut() failed: %w", err)
@@ -7333,8 +7333,8 @@ func (ts *Tensor) _TestAutogradMultipleDispatchNtonly(b bool, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cb := int32(0)
 	if b {
 		cb = int32(1)
@@ -7356,8 +7356,8 @@ func (ts *Tensor) _TestAutogradMultipleDispatchView(del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TestAutogradMultipleDispatchView(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TestAutogradMultipleDispatchView() failed: %w", err)
@@ -7375,8 +7375,8 @@ func (ts *Tensor) _TestAutogradMultipleDispatchViewCopy(del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TestAutogradMultipleDispatchViewCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TestAutogradMultipleDispatchViewCopy() failed: %w", err)
@@ -7394,8 +7394,8 @@ func (ts *Tensor) _TestAutogradMultipleDispatchViewCopyOut(out *Tensor, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TestAutogradMultipleDispatchViewCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TestAutogradMultipleDispatchViewCopyOut() failed: %w", err)
@@ -7413,8 +7413,8 @@ func (ts *Tensor) _TestCheckTensor(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TestCheckTensor(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TestCheckTensor() failed: %w", err)
@@ -7432,8 +7432,8 @@ func (ts *Tensor) _TestFunctorchFallback(other *Tensor, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TestFunctorchFallback(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TestFunctorchFallback() failed: %w", err)
@@ -7451,8 +7451,8 @@ func (ts *Tensor) _TestFunctorchFallbackOut(out *Tensor, other *Tensor, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TestFunctorchFallbackOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TestFunctorchFallbackOut() failed: %w", err)
@@ -7467,8 +7467,8 @@ func (ts *Tensor) _TestFunctorchFallbackOut(out *Tensor, other *Tensor, del bool
 // --------------------------
 
 func _TestOptionalFilledIntlist(values *Tensor, addends []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	addendsLen := len(addends)
 	lib.Atg_TestOptionalFilledIntlist(ptr, values.ctensor, addends, addendsLen)
 	if err = TorchErr(); err != nil {
@@ -7484,8 +7484,8 @@ func _TestOptionalFilledIntlist(values *Tensor, addends []int64) (retVal *Tensor
 // --------------------------
 
 func _TestOptionalFilledIntlistOut(out *Tensor, values *Tensor, addends []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	addendsLen := len(addends)
 	lib.Atg_TestOptionalFilledIntlistOut(ptr, out.ctensor, values.ctensor, addends, addendsLen)
 	if err = TorchErr(); err != nil {
@@ -7501,8 +7501,8 @@ func _TestOptionalFilledIntlistOut(out *Tensor, values *Tensor, addends []int64)
 // --------------------------
 
 func _TestOptionalFloatlist(values *Tensor, addends []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	addendsLen := len(addends)
 	lib.Atg_TestOptionalFloatlist(ptr, values.ctensor, addends, addendsLen)
 	if err = TorchErr(); err != nil {
@@ -7518,8 +7518,8 @@ func _TestOptionalFloatlist(values *Tensor, addends []float64) (retVal *Tensor, 
 // --------------------------
 
 func _TestOptionalFloatlistOut(out *Tensor, values *Tensor, addends []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	addendsLen := len(addends)
 	lib.Atg_TestOptionalFloatlistOut(ptr, out.ctensor, values.ctensor, addends, addendsLen)
 	if err = TorchErr(); err != nil {
@@ -7535,8 +7535,8 @@ func _TestOptionalFloatlistOut(out *Tensor, values *Tensor, addends []float64) (
 // --------------------------
 
 func _TestOptionalIntlist(values *Tensor, addends []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	addendsLen := len(addends)
 	lib.Atg_TestOptionalIntlist(ptr, values.ctensor, addends, addendsLen)
 	if err = TorchErr(); err != nil {
@@ -7552,8 +7552,8 @@ func _TestOptionalIntlist(values *Tensor, addends []int64) (retVal *Tensor, err 
 // --------------------------
 
 func _TestOptionalIntlistOut(out *Tensor, values *Tensor, addends []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	addendsLen := len(addends)
 	lib.Atg_TestOptionalIntlistOut(ptr, out.ctensor, values.ctensor, addends, addendsLen)
 	if err = TorchErr(); err != nil {
@@ -7572,8 +7572,8 @@ func (ts *Tensor) _TestSerializationSubcmul(other *Tensor, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TestSerializationSubcmul(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TestSerializationSubcmul() failed: %w", err)
@@ -7588,8 +7588,8 @@ func (ts *Tensor) _TestSerializationSubcmul(other *Tensor, del bool) (retVal *Te
 // --------------------------
 
 func _TestStringDefault(dummy *Tensor, a string, b string) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TestStringDefault(ptr, dummy.ctensor, a, b)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TestStringDefault() failed: %w", err)
@@ -7607,8 +7607,8 @@ func (ts *Tensor) _TestWarnInAutograd(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TestWarnInAutograd(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TestWarnInAutograd() failed: %w", err)
@@ -7626,8 +7626,8 @@ func (ts *Tensor) _TestWarnInAutogradOut(out *Tensor, del bool) (retVal *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TestWarnInAutogradOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TestWarnInAutogradOut() failed: %w", err)
@@ -7645,8 +7645,8 @@ func (ts *Tensor) _ToCopy(optionsKind gotch.DType, optionsDevice gotch.Device, n
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -7668,8 +7668,8 @@ func (ts *Tensor) _ToCopyOut(out *Tensor, nonBlocking bool, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -7691,8 +7691,8 @@ func (ts *Tensor) _ToDense(dtype gotch.DType, maskedGrad bool, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cmaskedGrad := int32(0)
 	if maskedGrad {
 		cmaskedGrad = int32(1)
@@ -7714,8 +7714,8 @@ func (ts *Tensor) _ToDenseOut(out *Tensor, dtype gotch.DType, maskedGrad bool, d
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cmaskedGrad := int32(0)
 	if maskedGrad {
 		cmaskedGrad = int32(1)
@@ -7737,8 +7737,8 @@ func (ts *Tensor) _ToSparse(layout Layout, blocksize []int64, denseDim []int64, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	blocksizeLen := len(blocksize)
 	var cdenseDimVal int64 = 0
 	var cdenseDimNull int = 1
@@ -7763,8 +7763,8 @@ func (ts *Tensor) _ToSparseBsc(blocksize []int64, denseDim []int64, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	blocksizeLen := len(blocksize)
 	var cdenseDimVal int64 = 0
 	var cdenseDimNull int = 1
@@ -7789,8 +7789,8 @@ func (ts *Tensor) _ToSparseBscOut(out *Tensor, blocksize []int64, denseDim []int
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	blocksizeLen := len(blocksize)
 	var cdenseDimVal int64 = 0
 	var cdenseDimNull int = 1
@@ -7815,8 +7815,8 @@ func (ts *Tensor) _ToSparseBsr(blocksize []int64, denseDim []int64, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	blocksizeLen := len(blocksize)
 	var cdenseDimVal int64 = 0
 	var cdenseDimNull int = 1
@@ -7841,8 +7841,8 @@ func (ts *Tensor) _ToSparseBsrOut(out *Tensor, blocksize []int64, denseDim []int
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	blocksizeLen := len(blocksize)
 	var cdenseDimVal int64 = 0
 	var cdenseDimNull int = 1
@@ -7867,8 +7867,8 @@ func (ts *Tensor) _ToSparseCsc(denseDim []int64, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdenseDimVal int64 = 0
 	var cdenseDimNull int = 1
 	if len(denseDim) > 0 {
@@ -7892,8 +7892,8 @@ func (ts *Tensor) _ToSparseCscOut(out *Tensor, denseDim []int64, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdenseDimVal int64 = 0
 	var cdenseDimNull int = 1
 	if len(denseDim) > 0 {
@@ -7917,8 +7917,8 @@ func (ts *Tensor) _ToSparseCsr(denseDim []int64, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdenseDimVal int64 = 0
 	var cdenseDimNull int = 1
 	if len(denseDim) > 0 {
@@ -7942,8 +7942,8 @@ func (ts *Tensor) _ToSparseCsrOut(out *Tensor, denseDim []int64, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdenseDimVal int64 = 0
 	var cdenseDimNull int = 1
 	if len(denseDim) > 0 {
@@ -7967,8 +7967,8 @@ func (ts *Tensor) _ToSparseOut(out *Tensor, layout Layout, blocksize []int64, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	blocksizeLen := len(blocksize)
 	var cdenseDimVal int64 = 0
 	var cdenseDimNull int = 1
@@ -8010,8 +8010,8 @@ func (ts *Tensor) _ToSparseSparseDim(sparseDim int64, del bool) (retVal *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_ToSparseSparseDim(ptr, ts.ctensor, sparseDim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_ToSparseSparseDim() failed: %w", err)
@@ -8029,8 +8029,8 @@ func (ts *Tensor) _ToSparseSparseDimOut(out *Tensor, sparseDim int64, del bool) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_ToSparseSparseDimOut(ptr, out.ctensor, ts.ctensor, sparseDim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_ToSparseSparseDimOut() failed: %w", err)
@@ -8083,8 +8083,8 @@ func _TransformBiasRescaleQkvOut(out0 *Tensor, out1 *Tensor, out2 *Tensor, qkv *
 // --------------------------
 
 func _TransformerEncoderLayerFwd(src *Tensor, embedDim int64, numHeads int64, qkvWeight *Tensor, qkvBias *Tensor, projWeight *Tensor, projBias *Tensor, useGelu bool, normFirst bool, eps float64, normWeight1 *Tensor, normBias1 *Tensor, normWeight2 *Tensor, normBias2 *Tensor, ffnWeight1 *Tensor, ffnBias1 *Tensor, ffnWeight2 *Tensor, ffnBias2 *Tensor, mask *Tensor, maskType []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cuseGelu := int32(0)
 	if useGelu {
 		cuseGelu = int32(1)
@@ -8113,8 +8113,8 @@ func _TransformerEncoderLayerFwd(src *Tensor, embedDim int64, numHeads int64, qk
 // --------------------------
 
 func _TransformerEncoderLayerFwdOut(out *Tensor, src *Tensor, embedDim int64, numHeads int64, qkvWeight *Tensor, qkvBias *Tensor, projWeight *Tensor, projBias *Tensor, useGelu bool, normFirst bool, eps float64, normWeight1 *Tensor, normBias1 *Tensor, normWeight2 *Tensor, normBias2 *Tensor, ffnWeight1 *Tensor, ffnBias1 *Tensor, ffnWeight2 *Tensor, ffnBias2 *Tensor, mask *Tensor, maskType []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cuseGelu := int32(0)
 	if useGelu {
 		cuseGelu = int32(1)
@@ -8143,8 +8143,8 @@ func _TransformerEncoderLayerFwdOut(out *Tensor, src *Tensor, embedDim int64, nu
 // --------------------------
 
 func _Trilinear(i1 *Tensor, i2 *Tensor, i3 *Tensor, expand1 []int64, expand2 []int64, expand3 []int64, sumdim []int64, unrollDim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	expand1Len := len(expand1)
 	expand2Len := len(expand2)
 	expand3Len := len(expand3)
@@ -8163,8 +8163,8 @@ func _Trilinear(i1 *Tensor, i2 *Tensor, i3 *Tensor, expand1 []int64, expand2 []i
 // --------------------------
 
 func _TrilinearOut(out *Tensor, i1 *Tensor, i2 *Tensor, i3 *Tensor, expand1 []int64, expand2 []int64, expand3 []int64, sumdim []int64, unrollDim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	expand1Len := len(expand1)
 	expand2Len := len(expand2)
 	expand3Len := len(expand3)
@@ -8183,8 +8183,8 @@ func _TrilinearOut(out *Tensor, i1 *Tensor, i2 *Tensor, i3 *Tensor, expand1 []in
 // --------------------------
 
 func _TritonMultiHeadAttention(query *Tensor, key *Tensor, value *Tensor, embedDim int64, numHead int64, qkvWeight *Tensor, qkvBias *Tensor, projWeight *Tensor, projBias *Tensor, mask *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TritonMultiHeadAttention(ptr, query.ctensor, key.ctensor, value.ctensor, embedDim, numHead, qkvWeight.ctensor, qkvBias.ctensor, projWeight.ctensor, projBias.ctensor, mask.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TritonMultiHeadAttention() failed: %w", err)
@@ -8199,8 +8199,8 @@ func _TritonMultiHeadAttention(query *Tensor, key *Tensor, value *Tensor, embedD
 // --------------------------
 
 func _TritonMultiHeadAttentionOut(out *Tensor, query *Tensor, key *Tensor, value *Tensor, embedDim int64, numHead int64, qkvWeight *Tensor, qkvBias *Tensor, projWeight *Tensor, projBias *Tensor, mask *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TritonMultiHeadAttentionOut(ptr, out.ctensor, query.ctensor, key.ctensor, value.ctensor, embedDim, numHead, qkvWeight.ctensor, qkvBias.ctensor, projWeight.ctensor, projBias.ctensor, mask.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TritonMultiHeadAttentionOut() failed: %w", err)
@@ -8215,8 +8215,8 @@ func _TritonMultiHeadAttentionOut(out *Tensor, query *Tensor, key *Tensor, value
 // --------------------------
 
 func _TritonScaledDotAttention(q *Tensor, k *Tensor, v *Tensor, dropoutP float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TritonScaledDotAttention(ptr, q.ctensor, k.ctensor, v.ctensor, dropoutP)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TritonScaledDotAttention() failed: %w", err)
@@ -8231,8 +8231,8 @@ func _TritonScaledDotAttention(q *Tensor, k *Tensor, v *Tensor, dropoutP float64
 // --------------------------
 
 func _TritonScaledDotAttentionOut(out *Tensor, q *Tensor, k *Tensor, v *Tensor, dropoutP float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_TritonScaledDotAttentionOut(ptr, out.ctensor, q.ctensor, k.ctensor, v.ctensor, dropoutP)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_TritonScaledDotAttentionOut() failed: %w", err)
@@ -8391,8 +8391,8 @@ func (ts *Tensor) _UnsafeIndex(indices []*Tensor, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cindices []lib.Ctensor
 	for _, t := range indices {
 		cindices = append(cindices, t.ctensor)
@@ -8414,8 +8414,8 @@ func (ts *Tensor) _UnsafeIndexPut(indices []*Tensor, values *Tensor, accumulate 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cindices []lib.Ctensor
 	for _, t := range indices {
 		cindices = append(cindices, t.ctensor)
@@ -8441,8 +8441,8 @@ func (ts *Tensor) _UnsafeView(size []int64, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_UnsafeView(ptr, ts.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -8461,8 +8461,8 @@ func (ts *Tensor) _UnsafeViewOut(out *Tensor, size []int64, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.Atg_UnsafeViewOut(ptr, out.ctensor, ts.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -8481,8 +8481,8 @@ func (ts *Tensor) _UpsampleBicubic2dAa(outputSize []int64, alignCorners bool, sc
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -8514,8 +8514,8 @@ func (ts *Tensor) _UpsampleBicubic2dAa(outputSize []int64, alignCorners bool, sc
 // --------------------------
 
 func _UpsampleBicubic2dAaBackward(gradOutput *Tensor, outputSize []int64, inputSize []int64, alignCorners bool, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	calignCorners := int32(0)
@@ -8548,8 +8548,8 @@ func _UpsampleBicubic2dAaBackward(gradOutput *Tensor, outputSize []int64, inputS
 // --------------------------
 
 func _UpsampleBicubic2dAaBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, outputSize []int64, inputSize []int64, alignCorners bool, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	calignCorners := int32(0)
@@ -8585,8 +8585,8 @@ func (ts *Tensor) _UpsampleBicubic2dAaOut(out *Tensor, outputSize []int64, align
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -8618,8 +8618,8 @@ func (ts *Tensor) _UpsampleBicubic2dAaOut(out *Tensor, outputSize []int64, align
 // --------------------------
 
 func _UpsampleBicubic2dAaVec(input *Tensor, outputSize []int64, alignCorners bool, scaleFactors []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -8643,8 +8643,8 @@ func (ts *Tensor) _UpsampleBilinear2dAa(outputSize []int64, alignCorners bool, s
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -8676,8 +8676,8 @@ func (ts *Tensor) _UpsampleBilinear2dAa(outputSize []int64, alignCorners bool, s
 // --------------------------
 
 func _UpsampleBilinear2dAaBackward(gradOutput *Tensor, outputSize []int64, inputSize []int64, alignCorners bool, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	calignCorners := int32(0)
@@ -8710,8 +8710,8 @@ func _UpsampleBilinear2dAaBackward(gradOutput *Tensor, outputSize []int64, input
 // --------------------------
 
 func _UpsampleBilinear2dAaBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, outputSize []int64, inputSize []int64, alignCorners bool, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	calignCorners := int32(0)
@@ -8747,8 +8747,8 @@ func (ts *Tensor) _UpsampleBilinear2dAaOut(out *Tensor, outputSize []int64, alig
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -8780,8 +8780,8 @@ func (ts *Tensor) _UpsampleBilinear2dAaOut(out *Tensor, outputSize []int64, alig
 // --------------------------
 
 func _UpsampleBilinear2dAaVec(input *Tensor, outputSize []int64, alignCorners bool, scaleFactors []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -8805,8 +8805,8 @@ func (ts *Tensor) _UpsampleNearestExact1d(outputSize []int64, scales []float64, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	var cscalesVal float64 = 0.0
 	var cscalesNull int = 1
@@ -8828,8 +8828,8 @@ func (ts *Tensor) _UpsampleNearestExact1d(outputSize []int64, scales []float64, 
 // --------------------------
 
 func _UpsampleNearestExact1dBackward(gradOutput *Tensor, outputSize []int64, inputSize []int64, scales []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	var cscalesVal float64 = 0.0
@@ -8852,8 +8852,8 @@ func _UpsampleNearestExact1dBackward(gradOutput *Tensor, outputSize []int64, inp
 // --------------------------
 
 func _UpsampleNearestExact1dBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, outputSize []int64, inputSize []int64, scales []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	var cscalesVal float64 = 0.0
@@ -8879,8 +8879,8 @@ func (ts *Tensor) _UpsampleNearestExact1dOut(out *Tensor, outputSize []int64, sc
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	var cscalesVal float64 = 0.0
 	var cscalesNull int = 1
@@ -8902,8 +8902,8 @@ func (ts *Tensor) _UpsampleNearestExact1dOut(out *Tensor, outputSize []int64, sc
 // --------------------------
 
 func _UpsampleNearestExact1dVec(input *Tensor, outputSize []int64, scaleFactors []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	scaleFactorsLen := len(scaleFactors)
 	lib.Atg_UpsampleNearestExact1dVec(ptr, input.ctensor, outputSize, outputSizeLen, scaleFactors, scaleFactorsLen)
@@ -8923,8 +8923,8 @@ func (ts *Tensor) _UpsampleNearestExact2d(outputSize []int64, scalesH []float64,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	var cscalesHVal float64 = 0.0
 	var cscalesHNull int = 1
@@ -8952,8 +8952,8 @@ func (ts *Tensor) _UpsampleNearestExact2d(outputSize []int64, scalesH []float64,
 // --------------------------
 
 func _UpsampleNearestExact2dBackward(gradOutput *Tensor, outputSize []int64, inputSize []int64, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	var cscalesHVal float64 = 0.0
@@ -8982,8 +8982,8 @@ func _UpsampleNearestExact2dBackward(gradOutput *Tensor, outputSize []int64, inp
 // --------------------------
 
 func _UpsampleNearestExact2dBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, outputSize []int64, inputSize []int64, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	var cscalesHVal float64 = 0.0
@@ -9015,8 +9015,8 @@ func (ts *Tensor) _UpsampleNearestExact2dOut(out *Tensor, outputSize []int64, sc
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	var cscalesHVal float64 = 0.0
 	var cscalesHNull int = 1
@@ -9044,8 +9044,8 @@ func (ts *Tensor) _UpsampleNearestExact2dOut(out *Tensor, outputSize []int64, sc
 // --------------------------
 
 func _UpsampleNearestExact2dVec(input *Tensor, outputSize []int64, scaleFactors []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	scaleFactorsLen := len(scaleFactors)
 	lib.Atg_UpsampleNearestExact2dVec(ptr, input.ctensor, outputSize, outputSizeLen, scaleFactors, scaleFactorsLen)
@@ -9065,8 +9065,8 @@ func (ts *Tensor) _UpsampleNearestExact3d(outputSize []int64, scalesD []float64,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	var cscalesDVal float64 = 0.0
 	var cscalesDNull int = 1
@@ -9100,8 +9100,8 @@ func (ts *Tensor) _UpsampleNearestExact3d(outputSize []int64, scalesD []float64,
 // --------------------------
 
 func _UpsampleNearestExact3dBackward(gradOutput *Tensor, outputSize []int64, inputSize []int64, scalesD []float64, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	var cscalesDVal float64 = 0.0
@@ -9136,8 +9136,8 @@ func _UpsampleNearestExact3dBackward(gradOutput *Tensor, outputSize []int64, inp
 // --------------------------
 
 func _UpsampleNearestExact3dBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, outputSize []int64, inputSize []int64, scalesD []float64, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	var cscalesDVal float64 = 0.0
@@ -9175,8 +9175,8 @@ func (ts *Tensor) _UpsampleNearestExact3dOut(out *Tensor, outputSize []int64, sc
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	var cscalesDVal float64 = 0.0
 	var cscalesDNull int = 1
@@ -9210,8 +9210,8 @@ func (ts *Tensor) _UpsampleNearestExact3dOut(out *Tensor, outputSize []int64, sc
 // --------------------------
 
 func _UpsampleNearestExact3dVec(input *Tensor, outputSize []int64, scaleFactors []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	scaleFactorsLen := len(scaleFactors)
 	lib.Atg_UpsampleNearestExact3dVec(ptr, input.ctensor, outputSize, outputSizeLen, scaleFactors, scaleFactorsLen)
@@ -9269,8 +9269,8 @@ func (ts *Tensor) _Values(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_Values(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_Values() failed: %w", err)
@@ -9288,8 +9288,8 @@ func (ts *Tensor) _ValuesCopy(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_ValuesCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_ValuesCopy() failed: %w", err)
@@ -9307,8 +9307,8 @@ func (ts *Tensor) _ValuesCopyOut(out *Tensor, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_ValuesCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_ValuesCopyOut() failed: %w", err)
@@ -9338,8 +9338,8 @@ func (ts *Tensor) _Version(del bool) (retVal int64, err error) {
 // --------------------------
 
 func _WeightNorm(v *Tensor, g *Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.Atg_WeightNorm(ptr, v.ctensor, g.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("_WeightNorm() failed: %w", err)
@@ -9442,8 +9442,8 @@ func (ts *Tensor) Abs(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAbs(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Abs() failed: %w", err)
@@ -9458,8 +9458,8 @@ func (ts *Tensor) Abs(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Abs_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAbs_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Abs_() failed: %w", err)
@@ -9477,8 +9477,8 @@ func (ts *Tensor) AbsOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAbsOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AbsOut() failed: %w", err)
@@ -9496,8 +9496,8 @@ func (ts *Tensor) Absolute(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAbsolute(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Absolute() failed: %w", err)
@@ -9512,8 +9512,8 @@ func (ts *Tensor) Absolute(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Absolute_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAbsolute_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Absolute_() failed: %w", err)
@@ -9531,8 +9531,8 @@ func (ts *Tensor) AbsoluteOut(out *Tensor, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAbsoluteOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AbsoluteOut() failed: %w", err)
@@ -9550,8 +9550,8 @@ func (ts *Tensor) Acos(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAcos(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Acos() failed: %w", err)
@@ -9566,8 +9566,8 @@ func (ts *Tensor) Acos(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Acos_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAcos_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Acos_() failed: %w", err)
@@ -9585,8 +9585,8 @@ func (ts *Tensor) AcosOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAcosOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AcosOut() failed: %w", err)
@@ -9604,8 +9604,8 @@ func (ts *Tensor) Acosh(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAcosh(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Acosh() failed: %w", err)
@@ -9620,8 +9620,8 @@ func (ts *Tensor) Acosh(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Acosh_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAcosh_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Acosh_() failed: %w", err)
@@ -9639,8 +9639,8 @@ func (ts *Tensor) AcoshOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAcoshOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AcoshOut() failed: %w", err)
@@ -9658,8 +9658,8 @@ func (ts *Tensor) AdaptiveAvgPool1d(outputSize []int64, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	lib.AtgAdaptiveAvgPool1d(ptr, ts.ctensor, outputSize, outputSizeLen)
 	if err = TorchErr(); err != nil {
@@ -9678,8 +9678,8 @@ func (ts *Tensor) AdaptiveAvgPool2d(outputSize []int64, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	lib.AtgAdaptiveAvgPool2d(ptr, ts.ctensor, outputSize, outputSizeLen)
 	if err = TorchErr(); err != nil {
@@ -9698,8 +9698,8 @@ func (ts *Tensor) AdaptiveAvgPool2dOut(out *Tensor, outputSize []int64, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	lib.AtgAdaptiveAvgPool2dOut(ptr, out.ctensor, ts.ctensor, outputSize, outputSizeLen)
 	if err = TorchErr(); err != nil {
@@ -9718,8 +9718,8 @@ func (ts *Tensor) AdaptiveAvgPool3d(outputSize []int64, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	lib.AtgAdaptiveAvgPool3d(ptr, ts.ctensor, outputSize, outputSizeLen)
 	if err = TorchErr(); err != nil {
@@ -9738,8 +9738,8 @@ func (ts *Tensor) AdaptiveAvgPool3dBackward(gradInput *Tensor, gradOutput *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAdaptiveAvgPool3dBackward(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AdaptiveAvgPool3dBackward() failed: %w", err)
@@ -9757,8 +9757,8 @@ func (ts *Tensor) AdaptiveAvgPool3dOut(out *Tensor, outputSize []int64, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	lib.AtgAdaptiveAvgPool3dOut(ptr, out.ctensor, ts.ctensor, outputSize, outputSizeLen)
 	if err = TorchErr(); err != nil {
@@ -9819,8 +9819,8 @@ func (ts *Tensor) AdaptiveMaxPool2dBackward(gradOutput *Tensor, indices *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAdaptiveMaxPool2dBackward(ptr, gradOutput.ctensor, ts.ctensor, indices.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AdaptiveMaxPool2dBackward() failed: %w", err)
@@ -9838,8 +9838,8 @@ func (ts *Tensor) AdaptiveMaxPool2dBackwardGradInput(gradInput *Tensor, gradOutp
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAdaptiveMaxPool2dBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, indices.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AdaptiveMaxPool2dBackwardGradInput() failed: %w", err)
@@ -9899,8 +9899,8 @@ func (ts *Tensor) AdaptiveMaxPool3dBackward(gradOutput *Tensor, indices *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAdaptiveMaxPool3dBackward(ptr, gradOutput.ctensor, ts.ctensor, indices.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AdaptiveMaxPool3dBackward() failed: %w", err)
@@ -9918,8 +9918,8 @@ func (ts *Tensor) AdaptiveMaxPool3dBackwardGradInput(gradInput *Tensor, gradOutp
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAdaptiveMaxPool3dBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, indices.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AdaptiveMaxPool3dBackwardGradInput() failed: %w", err)
@@ -9958,8 +9958,8 @@ func (ts *Tensor) Add(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAdd(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Add() failed: %w", err)
@@ -9974,8 +9974,8 @@ func (ts *Tensor) Add(other *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Add_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAdd_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Add_() failed: %w", err)
@@ -9993,8 +9993,8 @@ func (ts *Tensor) AddOut(out *Tensor, other *Tensor, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AddOut() failed: %w", err)
@@ -10012,8 +10012,8 @@ func (ts *Tensor) AddScalar(other *Scalar, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddScalar(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AddScalar() failed: %w", err)
@@ -10028,8 +10028,8 @@ func (ts *Tensor) AddScalar(other *Scalar, del bool) (retVal *Tensor, err error)
 // --------------------------
 
 func (ts *Tensor) AddScalar_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddScalar_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AddScalar_() failed: %w", err)
@@ -10047,8 +10047,8 @@ func (ts *Tensor) AddScalarOut(out *Tensor, other *Scalar, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AddScalarOut() failed: %w", err)
@@ -10066,8 +10066,8 @@ func (ts *Tensor) Addbmm(batch1 *Tensor, batch2 *Tensor, del bool) (retVal *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddbmm(ptr, ts.ctensor, batch1.ctensor, batch2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Addbmm() failed: %w", err)
@@ -10082,8 +10082,8 @@ func (ts *Tensor) Addbmm(batch1 *Tensor, batch2 *Tensor, del bool) (retVal *Tens
 // --------------------------
 
 func (ts *Tensor) Addbmm_(batch1 *Tensor, batch2 *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddbmm_(ptr, ts.ctensor, batch1.ctensor, batch2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Addbmm_() failed: %w", err)
@@ -10101,8 +10101,8 @@ func (ts *Tensor) AddbmmOut(out *Tensor, batch1 *Tensor, batch2 *Tensor, del boo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddbmmOut(ptr, out.ctensor, ts.ctensor, batch1.ctensor, batch2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AddbmmOut() failed: %w", err)
@@ -10120,8 +10120,8 @@ func (ts *Tensor) Addcdiv(tensor1 *Tensor, tensor2 *Tensor, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddcdiv(ptr, ts.ctensor, tensor1.ctensor, tensor2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Addcdiv() failed: %w", err)
@@ -10136,8 +10136,8 @@ func (ts *Tensor) Addcdiv(tensor1 *Tensor, tensor2 *Tensor, del bool) (retVal *T
 // --------------------------
 
 func (ts *Tensor) Addcdiv_(tensor1 *Tensor, tensor2 *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddcdiv_(ptr, ts.ctensor, tensor1.ctensor, tensor2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Addcdiv_() failed: %w", err)
@@ -10155,8 +10155,8 @@ func (ts *Tensor) AddcdivOut(out *Tensor, tensor1 *Tensor, tensor2 *Tensor, del 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddcdivOut(ptr, out.ctensor, ts.ctensor, tensor1.ctensor, tensor2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AddcdivOut() failed: %w", err)
@@ -10174,8 +10174,8 @@ func (ts *Tensor) Addcmul(tensor1 *Tensor, tensor2 *Tensor, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddcmul(ptr, ts.ctensor, tensor1.ctensor, tensor2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Addcmul() failed: %w", err)
@@ -10190,8 +10190,8 @@ func (ts *Tensor) Addcmul(tensor1 *Tensor, tensor2 *Tensor, del bool) (retVal *T
 // --------------------------
 
 func (ts *Tensor) Addcmul_(tensor1 *Tensor, tensor2 *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddcmul_(ptr, ts.ctensor, tensor1.ctensor, tensor2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Addcmul_() failed: %w", err)
@@ -10209,8 +10209,8 @@ func (ts *Tensor) AddcmulOut(out *Tensor, tensor1 *Tensor, tensor2 *Tensor, del 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddcmulOut(ptr, out.ctensor, ts.ctensor, tensor1.ctensor, tensor2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AddcmulOut() failed: %w", err)
@@ -10228,8 +10228,8 @@ func (ts *Tensor) Addmm(mat1 *Tensor, mat2 *Tensor, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddmm(ptr, ts.ctensor, mat1.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Addmm() failed: %w", err)
@@ -10244,8 +10244,8 @@ func (ts *Tensor) Addmm(mat1 *Tensor, mat2 *Tensor, del bool) (retVal *Tensor, e
 // --------------------------
 
 func (ts *Tensor) Addmm_(mat1 *Tensor, mat2 *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddmm_(ptr, ts.ctensor, mat1.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Addmm_() failed: %w", err)
@@ -10263,8 +10263,8 @@ func (ts *Tensor) AddmmOut(out *Tensor, mat1 *Tensor, mat2 *Tensor, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddmmOut(ptr, out.ctensor, ts.ctensor, mat1.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AddmmOut() failed: %w", err)
@@ -10282,8 +10282,8 @@ func (ts *Tensor) Addmv(mat *Tensor, vec *Tensor, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddmv(ptr, ts.ctensor, mat.ctensor, vec.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Addmv() failed: %w", err)
@@ -10298,8 +10298,8 @@ func (ts *Tensor) Addmv(mat *Tensor, vec *Tensor, del bool) (retVal *Tensor, err
 // --------------------------
 
 func (ts *Tensor) Addmv_(mat *Tensor, vec *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddmv_(ptr, ts.ctensor, mat.ctensor, vec.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Addmv_() failed: %w", err)
@@ -10317,8 +10317,8 @@ func (ts *Tensor) AddmvOut(out *Tensor, mat *Tensor, vec *Tensor, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddmvOut(ptr, out.ctensor, ts.ctensor, mat.ctensor, vec.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AddmvOut() failed: %w", err)
@@ -10336,8 +10336,8 @@ func (ts *Tensor) Addr(vec1 *Tensor, vec2 *Tensor, del bool) (retVal *Tensor, er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddr(ptr, ts.ctensor, vec1.ctensor, vec2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Addr() failed: %w", err)
@@ -10352,8 +10352,8 @@ func (ts *Tensor) Addr(vec1 *Tensor, vec2 *Tensor, del bool) (retVal *Tensor, er
 // --------------------------
 
 func (ts *Tensor) Addr_(vec1 *Tensor, vec2 *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddr_(ptr, ts.ctensor, vec1.ctensor, vec2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Addr_() failed: %w", err)
@@ -10371,8 +10371,8 @@ func (ts *Tensor) AddrOut(out *Tensor, vec1 *Tensor, vec2 *Tensor, del bool) (re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAddrOut(ptr, out.ctensor, ts.ctensor, vec1.ctensor, vec2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AddrOut() failed: %w", err)
@@ -10390,8 +10390,8 @@ func (ts *Tensor) Adjoint(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAdjoint(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Adjoint() failed: %w", err)
@@ -10406,8 +10406,8 @@ func (ts *Tensor) Adjoint(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func AffineGridGenerator(theta *Tensor, size []int64, alignCorners bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -10427,8 +10427,8 @@ func AffineGridGenerator(theta *Tensor, size []int64, alignCorners bool) (retVal
 // --------------------------
 
 func AffineGridGeneratorBackward(grad *Tensor, size []int64, alignCorners bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -10448,8 +10448,8 @@ func AffineGridGeneratorBackward(grad *Tensor, size []int64, alignCorners bool) 
 // --------------------------
 
 func AffineGridGeneratorOut(out *Tensor, theta *Tensor, size []int64, alignCorners bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -10472,8 +10472,8 @@ func (ts *Tensor) Alias(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAlias(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Alias() failed: %w", err)
@@ -10491,8 +10491,8 @@ func (ts *Tensor) AliasCopy(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAliasCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AliasCopy() failed: %w", err)
@@ -10510,8 +10510,8 @@ func (ts *Tensor) AliasCopyOut(out *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAliasCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AliasCopyOut() failed: %w", err)
@@ -10529,8 +10529,8 @@ func (ts *Tensor) AlignAs(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAlignAs(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AlignAs() failed: %w", err)
@@ -10548,8 +10548,8 @@ func (ts *Tensor) All(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAll(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("All() failed: %w", err)
@@ -10567,8 +10567,8 @@ func (ts *Tensor) AllAllOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAllAllOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AllAllOut() failed: %w", err)
@@ -10586,8 +10586,8 @@ func (ts *Tensor) AllDim(dim int64, keepdim bool, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ckeepdim := int32(0)
 	if keepdim {
 		ckeepdim = int32(1)
@@ -10609,8 +10609,8 @@ func (ts *Tensor) AllOut(out *Tensor, dim int64, keepdim bool, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ckeepdim := int32(0)
 	if keepdim {
 		ckeepdim = int32(1)
@@ -10648,8 +10648,8 @@ func (ts *Tensor) Allclose(other *Tensor, rtol float64, atol float64, equalNan b
 // --------------------------
 
 func AlphaDropout(input *Tensor, p float64, train bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctrain := int32(0)
 	if train {
 		ctrain = int32(1)
@@ -10668,8 +10668,8 @@ func AlphaDropout(input *Tensor, p float64, train bool) (retVal *Tensor, err err
 // --------------------------
 
 func (ts *Tensor) AlphaDropout_(p float64, train bool) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctrain := int32(0)
 	if train {
 		ctrain = int32(1)
@@ -10691,8 +10691,8 @@ func (ts *Tensor) Amax(dim []int64, keepdim bool, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -10715,8 +10715,8 @@ func (ts *Tensor) AmaxOut(out *Tensor, dim []int64, keepdim bool, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -10739,8 +10739,8 @@ func (ts *Tensor) Amin(dim []int64, keepdim bool, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -10763,8 +10763,8 @@ func (ts *Tensor) AminOut(out *Tensor, dim []int64, keepdim bool, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -10847,8 +10847,8 @@ func (ts *Tensor) Angle(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAngle(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Angle() failed: %w", err)
@@ -10866,8 +10866,8 @@ func (ts *Tensor) AngleOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAngleOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AngleOut() failed: %w", err)
@@ -10885,8 +10885,8 @@ func (ts *Tensor) Any(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAny(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Any() failed: %w", err)
@@ -10904,8 +10904,8 @@ func (ts *Tensor) AnyAllOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAnyAllOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AnyAllOut() failed: %w", err)
@@ -10923,8 +10923,8 @@ func (ts *Tensor) AnyDim(dim int64, keepdim bool, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ckeepdim := int32(0)
 	if keepdim {
 		ckeepdim = int32(1)
@@ -10946,8 +10946,8 @@ func (ts *Tensor) AnyOut(out *Tensor, dim int64, keepdim bool, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ckeepdim := int32(0)
 	if keepdim {
 		ckeepdim = int32(1)
@@ -10966,8 +10966,8 @@ func (ts *Tensor) AnyOut(out *Tensor, dim int64, keepdim bool, del bool) (retVal
 // --------------------------
 
 func Arange(end *Scalar, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArange(ptr, end.cscalar, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Arange() failed: %w", err)
@@ -10982,8 +10982,8 @@ func Arange(end *Scalar, optionsKind gotch.DType, optionsDevice gotch.Device) (r
 // --------------------------
 
 func ArangeStart(start *Scalar, end *Scalar, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArangeStart(ptr, start.cscalar, end.cscalar, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ArangeStart() failed: %w", err)
@@ -10998,8 +10998,8 @@ func ArangeStart(start *Scalar, end *Scalar, optionsKind gotch.DType, optionsDev
 // --------------------------
 
 func ArangeStartStep(start *Scalar, end *Scalar, step *Scalar, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArangeStartStep(ptr, start.cscalar, end.cscalar, step.cscalar, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ArangeStartStep() failed: %w", err)
@@ -11017,8 +11017,8 @@ func (ts *Tensor) Arccos(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArccos(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Arccos() failed: %w", err)
@@ -11033,8 +11033,8 @@ func (ts *Tensor) Arccos(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Arccos_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArccos_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Arccos_() failed: %w", err)
@@ -11052,8 +11052,8 @@ func (ts *Tensor) ArccosOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArccosOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ArccosOut() failed: %w", err)
@@ -11071,8 +11071,8 @@ func (ts *Tensor) Arccosh(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArccosh(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Arccosh() failed: %w", err)
@@ -11087,8 +11087,8 @@ func (ts *Tensor) Arccosh(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Arccosh_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArccosh_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Arccosh_() failed: %w", err)
@@ -11106,8 +11106,8 @@ func (ts *Tensor) ArccoshOut(out *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArccoshOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ArccoshOut() failed: %w", err)
@@ -11125,8 +11125,8 @@ func (ts *Tensor) Arcsin(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArcsin(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Arcsin() failed: %w", err)
@@ -11141,8 +11141,8 @@ func (ts *Tensor) Arcsin(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Arcsin_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArcsin_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Arcsin_() failed: %w", err)
@@ -11160,8 +11160,8 @@ func (ts *Tensor) ArcsinOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArcsinOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ArcsinOut() failed: %w", err)
@@ -11179,8 +11179,8 @@ func (ts *Tensor) Arcsinh(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArcsinh(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Arcsinh() failed: %w", err)
@@ -11195,8 +11195,8 @@ func (ts *Tensor) Arcsinh(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Arcsinh_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArcsinh_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Arcsinh_() failed: %w", err)
@@ -11214,8 +11214,8 @@ func (ts *Tensor) ArcsinhOut(out *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArcsinhOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ArcsinhOut() failed: %w", err)
@@ -11233,8 +11233,8 @@ func (ts *Tensor) Arctan(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArctan(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Arctan() failed: %w", err)
@@ -11252,8 +11252,8 @@ func (ts *Tensor) Arctan2(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArctan2(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Arctan2() failed: %w", err)
@@ -11268,8 +11268,8 @@ func (ts *Tensor) Arctan2(other *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Arctan2_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArctan2_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Arctan2_() failed: %w", err)
@@ -11287,8 +11287,8 @@ func (ts *Tensor) Arctan2Out(out *Tensor, other *Tensor, del bool) (retVal *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArctan2Out(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Arctan2Out() failed: %w", err)
@@ -11303,8 +11303,8 @@ func (ts *Tensor) Arctan2Out(out *Tensor, other *Tensor, del bool) (retVal *Tens
 // --------------------------
 
 func (ts *Tensor) Arctan_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArctan_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Arctan_() failed: %w", err)
@@ -11322,8 +11322,8 @@ func (ts *Tensor) ArctanOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArctanOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ArctanOut() failed: %w", err)
@@ -11341,8 +11341,8 @@ func (ts *Tensor) Arctanh(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArctanh(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Arctanh() failed: %w", err)
@@ -11357,8 +11357,8 @@ func (ts *Tensor) Arctanh(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Arctanh_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArctanh_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Arctanh_() failed: %w", err)
@@ -11376,8 +11376,8 @@ func (ts *Tensor) ArctanhOut(out *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArctanhOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ArctanhOut() failed: %w", err)
@@ -11395,8 +11395,8 @@ func (ts *Tensor) Argmax(dim []int64, keepdim bool, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -11424,8 +11424,8 @@ func (ts *Tensor) ArgmaxOut(out *Tensor, dim []int64, keepdim bool, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -11453,8 +11453,8 @@ func (ts *Tensor) Argmin(dim []int64, keepdim bool, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -11482,8 +11482,8 @@ func (ts *Tensor) ArgminOut(out *Tensor, dim []int64, keepdim bool, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -11511,8 +11511,8 @@ func (ts *Tensor) Argsort(dim int64, descending bool, del bool) (retVal *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cdescending := int32(0)
 	if descending {
 		cdescending = int32(1)
@@ -11534,8 +11534,8 @@ func (ts *Tensor) ArgsortStable(stable bool, dim int64, descending bool, del boo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cstable := int32(0)
 	if stable {
 		cstable = int32(1)
@@ -11561,8 +11561,8 @@ func (ts *Tensor) ArgsortStableOut(out *Tensor, stable bool, dim int64, descendi
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cstable := int32(0)
 	if stable {
 		cstable = int32(1)
@@ -11588,8 +11588,8 @@ func (ts *Tensor) Argwhere(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgArgwhere(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Argwhere() failed: %w", err)
@@ -11607,8 +11607,8 @@ func (ts *Tensor) AsStrided(size []int64, stride []int64, storageOffset []int64,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	strideLen := len(stride)
 	var cstorageOffsetVal int64 = 0
@@ -11631,8 +11631,8 @@ func (ts *Tensor) AsStrided(size []int64, stride []int64, storageOffset []int64,
 // --------------------------
 
 func (ts *Tensor) AsStrided_(size []int64, stride []int64, storageOffset []int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	strideLen := len(stride)
 	var cstorageOffsetVal int64 = 0
@@ -11658,8 +11658,8 @@ func (ts *Tensor) AsStridedCopy(size []int64, stride []int64, storageOffset []in
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	strideLen := len(stride)
 	var cstorageOffsetVal int64 = 0
@@ -11685,8 +11685,8 @@ func (ts *Tensor) AsStridedCopyOut(out *Tensor, size []int64, stride []int64, st
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	strideLen := len(stride)
 	var cstorageOffsetVal int64 = 0
@@ -11712,8 +11712,8 @@ func (ts *Tensor) AsStridedScatter(src *Tensor, size []int64, stride []int64, st
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	strideLen := len(stride)
 	var cstorageOffsetVal int64 = 0
@@ -11739,8 +11739,8 @@ func (ts *Tensor) AsStridedScatterOut(out *Tensor, src *Tensor, size []int64, st
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	strideLen := len(stride)
 	var cstorageOffsetVal int64 = 0
@@ -11766,8 +11766,8 @@ func (ts *Tensor) Asin(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAsin(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Asin() failed: %w", err)
@@ -11782,8 +11782,8 @@ func (ts *Tensor) Asin(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Asin_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAsin_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Asin_() failed: %w", err)
@@ -11801,8 +11801,8 @@ func (ts *Tensor) AsinOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAsinOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AsinOut() failed: %w", err)
@@ -11820,8 +11820,8 @@ func (ts *Tensor) Asinh(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAsinh(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Asinh() failed: %w", err)
@@ -11836,8 +11836,8 @@ func (ts *Tensor) Asinh(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Asinh_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAsinh_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Asinh_() failed: %w", err)
@@ -11855,8 +11855,8 @@ func (ts *Tensor) AsinhOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAsinhOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AsinhOut() failed: %w", err)
@@ -11874,8 +11874,8 @@ func (ts *Tensor) Atan(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAtan(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Atan() failed: %w", err)
@@ -11893,8 +11893,8 @@ func (ts *Tensor) Atan2(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAtan2(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Atan2() failed: %w", err)
@@ -11909,8 +11909,8 @@ func (ts *Tensor) Atan2(other *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Atan2_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAtan2_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Atan2_() failed: %w", err)
@@ -11928,8 +11928,8 @@ func (ts *Tensor) Atan2Out(out *Tensor, other *Tensor, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAtan2Out(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Atan2Out() failed: %w", err)
@@ -11944,8 +11944,8 @@ func (ts *Tensor) Atan2Out(out *Tensor, other *Tensor, del bool) (retVal *Tensor
 // --------------------------
 
 func (ts *Tensor) Atan_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAtan_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Atan_() failed: %w", err)
@@ -11963,8 +11963,8 @@ func (ts *Tensor) AtanOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAtanOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AtanOut() failed: %w", err)
@@ -11982,8 +11982,8 @@ func (ts *Tensor) Atanh(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAtanh(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Atanh() failed: %w", err)
@@ -11998,8 +11998,8 @@ func (ts *Tensor) Atanh(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Atanh_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAtanh_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Atanh_() failed: %w", err)
@@ -12017,8 +12017,8 @@ func (ts *Tensor) AtanhOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAtanhOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("AtanhOut() failed: %w", err)
@@ -12036,8 +12036,8 @@ func (ts *Tensor) Atleast1d(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAtleast1d(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Atleast1d() failed: %w", err)
@@ -12055,8 +12055,8 @@ func (ts *Tensor) Atleast2d(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAtleast2d(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Atleast2d() failed: %w", err)
@@ -12074,8 +12074,8 @@ func (ts *Tensor) Atleast3d(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgAtleast3d(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Atleast3d() failed: %w", err)
@@ -12093,8 +12093,8 @@ func (ts *Tensor) AvgPool1d(kernelSize []int64, stride []int64, padding []int64,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -12123,8 +12123,8 @@ func (ts *Tensor) AvgPool2d(kernelSize []int64, stride []int64, padding []int64,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -12159,8 +12159,8 @@ func (ts *Tensor) AvgPool2dBackward(gradOutput *Tensor, kernelSize []int64, stri
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -12195,8 +12195,8 @@ func (ts *Tensor) AvgPool2dBackwardGradInput(gradInput *Tensor, gradOutput *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -12231,8 +12231,8 @@ func (ts *Tensor) AvgPool2dOut(out *Tensor, kernelSize []int64, stride []int64, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -12267,8 +12267,8 @@ func (ts *Tensor) AvgPool3d(kernelSize []int64, stride []int64, padding []int64,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -12303,8 +12303,8 @@ func (ts *Tensor) AvgPool3dBackward(gradOutput *Tensor, kernelSize []int64, stri
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -12339,8 +12339,8 @@ func (ts *Tensor) AvgPool3dBackwardGradInput(gradInput *Tensor, gradOutput *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -12375,8 +12375,8 @@ func (ts *Tensor) AvgPool3dOut(out *Tensor, kernelSize []int64, stride []int64, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -12411,8 +12411,8 @@ func (ts *Tensor) Baddbmm(batch1 *Tensor, batch2 *Tensor, beta *Scalar, alpha *S
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBaddbmm(ptr, ts.ctensor, batch1.ctensor, batch2.ctensor, beta.cscalar, alpha.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Baddbmm() failed: %w", err)
@@ -12427,8 +12427,8 @@ func (ts *Tensor) Baddbmm(batch1 *Tensor, batch2 *Tensor, beta *Scalar, alpha *S
 // --------------------------
 
 func (ts *Tensor) Baddbmm_(batch1 *Tensor, batch2 *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBaddbmm_(ptr, ts.ctensor, batch1.ctensor, batch2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Baddbmm_() failed: %w", err)
@@ -12446,8 +12446,8 @@ func (ts *Tensor) BaddbmmOut(out *Tensor, batch1 *Tensor, batch2 *Tensor, del bo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBaddbmmOut(ptr, out.ctensor, ts.ctensor, batch1.ctensor, batch2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BaddbmmOut() failed: %w", err)
@@ -12462,8 +12462,8 @@ func (ts *Tensor) BaddbmmOut(out *Tensor, batch1 *Tensor, batch2 *Tensor, del bo
 // --------------------------
 
 func BartlettWindow(windowLength int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBartlettWindow(ptr, windowLength, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BartlettWindow() failed: %w", err)
@@ -12478,8 +12478,8 @@ func BartlettWindow(windowLength int64, optionsKind gotch.DType, optionsDevice g
 // --------------------------
 
 func BartlettWindowOut(out *Tensor, windowLength int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBartlettWindowOut(ptr, out.ctensor, windowLength)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BartlettWindowOut() failed: %w", err)
@@ -12494,8 +12494,8 @@ func BartlettWindowOut(out *Tensor, windowLength int64) (retVal *Tensor, err err
 // --------------------------
 
 func BartlettWindowPeriodic(windowLength int64, periodic bool, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cperiodic := int32(0)
 	if periodic {
 		cperiodic = int32(1)
@@ -12514,8 +12514,8 @@ func BartlettWindowPeriodic(windowLength int64, periodic bool, optionsKind gotch
 // --------------------------
 
 func BartlettWindowPeriodicOut(out *Tensor, windowLength int64, periodic bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cperiodic := int32(0)
 	if periodic {
 		cperiodic = int32(1)
@@ -12534,8 +12534,8 @@ func BartlettWindowPeriodicOut(out *Tensor, windowLength int64, periodic bool) (
 // --------------------------
 
 func BatchNorm(input *Tensor, weight *Tensor, bias *Tensor, runningMean *Tensor, runningVar *Tensor, training bool, momentum float64, eps float64, cudnnEnabled bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctraining := int32(0)
 	if training {
 		ctraining = int32(1)
@@ -12558,8 +12558,8 @@ func BatchNorm(input *Tensor, weight *Tensor, bias *Tensor, runningMean *Tensor,
 // --------------------------
 
 func BatchNormBackwardElemt(gradOut *Tensor, input *Tensor, mean *Tensor, invstd *Tensor, weight *Tensor, sumDy *Tensor, sumDyXmu *Tensor, count *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBatchNormBackwardElemt(ptr, gradOut.ctensor, input.ctensor, mean.ctensor, invstd.ctensor, weight.ctensor, sumDy.ctensor, sumDyXmu.ctensor, count.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BatchNormBackwardElemt() failed: %w", err)
@@ -12574,8 +12574,8 @@ func BatchNormBackwardElemt(gradOut *Tensor, input *Tensor, mean *Tensor, invstd
 // --------------------------
 
 func BatchNormBackwardElemtOut(out *Tensor, gradOut *Tensor, input *Tensor, mean *Tensor, invstd *Tensor, weight *Tensor, sumDy *Tensor, sumDyXmu *Tensor, count *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBatchNormBackwardElemtOut(ptr, out.ctensor, gradOut.ctensor, input.ctensor, mean.ctensor, invstd.ctensor, weight.ctensor, sumDy.ctensor, sumDyXmu.ctensor, count.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BatchNormBackwardElemtOut() failed: %w", err)
@@ -12656,8 +12656,8 @@ func BatchNormBackwardReduceOut(out0 *Tensor, out1 *Tensor, out2 *Tensor, out3 *
 // --------------------------
 
 func BatchNormElemt(input *Tensor, weight *Tensor, bias *Tensor, mean *Tensor, invstd *Tensor, eps float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBatchNormElemt(ptr, input.ctensor, weight.ctensor, bias.ctensor, mean.ctensor, invstd.ctensor, eps)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BatchNormElemt() failed: %w", err)
@@ -12672,8 +12672,8 @@ func BatchNormElemt(input *Tensor, weight *Tensor, bias *Tensor, mean *Tensor, i
 // --------------------------
 
 func BatchNormElemtOut(out *Tensor, input *Tensor, weight *Tensor, bias *Tensor, mean *Tensor, invstd *Tensor, eps float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBatchNormElemtOut(ptr, out.ctensor, input.ctensor, weight.ctensor, bias.ctensor, mean.ctensor, invstd.ctensor, eps)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BatchNormElemtOut() failed: %w", err)
@@ -12827,8 +12827,8 @@ func (ts *Tensor) Bernoulli(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBernoulli(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Bernoulli() failed: %w", err)
@@ -12843,8 +12843,8 @@ func (ts *Tensor) Bernoulli(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Bernoulli_(p *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBernoulli_(ptr, ts.ctensor, p.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Bernoulli_() failed: %w", err)
@@ -12859,8 +12859,8 @@ func (ts *Tensor) Bernoulli_(p *Tensor) (err error) {
 // --------------------------
 
 func (ts *Tensor) BernoulliFloat_(p float64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBernoulliFloat_(ptr, ts.ctensor, p)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BernoulliFloat_() failed: %w", err)
@@ -12878,8 +12878,8 @@ func (ts *Tensor) BernoulliP(p float64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBernoulliP(ptr, ts.ctensor, p)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BernoulliP() failed: %w", err)
@@ -12897,8 +12897,8 @@ func (ts *Tensor) BernoulliTensor(p *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBernoulliTensor(ptr, ts.ctensor, p.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BernoulliTensor() failed: %w", err)
@@ -12913,8 +12913,8 @@ func (ts *Tensor) BernoulliTensor(p *Tensor, del bool) (retVal *Tensor, err erro
 // --------------------------
 
 func Bilinear(input1 *Tensor, input2 *Tensor, weight *Tensor, bias *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBilinear(ptr, input1.ctensor, input2.ctensor, weight.ctensor, bias.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Bilinear() failed: %w", err)
@@ -12932,8 +12932,8 @@ func (ts *Tensor) BinaryCrossEntropy(target *Tensor, weight *Tensor, reduction i
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBinaryCrossEntropy(ptr, ts.ctensor, target.ctensor, weight.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BinaryCrossEntropy() failed: %w", err)
@@ -12951,8 +12951,8 @@ func (ts *Tensor) BinaryCrossEntropyBackward(gradOutput *Tensor, target *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBinaryCrossEntropyBackward(ptr, gradOutput.ctensor, ts.ctensor, target.ctensor, weight.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BinaryCrossEntropyBackward() failed: %w", err)
@@ -12970,8 +12970,8 @@ func (ts *Tensor) BinaryCrossEntropyBackwardGradInput(gradInput *Tensor, gradOut
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBinaryCrossEntropyBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, target.ctensor, weight.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BinaryCrossEntropyBackwardGradInput() failed: %w", err)
@@ -12989,8 +12989,8 @@ func (ts *Tensor) BinaryCrossEntropyOut(out *Tensor, target *Tensor, weight *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBinaryCrossEntropyOut(ptr, out.ctensor, ts.ctensor, target.ctensor, weight.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BinaryCrossEntropyOut() failed: %w", err)
@@ -13008,8 +13008,8 @@ func (ts *Tensor) BinaryCrossEntropyWithLogits(target *Tensor, weight *Tensor, p
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBinaryCrossEntropyWithLogits(ptr, ts.ctensor, target.ctensor, weight.ctensor, posWeight.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BinaryCrossEntropyWithLogits() failed: %w", err)
@@ -13027,8 +13027,8 @@ func (ts *Tensor) BinaryCrossEntropyWithLogitsOut(out *Tensor, target *Tensor, w
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBinaryCrossEntropyWithLogitsOut(ptr, out.ctensor, ts.ctensor, target.ctensor, weight.ctensor, posWeight.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BinaryCrossEntropyWithLogitsOut() failed: %w", err)
@@ -13046,8 +13046,8 @@ func (ts *Tensor) Bincount(weights *Tensor, minlength int64, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBincount(ptr, ts.ctensor, weights.ctensor, minlength)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Bincount() failed: %w", err)
@@ -13065,8 +13065,8 @@ func (ts *Tensor) BincountOut(out *Tensor, weights *Tensor, minlength int64, del
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBincountOut(ptr, out.ctensor, ts.ctensor, weights.ctensor, minlength)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BincountOut() failed: %w", err)
@@ -13081,8 +13081,8 @@ func (ts *Tensor) BincountOut(out *Tensor, weights *Tensor, minlength int64, del
 // --------------------------
 
 func Binomial(count *Tensor, prob *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBinomial(ptr, count.ctensor, prob.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Binomial() failed: %w", err)
@@ -13097,8 +13097,8 @@ func Binomial(count *Tensor, prob *Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func BinomialOut(out *Tensor, count *Tensor, prob *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBinomialOut(ptr, out.ctensor, count.ctensor, prob.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BinomialOut() failed: %w", err)
@@ -13116,8 +13116,8 @@ func (ts *Tensor) BitwiseAnd(other *Scalar, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseAnd(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseAnd() failed: %w", err)
@@ -13132,8 +13132,8 @@ func (ts *Tensor) BitwiseAnd(other *Scalar, del bool) (retVal *Tensor, err error
 // --------------------------
 
 func (ts *Tensor) BitwiseAnd_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseAnd_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseAnd_() failed: %w", err)
@@ -13151,8 +13151,8 @@ func (ts *Tensor) BitwiseAndScalarOut(out *Tensor, other *Scalar, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseAndScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseAndScalarOut() failed: %w", err)
@@ -13167,8 +13167,8 @@ func (ts *Tensor) BitwiseAndScalarOut(out *Tensor, other *Scalar, del bool) (ret
 // --------------------------
 
 func BitwiseAndScalarTensor(selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseAndScalarTensor(ptr, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseAndScalarTensor() failed: %w", err)
@@ -13183,8 +13183,8 @@ func BitwiseAndScalarTensor(selfScalar *Scalar, other *Tensor) (retVal *Tensor, 
 // --------------------------
 
 func BitwiseAndScalarTensorOut(out *Tensor, selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseAndScalarTensorOut(ptr, out.ctensor, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseAndScalarTensorOut() failed: %w", err)
@@ -13202,8 +13202,8 @@ func (ts *Tensor) BitwiseAndTensor(other *Tensor, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseAndTensor(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseAndTensor() failed: %w", err)
@@ -13218,8 +13218,8 @@ func (ts *Tensor) BitwiseAndTensor(other *Tensor, del bool) (retVal *Tensor, err
 // --------------------------
 
 func (ts *Tensor) BitwiseAndTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseAndTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseAndTensor_() failed: %w", err)
@@ -13237,8 +13237,8 @@ func (ts *Tensor) BitwiseAndTensorOut(out *Tensor, other *Tensor, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseAndTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseAndTensorOut() failed: %w", err)
@@ -13256,8 +13256,8 @@ func (ts *Tensor) BitwiseLeftShift(other *Tensor, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseLeftShift(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseLeftShift() failed: %w", err)
@@ -13272,8 +13272,8 @@ func (ts *Tensor) BitwiseLeftShift(other *Tensor, del bool) (retVal *Tensor, err
 // --------------------------
 
 func (ts *Tensor) BitwiseLeftShift_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseLeftShift_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseLeftShift_() failed: %w", err)
@@ -13288,8 +13288,8 @@ func (ts *Tensor) BitwiseLeftShift_(other *Tensor) (err error) {
 // --------------------------
 
 func BitwiseLeftShiftScalarTensor(selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseLeftShiftScalarTensor(ptr, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseLeftShiftScalarTensor() failed: %w", err)
@@ -13304,8 +13304,8 @@ func BitwiseLeftShiftScalarTensor(selfScalar *Scalar, other *Tensor) (retVal *Te
 // --------------------------
 
 func BitwiseLeftShiftScalarTensorOut(out *Tensor, selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseLeftShiftScalarTensorOut(ptr, out.ctensor, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseLeftShiftScalarTensorOut() failed: %w", err)
@@ -13323,8 +13323,8 @@ func (ts *Tensor) BitwiseLeftShiftTensorOut(out *Tensor, other *Tensor, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseLeftShiftTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseLeftShiftTensorOut() failed: %w", err)
@@ -13342,8 +13342,8 @@ func (ts *Tensor) BitwiseLeftShiftTensorScalar(other *Scalar, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseLeftShiftTensorScalar(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseLeftShiftTensorScalar() failed: %w", err)
@@ -13358,8 +13358,8 @@ func (ts *Tensor) BitwiseLeftShiftTensorScalar(other *Scalar, del bool) (retVal 
 // --------------------------
 
 func (ts *Tensor) BitwiseLeftShiftTensorScalar_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseLeftShiftTensorScalar_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseLeftShiftTensorScalar_() failed: %w", err)
@@ -13377,8 +13377,8 @@ func (ts *Tensor) BitwiseLeftShiftTensorScalarOut(out *Tensor, other *Scalar, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseLeftShiftTensorScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseLeftShiftTensorScalarOut() failed: %w", err)
@@ -13396,8 +13396,8 @@ func (ts *Tensor) BitwiseNot(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseNot(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseNot() failed: %w", err)
@@ -13412,8 +13412,8 @@ func (ts *Tensor) BitwiseNot(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) BitwiseNot_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseNot_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseNot_() failed: %w", err)
@@ -13431,8 +13431,8 @@ func (ts *Tensor) BitwiseNotOut(out *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseNotOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseNotOut() failed: %w", err)
@@ -13450,8 +13450,8 @@ func (ts *Tensor) BitwiseOr(other *Scalar, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseOr(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseOr() failed: %w", err)
@@ -13466,8 +13466,8 @@ func (ts *Tensor) BitwiseOr(other *Scalar, del bool) (retVal *Tensor, err error)
 // --------------------------
 
 func (ts *Tensor) BitwiseOr_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseOr_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseOr_() failed: %w", err)
@@ -13485,8 +13485,8 @@ func (ts *Tensor) BitwiseOrScalarOut(out *Tensor, other *Scalar, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseOrScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseOrScalarOut() failed: %w", err)
@@ -13501,8 +13501,8 @@ func (ts *Tensor) BitwiseOrScalarOut(out *Tensor, other *Scalar, del bool) (retV
 // --------------------------
 
 func BitwiseOrScalarTensor(selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseOrScalarTensor(ptr, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseOrScalarTensor() failed: %w", err)
@@ -13517,8 +13517,8 @@ func BitwiseOrScalarTensor(selfScalar *Scalar, other *Tensor) (retVal *Tensor, e
 // --------------------------
 
 func BitwiseOrScalarTensorOut(out *Tensor, selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseOrScalarTensorOut(ptr, out.ctensor, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseOrScalarTensorOut() failed: %w", err)
@@ -13536,8 +13536,8 @@ func (ts *Tensor) BitwiseOrTensor(other *Tensor, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseOrTensor(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseOrTensor() failed: %w", err)
@@ -13552,8 +13552,8 @@ func (ts *Tensor) BitwiseOrTensor(other *Tensor, del bool) (retVal *Tensor, err 
 // --------------------------
 
 func (ts *Tensor) BitwiseOrTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseOrTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseOrTensor_() failed: %w", err)
@@ -13571,8 +13571,8 @@ func (ts *Tensor) BitwiseOrTensorOut(out *Tensor, other *Tensor, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseOrTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseOrTensorOut() failed: %w", err)
@@ -13590,8 +13590,8 @@ func (ts *Tensor) BitwiseRightShift(other *Tensor, del bool) (retVal *Tensor, er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseRightShift(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseRightShift() failed: %w", err)
@@ -13606,8 +13606,8 @@ func (ts *Tensor) BitwiseRightShift(other *Tensor, del bool) (retVal *Tensor, er
 // --------------------------
 
 func (ts *Tensor) BitwiseRightShift_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseRightShift_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseRightShift_() failed: %w", err)
@@ -13622,8 +13622,8 @@ func (ts *Tensor) BitwiseRightShift_(other *Tensor) (err error) {
 // --------------------------
 
 func BitwiseRightShiftScalarTensor(selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseRightShiftScalarTensor(ptr, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseRightShiftScalarTensor() failed: %w", err)
@@ -13638,8 +13638,8 @@ func BitwiseRightShiftScalarTensor(selfScalar *Scalar, other *Tensor) (retVal *T
 // --------------------------
 
 func BitwiseRightShiftScalarTensorOut(out *Tensor, selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseRightShiftScalarTensorOut(ptr, out.ctensor, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseRightShiftScalarTensorOut() failed: %w", err)
@@ -13657,8 +13657,8 @@ func (ts *Tensor) BitwiseRightShiftTensorOut(out *Tensor, other *Tensor, del boo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseRightShiftTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseRightShiftTensorOut() failed: %w", err)
@@ -13676,8 +13676,8 @@ func (ts *Tensor) BitwiseRightShiftTensorScalar(other *Scalar, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseRightShiftTensorScalar(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseRightShiftTensorScalar() failed: %w", err)
@@ -13692,8 +13692,8 @@ func (ts *Tensor) BitwiseRightShiftTensorScalar(other *Scalar, del bool) (retVal
 // --------------------------
 
 func (ts *Tensor) BitwiseRightShiftTensorScalar_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseRightShiftTensorScalar_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseRightShiftTensorScalar_() failed: %w", err)
@@ -13711,8 +13711,8 @@ func (ts *Tensor) BitwiseRightShiftTensorScalarOut(out *Tensor, other *Scalar, d
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseRightShiftTensorScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseRightShiftTensorScalarOut() failed: %w", err)
@@ -13730,8 +13730,8 @@ func (ts *Tensor) BitwiseXor(other *Scalar, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseXor(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseXor() failed: %w", err)
@@ -13746,8 +13746,8 @@ func (ts *Tensor) BitwiseXor(other *Scalar, del bool) (retVal *Tensor, err error
 // --------------------------
 
 func (ts *Tensor) BitwiseXor_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseXor_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseXor_() failed: %w", err)
@@ -13765,8 +13765,8 @@ func (ts *Tensor) BitwiseXorScalarOut(out *Tensor, other *Scalar, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseXorScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseXorScalarOut() failed: %w", err)
@@ -13781,8 +13781,8 @@ func (ts *Tensor) BitwiseXorScalarOut(out *Tensor, other *Scalar, del bool) (ret
 // --------------------------
 
 func BitwiseXorScalarTensor(selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseXorScalarTensor(ptr, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseXorScalarTensor() failed: %w", err)
@@ -13797,8 +13797,8 @@ func BitwiseXorScalarTensor(selfScalar *Scalar, other *Tensor) (retVal *Tensor, 
 // --------------------------
 
 func BitwiseXorScalarTensorOut(out *Tensor, selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseXorScalarTensorOut(ptr, out.ctensor, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseXorScalarTensorOut() failed: %w", err)
@@ -13816,8 +13816,8 @@ func (ts *Tensor) BitwiseXorTensor(other *Tensor, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseXorTensor(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseXorTensor() failed: %w", err)
@@ -13832,8 +13832,8 @@ func (ts *Tensor) BitwiseXorTensor(other *Tensor, del bool) (retVal *Tensor, err
 // --------------------------
 
 func (ts *Tensor) BitwiseXorTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseXorTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseXorTensor_() failed: %w", err)
@@ -13851,8 +13851,8 @@ func (ts *Tensor) BitwiseXorTensorOut(out *Tensor, other *Tensor, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBitwiseXorTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BitwiseXorTensorOut() failed: %w", err)
@@ -13867,8 +13867,8 @@ func (ts *Tensor) BitwiseXorTensorOut(out *Tensor, other *Tensor, del bool) (ret
 // --------------------------
 
 func BlackmanWindow(windowLength int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBlackmanWindow(ptr, windowLength, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BlackmanWindow() failed: %w", err)
@@ -13883,8 +13883,8 @@ func BlackmanWindow(windowLength int64, optionsKind gotch.DType, optionsDevice g
 // --------------------------
 
 func BlackmanWindowOut(out *Tensor, windowLength int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBlackmanWindowOut(ptr, out.ctensor, windowLength)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BlackmanWindowOut() failed: %w", err)
@@ -13899,8 +13899,8 @@ func BlackmanWindowOut(out *Tensor, windowLength int64) (retVal *Tensor, err err
 // --------------------------
 
 func BlackmanWindowPeriodic(windowLength int64, periodic bool, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cperiodic := int32(0)
 	if periodic {
 		cperiodic = int32(1)
@@ -13919,8 +13919,8 @@ func BlackmanWindowPeriodic(windowLength int64, periodic bool, optionsKind gotch
 // --------------------------
 
 func BlackmanWindowPeriodicOut(out *Tensor, windowLength int64, periodic bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cperiodic := int32(0)
 	if periodic {
 		cperiodic = int32(1)
@@ -13939,8 +13939,8 @@ func BlackmanWindowPeriodicOut(out *Tensor, windowLength int64, periodic bool) (
 // --------------------------
 
 func BlockDiag(tensors []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -13959,8 +13959,8 @@ func BlockDiag(tensors []*Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func BlockDiagOut(out *Tensor, tensors []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -13982,8 +13982,8 @@ func (ts *Tensor) Bmm(mat2 *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBmm(ptr, ts.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Bmm() failed: %w", err)
@@ -14001,8 +14001,8 @@ func (ts *Tensor) BmmOut(out *Tensor, mat2 *Tensor, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgBmmOut(ptr, out.ctensor, ts.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("BmmOut() failed: %w", err)
@@ -14020,8 +14020,8 @@ func (ts *Tensor) BroadcastTo(size []int64, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgBroadcastTo(ptr, ts.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -14040,8 +14040,8 @@ func (ts *Tensor) Bucketize(boundaries *Tensor, outInt32 bool, right bool, del b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	coutInt32 := int32(0)
 	if outInt32 {
 		coutInt32 = int32(1)
@@ -14064,8 +14064,8 @@ func (ts *Tensor) Bucketize(boundaries *Tensor, outInt32 bool, right bool, del b
 // --------------------------
 
 func BucketizeScalar(selfScalar *Scalar, boundaries *Tensor, outInt32 bool, right bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	coutInt32 := int32(0)
 	if outInt32 {
 		coutInt32 = int32(1)
@@ -14088,8 +14088,8 @@ func BucketizeScalar(selfScalar *Scalar, boundaries *Tensor, outInt32 bool, righ
 // --------------------------
 
 func BucketizeScalarOut(out *Tensor, selfScalar *Scalar, boundaries *Tensor, outInt32 bool, right bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	coutInt32 := int32(0)
 	if outInt32 {
 		coutInt32 = int32(1)
@@ -14115,8 +14115,8 @@ func (ts *Tensor) BucketizeTensorOut(out *Tensor, boundaries *Tensor, outInt32 b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	coutInt32 := int32(0)
 	if outInt32 {
 		coutInt32 = int32(1)
@@ -14151,8 +14151,8 @@ func CanCast(from gotch.DType, to gotch.DType) (retVal bool, err error) {
 // --------------------------
 
 func CartesianProd(tensors []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -14171,8 +14171,8 @@ func CartesianProd(tensors []*Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func Cat(tensors []*Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -14191,8 +14191,8 @@ func Cat(tensors []*Tensor, dim int64) (retVal *Tensor, err error) {
 // --------------------------
 
 func CatOut(out *Tensor, tensors []*Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -14214,8 +14214,8 @@ func (ts *Tensor) Cauchy(median float64, sigma float64, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCauchy(ptr, ts.ctensor, median, sigma)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Cauchy() failed: %w", err)
@@ -14230,8 +14230,8 @@ func (ts *Tensor) Cauchy(median float64, sigma float64, del bool) (retVal *Tenso
 // --------------------------
 
 func (ts *Tensor) Cauchy_(median float64, sigma float64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCauchy_(ptr, ts.ctensor, median, sigma)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Cauchy_() failed: %w", err)
@@ -14249,8 +14249,8 @@ func (ts *Tensor) CauchyOut(out *Tensor, median float64, sigma float64, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCauchyOut(ptr, out.ctensor, ts.ctensor, median, sigma)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CauchyOut() failed: %w", err)
@@ -14268,8 +14268,8 @@ func (ts *Tensor) CcolIndices(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCcolIndices(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CcolIndices() failed: %w", err)
@@ -14287,8 +14287,8 @@ func (ts *Tensor) CcolIndicesCopy(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCcolIndicesCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CcolIndicesCopy() failed: %w", err)
@@ -14306,8 +14306,8 @@ func (ts *Tensor) CcolIndicesCopyOut(out *Tensor, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCcolIndicesCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CcolIndicesCopyOut() failed: %w", err)
@@ -14322,8 +14322,8 @@ func (ts *Tensor) CcolIndicesCopyOut(out *Tensor, del bool) (retVal *Tensor, err
 // --------------------------
 
 func Cdist(x1 *Tensor, x2 *Tensor, p float64, computeMode []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ccomputeModeVal int64 = 0
 	var ccomputeModeNull int = 1
 	if len(computeMode) > 0 {
@@ -14347,8 +14347,8 @@ func (ts *Tensor) Ceil(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCeil(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Ceil() failed: %w", err)
@@ -14363,8 +14363,8 @@ func (ts *Tensor) Ceil(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Ceil_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCeil_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Ceil_() failed: %w", err)
@@ -14382,8 +14382,8 @@ func (ts *Tensor) CeilOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCeilOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CeilOut() failed: %w", err)
@@ -14401,8 +14401,8 @@ func (ts *Tensor) Celu(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCelu(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Celu() failed: %w", err)
@@ -14417,8 +14417,8 @@ func (ts *Tensor) Celu(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Celu_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCelu_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Celu_() failed: %w", err)
@@ -14436,8 +14436,8 @@ func (ts *Tensor) CeluOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCeluOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CeluOut() failed: %w", err)
@@ -14452,8 +14452,8 @@ func (ts *Tensor) CeluOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func ChainMatmul(matrices []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cmatrices []lib.Ctensor
 	for _, t := range matrices {
 		cmatrices = append(cmatrices, t.ctensor)
@@ -14472,8 +14472,8 @@ func ChainMatmul(matrices []*Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func ChainMatmulOut(out *Tensor, matrices []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cmatrices []lib.Ctensor
 	for _, t := range matrices {
 		cmatrices = append(cmatrices, t.ctensor)
@@ -14495,8 +14495,8 @@ func (ts *Tensor) Chalf(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgChalf(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Chalf() failed: %w", err)
@@ -14514,8 +14514,8 @@ func (ts *Tensor) ChannelShuffle(groups int64, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgChannelShuffle(ptr, ts.ctensor, groups)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ChannelShuffle() failed: %w", err)
@@ -14533,8 +14533,8 @@ func (ts *Tensor) ChannelShuffleOut(out *Tensor, groups int64, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgChannelShuffleOut(ptr, out.ctensor, ts.ctensor, groups)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ChannelShuffleOut() failed: %w", err)
@@ -14552,8 +14552,8 @@ func (ts *Tensor) Cholesky(upper bool, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cupper := int32(0)
 	if upper {
 		cupper = int32(1)
@@ -14575,8 +14575,8 @@ func (ts *Tensor) CholeskyInverse(upper bool, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cupper := int32(0)
 	if upper {
 		cupper = int32(1)
@@ -14598,8 +14598,8 @@ func (ts *Tensor) CholeskyInverseOut(out *Tensor, upper bool, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cupper := int32(0)
 	if upper {
 		cupper = int32(1)
@@ -14621,8 +14621,8 @@ func (ts *Tensor) CholeskyOut(out *Tensor, upper bool, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cupper := int32(0)
 	if upper {
 		cupper = int32(1)
@@ -14644,8 +14644,8 @@ func (ts *Tensor) CholeskySolve(input2 *Tensor, upper bool, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cupper := int32(0)
 	if upper {
 		cupper = int32(1)
@@ -14667,8 +14667,8 @@ func (ts *Tensor) CholeskySolveOut(out *Tensor, input2 *Tensor, upper bool, del 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cupper := int32(0)
 	if upper {
 		cupper = int32(1)
@@ -14707,8 +14707,8 @@ func (ts *Tensor) Clamp(min *Scalar, max *Scalar, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClamp(ptr, ts.ctensor, min.cscalar, max.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Clamp() failed: %w", err)
@@ -14723,8 +14723,8 @@ func (ts *Tensor) Clamp(min *Scalar, max *Scalar, del bool) (retVal *Tensor, err
 // --------------------------
 
 func (ts *Tensor) Clamp_(min *Scalar, max *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClamp_(ptr, ts.ctensor, min.cscalar, max.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Clamp_() failed: %w", err)
@@ -14742,8 +14742,8 @@ func (ts *Tensor) ClampMax(max *Scalar, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClampMax(ptr, ts.ctensor, max.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClampMax() failed: %w", err)
@@ -14758,8 +14758,8 @@ func (ts *Tensor) ClampMax(max *Scalar, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) ClampMax_(max *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClampMax_(ptr, ts.ctensor, max.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClampMax_() failed: %w", err)
@@ -14777,8 +14777,8 @@ func (ts *Tensor) ClampMaxOut(out *Tensor, max *Scalar, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClampMaxOut(ptr, out.ctensor, ts.ctensor, max.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClampMaxOut() failed: %w", err)
@@ -14796,8 +14796,8 @@ func (ts *Tensor) ClampMaxTensor(max *Tensor, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClampMaxTensor(ptr, ts.ctensor, max.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClampMaxTensor() failed: %w", err)
@@ -14812,8 +14812,8 @@ func (ts *Tensor) ClampMaxTensor(max *Tensor, del bool) (retVal *Tensor, err err
 // --------------------------
 
 func (ts *Tensor) ClampMaxTensor_(max *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClampMaxTensor_(ptr, ts.ctensor, max.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClampMaxTensor_() failed: %w", err)
@@ -14831,8 +14831,8 @@ func (ts *Tensor) ClampMaxTensorOut(out *Tensor, max *Tensor, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClampMaxTensorOut(ptr, out.ctensor, ts.ctensor, max.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClampMaxTensorOut() failed: %w", err)
@@ -14850,8 +14850,8 @@ func (ts *Tensor) ClampMin(min *Scalar, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClampMin(ptr, ts.ctensor, min.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClampMin() failed: %w", err)
@@ -14866,8 +14866,8 @@ func (ts *Tensor) ClampMin(min *Scalar, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) ClampMin_(min *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClampMin_(ptr, ts.ctensor, min.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClampMin_() failed: %w", err)
@@ -14885,8 +14885,8 @@ func (ts *Tensor) ClampMinOut(out *Tensor, min *Scalar, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClampMinOut(ptr, out.ctensor, ts.ctensor, min.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClampMinOut() failed: %w", err)
@@ -14904,8 +14904,8 @@ func (ts *Tensor) ClampMinTensor(min *Tensor, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClampMinTensor(ptr, ts.ctensor, min.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClampMinTensor() failed: %w", err)
@@ -14920,8 +14920,8 @@ func (ts *Tensor) ClampMinTensor(min *Tensor, del bool) (retVal *Tensor, err err
 // --------------------------
 
 func (ts *Tensor) ClampMinTensor_(min *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClampMinTensor_(ptr, ts.ctensor, min.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClampMinTensor_() failed: %w", err)
@@ -14939,8 +14939,8 @@ func (ts *Tensor) ClampMinTensorOut(out *Tensor, min *Tensor, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClampMinTensorOut(ptr, out.ctensor, ts.ctensor, min.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClampMinTensorOut() failed: %w", err)
@@ -14958,8 +14958,8 @@ func (ts *Tensor) ClampOut(out *Tensor, min *Scalar, max *Scalar, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClampOut(ptr, out.ctensor, ts.ctensor, min.cscalar, max.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClampOut() failed: %w", err)
@@ -14977,8 +14977,8 @@ func (ts *Tensor) ClampTensor(min *Tensor, max *Tensor, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClampTensor(ptr, ts.ctensor, min.ctensor, max.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClampTensor() failed: %w", err)
@@ -14993,8 +14993,8 @@ func (ts *Tensor) ClampTensor(min *Tensor, max *Tensor, del bool) (retVal *Tenso
 // --------------------------
 
 func (ts *Tensor) ClampTensor_(min *Tensor, max *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClampTensor_(ptr, ts.ctensor, min.ctensor, max.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClampTensor_() failed: %w", err)
@@ -15012,8 +15012,8 @@ func (ts *Tensor) ClampTensorOut(out *Tensor, min *Tensor, max *Tensor, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClampTensorOut(ptr, out.ctensor, ts.ctensor, min.ctensor, max.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClampTensorOut() failed: %w", err)
@@ -15031,8 +15031,8 @@ func (ts *Tensor) Clip(min *Scalar, max *Scalar, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClip(ptr, ts.ctensor, min.cscalar, max.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Clip() failed: %w", err)
@@ -15047,8 +15047,8 @@ func (ts *Tensor) Clip(min *Scalar, max *Scalar, del bool) (retVal *Tensor, err 
 // --------------------------
 
 func (ts *Tensor) Clip_(min *Scalar, max *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClip_(ptr, ts.ctensor, min.cscalar, max.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Clip_() failed: %w", err)
@@ -15066,8 +15066,8 @@ func (ts *Tensor) ClipOut(out *Tensor, min *Scalar, max *Scalar, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClipOut(ptr, out.ctensor, ts.ctensor, min.cscalar, max.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClipOut() failed: %w", err)
@@ -15085,8 +15085,8 @@ func (ts *Tensor) ClipTensor(min *Tensor, max *Tensor, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClipTensor(ptr, ts.ctensor, min.ctensor, max.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClipTensor() failed: %w", err)
@@ -15101,8 +15101,8 @@ func (ts *Tensor) ClipTensor(min *Tensor, max *Tensor, del bool) (retVal *Tensor
 // --------------------------
 
 func (ts *Tensor) ClipTensor_(min *Tensor, max *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClipTensor_(ptr, ts.ctensor, min.ctensor, max.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClipTensor_() failed: %w", err)
@@ -15120,8 +15120,8 @@ func (ts *Tensor) ClipTensorOut(out *Tensor, min *Tensor, max *Tensor, del bool)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClipTensorOut(ptr, out.ctensor, ts.ctensor, min.ctensor, max.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ClipTensorOut() failed: %w", err)
@@ -15139,8 +15139,8 @@ func (ts *Tensor) Clone(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgClone(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Clone() failed: %w", err)
@@ -15158,8 +15158,8 @@ func (ts *Tensor) Coalesce(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCoalesce(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Coalesce() failed: %w", err)
@@ -15177,8 +15177,8 @@ func (ts *Tensor) Col2im(outputSize []int64, kernelSize []int64, dilation []int6
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	kernelSizeLen := len(kernelSize)
 	dilationLen := len(dilation)
@@ -15201,8 +15201,8 @@ func (ts *Tensor) Col2imOut(out *Tensor, outputSize []int64, kernelSize []int64,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	kernelSizeLen := len(kernelSize)
 	dilationLen := len(dilation)
@@ -15225,8 +15225,8 @@ func (ts *Tensor) ColIndices(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgColIndices(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ColIndices() failed: %w", err)
@@ -15244,8 +15244,8 @@ func (ts *Tensor) ColIndicesCopy(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgColIndicesCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ColIndicesCopy() failed: %w", err)
@@ -15263,8 +15263,8 @@ func (ts *Tensor) ColIndicesCopyOut(out *Tensor, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgColIndicesCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ColIndicesCopyOut() failed: %w", err)
@@ -15279,8 +15279,8 @@ func (ts *Tensor) ColIndicesCopyOut(out *Tensor, del bool) (retVal *Tensor, err 
 // --------------------------
 
 func ColumnStack(tensors []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -15299,8 +15299,8 @@ func ColumnStack(tensors []*Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func ColumnStackOut(out *Tensor, tensors []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -15322,8 +15322,8 @@ func (ts *Tensor) Combinations(r int64, withReplacement bool, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cwithReplacement := int32(0)
 	if withReplacement {
 		cwithReplacement = int32(1)
@@ -15342,8 +15342,8 @@ func (ts *Tensor) Combinations(r int64, withReplacement bool, del bool) (retVal 
 // --------------------------
 
 func Complex(real *Tensor, imag *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgComplex(ptr, real.ctensor, imag.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Complex() failed: %w", err)
@@ -15358,8 +15358,8 @@ func Complex(real *Tensor, imag *Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func ComplexOut(out *Tensor, real *Tensor, imag *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgComplexOut(ptr, out.ctensor, real.ctensor, imag.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ComplexOut() failed: %w", err)
@@ -15374,8 +15374,8 @@ func ComplexOut(out *Tensor, real *Tensor, imag *Tensor) (retVal *Tensor, err er
 // --------------------------
 
 func Concat(tensors []*Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -15394,8 +15394,8 @@ func Concat(tensors []*Tensor, dim int64) (retVal *Tensor, err error) {
 // --------------------------
 
 func ConcatOut(out *Tensor, tensors []*Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -15414,8 +15414,8 @@ func ConcatOut(out *Tensor, tensors []*Tensor, dim int64) (retVal *Tensor, err e
 // --------------------------
 
 func Concatenate(tensors []*Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -15434,8 +15434,8 @@ func Concatenate(tensors []*Tensor, dim int64) (retVal *Tensor, err error) {
 // --------------------------
 
 func ConcatenateOut(out *Tensor, tensors []*Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -15457,8 +15457,8 @@ func (ts *Tensor) Conj(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgConj(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Conj() failed: %w", err)
@@ -15476,8 +15476,8 @@ func (ts *Tensor) ConjPhysical(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgConjPhysical(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ConjPhysical() failed: %w", err)
@@ -15492,8 +15492,8 @@ func (ts *Tensor) ConjPhysical(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) ConjPhysical_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgConjPhysical_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ConjPhysical_() failed: %w", err)
@@ -15511,8 +15511,8 @@ func (ts *Tensor) ConjPhysicalOut(out *Tensor, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgConjPhysicalOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ConjPhysicalOut() failed: %w", err)
@@ -15530,8 +15530,8 @@ func (ts *Tensor) ConstantPadNd(pad []int64, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	padLen := len(pad)
 	lib.AtgConstantPadNd(ptr, ts.ctensor, pad, padLen)
 	if err = TorchErr(); err != nil {
@@ -15550,8 +15550,8 @@ func (ts *Tensor) ConstantPadNdOut(out *Tensor, pad []int64, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	padLen := len(pad)
 	lib.AtgConstantPadNdOut(ptr, out.ctensor, ts.ctensor, pad, padLen)
 	if err = TorchErr(); err != nil {
@@ -15570,8 +15570,8 @@ func (ts *Tensor) Contiguous(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgContiguous(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Contiguous() failed: %w", err)
@@ -15586,8 +15586,8 @@ func (ts *Tensor) Contiguous(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func Conv1d(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding []int64, dilation []int64, groups int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	dilationLen := len(dilation)
@@ -15605,8 +15605,8 @@ func Conv1d(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding
 // --------------------------
 
 func Conv1dPadding(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding string, dilation []int64, groups int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	dilationLen := len(dilation)
 	lib.AtgConv1dPadding(ptr, input.ctensor, weight.ctensor, bias.ctensor, stride, strideLen, padding, dilation, dilationLen, groups)
@@ -15623,8 +15623,8 @@ func Conv1dPadding(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, 
 // --------------------------
 
 func Conv2d(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding []int64, dilation []int64, groups int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	dilationLen := len(dilation)
@@ -15642,8 +15642,8 @@ func Conv2d(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding
 // --------------------------
 
 func Conv2dPadding(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding string, dilation []int64, groups int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	dilationLen := len(dilation)
 	lib.AtgConv2dPadding(ptr, input.ctensor, weight.ctensor, bias.ctensor, stride, strideLen, padding, dilation, dilationLen, groups)
@@ -15660,8 +15660,8 @@ func Conv2dPadding(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, 
 // --------------------------
 
 func Conv3d(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding []int64, dilation []int64, groups int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	dilationLen := len(dilation)
@@ -15679,8 +15679,8 @@ func Conv3d(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding
 // --------------------------
 
 func Conv3dPadding(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding string, dilation []int64, groups int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	dilationLen := len(dilation)
 	lib.AtgConv3dPadding(ptr, input.ctensor, weight.ctensor, bias.ctensor, stride, strideLen, padding, dilation, dilationLen, groups)
@@ -15700,8 +15700,8 @@ func (ts *Tensor) ConvDepthwise3d(weight *Tensor, kernelSize []int64, bias *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -15723,8 +15723,8 @@ func (ts *Tensor) ConvDepthwise3dOut(out *Tensor, weight *Tensor, kernelSize []i
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -15746,8 +15746,8 @@ func (ts *Tensor) ConvTbc(weight *Tensor, bias *Tensor, pad int64, del bool) (re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgConvTbc(ptr, ts.ctensor, weight.ctensor, bias.ctensor, pad)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ConvTbc() failed: %w", err)
@@ -15787,8 +15787,8 @@ func (ts *Tensor) ConvTbcOut(out *Tensor, weight *Tensor, bias *Tensor, pad int6
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgConvTbcOut(ptr, out.ctensor, ts.ctensor, weight.ctensor, bias.ctensor, pad)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ConvTbcOut() failed: %w", err)
@@ -15803,8 +15803,8 @@ func (ts *Tensor) ConvTbcOut(out *Tensor, weight *Tensor, bias *Tensor, pad int6
 // --------------------------
 
 func ConvTranspose1d(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding []int64, outputPadding []int64, groups int64, dilation []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	outputPaddingLen := len(outputPadding)
@@ -15823,8 +15823,8 @@ func ConvTranspose1d(input *Tensor, weight *Tensor, bias *Tensor, stride []int64
 // --------------------------
 
 func ConvTranspose2d(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding []int64, outputPadding []int64, groups int64, dilation []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	outputPaddingLen := len(outputPadding)
@@ -15843,8 +15843,8 @@ func ConvTranspose2d(input *Tensor, weight *Tensor, bias *Tensor, stride []int64
 // --------------------------
 
 func ConvTranspose3d(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding []int64, outputPadding []int64, groups int64, dilation []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	outputPaddingLen := len(outputPadding)
@@ -15863,8 +15863,8 @@ func ConvTranspose3d(input *Tensor, weight *Tensor, bias *Tensor, stride []int64
 // --------------------------
 
 func Convolution(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding []int64, dilation []int64, transposed bool, outputPadding []int64, groups int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	dilationLen := len(dilation)
@@ -15887,8 +15887,8 @@ func Convolution(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, pa
 // --------------------------
 
 func ConvolutionOut(out *Tensor, input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding []int64, dilation []int64, transposed bool, outputPadding []int64, groups int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	dilationLen := len(dilation)
@@ -15911,8 +15911,8 @@ func ConvolutionOut(out *Tensor, input *Tensor, weight *Tensor, bias *Tensor, st
 // --------------------------
 
 func ConvolutionOverrideable(input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding []int64, dilation []int64, transposed bool, outputPadding []int64, groups int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	dilationLen := len(dilation)
@@ -15935,8 +15935,8 @@ func ConvolutionOverrideable(input *Tensor, weight *Tensor, bias *Tensor, stride
 // --------------------------
 
 func ConvolutionOverrideableOut(out *Tensor, input *Tensor, weight *Tensor, bias *Tensor, stride []int64, padding []int64, dilation []int64, transposed bool, outputPadding []int64, groups int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	dilationLen := len(dilation)
@@ -15962,8 +15962,8 @@ func (ts *Tensor) Copy(src *Tensor, nonBlocking bool, del bool) (retVal *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -15985,8 +15985,8 @@ func (ts *Tensor) CopyOut(out *Tensor, src *Tensor, nonBlocking bool, del bool) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -16008,8 +16008,8 @@ func (ts *Tensor) CopySparseToSparse(src *Tensor, nonBlocking bool, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -16028,8 +16028,8 @@ func (ts *Tensor) CopySparseToSparse(src *Tensor, nonBlocking bool, del bool) (r
 // --------------------------
 
 func (ts *Tensor) CopySparseToSparse_(src *Tensor, nonBlocking bool) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -16051,8 +16051,8 @@ func (ts *Tensor) CopySparseToSparseOut(out *Tensor, src *Tensor, nonBlocking bo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -16074,8 +16074,8 @@ func (ts *Tensor) Copysign(other *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCopysign(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Copysign() failed: %w", err)
@@ -16090,8 +16090,8 @@ func (ts *Tensor) Copysign(other *Tensor, del bool) (retVal *Tensor, err error) 
 // --------------------------
 
 func (ts *Tensor) Copysign_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCopysign_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Copysign_() failed: %w", err)
@@ -16109,8 +16109,8 @@ func (ts *Tensor) CopysignOut(out *Tensor, other *Tensor, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCopysignOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CopysignOut() failed: %w", err)
@@ -16128,8 +16128,8 @@ func (ts *Tensor) CopysignScalar(other *Scalar, del bool) (retVal *Tensor, err e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCopysignScalar(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CopysignScalar() failed: %w", err)
@@ -16144,8 +16144,8 @@ func (ts *Tensor) CopysignScalar(other *Scalar, del bool) (retVal *Tensor, err e
 // --------------------------
 
 func (ts *Tensor) CopysignScalar_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCopysignScalar_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CopysignScalar_() failed: %w", err)
@@ -16163,8 +16163,8 @@ func (ts *Tensor) CopysignScalarOut(out *Tensor, other *Scalar, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCopysignScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CopysignScalarOut() failed: %w", err)
@@ -16182,8 +16182,8 @@ func (ts *Tensor) Corrcoef(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCorrcoef(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Corrcoef() failed: %w", err)
@@ -16201,8 +16201,8 @@ func (ts *Tensor) Cos(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCos(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Cos() failed: %w", err)
@@ -16217,8 +16217,8 @@ func (ts *Tensor) Cos(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Cos_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCos_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Cos_() failed: %w", err)
@@ -16236,8 +16236,8 @@ func (ts *Tensor) CosOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCosOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CosOut() failed: %w", err)
@@ -16255,8 +16255,8 @@ func (ts *Tensor) Cosh(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCosh(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Cosh() failed: %w", err)
@@ -16271,8 +16271,8 @@ func (ts *Tensor) Cosh(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Cosh_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCosh_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Cosh_() failed: %w", err)
@@ -16290,8 +16290,8 @@ func (ts *Tensor) CoshOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCoshOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CoshOut() failed: %w", err)
@@ -16306,8 +16306,8 @@ func (ts *Tensor) CoshOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func CosineEmbeddingLoss(input1 *Tensor, input2 *Tensor, target *Tensor, margin float64, reduction int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCosineEmbeddingLoss(ptr, input1.ctensor, input2.ctensor, target.ctensor, margin, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CosineEmbeddingLoss() failed: %w", err)
@@ -16322,8 +16322,8 @@ func CosineEmbeddingLoss(input1 *Tensor, input2 *Tensor, target *Tensor, margin 
 // --------------------------
 
 func CosineSimilarity(x1 *Tensor, x2 *Tensor, dim int64, eps float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCosineSimilarity(ptr, x1.ctensor, x2.ctensor, dim, eps)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CosineSimilarity() failed: %w", err)
@@ -16341,8 +16341,8 @@ func (ts *Tensor) CountNonzero(dim []int64, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -16366,8 +16366,8 @@ func (ts *Tensor) CountNonzeroDimIntlist(dim []int64, del bool) (retVal *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	lib.AtgCountNonzeroDimIntlist(ptr, ts.ctensor, dim, dimLen)
 	if err = TorchErr(); err != nil {
@@ -16386,8 +16386,8 @@ func (ts *Tensor) CountNonzeroDimIntlistOut(out *Tensor, dim []int64, del bool) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	lib.AtgCountNonzeroDimIntlistOut(ptr, out.ctensor, ts.ctensor, dim, dimLen)
 	if err = TorchErr(); err != nil {
@@ -16406,8 +16406,8 @@ func (ts *Tensor) CountNonzeroOut(out *Tensor, dim []int64, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -16431,8 +16431,8 @@ func (ts *Tensor) Cov(correction int64, fweights *Tensor, aweights *Tensor, del 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCov(ptr, ts.ctensor, correction, fweights.ctensor, aweights.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Cov() failed: %w", err)
@@ -16450,8 +16450,8 @@ func (ts *Tensor) Cross(other *Tensor, dim []int64, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -16475,8 +16475,8 @@ func (ts *Tensor) CrossEntropyLoss(target *Tensor, weight *Tensor, reduction int
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCrossEntropyLoss(ptr, ts.ctensor, target.ctensor, weight.ctensor, reduction, ignoreIndex, labelSmoothing)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CrossEntropyLoss() failed: %w", err)
@@ -16494,8 +16494,8 @@ func (ts *Tensor) CrossOut(out *Tensor, other *Tensor, dim []int64, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -16519,8 +16519,8 @@ func (ts *Tensor) CrowIndices(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCrowIndices(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CrowIndices() failed: %w", err)
@@ -16538,8 +16538,8 @@ func (ts *Tensor) CrowIndicesCopy(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCrowIndicesCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CrowIndicesCopy() failed: %w", err)
@@ -16557,8 +16557,8 @@ func (ts *Tensor) CrowIndicesCopyOut(out *Tensor, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCrowIndicesCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CrowIndicesCopyOut() failed: %w", err)
@@ -16573,8 +16573,8 @@ func (ts *Tensor) CrowIndicesCopyOut(out *Tensor, del bool) (retVal *Tensor, err
 // --------------------------
 
 func CtcLoss(logProbs *Tensor, targets *Tensor, inputLengths []int64, targetLengths []int64, blank int64, reduction int64, zeroInfinity bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	inputLengthsLen := len(inputLengths)
 	targetLengthsLen := len(targetLengths)
 	czeroInfinity := int32(0)
@@ -16595,8 +16595,8 @@ func CtcLoss(logProbs *Tensor, targets *Tensor, inputLengths []int64, targetLeng
 // --------------------------
 
 func CtcLossTensor(logProbs *Tensor, targets *Tensor, inputLengths *Tensor, targetLengths *Tensor, blank int64, reduction int64, zeroInfinity bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	czeroInfinity := int32(0)
 	if zeroInfinity {
 		czeroInfinity = int32(1)
@@ -16615,8 +16615,8 @@ func CtcLossTensor(logProbs *Tensor, targets *Tensor, inputLengths *Tensor, targ
 // --------------------------
 
 func CudnnAffineGridGenerator(theta *Tensor, n int64, c int64, h int64, w int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCudnnAffineGridGenerator(ptr, theta.ctensor, n, c, h, w)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CudnnAffineGridGenerator() failed: %w", err)
@@ -16631,8 +16631,8 @@ func CudnnAffineGridGenerator(theta *Tensor, n int64, c int64, h int64, w int64)
 // --------------------------
 
 func CudnnAffineGridGeneratorBackward(grad *Tensor, n int64, c int64, h int64, w int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCudnnAffineGridGeneratorBackward(ptr, grad.ctensor, n, c, h, w)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CudnnAffineGridGeneratorBackward() failed: %w", err)
@@ -16647,8 +16647,8 @@ func CudnnAffineGridGeneratorBackward(grad *Tensor, n int64, c int64, h int64, w
 // --------------------------
 
 func CudnnAffineGridGeneratorBackwardOut(out *Tensor, grad *Tensor, n int64, c int64, h int64, w int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCudnnAffineGridGeneratorBackwardOut(ptr, out.ctensor, grad.ctensor, n, c, h, w)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CudnnAffineGridGeneratorBackwardOut() failed: %w", err)
@@ -16663,8 +16663,8 @@ func CudnnAffineGridGeneratorBackwardOut(out *Tensor, grad *Tensor, n int64, c i
 // --------------------------
 
 func CudnnAffineGridGeneratorOut(out *Tensor, theta *Tensor, n int64, c int64, h int64, w int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCudnnAffineGridGeneratorOut(ptr, out.ctensor, theta.ctensor, n, c, h, w)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CudnnAffineGridGeneratorOut() failed: %w", err)
@@ -16770,8 +16770,8 @@ func (ts *Tensor) CudnnConvolution(weight *Tensor, padding []int64, stride []int
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	strideLen := len(stride)
 	dilationLen := len(dilation)
@@ -16804,8 +16804,8 @@ func (ts *Tensor) CudnnConvolutionAddRelu(weight *Tensor, z *Tensor, alpha *Scal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	dilationLen := len(dilation)
@@ -16826,8 +16826,8 @@ func (ts *Tensor) CudnnConvolutionAddReluOut(out *Tensor, weight *Tensor, z *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	dilationLen := len(dilation)
@@ -16848,8 +16848,8 @@ func (ts *Tensor) CudnnConvolutionOut(out *Tensor, weight *Tensor, padding []int
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	strideLen := len(stride)
 	dilationLen := len(dilation)
@@ -16882,8 +16882,8 @@ func (ts *Tensor) CudnnConvolutionRelu(weight *Tensor, bias *Tensor, stride []in
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	dilationLen := len(dilation)
@@ -16904,8 +16904,8 @@ func (ts *Tensor) CudnnConvolutionReluOut(out *Tensor, weight *Tensor, bias *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	dilationLen := len(dilation)
@@ -16926,8 +16926,8 @@ func (ts *Tensor) CudnnConvolutionTranspose(weight *Tensor, padding []int64, out
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	outputPaddingLen := len(outputPadding)
 	strideLen := len(stride)
@@ -16961,8 +16961,8 @@ func (ts *Tensor) CudnnConvolutionTransposeOut(out *Tensor, weight *Tensor, padd
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	outputPaddingLen := len(outputPadding)
 	strideLen := len(stride)
@@ -16996,8 +16996,8 @@ func (ts *Tensor) CudnnGridSampler(grid *Tensor, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCudnnGridSampler(ptr, ts.ctensor, grid.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CudnnGridSampler() failed: %w", err)
@@ -17055,8 +17055,8 @@ func (ts *Tensor) CudnnGridSamplerOut(out *Tensor, grid *Tensor, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCudnnGridSamplerOut(ptr, out.ctensor, ts.ctensor, grid.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CudnnGridSamplerOut() failed: %w", err)
@@ -17126,8 +17126,8 @@ func (ts *Tensor) CummaxOut(values *Tensor, indices *Tensor, dim int64, del bool
 // --------------------------
 
 func CummaxminBackward(grad *Tensor, input *Tensor, indices *Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCummaxminBackward(ptr, grad.ctensor, input.ctensor, indices.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CummaxminBackward() failed: %w", err)
@@ -17185,8 +17185,8 @@ func (ts *Tensor) Cumprod(dim int64, dtype gotch.DType, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCumprod(ptr, ts.ctensor, dim, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Cumprod() failed: %w", err)
@@ -17201,8 +17201,8 @@ func (ts *Tensor) Cumprod(dim int64, dtype gotch.DType, del bool) (retVal *Tenso
 // --------------------------
 
 func (ts *Tensor) Cumprod_(dim int64, dtype gotch.DType) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCumprod_(ptr, ts.ctensor, dim, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Cumprod_() failed: %w", err)
@@ -17217,8 +17217,8 @@ func (ts *Tensor) Cumprod_(dim int64, dtype gotch.DType) (err error) {
 // --------------------------
 
 func CumprodBackward(grad *Tensor, input *Tensor, dim int64, output *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCumprodBackward(ptr, grad.ctensor, input.ctensor, dim, output.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CumprodBackward() failed: %w", err)
@@ -17236,8 +17236,8 @@ func (ts *Tensor) CumprodOut(out *Tensor, dim int64, dtype gotch.DType, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCumprodOut(ptr, out.ctensor, ts.ctensor, dim, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CumprodOut() failed: %w", err)
@@ -17255,8 +17255,8 @@ func (ts *Tensor) Cumsum(dim int64, dtype gotch.DType, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCumsum(ptr, ts.ctensor, dim, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Cumsum() failed: %w", err)
@@ -17271,8 +17271,8 @@ func (ts *Tensor) Cumsum(dim int64, dtype gotch.DType, del bool) (retVal *Tensor
 // --------------------------
 
 func (ts *Tensor) Cumsum_(dim int64, dtype gotch.DType) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCumsum_(ptr, ts.ctensor, dim, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Cumsum_() failed: %w", err)
@@ -17290,8 +17290,8 @@ func (ts *Tensor) CumsumOut(out *Tensor, dim int64, dtype gotch.DType, del bool)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCumsumOut(ptr, out.ctensor, ts.ctensor, dim, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CumsumOut() failed: %w", err)
@@ -17306,8 +17306,8 @@ func (ts *Tensor) CumsumOut(out *Tensor, dim int64, dtype gotch.DType, del bool)
 // --------------------------
 
 func CumulativeTrapezoid(y *Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCumulativeTrapezoid(ptr, y.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CumulativeTrapezoid() failed: %w", err)
@@ -17322,8 +17322,8 @@ func CumulativeTrapezoid(y *Tensor, dim int64) (retVal *Tensor, err error) {
 // --------------------------
 
 func CumulativeTrapezoidX(y *Tensor, x *Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgCumulativeTrapezoidX(ptr, y.ctensor, x.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("CumulativeTrapezoidX() failed: %w", err)
@@ -17341,8 +17341,8 @@ func (ts *Tensor) Data(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgData(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Data() failed: %w", err)
@@ -17360,8 +17360,8 @@ func (ts *Tensor) Deg2rad(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDeg2rad(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Deg2rad() failed: %w", err)
@@ -17376,8 +17376,8 @@ func (ts *Tensor) Deg2rad(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Deg2rad_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDeg2rad_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Deg2rad_() failed: %w", err)
@@ -17395,8 +17395,8 @@ func (ts *Tensor) Deg2radOut(out *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDeg2radOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Deg2radOut() failed: %w", err)
@@ -17429,8 +17429,8 @@ func (ts *Tensor) Dequantize(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDequantize(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Dequantize() failed: %w", err)
@@ -17448,8 +17448,8 @@ func (ts *Tensor) Det(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDet(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Det() failed: %w", err)
@@ -17467,8 +17467,8 @@ func (ts *Tensor) Detach(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDetach(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Detach() failed: %w", err)
@@ -17483,8 +17483,8 @@ func (ts *Tensor) Detach(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Detach_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDetach_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Detach_() failed: %w", err)
@@ -17502,8 +17502,8 @@ func (ts *Tensor) DetachCopy(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDetachCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DetachCopy() failed: %w", err)
@@ -17521,8 +17521,8 @@ func (ts *Tensor) DetachCopyOut(out *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDetachCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DetachCopyOut() failed: %w", err)
@@ -17540,8 +17540,8 @@ func (ts *Tensor) Diag(diagonal int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDiag(ptr, ts.ctensor, diagonal)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Diag() failed: %w", err)
@@ -17559,8 +17559,8 @@ func (ts *Tensor) DiagEmbed(offset int64, dim1 int64, dim2 int64, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDiagEmbed(ptr, ts.ctensor, offset, dim1, dim2)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DiagEmbed() failed: %w", err)
@@ -17578,8 +17578,8 @@ func (ts *Tensor) DiagEmbedOut(out *Tensor, offset int64, dim1 int64, dim2 int64
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDiagEmbedOut(ptr, out.ctensor, ts.ctensor, offset, dim1, dim2)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DiagEmbedOut() failed: %w", err)
@@ -17597,8 +17597,8 @@ func (ts *Tensor) DiagOut(out *Tensor, diagonal int64, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDiagOut(ptr, out.ctensor, ts.ctensor, diagonal)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DiagOut() failed: %w", err)
@@ -17616,8 +17616,8 @@ func (ts *Tensor) Diagflat(offset int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDiagflat(ptr, ts.ctensor, offset)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Diagflat() failed: %w", err)
@@ -17635,8 +17635,8 @@ func (ts *Tensor) Diagonal(offset int64, dim1 int64, dim2 int64, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDiagonal(ptr, ts.ctensor, offset, dim1, dim2)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Diagonal() failed: %w", err)
@@ -17651,8 +17651,8 @@ func (ts *Tensor) Diagonal(offset int64, dim1 int64, dim2 int64, del bool) (retV
 // --------------------------
 
 func DiagonalBackward(gradOutput *Tensor, inputSizes []int64, offset int64, dim1 int64, dim2 int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	inputSizesLen := len(inputSizes)
 	lib.AtgDiagonalBackward(ptr, gradOutput.ctensor, inputSizes, inputSizesLen, offset, dim1, dim2)
 	if err = TorchErr(); err != nil {
@@ -17668,8 +17668,8 @@ func DiagonalBackward(gradOutput *Tensor, inputSizes []int64, offset int64, dim1
 // --------------------------
 
 func DiagonalBackwardOut(out *Tensor, gradOutput *Tensor, inputSizes []int64, offset int64, dim1 int64, dim2 int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	inputSizesLen := len(inputSizes)
 	lib.AtgDiagonalBackwardOut(ptr, out.ctensor, gradOutput.ctensor, inputSizes, inputSizesLen, offset, dim1, dim2)
 	if err = TorchErr(); err != nil {
@@ -17688,8 +17688,8 @@ func (ts *Tensor) DiagonalCopy(offset int64, dim1 int64, dim2 int64, del bool) (
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDiagonalCopy(ptr, ts.ctensor, offset, dim1, dim2)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DiagonalCopy() failed: %w", err)
@@ -17707,8 +17707,8 @@ func (ts *Tensor) DiagonalCopyOut(out *Tensor, offset int64, dim1 int64, dim2 in
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDiagonalCopyOut(ptr, out.ctensor, ts.ctensor, offset, dim1, dim2)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DiagonalCopyOut() failed: %w", err)
@@ -17726,8 +17726,8 @@ func (ts *Tensor) DiagonalScatter(src *Tensor, offset int64, dim1 int64, dim2 in
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDiagonalScatter(ptr, ts.ctensor, src.ctensor, offset, dim1, dim2)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DiagonalScatter() failed: %w", err)
@@ -17745,8 +17745,8 @@ func (ts *Tensor) DiagonalScatterOut(out *Tensor, src *Tensor, offset int64, dim
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDiagonalScatterOut(ptr, out.ctensor, ts.ctensor, src.ctensor, offset, dim1, dim2)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DiagonalScatterOut() failed: %w", err)
@@ -17764,8 +17764,8 @@ func (ts *Tensor) Diff(n int64, dim int64, prepend *Tensor, append *Tensor, del 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDiff(ptr, ts.ctensor, n, dim, prepend.ctensor, append.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Diff() failed: %w", err)
@@ -17783,8 +17783,8 @@ func (ts *Tensor) DiffOut(out *Tensor, n int64, dim int64, prepend *Tensor, appe
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDiffOut(ptr, out.ctensor, ts.ctensor, n, dim, prepend.ctensor, append.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DiffOut() failed: %w", err)
@@ -17802,8 +17802,8 @@ func (ts *Tensor) Digamma(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDigamma(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Digamma() failed: %w", err)
@@ -17818,8 +17818,8 @@ func (ts *Tensor) Digamma(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Digamma_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDigamma_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Digamma_() failed: %w", err)
@@ -17837,8 +17837,8 @@ func (ts *Tensor) DigammaOut(out *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDigammaOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DigammaOut() failed: %w", err)
@@ -17856,8 +17856,8 @@ func (ts *Tensor) Dist(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDist(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Dist() failed: %w", err)
@@ -17875,8 +17875,8 @@ func (ts *Tensor) DistOut(out *Tensor, other *Tensor, del bool) (retVal *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDistOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DistOut() failed: %w", err)
@@ -17894,8 +17894,8 @@ func (ts *Tensor) Div(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDiv(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Div() failed: %w", err)
@@ -17910,8 +17910,8 @@ func (ts *Tensor) Div(other *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Div_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDiv_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Div_() failed: %w", err)
@@ -17929,8 +17929,8 @@ func (ts *Tensor) DivOut(out *Tensor, other *Tensor, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivOut() failed: %w", err)
@@ -17948,8 +17948,8 @@ func (ts *Tensor) DivOutMode(out *Tensor, other *Tensor, roundingMode string, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivOutMode(ptr, out.ctensor, ts.ctensor, other.ctensor, roundingMode)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivOutMode() failed: %w", err)
@@ -17967,8 +17967,8 @@ func (ts *Tensor) DivScalar(other *Scalar, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivScalar(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivScalar() failed: %w", err)
@@ -17983,8 +17983,8 @@ func (ts *Tensor) DivScalar(other *Scalar, del bool) (retVal *Tensor, err error)
 // --------------------------
 
 func (ts *Tensor) DivScalar_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivScalar_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivScalar_() failed: %w", err)
@@ -18002,8 +18002,8 @@ func (ts *Tensor) DivScalarMode(other *Scalar, roundingMode string, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivScalarMode(ptr, ts.ctensor, other.cscalar, roundingMode)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivScalarMode() failed: %w", err)
@@ -18018,8 +18018,8 @@ func (ts *Tensor) DivScalarMode(other *Scalar, roundingMode string, del bool) (r
 // --------------------------
 
 func (ts *Tensor) DivScalarMode_(other *Scalar, roundingMode string) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivScalarMode_(ptr, ts.ctensor, other.cscalar, roundingMode)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivScalarMode_() failed: %w", err)
@@ -18037,8 +18037,8 @@ func (ts *Tensor) DivScalarModeOut(out *Tensor, other *Scalar, roundingMode stri
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivScalarModeOut(ptr, out.ctensor, ts.ctensor, other.cscalar, roundingMode)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivScalarModeOut() failed: %w", err)
@@ -18056,8 +18056,8 @@ func (ts *Tensor) DivScalarOut(out *Tensor, other *Scalar, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivScalarOut() failed: %w", err)
@@ -18075,8 +18075,8 @@ func (ts *Tensor) DivTensorMode(other *Tensor, roundingMode string, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivTensorMode(ptr, ts.ctensor, other.ctensor, roundingMode)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivTensorMode() failed: %w", err)
@@ -18091,8 +18091,8 @@ func (ts *Tensor) DivTensorMode(other *Tensor, roundingMode string, del bool) (r
 // --------------------------
 
 func (ts *Tensor) DivTensorMode_(other *Tensor, roundingMode string) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivTensorMode_(ptr, ts.ctensor, other.ctensor, roundingMode)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivTensorMode_() failed: %w", err)
@@ -18110,8 +18110,8 @@ func (ts *Tensor) Divide(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivide(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Divide() failed: %w", err)
@@ -18126,8 +18126,8 @@ func (ts *Tensor) Divide(other *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Divide_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivide_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Divide_() failed: %w", err)
@@ -18145,8 +18145,8 @@ func (ts *Tensor) DivideOut(out *Tensor, other *Tensor, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivideOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivideOut() failed: %w", err)
@@ -18164,8 +18164,8 @@ func (ts *Tensor) DivideOutMode(out *Tensor, other *Tensor, roundingMode string,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivideOutMode(ptr, out.ctensor, ts.ctensor, other.ctensor, roundingMode)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivideOutMode() failed: %w", err)
@@ -18183,8 +18183,8 @@ func (ts *Tensor) DivideScalar(other *Scalar, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivideScalar(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivideScalar() failed: %w", err)
@@ -18199,8 +18199,8 @@ func (ts *Tensor) DivideScalar(other *Scalar, del bool) (retVal *Tensor, err err
 // --------------------------
 
 func (ts *Tensor) DivideScalar_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivideScalar_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivideScalar_() failed: %w", err)
@@ -18218,8 +18218,8 @@ func (ts *Tensor) DivideScalarMode(other *Scalar, roundingMode string, del bool)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivideScalarMode(ptr, ts.ctensor, other.cscalar, roundingMode)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivideScalarMode() failed: %w", err)
@@ -18234,8 +18234,8 @@ func (ts *Tensor) DivideScalarMode(other *Scalar, roundingMode string, del bool)
 // --------------------------
 
 func (ts *Tensor) DivideScalarMode_(other *Scalar, roundingMode string) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivideScalarMode_(ptr, ts.ctensor, other.cscalar, roundingMode)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivideScalarMode_() failed: %w", err)
@@ -18253,8 +18253,8 @@ func (ts *Tensor) DivideTensorMode(other *Tensor, roundingMode string, del bool)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivideTensorMode(ptr, ts.ctensor, other.ctensor, roundingMode)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivideTensorMode() failed: %w", err)
@@ -18269,8 +18269,8 @@ func (ts *Tensor) DivideTensorMode(other *Tensor, roundingMode string, del bool)
 // --------------------------
 
 func (ts *Tensor) DivideTensorMode_(other *Tensor, roundingMode string) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDivideTensorMode_(ptr, ts.ctensor, other.ctensor, roundingMode)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DivideTensorMode_() failed: %w", err)
@@ -18288,8 +18288,8 @@ func (ts *Tensor) Dot(tensor *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDot(ptr, ts.ctensor, tensor.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Dot() failed: %w", err)
@@ -18307,8 +18307,8 @@ func (ts *Tensor) DotOut(out *Tensor, tensor *Tensor, del bool) (retVal *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgDotOut(ptr, out.ctensor, ts.ctensor, tensor.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("DotOut() failed: %w", err)
@@ -18323,8 +18323,8 @@ func (ts *Tensor) DotOut(out *Tensor, tensor *Tensor, del bool) (retVal *Tensor,
 // --------------------------
 
 func Dropout(input *Tensor, p float64, train bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctrain := int32(0)
 	if train {
 		ctrain = int32(1)
@@ -18343,8 +18343,8 @@ func Dropout(input *Tensor, p float64, train bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Dropout_(p float64, train bool) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctrain := int32(0)
 	if train {
 		ctrain = int32(1)
@@ -18363,8 +18363,8 @@ func (ts *Tensor) Dropout_(p float64, train bool) (err error) {
 // --------------------------
 
 func Dstack(tensors []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -18383,8 +18383,8 @@ func Dstack(tensors []*Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func DstackOut(out *Tensor, tensors []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -18403,8 +18403,8 @@ func DstackOut(out *Tensor, tensors []*Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func Einsum(equation string, tensors []*Tensor, path []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -18427,8 +18427,8 @@ func (ts *Tensor) Elu(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgElu(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Elu() failed: %w", err)
@@ -18443,8 +18443,8 @@ func (ts *Tensor) Elu(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Elu_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgElu_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Elu_() failed: %w", err)
@@ -18459,8 +18459,8 @@ func (ts *Tensor) Elu_() (err error) {
 // --------------------------
 
 func EluBackward(gradOutput *Tensor, alpha *Scalar, scale *Scalar, inputScale *Scalar, isResult bool, selfOrResult *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cisResult := int32(0)
 	if isResult {
 		cisResult = int32(1)
@@ -18479,8 +18479,8 @@ func EluBackward(gradOutput *Tensor, alpha *Scalar, scale *Scalar, inputScale *S
 // --------------------------
 
 func EluBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, alpha *Scalar, scale *Scalar, inputScale *Scalar, isResult bool, selfOrResult *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cisResult := int32(0)
 	if isResult {
 		cisResult = int32(1)
@@ -18502,8 +18502,8 @@ func (ts *Tensor) EluOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgEluOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("EluOut() failed: %w", err)
@@ -18518,8 +18518,8 @@ func (ts *Tensor) EluOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func Embedding(weight *Tensor, indices *Tensor, paddingIdx int64, scaleGradByFreq bool, sparse bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cscaleGradByFreq := int32(0)
 	if scaleGradByFreq {
 		cscaleGradByFreq = int32(1)
@@ -18542,8 +18542,8 @@ func Embedding(weight *Tensor, indices *Tensor, paddingIdx int64, scaleGradByFre
 // --------------------------
 
 func EmbeddingBackward(grad *Tensor, indices *Tensor, numWeights int64, paddingIdx int64, scaleGradByFreq bool, sparse bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cscaleGradByFreq := int32(0)
 	if scaleGradByFreq {
 		cscaleGradByFreq = int32(1)
@@ -18638,8 +18638,8 @@ func EmbeddingBagPaddingIdx(weight *Tensor, indices *Tensor, offsets *Tensor, sc
 // --------------------------
 
 func EmbeddingDenseBackward(gradOutput *Tensor, indices *Tensor, numWeights int64, paddingIdx int64, scaleGradByFreq bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cscaleGradByFreq := int32(0)
 	if scaleGradByFreq {
 		cscaleGradByFreq = int32(1)
@@ -18658,8 +18658,8 @@ func EmbeddingDenseBackward(gradOutput *Tensor, indices *Tensor, numWeights int6
 // --------------------------
 
 func EmbeddingDenseBackwardOut(out *Tensor, gradOutput *Tensor, indices *Tensor, numWeights int64, paddingIdx int64, scaleGradByFreq bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cscaleGradByFreq := int32(0)
 	if scaleGradByFreq {
 		cscaleGradByFreq = int32(1)
@@ -18678,8 +18678,8 @@ func EmbeddingDenseBackwardOut(out *Tensor, gradOutput *Tensor, indices *Tensor,
 // --------------------------
 
 func EmbeddingOut(out *Tensor, weight *Tensor, indices *Tensor, paddingIdx int64, scaleGradByFreq bool, sparse bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cscaleGradByFreq := int32(0)
 	if scaleGradByFreq {
 		cscaleGradByFreq = int32(1)
@@ -18705,8 +18705,8 @@ func (ts *Tensor) EmbeddingRenorm(indices *Tensor, maxNorm float64, normType flo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgEmbeddingRenorm(ptr, ts.ctensor, indices.ctensor, maxNorm, normType)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("EmbeddingRenorm() failed: %w", err)
@@ -18721,8 +18721,8 @@ func (ts *Tensor) EmbeddingRenorm(indices *Tensor, maxNorm float64, normType flo
 // --------------------------
 
 func (ts *Tensor) EmbeddingRenorm_(indices *Tensor, maxNorm float64, normType float64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgEmbeddingRenorm_(ptr, ts.ctensor, indices.ctensor, maxNorm, normType)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("EmbeddingRenorm_() failed: %w", err)
@@ -18740,8 +18740,8 @@ func (ts *Tensor) EmbeddingRenormOut(out *Tensor, indices *Tensor, maxNorm float
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgEmbeddingRenormOut(ptr, out.ctensor, ts.ctensor, indices.ctensor, maxNorm, normType)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("EmbeddingRenormOut() failed: %w", err)
@@ -18756,8 +18756,8 @@ func (ts *Tensor) EmbeddingRenormOut(out *Tensor, indices *Tensor, maxNorm float
 // --------------------------
 
 func EmbeddingSparseBackward(grad *Tensor, indices *Tensor, numWeights int64, paddingIdx int64, scaleGradByFreq bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cscaleGradByFreq := int32(0)
 	if scaleGradByFreq {
 		cscaleGradByFreq = int32(1)
@@ -18776,8 +18776,8 @@ func EmbeddingSparseBackward(grad *Tensor, indices *Tensor, numWeights int64, pa
 // --------------------------
 
 func Empty(size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgEmpty(ptr, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -18796,8 +18796,8 @@ func (ts *Tensor) EmptyLike(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgEmptyLike(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("EmptyLike() failed: %w", err)
@@ -18815,8 +18815,8 @@ func (ts *Tensor) EmptyLikeOut(out *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgEmptyLikeOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("EmptyLikeOut() failed: %w", err)
@@ -18831,8 +18831,8 @@ func (ts *Tensor) EmptyLikeOut(out *Tensor, del bool) (retVal *Tensor, err error
 // --------------------------
 
 func EmptyOut(out *Tensor, size []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgEmptyOut(ptr, out.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -18848,8 +18848,8 @@ func EmptyOut(out *Tensor, size []int64) (retVal *Tensor, err error) {
 // --------------------------
 
 func EmptyPermuted(size []int64, physicalLayout []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	physicalLayoutLen := len(physicalLayout)
 	lib.AtgEmptyPermuted(ptr, size, sizeLen, physicalLayout, physicalLayoutLen, optionsKind.CInt(), optionsDevice.CInt())
@@ -18866,8 +18866,8 @@ func EmptyPermuted(size []int64, physicalLayout []int64, optionsKind gotch.DType
 // --------------------------
 
 func EmptyPermutedOut(out *Tensor, size []int64, physicalLayout []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	physicalLayoutLen := len(physicalLayout)
 	lib.AtgEmptyPermutedOut(ptr, out.ctensor, size, sizeLen, physicalLayout, physicalLayoutLen)
@@ -18884,8 +18884,8 @@ func EmptyPermutedOut(out *Tensor, size []int64, physicalLayout []int64) (retVal
 // --------------------------
 
 func EmptyQuantized(size []int64, qtensor *Tensor, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgEmptyQuantized(ptr, size, sizeLen, qtensor.ctensor, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -18901,8 +18901,8 @@ func EmptyQuantized(size []int64, qtensor *Tensor, optionsKind gotch.DType, opti
 // --------------------------
 
 func EmptyQuantizedOut(out *Tensor, size []int64, qtensor *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgEmptyQuantizedOut(ptr, out.ctensor, size, sizeLen, qtensor.ctensor)
 	if err = TorchErr(); err != nil {
@@ -18918,8 +18918,8 @@ func EmptyQuantizedOut(out *Tensor, size []int64, qtensor *Tensor) (retVal *Tens
 // --------------------------
 
 func EmptyStrided(size []int64, stride []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	strideLen := len(stride)
 	lib.AtgEmptyStrided(ptr, size, sizeLen, stride, strideLen, optionsKind.CInt(), optionsDevice.CInt())
@@ -18936,8 +18936,8 @@ func EmptyStrided(size []int64, stride []int64, optionsKind gotch.DType, options
 // --------------------------
 
 func EmptyStridedOut(out *Tensor, size []int64, stride []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	strideLen := len(stride)
 	lib.AtgEmptyStridedOut(ptr, out.ctensor, size, sizeLen, stride, strideLen)
@@ -18957,8 +18957,8 @@ func (ts *Tensor) Eq(other *Scalar, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgEq(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Eq() failed: %w", err)
@@ -18973,8 +18973,8 @@ func (ts *Tensor) Eq(other *Scalar, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Eq_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgEq_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Eq_() failed: %w", err)
@@ -18992,8 +18992,8 @@ func (ts *Tensor) EqScalarOut(out *Tensor, other *Scalar, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgEqScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("EqScalarOut() failed: %w", err)
@@ -19011,8 +19011,8 @@ func (ts *Tensor) EqTensor(other *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgEqTensor(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("EqTensor() failed: %w", err)
@@ -19027,8 +19027,8 @@ func (ts *Tensor) EqTensor(other *Tensor, del bool) (retVal *Tensor, err error) 
 // --------------------------
 
 func (ts *Tensor) EqTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgEqTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("EqTensor_() failed: %w", err)
@@ -19046,8 +19046,8 @@ func (ts *Tensor) EqTensorOut(out *Tensor, other *Tensor, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgEqTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("EqTensorOut() failed: %w", err)
@@ -19080,8 +19080,8 @@ func (ts *Tensor) Erf(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgErf(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Erf() failed: %w", err)
@@ -19096,8 +19096,8 @@ func (ts *Tensor) Erf(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Erf_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgErf_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Erf_() failed: %w", err)
@@ -19115,8 +19115,8 @@ func (ts *Tensor) ErfOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgErfOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ErfOut() failed: %w", err)
@@ -19134,8 +19134,8 @@ func (ts *Tensor) Erfc(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgErfc(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Erfc() failed: %w", err)
@@ -19150,8 +19150,8 @@ func (ts *Tensor) Erfc(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Erfc_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgErfc_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Erfc_() failed: %w", err)
@@ -19169,8 +19169,8 @@ func (ts *Tensor) ErfcOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgErfcOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ErfcOut() failed: %w", err)
@@ -19188,8 +19188,8 @@ func (ts *Tensor) Erfinv(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgErfinv(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Erfinv() failed: %w", err)
@@ -19204,8 +19204,8 @@ func (ts *Tensor) Erfinv(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Erfinv_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgErfinv_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Erfinv_() failed: %w", err)
@@ -19223,8 +19223,8 @@ func (ts *Tensor) ErfinvOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgErfinvOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ErfinvOut() failed: %w", err)
@@ -19242,8 +19242,8 @@ func (ts *Tensor) Exp(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgExp(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Exp() failed: %w", err)
@@ -19261,8 +19261,8 @@ func (ts *Tensor) Exp2(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgExp2(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Exp2() failed: %w", err)
@@ -19277,8 +19277,8 @@ func (ts *Tensor) Exp2(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Exp2_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgExp2_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Exp2_() failed: %w", err)
@@ -19296,8 +19296,8 @@ func (ts *Tensor) Exp2Out(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgExp2Out(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Exp2Out() failed: %w", err)
@@ -19312,8 +19312,8 @@ func (ts *Tensor) Exp2Out(out *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Exp_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgExp_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Exp_() failed: %w", err)
@@ -19331,8 +19331,8 @@ func (ts *Tensor) ExpOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgExpOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ExpOut() failed: %w", err)
@@ -19350,8 +19350,8 @@ func (ts *Tensor) Expand(size []int64, implicit bool, del bool) (retVal *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	cimplicit := int32(0)
 	if implicit {
@@ -19374,8 +19374,8 @@ func (ts *Tensor) ExpandAs(other *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgExpandAs(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ExpandAs() failed: %w", err)
@@ -19393,8 +19393,8 @@ func (ts *Tensor) ExpandCopy(size []int64, implicit bool, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	cimplicit := int32(0)
 	if implicit {
@@ -19417,8 +19417,8 @@ func (ts *Tensor) ExpandCopyOut(out *Tensor, size []int64, implicit bool, del bo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	cimplicit := int32(0)
 	if implicit {
@@ -19441,8 +19441,8 @@ func (ts *Tensor) Expm1(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgExpm1(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Expm1() failed: %w", err)
@@ -19457,8 +19457,8 @@ func (ts *Tensor) Expm1(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Expm1_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgExpm1_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Expm1_() failed: %w", err)
@@ -19476,8 +19476,8 @@ func (ts *Tensor) Expm1Out(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgExpm1Out(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Expm1Out() failed: %w", err)
@@ -19495,8 +19495,8 @@ func (ts *Tensor) Exponential(lambd float64, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgExponential(ptr, ts.ctensor, lambd)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Exponential() failed: %w", err)
@@ -19511,8 +19511,8 @@ func (ts *Tensor) Exponential(lambd float64, del bool) (retVal *Tensor, err erro
 // --------------------------
 
 func (ts *Tensor) Exponential_(lambd float64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgExponential_(ptr, ts.ctensor, lambd)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Exponential_() failed: %w", err)
@@ -19530,8 +19530,8 @@ func (ts *Tensor) ExponentialOut(out *Tensor, lambd float64, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgExponentialOut(ptr, out.ctensor, ts.ctensor, lambd)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ExponentialOut() failed: %w", err)
@@ -19546,8 +19546,8 @@ func (ts *Tensor) ExponentialOut(out *Tensor, lambd float64, del bool) (retVal *
 // --------------------------
 
 func Eye(n int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgEye(ptr, n, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Eye() failed: %w", err)
@@ -19562,8 +19562,8 @@ func Eye(n int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *
 // --------------------------
 
 func EyeM(n int64, m int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgEyeM(ptr, n, m, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("EyeM() failed: %w", err)
@@ -19578,8 +19578,8 @@ func EyeM(n int64, m int64, optionsKind gotch.DType, optionsDevice gotch.Device)
 // --------------------------
 
 func EyeMOut(out *Tensor, n int64, m int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgEyeMOut(ptr, out.ctensor, n, m)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("EyeMOut() failed: %w", err)
@@ -19594,8 +19594,8 @@ func EyeMOut(out *Tensor, n int64, m int64) (retVal *Tensor, err error) {
 // --------------------------
 
 func EyeOut(out *Tensor, n int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgEyeOut(ptr, out.ctensor, n)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("EyeOut() failed: %w", err)
@@ -19613,8 +19613,8 @@ func (ts *Tensor) FakeQuantizePerChannelAffine(scale *Tensor, zeroPoint *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFakeQuantizePerChannelAffine(ptr, ts.ctensor, scale.ctensor, zeroPoint.ctensor, axis, quantMin, quantMax)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FakeQuantizePerChannelAffine() failed: %w", err)
@@ -19649,8 +19649,8 @@ func (ts *Tensor) FakeQuantizePerChannelAffineCachemask(scale *Tensor, zeroPoint
 // --------------------------
 
 func FakeQuantizePerChannelAffineCachemaskBackward(grad *Tensor, mask *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFakeQuantizePerChannelAffineCachemaskBackward(ptr, grad.ctensor, mask.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FakeQuantizePerChannelAffineCachemaskBackward() failed: %w", err)
@@ -19688,8 +19688,8 @@ func (ts *Tensor) FakeQuantizePerTensorAffine(scale float64, zeroPoint int64, qu
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFakeQuantizePerTensorAffine(ptr, ts.ctensor, scale, zeroPoint, quantMin, quantMax)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FakeQuantizePerTensorAffine() failed: %w", err)
@@ -19724,8 +19724,8 @@ func (ts *Tensor) FakeQuantizePerTensorAffineCachemask(scale float64, zeroPoint 
 // --------------------------
 
 func FakeQuantizePerTensorAffineCachemaskBackward(grad *Tensor, mask *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFakeQuantizePerTensorAffineCachemaskBackward(ptr, grad.ctensor, mask.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FakeQuantizePerTensorAffineCachemaskBackward() failed: %w", err)
@@ -19763,8 +19763,8 @@ func (ts *Tensor) FakeQuantizePerTensorAffineTensorQparams(scale *Tensor, zeroPo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFakeQuantizePerTensorAffineTensorQparams(ptr, ts.ctensor, scale.ctensor, zeroPoint.ctensor, quantMin, quantMax)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FakeQuantizePerTensorAffineTensorQparams() failed: %w", err)
@@ -19779,8 +19779,8 @@ func (ts *Tensor) FakeQuantizePerTensorAffineTensorQparams(scale *Tensor, zeroPo
 // --------------------------
 
 func FbgemmLinearFp16Weight(input *Tensor, packedWeight *Tensor, bias *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFbgemmLinearFp16Weight(ptr, input.ctensor, packedWeight.ctensor, bias.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FbgemmLinearFp16Weight() failed: %w", err)
@@ -19795,8 +19795,8 @@ func FbgemmLinearFp16Weight(input *Tensor, packedWeight *Tensor, bias *Tensor) (
 // --------------------------
 
 func FbgemmLinearFp16WeightFp32Activation(input *Tensor, packedWeight *Tensor, bias *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFbgemmLinearFp16WeightFp32Activation(ptr, input.ctensor, packedWeight.ctensor, bias.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FbgemmLinearFp16WeightFp32Activation() failed: %w", err)
@@ -19811,8 +19811,8 @@ func FbgemmLinearFp16WeightFp32Activation(input *Tensor, packedWeight *Tensor, b
 // --------------------------
 
 func FbgemmLinearInt8Weight(input *Tensor, weight *Tensor, packed *Tensor, colOffsets *Tensor, weightScale *Scalar, weightZeroPoint *Scalar, bias *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFbgemmLinearInt8Weight(ptr, input.ctensor, weight.ctensor, packed.ctensor, colOffsets.ctensor, weightScale.cscalar, weightZeroPoint.cscalar, bias.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FbgemmLinearInt8Weight() failed: %w", err)
@@ -19827,8 +19827,8 @@ func FbgemmLinearInt8Weight(input *Tensor, weight *Tensor, packed *Tensor, colOf
 // --------------------------
 
 func FbgemmLinearInt8WeightFp32Activation(input *Tensor, weight *Tensor, packed *Tensor, colOffsets *Tensor, weightScale *Scalar, weightZeroPoint *Scalar, bias *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFbgemmLinearInt8WeightFp32Activation(ptr, input.ctensor, weight.ctensor, packed.ctensor, colOffsets.ctensor, weightScale.cscalar, weightZeroPoint.cscalar, bias.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FbgemmLinearInt8WeightFp32Activation() failed: %w", err)
@@ -19843,8 +19843,8 @@ func FbgemmLinearInt8WeightFp32Activation(input *Tensor, weight *Tensor, packed 
 // --------------------------
 
 func FbgemmPackGemmMatrixFp16(input *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFbgemmPackGemmMatrixFp16(ptr, input.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FbgemmPackGemmMatrixFp16() failed: %w", err)
@@ -19859,8 +19859,8 @@ func FbgemmPackGemmMatrixFp16(input *Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func FbgemmPackQuantizedMatrix(input *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFbgemmPackQuantizedMatrix(ptr, input.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FbgemmPackQuantizedMatrix() failed: %w", err)
@@ -19875,8 +19875,8 @@ func FbgemmPackQuantizedMatrix(input *Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func FbgemmPackQuantizedMatrixKn(input *Tensor, k int64, n int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFbgemmPackQuantizedMatrixKn(ptr, input.ctensor, k, n)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FbgemmPackQuantizedMatrixKn() failed: %w", err)
@@ -19891,8 +19891,8 @@ func FbgemmPackQuantizedMatrixKn(input *Tensor, k int64, n int64) (retVal *Tenso
 // --------------------------
 
 func FeatureAlphaDropout(input *Tensor, p float64, train bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctrain := int32(0)
 	if train {
 		ctrain = int32(1)
@@ -19911,8 +19911,8 @@ func FeatureAlphaDropout(input *Tensor, p float64, train bool) (retVal *Tensor, 
 // --------------------------
 
 func (ts *Tensor) FeatureAlphaDropout_(p float64, train bool) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctrain := int32(0)
 	if train {
 		ctrain = int32(1)
@@ -19931,8 +19931,8 @@ func (ts *Tensor) FeatureAlphaDropout_(p float64, train bool) (err error) {
 // --------------------------
 
 func FeatureDropout(input *Tensor, p float64, train bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctrain := int32(0)
 	if train {
 		ctrain = int32(1)
@@ -19951,8 +19951,8 @@ func FeatureDropout(input *Tensor, p float64, train bool) (retVal *Tensor, err e
 // --------------------------
 
 func (ts *Tensor) FeatureDropout_(p float64, train bool) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctrain := int32(0)
 	if train {
 		ctrain = int32(1)
@@ -19974,8 +19974,8 @@ func (ts *Tensor) FftFft(n []int64, dim int64, norm string, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cnVal int64 = 0
 	var cnNull int = 1
 	if len(n) > 0 {
@@ -19999,8 +19999,8 @@ func (ts *Tensor) FftFft2(s []int64, dim []int64, norm string, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftFft2(ptr, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20020,8 +20020,8 @@ func (ts *Tensor) FftFft2Out(out *Tensor, s []int64, dim []int64, norm string, d
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftFft2Out(ptr, out.ctensor, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20041,8 +20041,8 @@ func (ts *Tensor) FftFftOut(out *Tensor, n []int64, dim int64, norm string, del 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cnVal int64 = 0
 	var cnNull int = 1
 	if len(n) > 0 {
@@ -20063,8 +20063,8 @@ func (ts *Tensor) FftFftOut(out *Tensor, n []int64, dim int64, norm string, del 
 // --------------------------
 
 func FftFftfreq(n int64, d float64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFftFftfreq(ptr, n, d, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FftFftfreq() failed: %w", err)
@@ -20079,8 +20079,8 @@ func FftFftfreq(n int64, d float64, optionsKind gotch.DType, optionsDevice gotch
 // --------------------------
 
 func FftFftfreqOut(out *Tensor, n int64, d float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFftFftfreqOut(ptr, out.ctensor, n, d)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FftFftfreqOut() failed: %w", err)
@@ -20098,8 +20098,8 @@ func (ts *Tensor) FftFftn(s []int64, dim []int64, norm string, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftFftn(ptr, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20119,8 +20119,8 @@ func (ts *Tensor) FftFftnOut(out *Tensor, s []int64, dim []int64, norm string, d
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftFftnOut(ptr, out.ctensor, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20140,8 +20140,8 @@ func (ts *Tensor) FftFftshift(dim []int64, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	lib.AtgFftFftshift(ptr, ts.ctensor, dim, dimLen)
 	if err = TorchErr(); err != nil {
@@ -20160,8 +20160,8 @@ func (ts *Tensor) FftHfft(n []int64, dim int64, norm string, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cnVal int64 = 0
 	var cnNull int = 1
 	if len(n) > 0 {
@@ -20185,8 +20185,8 @@ func (ts *Tensor) FftHfft2(s []int64, dim []int64, norm string, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftHfft2(ptr, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20206,8 +20206,8 @@ func (ts *Tensor) FftHfft2Out(out *Tensor, s []int64, dim []int64, norm string, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftHfft2Out(ptr, out.ctensor, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20227,8 +20227,8 @@ func (ts *Tensor) FftHfftOut(out *Tensor, n []int64, dim int64, norm string, del
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cnVal int64 = 0
 	var cnNull int = 1
 	if len(n) > 0 {
@@ -20252,8 +20252,8 @@ func (ts *Tensor) FftHfftn(s []int64, dim []int64, norm string, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftHfftn(ptr, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20273,8 +20273,8 @@ func (ts *Tensor) FftHfftnOut(out *Tensor, s []int64, dim []int64, norm string, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftHfftnOut(ptr, out.ctensor, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20294,8 +20294,8 @@ func (ts *Tensor) FftIfft(n []int64, dim int64, norm string, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cnVal int64 = 0
 	var cnNull int = 1
 	if len(n) > 0 {
@@ -20319,8 +20319,8 @@ func (ts *Tensor) FftIfft2(s []int64, dim []int64, norm string, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftIfft2(ptr, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20340,8 +20340,8 @@ func (ts *Tensor) FftIfft2Out(out *Tensor, s []int64, dim []int64, norm string, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftIfft2Out(ptr, out.ctensor, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20361,8 +20361,8 @@ func (ts *Tensor) FftIfftOut(out *Tensor, n []int64, dim int64, norm string, del
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cnVal int64 = 0
 	var cnNull int = 1
 	if len(n) > 0 {
@@ -20386,8 +20386,8 @@ func (ts *Tensor) FftIfftn(s []int64, dim []int64, norm string, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftIfftn(ptr, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20407,8 +20407,8 @@ func (ts *Tensor) FftIfftnOut(out *Tensor, s []int64, dim []int64, norm string, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftIfftnOut(ptr, out.ctensor, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20428,8 +20428,8 @@ func (ts *Tensor) FftIfftshift(dim []int64, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	lib.AtgFftIfftshift(ptr, ts.ctensor, dim, dimLen)
 	if err = TorchErr(); err != nil {
@@ -20448,8 +20448,8 @@ func (ts *Tensor) FftIhfft(n []int64, dim int64, norm string, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cnVal int64 = 0
 	var cnNull int = 1
 	if len(n) > 0 {
@@ -20473,8 +20473,8 @@ func (ts *Tensor) FftIhfft2(s []int64, dim []int64, norm string, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftIhfft2(ptr, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20494,8 +20494,8 @@ func (ts *Tensor) FftIhfft2Out(out *Tensor, s []int64, dim []int64, norm string,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftIhfft2Out(ptr, out.ctensor, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20515,8 +20515,8 @@ func (ts *Tensor) FftIhfftOut(out *Tensor, n []int64, dim int64, norm string, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cnVal int64 = 0
 	var cnNull int = 1
 	if len(n) > 0 {
@@ -20540,8 +20540,8 @@ func (ts *Tensor) FftIhfftn(s []int64, dim []int64, norm string, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftIhfftn(ptr, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20561,8 +20561,8 @@ func (ts *Tensor) FftIhfftnOut(out *Tensor, s []int64, dim []int64, norm string,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftIhfftnOut(ptr, out.ctensor, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20582,8 +20582,8 @@ func (ts *Tensor) FftIrfft(n []int64, dim int64, norm string, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cnVal int64 = 0
 	var cnNull int = 1
 	if len(n) > 0 {
@@ -20607,8 +20607,8 @@ func (ts *Tensor) FftIrfft2(s []int64, dim []int64, norm string, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftIrfft2(ptr, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20628,8 +20628,8 @@ func (ts *Tensor) FftIrfft2Out(out *Tensor, s []int64, dim []int64, norm string,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftIrfft2Out(ptr, out.ctensor, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20649,8 +20649,8 @@ func (ts *Tensor) FftIrfftOut(out *Tensor, n []int64, dim int64, norm string, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cnVal int64 = 0
 	var cnNull int = 1
 	if len(n) > 0 {
@@ -20674,8 +20674,8 @@ func (ts *Tensor) FftIrfftn(s []int64, dim []int64, norm string, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftIrfftn(ptr, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20695,8 +20695,8 @@ func (ts *Tensor) FftIrfftnOut(out *Tensor, s []int64, dim []int64, norm string,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftIrfftnOut(ptr, out.ctensor, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20716,8 +20716,8 @@ func (ts *Tensor) FftRfft(n []int64, dim int64, norm string, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cnVal int64 = 0
 	var cnNull int = 1
 	if len(n) > 0 {
@@ -20741,8 +20741,8 @@ func (ts *Tensor) FftRfft2(s []int64, dim []int64, norm string, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftRfft2(ptr, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20762,8 +20762,8 @@ func (ts *Tensor) FftRfft2Out(out *Tensor, s []int64, dim []int64, norm string, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftRfft2Out(ptr, out.ctensor, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20783,8 +20783,8 @@ func (ts *Tensor) FftRfftOut(out *Tensor, n []int64, dim int64, norm string, del
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cnVal int64 = 0
 	var cnNull int = 1
 	if len(n) > 0 {
@@ -20805,8 +20805,8 @@ func (ts *Tensor) FftRfftOut(out *Tensor, n []int64, dim int64, norm string, del
 // --------------------------
 
 func FftRfftfreq(n int64, d float64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFftRfftfreq(ptr, n, d, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FftRfftfreq() failed: %w", err)
@@ -20821,8 +20821,8 @@ func FftRfftfreq(n int64, d float64, optionsKind gotch.DType, optionsDevice gotc
 // --------------------------
 
 func FftRfftfreqOut(out *Tensor, n int64, d float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFftRfftfreqOut(ptr, out.ctensor, n, d)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FftRfftfreqOut() failed: %w", err)
@@ -20840,8 +20840,8 @@ func (ts *Tensor) FftRfftn(s []int64, dim []int64, norm string, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftRfftn(ptr, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20861,8 +20861,8 @@ func (ts *Tensor) FftRfftnOut(out *Tensor, s []int64, dim []int64, norm string, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sLen := len(s)
 	dimLen := len(dim)
 	lib.AtgFftRfftnOut(ptr, out.ctensor, ts.ctensor, s, sLen, dim, dimLen, norm)
@@ -20882,8 +20882,8 @@ func (ts *Tensor) Fill(value *Scalar, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFill(ptr, ts.ctensor, value.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Fill() failed: %w", err)
@@ -20898,8 +20898,8 @@ func (ts *Tensor) Fill(value *Scalar, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Fill_(value *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFill_(ptr, ts.ctensor, value.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Fill_() failed: %w", err)
@@ -20914,8 +20914,8 @@ func (ts *Tensor) Fill_(value *Scalar) (err error) {
 // --------------------------
 
 func (ts *Tensor) FillDiagonal_(fillValue *Scalar, wrap bool) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cwrap := int32(0)
 	if wrap {
 		cwrap = int32(1)
@@ -20937,8 +20937,8 @@ func (ts *Tensor) FillScalarOut(out *Tensor, value *Scalar, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFillScalarOut(ptr, out.ctensor, ts.ctensor, value.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FillScalarOut() failed: %w", err)
@@ -20956,8 +20956,8 @@ func (ts *Tensor) FillTensor(value *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFillTensor(ptr, ts.ctensor, value.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FillTensor() failed: %w", err)
@@ -20972,8 +20972,8 @@ func (ts *Tensor) FillTensor(value *Tensor, del bool) (retVal *Tensor, err error
 // --------------------------
 
 func (ts *Tensor) FillTensor_(value *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFillTensor_(ptr, ts.ctensor, value.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FillTensor_() failed: %w", err)
@@ -20991,8 +20991,8 @@ func (ts *Tensor) FillTensorOut(out *Tensor, value *Tensor, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFillTensorOut(ptr, out.ctensor, ts.ctensor, value.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FillTensorOut() failed: %w", err)
@@ -21010,8 +21010,8 @@ func (ts *Tensor) Fix(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFix(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Fix() failed: %w", err)
@@ -21026,8 +21026,8 @@ func (ts *Tensor) Fix(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Fix_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFix_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Fix_() failed: %w", err)
@@ -21045,8 +21045,8 @@ func (ts *Tensor) FixOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFixOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FixOut() failed: %w", err)
@@ -21064,8 +21064,8 @@ func (ts *Tensor) Flatten(startDim int64, endDim int64, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFlatten(ptr, ts.ctensor, startDim, endDim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Flatten() failed: %w", err)
@@ -21080,8 +21080,8 @@ func (ts *Tensor) Flatten(startDim int64, endDim int64, del bool) (retVal *Tenso
 // --------------------------
 
 func FlattenDenseTensors(tensors []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -21103,8 +21103,8 @@ func (ts *Tensor) Flip(dims []int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimsLen := len(dims)
 	lib.AtgFlip(ptr, ts.ctensor, dims, dimsLen)
 	if err = TorchErr(); err != nil {
@@ -21123,8 +21123,8 @@ func (ts *Tensor) FlipOut(out *Tensor, dims []int64, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimsLen := len(dims)
 	lib.AtgFlipOut(ptr, out.ctensor, ts.ctensor, dims, dimsLen)
 	if err = TorchErr(); err != nil {
@@ -21143,8 +21143,8 @@ func (ts *Tensor) Fliplr(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFliplr(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Fliplr() failed: %w", err)
@@ -21162,8 +21162,8 @@ func (ts *Tensor) Flipud(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFlipud(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Flipud() failed: %w", err)
@@ -21181,8 +21181,8 @@ func (ts *Tensor) FloatPower(exponent *Tensor, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFloatPower(ptr, ts.ctensor, exponent.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FloatPower() failed: %w", err)
@@ -21197,8 +21197,8 @@ func (ts *Tensor) FloatPower(exponent *Tensor, del bool) (retVal *Tensor, err er
 // --------------------------
 
 func (ts *Tensor) FloatPower_(exponent *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFloatPower_(ptr, ts.ctensor, exponent.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FloatPower_() failed: %w", err)
@@ -21213,8 +21213,8 @@ func (ts *Tensor) FloatPower_(exponent *Scalar) (err error) {
 // --------------------------
 
 func FloatPowerScalar(selfScalar *Scalar, exponent *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFloatPowerScalar(ptr, selfScalar.cscalar, exponent.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FloatPowerScalar() failed: %w", err)
@@ -21229,8 +21229,8 @@ func FloatPowerScalar(selfScalar *Scalar, exponent *Tensor) (retVal *Tensor, err
 // --------------------------
 
 func FloatPowerScalarOut(out *Tensor, selfScalar *Scalar, exponent *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFloatPowerScalarOut(ptr, out.ctensor, selfScalar.cscalar, exponent.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FloatPowerScalarOut() failed: %w", err)
@@ -21245,8 +21245,8 @@ func FloatPowerScalarOut(out *Tensor, selfScalar *Scalar, exponent *Tensor) (ret
 // --------------------------
 
 func (ts *Tensor) FloatPowerTensor_(exponent *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFloatPowerTensor_(ptr, ts.ctensor, exponent.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FloatPowerTensor_() failed: %w", err)
@@ -21264,8 +21264,8 @@ func (ts *Tensor) FloatPowerTensorScalar(exponent *Scalar, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFloatPowerTensorScalar(ptr, ts.ctensor, exponent.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FloatPowerTensorScalar() failed: %w", err)
@@ -21283,8 +21283,8 @@ func (ts *Tensor) FloatPowerTensorScalarOut(out *Tensor, exponent *Scalar, del b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFloatPowerTensorScalarOut(ptr, out.ctensor, ts.ctensor, exponent.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FloatPowerTensorScalarOut() failed: %w", err)
@@ -21302,8 +21302,8 @@ func (ts *Tensor) FloatPowerTensorTensorOut(out *Tensor, exponent *Tensor, del b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFloatPowerTensorTensorOut(ptr, out.ctensor, ts.ctensor, exponent.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FloatPowerTensorTensorOut() failed: %w", err)
@@ -21321,8 +21321,8 @@ func (ts *Tensor) Floor(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFloor(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Floor() failed: %w", err)
@@ -21337,8 +21337,8 @@ func (ts *Tensor) Floor(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Floor_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFloor_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Floor_() failed: %w", err)
@@ -21356,8 +21356,8 @@ func (ts *Tensor) FloorDivide(other *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFloorDivide(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FloorDivide() failed: %w", err)
@@ -21372,8 +21372,8 @@ func (ts *Tensor) FloorDivide(other *Tensor, del bool) (retVal *Tensor, err erro
 // --------------------------
 
 func (ts *Tensor) FloorDivide_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFloorDivide_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FloorDivide_() failed: %w", err)
@@ -21391,8 +21391,8 @@ func (ts *Tensor) FloorDivideOut(out *Tensor, other *Tensor, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFloorDivideOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FloorDivideOut() failed: %w", err)
@@ -21410,8 +21410,8 @@ func (ts *Tensor) FloorDivideScalar(other *Scalar, del bool) (retVal *Tensor, er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFloorDivideScalar(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FloorDivideScalar() failed: %w", err)
@@ -21426,8 +21426,8 @@ func (ts *Tensor) FloorDivideScalar(other *Scalar, del bool) (retVal *Tensor, er
 // --------------------------
 
 func (ts *Tensor) FloorDivideScalar_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFloorDivideScalar_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FloorDivideScalar_() failed: %w", err)
@@ -21445,8 +21445,8 @@ func (ts *Tensor) FloorOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFloorOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FloorOut() failed: %w", err)
@@ -21464,8 +21464,8 @@ func (ts *Tensor) Fmax(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFmax(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Fmax() failed: %w", err)
@@ -21483,8 +21483,8 @@ func (ts *Tensor) FmaxOut(out *Tensor, other *Tensor, del bool) (retVal *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFmaxOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FmaxOut() failed: %w", err)
@@ -21502,8 +21502,8 @@ func (ts *Tensor) Fmin(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFmin(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Fmin() failed: %w", err)
@@ -21521,8 +21521,8 @@ func (ts *Tensor) FminOut(out *Tensor, other *Tensor, del bool) (retVal *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFminOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FminOut() failed: %w", err)
@@ -21540,8 +21540,8 @@ func (ts *Tensor) Fmod(other *Scalar, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFmod(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Fmod() failed: %w", err)
@@ -21556,8 +21556,8 @@ func (ts *Tensor) Fmod(other *Scalar, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Fmod_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFmod_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Fmod_() failed: %w", err)
@@ -21575,8 +21575,8 @@ func (ts *Tensor) FmodScalarOut(out *Tensor, other *Scalar, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFmodScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FmodScalarOut() failed: %w", err)
@@ -21594,8 +21594,8 @@ func (ts *Tensor) FmodTensor(other *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFmodTensor(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FmodTensor() failed: %w", err)
@@ -21610,8 +21610,8 @@ func (ts *Tensor) FmodTensor(other *Tensor, del bool) (retVal *Tensor, err error
 // --------------------------
 
 func (ts *Tensor) FmodTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFmodTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FmodTensor_() failed: %w", err)
@@ -21629,8 +21629,8 @@ func (ts *Tensor) FmodTensorOut(out *Tensor, other *Tensor, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFmodTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FmodTensorOut() failed: %w", err)
@@ -21648,8 +21648,8 @@ func (ts *Tensor) Frac(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFrac(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Frac() failed: %w", err)
@@ -21664,8 +21664,8 @@ func (ts *Tensor) Frac(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Frac_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFrac_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Frac_() failed: %w", err)
@@ -21683,8 +21683,8 @@ func (ts *Tensor) FracOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFracOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FracOut() failed: %w", err)
@@ -21724,8 +21724,8 @@ func (ts *Tensor) FractionalMaxPool2dBackward(gradOutput *Tensor, kernelSize []i
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	outputSizeLen := len(outputSize)
 	lib.AtgFractionalMaxPool2dBackward(ptr, gradOutput.ctensor, ts.ctensor, kernelSize, kernelSizeLen, outputSize, outputSizeLen, indices.ctensor)
@@ -21745,8 +21745,8 @@ func (ts *Tensor) FractionalMaxPool2dBackwardGradInput(gradInput *Tensor, gradOu
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	outputSizeLen := len(outputSize)
 	lib.AtgFractionalMaxPool2dBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, kernelSize, kernelSizeLen, outputSize, outputSizeLen, indices.ctensor)
@@ -21810,8 +21810,8 @@ func (ts *Tensor) FractionalMaxPool3dBackward(gradOutput *Tensor, kernelSize []i
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	outputSizeLen := len(outputSize)
 	lib.AtgFractionalMaxPool3dBackward(ptr, gradOutput.ctensor, ts.ctensor, kernelSize, kernelSizeLen, outputSize, outputSizeLen, indices.ctensor)
@@ -21831,8 +21831,8 @@ func (ts *Tensor) FractionalMaxPool3dBackwardGradInput(gradInput *Tensor, gradOu
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	outputSizeLen := len(outputSize)
 	lib.AtgFractionalMaxPool3dBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, kernelSize, kernelSizeLen, outputSize, outputSizeLen, indices.ctensor)
@@ -21914,8 +21914,8 @@ func (ts *Tensor) FrobeniusNorm(dim []int64, keepdim bool, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -21938,8 +21938,8 @@ func (ts *Tensor) FrobeniusNormOut(out *Tensor, dim []int64, keepdim bool, del b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -21959,8 +21959,8 @@ func (ts *Tensor) FrobeniusNormOut(out *Tensor, dim []int64, keepdim bool, del b
 // --------------------------
 
 func FromFile(filename string, shared bool, size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cshared := int32(0)
 	if shared {
 		cshared = int32(1)
@@ -21985,8 +21985,8 @@ func FromFile(filename string, shared bool, size []int64, optionsKind gotch.DTyp
 // --------------------------
 
 func FromFileOut(out *Tensor, filename string, shared bool, size []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cshared := int32(0)
 	if shared {
 		cshared = int32(1)
@@ -22011,8 +22011,8 @@ func FromFileOut(out *Tensor, filename string, shared bool, size []int64) (retVa
 // --------------------------
 
 func Full(size []int64, fillValue *Scalar, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgFull(ptr, size, sizeLen, fillValue.cscalar, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -22031,8 +22031,8 @@ func (ts *Tensor) FullLike(fillValue *Scalar, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFullLike(ptr, ts.ctensor, fillValue.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FullLike() failed: %w", err)
@@ -22050,8 +22050,8 @@ func (ts *Tensor) FullLikeOut(out *Tensor, fillValue *Scalar, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgFullLikeOut(ptr, out.ctensor, ts.ctensor, fillValue.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("FullLikeOut() failed: %w", err)
@@ -22066,8 +22066,8 @@ func (ts *Tensor) FullLikeOut(out *Tensor, fillValue *Scalar, del bool) (retVal 
 // --------------------------
 
 func FullOut(out *Tensor, size []int64, fillValue *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgFullOut(ptr, out.ctensor, size, sizeLen, fillValue.cscalar)
 	if err = TorchErr(); err != nil {
@@ -22086,8 +22086,8 @@ func (ts *Tensor) FusedMovingAvgObsFakeQuant(observerOn *Tensor, fakeQuantOn *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cperRowFakeQuant := int32(0)
 	if perRowFakeQuant {
 		cperRowFakeQuant = int32(1)
@@ -22113,8 +22113,8 @@ func (ts *Tensor) Gather(dim int64, index *Tensor, sparseGrad bool, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	csparseGrad := int32(0)
 	if sparseGrad {
 		csparseGrad = int32(1)
@@ -22136,8 +22136,8 @@ func (ts *Tensor) GatherBackward(grad *Tensor, dim int64, index *Tensor, sparseG
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	csparseGrad := int32(0)
 	if sparseGrad {
 		csparseGrad = int32(1)
@@ -22159,8 +22159,8 @@ func (ts *Tensor) GatherOut(out *Tensor, dim int64, index *Tensor, sparseGrad bo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	csparseGrad := int32(0)
 	if sparseGrad {
 		csparseGrad = int32(1)
@@ -22182,8 +22182,8 @@ func (ts *Tensor) Gcd(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGcd(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Gcd() failed: %w", err)
@@ -22198,8 +22198,8 @@ func (ts *Tensor) Gcd(other *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Gcd_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGcd_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Gcd_() failed: %w", err)
@@ -22217,8 +22217,8 @@ func (ts *Tensor) GcdOut(out *Tensor, other *Tensor, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGcdOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GcdOut() failed: %w", err)
@@ -22236,8 +22236,8 @@ func (ts *Tensor) Ge(other *Scalar, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGe(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Ge() failed: %w", err)
@@ -22252,8 +22252,8 @@ func (ts *Tensor) Ge(other *Scalar, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Ge_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGe_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Ge_() failed: %w", err)
@@ -22271,8 +22271,8 @@ func (ts *Tensor) GeScalarOut(out *Tensor, other *Scalar, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGeScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GeScalarOut() failed: %w", err)
@@ -22290,8 +22290,8 @@ func (ts *Tensor) GeTensor(other *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGeTensor(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GeTensor() failed: %w", err)
@@ -22306,8 +22306,8 @@ func (ts *Tensor) GeTensor(other *Tensor, del bool) (retVal *Tensor, err error) 
 // --------------------------
 
 func (ts *Tensor) GeTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGeTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GeTensor_() failed: %w", err)
@@ -22325,8 +22325,8 @@ func (ts *Tensor) GeTensorOut(out *Tensor, other *Tensor, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGeTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GeTensorOut() failed: %w", err)
@@ -22344,8 +22344,8 @@ func (ts *Tensor) Gelu(approximate string, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGelu(ptr, ts.ctensor, approximate)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Gelu() failed: %w", err)
@@ -22360,8 +22360,8 @@ func (ts *Tensor) Gelu(approximate string, del bool) (retVal *Tensor, err error)
 // --------------------------
 
 func (ts *Tensor) Gelu_(approximate string) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGelu_(ptr, ts.ctensor, approximate)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Gelu_() failed: %w", err)
@@ -22379,8 +22379,8 @@ func (ts *Tensor) GeluBackward(gradOutput *Tensor, approximate string, del bool)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGeluBackward(ptr, gradOutput.ctensor, ts.ctensor, approximate)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GeluBackward() failed: %w", err)
@@ -22398,8 +22398,8 @@ func (ts *Tensor) GeluBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, a
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGeluBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, approximate)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GeluBackwardGradInput() failed: %w", err)
@@ -22417,8 +22417,8 @@ func (ts *Tensor) GeluOut(out *Tensor, approximate string, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGeluOut(ptr, out.ctensor, ts.ctensor, approximate)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GeluOut() failed: %w", err)
@@ -22436,8 +22436,8 @@ func (ts *Tensor) Geometric(p float64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGeometric(ptr, ts.ctensor, p)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Geometric() failed: %w", err)
@@ -22452,8 +22452,8 @@ func (ts *Tensor) Geometric(p float64, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Geometric_(p float64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGeometric_(ptr, ts.ctensor, p)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Geometric_() failed: %w", err)
@@ -22471,8 +22471,8 @@ func (ts *Tensor) GeometricOut(out *Tensor, p float64, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGeometricOut(ptr, out.ctensor, ts.ctensor, p)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GeometricOut() failed: %w", err)
@@ -22530,8 +22530,8 @@ func (ts *Tensor) Ger(vec2 *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGer(ptr, ts.ctensor, vec2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Ger() failed: %w", err)
@@ -22549,8 +22549,8 @@ func (ts *Tensor) GerOut(out *Tensor, vec2 *Tensor, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGerOut(ptr, out.ctensor, ts.ctensor, vec2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GerOut() failed: %w", err)
@@ -22568,8 +22568,8 @@ func (ts *Tensor) Glu(dim int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGlu(ptr, ts.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Glu() failed: %w", err)
@@ -22587,8 +22587,8 @@ func (ts *Tensor) GluBackward(gradOutput *Tensor, dim int64, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGluBackward(ptr, gradOutput.ctensor, ts.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GluBackward() failed: %w", err)
@@ -22606,8 +22606,8 @@ func (ts *Tensor) GluBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, di
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGluBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GluBackwardGradInput() failed: %w", err)
@@ -22622,8 +22622,8 @@ func (ts *Tensor) GluBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, di
 // --------------------------
 
 func GluBackwardJvp(gradX *Tensor, gradGlu *Tensor, x *Tensor, dgradGlu *Tensor, dx *Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGluBackwardJvp(ptr, gradX.ctensor, gradGlu.ctensor, x.ctensor, dgradGlu.ctensor, dx.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GluBackwardJvp() failed: %w", err)
@@ -22638,8 +22638,8 @@ func GluBackwardJvp(gradX *Tensor, gradGlu *Tensor, x *Tensor, dgradGlu *Tensor,
 // --------------------------
 
 func GluBackwardJvpOut(out *Tensor, gradX *Tensor, gradGlu *Tensor, x *Tensor, dgradGlu *Tensor, dx *Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGluBackwardJvpOut(ptr, out.ctensor, gradX.ctensor, gradGlu.ctensor, x.ctensor, dgradGlu.ctensor, dx.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GluBackwardJvpOut() failed: %w", err)
@@ -22654,8 +22654,8 @@ func GluBackwardJvpOut(out *Tensor, gradX *Tensor, gradGlu *Tensor, x *Tensor, d
 // --------------------------
 
 func GluJvp(glu *Tensor, x *Tensor, dx *Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGluJvp(ptr, glu.ctensor, x.ctensor, dx.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GluJvp() failed: %w", err)
@@ -22670,8 +22670,8 @@ func GluJvp(glu *Tensor, x *Tensor, dx *Tensor, dim int64) (retVal *Tensor, err 
 // --------------------------
 
 func GluJvpOut(out *Tensor, glu *Tensor, x *Tensor, dx *Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGluJvpOut(ptr, out.ctensor, glu.ctensor, x.ctensor, dx.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GluJvpOut() failed: %w", err)
@@ -22689,8 +22689,8 @@ func (ts *Tensor) GluOut(out *Tensor, dim int64, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGluOut(ptr, out.ctensor, ts.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GluOut() failed: %w", err)
@@ -22708,8 +22708,8 @@ func (ts *Tensor) Grad(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGrad(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Grad() failed: %w", err)
@@ -22727,8 +22727,8 @@ func (ts *Tensor) Greater(other *Scalar, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGreater(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Greater() failed: %w", err)
@@ -22743,8 +22743,8 @@ func (ts *Tensor) Greater(other *Scalar, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Greater_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGreater_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Greater_() failed: %w", err)
@@ -22762,8 +22762,8 @@ func (ts *Tensor) GreaterEqual(other *Scalar, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGreaterEqual(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GreaterEqual() failed: %w", err)
@@ -22778,8 +22778,8 @@ func (ts *Tensor) GreaterEqual(other *Scalar, del bool) (retVal *Tensor, err err
 // --------------------------
 
 func (ts *Tensor) GreaterEqual_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGreaterEqual_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GreaterEqual_() failed: %w", err)
@@ -22797,8 +22797,8 @@ func (ts *Tensor) GreaterEqualScalarOut(out *Tensor, other *Scalar, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGreaterEqualScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GreaterEqualScalarOut() failed: %w", err)
@@ -22816,8 +22816,8 @@ func (ts *Tensor) GreaterEqualTensor(other *Tensor, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGreaterEqualTensor(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GreaterEqualTensor() failed: %w", err)
@@ -22832,8 +22832,8 @@ func (ts *Tensor) GreaterEqualTensor(other *Tensor, del bool) (retVal *Tensor, e
 // --------------------------
 
 func (ts *Tensor) GreaterEqualTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGreaterEqualTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GreaterEqualTensor_() failed: %w", err)
@@ -22851,8 +22851,8 @@ func (ts *Tensor) GreaterEqualTensorOut(out *Tensor, other *Tensor, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGreaterEqualTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GreaterEqualTensorOut() failed: %w", err)
@@ -22870,8 +22870,8 @@ func (ts *Tensor) GreaterScalarOut(out *Tensor, other *Scalar, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGreaterScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GreaterScalarOut() failed: %w", err)
@@ -22889,8 +22889,8 @@ func (ts *Tensor) GreaterTensor(other *Tensor, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGreaterTensor(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GreaterTensor() failed: %w", err)
@@ -22905,8 +22905,8 @@ func (ts *Tensor) GreaterTensor(other *Tensor, del bool) (retVal *Tensor, err er
 // --------------------------
 
 func (ts *Tensor) GreaterTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGreaterTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GreaterTensor_() failed: %w", err)
@@ -22924,8 +22924,8 @@ func (ts *Tensor) GreaterTensorOut(out *Tensor, other *Tensor, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGreaterTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GreaterTensorOut() failed: %w", err)
@@ -22940,8 +22940,8 @@ func (ts *Tensor) GreaterTensorOut(out *Tensor, other *Tensor, del bool) (retVal
 // --------------------------
 
 func GridSampler(input *Tensor, grid *Tensor, interpolationMode int64, paddingMode int64, alignCorners bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	calignCorners := int32(0)
 	if alignCorners {
 		calignCorners = int32(1)
@@ -22960,8 +22960,8 @@ func GridSampler(input *Tensor, grid *Tensor, interpolationMode int64, paddingMo
 // --------------------------
 
 func GridSampler2d(input *Tensor, grid *Tensor, interpolationMode int64, paddingMode int64, alignCorners bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	calignCorners := int32(0)
 	if alignCorners {
 		calignCorners = int32(1)
@@ -22980,8 +22980,8 @@ func GridSampler2d(input *Tensor, grid *Tensor, interpolationMode int64, padding
 // --------------------------
 
 func GridSampler2dOut(out *Tensor, input *Tensor, grid *Tensor, interpolationMode int64, paddingMode int64, alignCorners bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	calignCorners := int32(0)
 	if alignCorners {
 		calignCorners = int32(1)
@@ -23000,8 +23000,8 @@ func GridSampler2dOut(out *Tensor, input *Tensor, grid *Tensor, interpolationMod
 // --------------------------
 
 func GridSampler3d(input *Tensor, grid *Tensor, interpolationMode int64, paddingMode int64, alignCorners bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	calignCorners := int32(0)
 	if alignCorners {
 		calignCorners = int32(1)
@@ -23020,8 +23020,8 @@ func GridSampler3d(input *Tensor, grid *Tensor, interpolationMode int64, padding
 // --------------------------
 
 func GridSampler3dOut(out *Tensor, input *Tensor, grid *Tensor, interpolationMode int64, paddingMode int64, alignCorners bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	calignCorners := int32(0)
 	if alignCorners {
 		calignCorners = int32(1)
@@ -23040,8 +23040,8 @@ func GridSampler3dOut(out *Tensor, input *Tensor, grid *Tensor, interpolationMod
 // --------------------------
 
 func GroupNorm(input *Tensor, numGroups int64, weight *Tensor, bias *Tensor, eps float64, cudnnEnabled bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ccudnnEnabled := int32(0)
 	if cudnnEnabled {
 		ccudnnEnabled = int32(1)
@@ -23097,8 +23097,8 @@ func Gru(input *Tensor, hx *Tensor, params []*Tensor, hasBiases bool, numLayers 
 // --------------------------
 
 func GruCell(input *Tensor, hx *Tensor, wIh *Tensor, wHh *Tensor, bIh *Tensor, bHh *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGruCell(ptr, input.ctensor, hx.ctensor, wIh.ctensor, wHh.ctensor, bIh.ctensor, bHh.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GruCell() failed: %w", err)
@@ -23149,8 +23149,8 @@ func (ts *Tensor) Gt(other *Scalar, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGt(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Gt() failed: %w", err)
@@ -23165,8 +23165,8 @@ func (ts *Tensor) Gt(other *Scalar, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Gt_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGt_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Gt_() failed: %w", err)
@@ -23184,8 +23184,8 @@ func (ts *Tensor) GtScalarOut(out *Tensor, other *Scalar, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGtScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GtScalarOut() failed: %w", err)
@@ -23203,8 +23203,8 @@ func (ts *Tensor) GtTensor(other *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGtTensor(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GtTensor() failed: %w", err)
@@ -23219,8 +23219,8 @@ func (ts *Tensor) GtTensor(other *Tensor, del bool) (retVal *Tensor, err error) 
 // --------------------------
 
 func (ts *Tensor) GtTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGtTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GtTensor_() failed: %w", err)
@@ -23238,8 +23238,8 @@ func (ts *Tensor) GtTensorOut(out *Tensor, other *Tensor, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgGtTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("GtTensorOut() failed: %w", err)
@@ -23254,8 +23254,8 @@ func (ts *Tensor) GtTensorOut(out *Tensor, other *Tensor, del bool) (retVal *Ten
 // --------------------------
 
 func HammingWindow(windowLength int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHammingWindow(ptr, windowLength, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HammingWindow() failed: %w", err)
@@ -23270,8 +23270,8 @@ func HammingWindow(windowLength int64, optionsKind gotch.DType, optionsDevice go
 // --------------------------
 
 func HammingWindowOut(out *Tensor, windowLength int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHammingWindowOut(ptr, out.ctensor, windowLength)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HammingWindowOut() failed: %w", err)
@@ -23286,8 +23286,8 @@ func HammingWindowOut(out *Tensor, windowLength int64) (retVal *Tensor, err erro
 // --------------------------
 
 func HammingWindowPeriodic(windowLength int64, periodic bool, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cperiodic := int32(0)
 	if periodic {
 		cperiodic = int32(1)
@@ -23306,8 +23306,8 @@ func HammingWindowPeriodic(windowLength int64, periodic bool, optionsKind gotch.
 // --------------------------
 
 func HammingWindowPeriodicAlpha(windowLength int64, periodic bool, alpha float64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cperiodic := int32(0)
 	if periodic {
 		cperiodic = int32(1)
@@ -23326,8 +23326,8 @@ func HammingWindowPeriodicAlpha(windowLength int64, periodic bool, alpha float64
 // --------------------------
 
 func HammingWindowPeriodicAlphaBeta(windowLength int64, periodic bool, alpha float64, beta float64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cperiodic := int32(0)
 	if periodic {
 		cperiodic = int32(1)
@@ -23346,8 +23346,8 @@ func HammingWindowPeriodicAlphaBeta(windowLength int64, periodic bool, alpha flo
 // --------------------------
 
 func HammingWindowPeriodicAlphaBetaOut(out *Tensor, windowLength int64, periodic bool, alpha float64, beta float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cperiodic := int32(0)
 	if periodic {
 		cperiodic = int32(1)
@@ -23366,8 +23366,8 @@ func HammingWindowPeriodicAlphaBetaOut(out *Tensor, windowLength int64, periodic
 // --------------------------
 
 func HammingWindowPeriodicAlphaOut(out *Tensor, windowLength int64, periodic bool, alpha float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cperiodic := int32(0)
 	if periodic {
 		cperiodic = int32(1)
@@ -23386,8 +23386,8 @@ func HammingWindowPeriodicAlphaOut(out *Tensor, windowLength int64, periodic boo
 // --------------------------
 
 func HammingWindowPeriodicOut(out *Tensor, windowLength int64, periodic bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cperiodic := int32(0)
 	if periodic {
 		cperiodic = int32(1)
@@ -23406,8 +23406,8 @@ func HammingWindowPeriodicOut(out *Tensor, windowLength int64, periodic bool) (r
 // --------------------------
 
 func HannWindow(windowLength int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHannWindow(ptr, windowLength, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HannWindow() failed: %w", err)
@@ -23422,8 +23422,8 @@ func HannWindow(windowLength int64, optionsKind gotch.DType, optionsDevice gotch
 // --------------------------
 
 func HannWindowOut(out *Tensor, windowLength int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHannWindowOut(ptr, out.ctensor, windowLength)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HannWindowOut() failed: %w", err)
@@ -23438,8 +23438,8 @@ func HannWindowOut(out *Tensor, windowLength int64) (retVal *Tensor, err error) 
 // --------------------------
 
 func HannWindowPeriodic(windowLength int64, periodic bool, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cperiodic := int32(0)
 	if periodic {
 		cperiodic = int32(1)
@@ -23458,8 +23458,8 @@ func HannWindowPeriodic(windowLength int64, periodic bool, optionsKind gotch.DTy
 // --------------------------
 
 func HannWindowPeriodicOut(out *Tensor, windowLength int64, periodic bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cperiodic := int32(0)
 	if periodic {
 		cperiodic = int32(1)
@@ -23481,8 +23481,8 @@ func (ts *Tensor) Hardshrink(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardshrink(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Hardshrink() failed: %w", err)
@@ -23500,8 +23500,8 @@ func (ts *Tensor) HardshrinkBackward(gradOut *Tensor, lambd *Scalar, del bool) (
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardshrinkBackward(ptr, gradOut.ctensor, ts.ctensor, lambd.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HardshrinkBackward() failed: %w", err)
@@ -23519,8 +23519,8 @@ func (ts *Tensor) HardshrinkBackwardGradInput(gradInput *Tensor, gradOut *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardshrinkBackwardGradInput(ptr, gradInput.ctensor, gradOut.ctensor, ts.ctensor, lambd.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HardshrinkBackwardGradInput() failed: %w", err)
@@ -23538,8 +23538,8 @@ func (ts *Tensor) HardshrinkOut(out *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardshrinkOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HardshrinkOut() failed: %w", err)
@@ -23557,8 +23557,8 @@ func (ts *Tensor) Hardsigmoid(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardsigmoid(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Hardsigmoid() failed: %w", err)
@@ -23573,8 +23573,8 @@ func (ts *Tensor) Hardsigmoid(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Hardsigmoid_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardsigmoid_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Hardsigmoid_() failed: %w", err)
@@ -23592,8 +23592,8 @@ func (ts *Tensor) HardsigmoidBackward(gradOutput *Tensor, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardsigmoidBackward(ptr, gradOutput.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HardsigmoidBackward() failed: %w", err)
@@ -23611,8 +23611,8 @@ func (ts *Tensor) HardsigmoidBackwardGradInput(gradInput *Tensor, gradOutput *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardsigmoidBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HardsigmoidBackwardGradInput() failed: %w", err)
@@ -23630,8 +23630,8 @@ func (ts *Tensor) HardsigmoidOut(out *Tensor, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardsigmoidOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HardsigmoidOut() failed: %w", err)
@@ -23649,8 +23649,8 @@ func (ts *Tensor) Hardswish(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardswish(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Hardswish() failed: %w", err)
@@ -23665,8 +23665,8 @@ func (ts *Tensor) Hardswish(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Hardswish_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardswish_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Hardswish_() failed: %w", err)
@@ -23684,8 +23684,8 @@ func (ts *Tensor) HardswishBackward(gradOutput *Tensor, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardswishBackward(ptr, gradOutput.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HardswishBackward() failed: %w", err)
@@ -23703,8 +23703,8 @@ func (ts *Tensor) HardswishBackwardOut(out *Tensor, gradOutput *Tensor, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardswishBackwardOut(ptr, out.ctensor, gradOutput.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HardswishBackwardOut() failed: %w", err)
@@ -23722,8 +23722,8 @@ func (ts *Tensor) HardswishOut(out *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardswishOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HardswishOut() failed: %w", err)
@@ -23741,8 +23741,8 @@ func (ts *Tensor) Hardtanh(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardtanh(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Hardtanh() failed: %w", err)
@@ -23757,8 +23757,8 @@ func (ts *Tensor) Hardtanh(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Hardtanh_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardtanh_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Hardtanh_() failed: %w", err)
@@ -23776,8 +23776,8 @@ func (ts *Tensor) HardtanhBackward(gradOutput *Tensor, minVal *Scalar, maxVal *S
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardtanhBackward(ptr, gradOutput.ctensor, ts.ctensor, minVal.cscalar, maxVal.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HardtanhBackward() failed: %w", err)
@@ -23795,8 +23795,8 @@ func (ts *Tensor) HardtanhBackwardGradInput(gradInput *Tensor, gradOutput *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardtanhBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, minVal.cscalar, maxVal.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HardtanhBackwardGradInput() failed: %w", err)
@@ -23814,8 +23814,8 @@ func (ts *Tensor) HardtanhOut(out *Tensor, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHardtanhOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HardtanhOut() failed: %w", err)
@@ -23833,8 +23833,8 @@ func (ts *Tensor) Heaviside(values *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHeaviside(ptr, ts.ctensor, values.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Heaviside() failed: %w", err)
@@ -23849,8 +23849,8 @@ func (ts *Tensor) Heaviside(values *Tensor, del bool) (retVal *Tensor, err error
 // --------------------------
 
 func (ts *Tensor) Heaviside_(values *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHeaviside_(ptr, ts.ctensor, values.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Heaviside_() failed: %w", err)
@@ -23868,8 +23868,8 @@ func (ts *Tensor) HeavisideOut(out *Tensor, values *Tensor, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHeavisideOut(ptr, out.ctensor, ts.ctensor, values.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HeavisideOut() failed: %w", err)
@@ -23887,8 +23887,8 @@ func (ts *Tensor) HingeEmbeddingLoss(target *Tensor, margin float64, reduction i
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHingeEmbeddingLoss(ptr, ts.ctensor, target.ctensor, margin, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HingeEmbeddingLoss() failed: %w", err)
@@ -23906,8 +23906,8 @@ func (ts *Tensor) Histc(bins int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHistc(ptr, ts.ctensor, bins)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Histc() failed: %w", err)
@@ -23925,8 +23925,8 @@ func (ts *Tensor) HistcOut(out *Tensor, bins int64, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHistcOut(ptr, out.ctensor, ts.ctensor, bins)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HistcOut() failed: %w", err)
@@ -23941,8 +23941,8 @@ func (ts *Tensor) HistcOut(out *Tensor, bins int64, del bool) (retVal *Tensor, e
 // --------------------------
 
 func Hspmm(mat1 *Tensor, mat2 *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHspmm(ptr, mat1.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Hspmm() failed: %w", err)
@@ -23957,8 +23957,8 @@ func Hspmm(mat1 *Tensor, mat2 *Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func HspmmOut(out *Tensor, mat1 *Tensor, mat2 *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHspmmOut(ptr, out.ctensor, mat1.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HspmmOut() failed: %w", err)
@@ -23973,8 +23973,8 @@ func HspmmOut(out *Tensor, mat1 *Tensor, mat2 *Tensor) (retVal *Tensor, err erro
 // --------------------------
 
 func Hstack(tensors []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -23993,8 +23993,8 @@ func Hstack(tensors []*Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func HstackOut(out *Tensor, tensors []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -24016,8 +24016,8 @@ func (ts *Tensor) HuberLoss(target *Tensor, reduction int64, delta float64, del 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHuberLoss(ptr, ts.ctensor, target.ctensor, reduction, delta)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HuberLoss() failed: %w", err)
@@ -24035,8 +24035,8 @@ func (ts *Tensor) HuberLossBackward(gradOutput *Tensor, target *Tensor, reductio
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHuberLossBackward(ptr, gradOutput.ctensor, ts.ctensor, target.ctensor, reduction, delta)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HuberLossBackward() failed: %w", err)
@@ -24054,8 +24054,8 @@ func (ts *Tensor) HuberLossBackwardOut(gradInput *Tensor, gradOutput *Tensor, ta
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHuberLossBackwardOut(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, target.ctensor, reduction, delta)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HuberLossBackwardOut() failed: %w", err)
@@ -24073,8 +24073,8 @@ func (ts *Tensor) HuberLossOut(out *Tensor, target *Tensor, reduction int64, del
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHuberLossOut(ptr, out.ctensor, ts.ctensor, target.ctensor, reduction, delta)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HuberLossOut() failed: %w", err)
@@ -24092,8 +24092,8 @@ func (ts *Tensor) Hypot(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHypot(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Hypot() failed: %w", err)
@@ -24108,8 +24108,8 @@ func (ts *Tensor) Hypot(other *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Hypot_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHypot_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Hypot_() failed: %w", err)
@@ -24127,8 +24127,8 @@ func (ts *Tensor) HypotOut(out *Tensor, other *Tensor, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgHypotOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("HypotOut() failed: %w", err)
@@ -24146,8 +24146,8 @@ func (ts *Tensor) I0(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgI0(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("I0() failed: %w", err)
@@ -24162,8 +24162,8 @@ func (ts *Tensor) I0(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) I0_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgI0_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("I0_() failed: %w", err)
@@ -24181,8 +24181,8 @@ func (ts *Tensor) I0Out(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgI0Out(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("I0Out() failed: %w", err)
@@ -24200,8 +24200,8 @@ func (ts *Tensor) Igamma(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIgamma(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Igamma() failed: %w", err)
@@ -24216,8 +24216,8 @@ func (ts *Tensor) Igamma(other *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Igamma_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIgamma_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Igamma_() failed: %w", err)
@@ -24235,8 +24235,8 @@ func (ts *Tensor) IgammaOut(out *Tensor, other *Tensor, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIgammaOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IgammaOut() failed: %w", err)
@@ -24254,8 +24254,8 @@ func (ts *Tensor) Igammac(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIgammac(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Igammac() failed: %w", err)
@@ -24270,8 +24270,8 @@ func (ts *Tensor) Igammac(other *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Igammac_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIgammac_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Igammac_() failed: %w", err)
@@ -24289,8 +24289,8 @@ func (ts *Tensor) IgammacOut(out *Tensor, other *Tensor, del bool) (retVal *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIgammacOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IgammacOut() failed: %w", err)
@@ -24308,8 +24308,8 @@ func (ts *Tensor) Im2col(kernelSize []int64, dilation []int64, padding []int64, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	dilationLen := len(dilation)
 	paddingLen := len(padding)
@@ -24331,8 +24331,8 @@ func (ts *Tensor) Im2colOut(out *Tensor, kernelSize []int64, dilation []int64, p
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	dilationLen := len(dilation)
 	paddingLen := len(padding)
@@ -24354,8 +24354,8 @@ func (ts *Tensor) Imag(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgImag(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Imag() failed: %w", err)
@@ -24373,8 +24373,8 @@ func (ts *Tensor) IndexAdd(dim int64, index *Tensor, source *Tensor, del bool) (
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIndexAdd(ptr, ts.ctensor, dim, index.ctensor, source.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IndexAdd() failed: %w", err)
@@ -24389,8 +24389,8 @@ func (ts *Tensor) IndexAdd(dim int64, index *Tensor, source *Tensor, del bool) (
 // --------------------------
 
 func (ts *Tensor) IndexAdd_(dim int64, index *Tensor, source *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIndexAdd_(ptr, ts.ctensor, dim, index.ctensor, source.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IndexAdd_() failed: %w", err)
@@ -24408,8 +24408,8 @@ func (ts *Tensor) IndexAddOut(out *Tensor, dim int64, index *Tensor, source *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIndexAddOut(ptr, out.ctensor, ts.ctensor, dim, index.ctensor, source.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IndexAddOut() failed: %w", err)
@@ -24427,8 +24427,8 @@ func (ts *Tensor) IndexCopy(dim int64, index *Tensor, source *Tensor, del bool) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIndexCopy(ptr, ts.ctensor, dim, index.ctensor, source.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IndexCopy() failed: %w", err)
@@ -24443,8 +24443,8 @@ func (ts *Tensor) IndexCopy(dim int64, index *Tensor, source *Tensor, del bool) 
 // --------------------------
 
 func (ts *Tensor) IndexCopy_(dim int64, index *Tensor, source *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIndexCopy_(ptr, ts.ctensor, dim, index.ctensor, source.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IndexCopy_() failed: %w", err)
@@ -24462,8 +24462,8 @@ func (ts *Tensor) IndexCopyOut(out *Tensor, dim int64, index *Tensor, source *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIndexCopyOut(ptr, out.ctensor, ts.ctensor, dim, index.ctensor, source.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IndexCopyOut() failed: %w", err)
@@ -24481,8 +24481,8 @@ func (ts *Tensor) IndexFill(dim int64, index *Tensor, value *Scalar, del bool) (
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIndexFill(ptr, ts.ctensor, dim, index.ctensor, value.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IndexFill() failed: %w", err)
@@ -24497,8 +24497,8 @@ func (ts *Tensor) IndexFill(dim int64, index *Tensor, value *Scalar, del bool) (
 // --------------------------
 
 func (ts *Tensor) IndexFill_(dim int64, index *Tensor, value *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIndexFill_(ptr, ts.ctensor, dim, index.ctensor, value.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IndexFill_() failed: %w", err)
@@ -24516,8 +24516,8 @@ func (ts *Tensor) IndexFillIntScalarOut(out *Tensor, dim int64, index *Tensor, v
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIndexFillIntScalarOut(ptr, out.ctensor, ts.ctensor, dim, index.ctensor, value.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IndexFillIntScalarOut() failed: %w", err)
@@ -24535,8 +24535,8 @@ func (ts *Tensor) IndexFillIntTensor(dim int64, index *Tensor, value *Tensor, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIndexFillIntTensor(ptr, ts.ctensor, dim, index.ctensor, value.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IndexFillIntTensor() failed: %w", err)
@@ -24551,8 +24551,8 @@ func (ts *Tensor) IndexFillIntTensor(dim int64, index *Tensor, value *Tensor, de
 // --------------------------
 
 func (ts *Tensor) IndexFillIntTensor_(dim int64, index *Tensor, value *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIndexFillIntTensor_(ptr, ts.ctensor, dim, index.ctensor, value.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IndexFillIntTensor_() failed: %w", err)
@@ -24570,8 +24570,8 @@ func (ts *Tensor) IndexFillIntTensorOut(out *Tensor, dim int64, index *Tensor, v
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIndexFillIntTensorOut(ptr, out.ctensor, ts.ctensor, dim, index.ctensor, value.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IndexFillIntTensorOut() failed: %w", err)
@@ -24589,8 +24589,8 @@ func (ts *Tensor) IndexPutOut(out *Tensor, indices []*Tensor, values *Tensor, ac
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cindices []lib.Ctensor
 	for _, t := range indices {
 		cindices = append(cindices, t.ctensor)
@@ -24616,8 +24616,8 @@ func (ts *Tensor) IndexReduce(dim int64, index *Tensor, source *Tensor, reduce s
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cincludeSelf := int32(0)
 	if includeSelf {
 		cincludeSelf = int32(1)
@@ -24636,8 +24636,8 @@ func (ts *Tensor) IndexReduce(dim int64, index *Tensor, source *Tensor, reduce s
 // --------------------------
 
 func (ts *Tensor) IndexReduce_(dim int64, index *Tensor, source *Tensor, reduce string, includeSelf bool) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cincludeSelf := int32(0)
 	if includeSelf {
 		cincludeSelf = int32(1)
@@ -24659,8 +24659,8 @@ func (ts *Tensor) IndexReduceOut(out *Tensor, dim int64, index *Tensor, source *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cincludeSelf := int32(0)
 	if includeSelf {
 		cincludeSelf = int32(1)
@@ -24682,8 +24682,8 @@ func (ts *Tensor) IndexSelect(dim int64, index *Tensor, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIndexSelect(ptr, ts.ctensor, dim, index.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IndexSelect() failed: %w", err)
@@ -24698,8 +24698,8 @@ func (ts *Tensor) IndexSelect(dim int64, index *Tensor, del bool) (retVal *Tenso
 // --------------------------
 
 func IndexSelectBackward(grad *Tensor, selfSizes []int64, dim int64, index *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	selfSizesLen := len(selfSizes)
 	lib.AtgIndexSelectBackward(ptr, grad.ctensor, selfSizes, selfSizesLen, dim, index.ctensor)
 	if err = TorchErr(); err != nil {
@@ -24718,8 +24718,8 @@ func (ts *Tensor) IndexSelectOut(out *Tensor, dim int64, index *Tensor, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIndexSelectOut(ptr, out.ctensor, ts.ctensor, dim, index.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IndexSelectOut() failed: %w", err)
@@ -24737,8 +24737,8 @@ func (ts *Tensor) IndexTensorOut(out *Tensor, indices []*Tensor, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cindices []lib.Ctensor
 	for _, t := range indices {
 		cindices = append(cindices, t.ctensor)
@@ -24760,8 +24760,8 @@ func (ts *Tensor) Indices(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIndices(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Indices() failed: %w", err)
@@ -24779,8 +24779,8 @@ func (ts *Tensor) IndicesCopy(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIndicesCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IndicesCopy() failed: %w", err)
@@ -24798,8 +24798,8 @@ func (ts *Tensor) IndicesCopyOut(out *Tensor, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIndicesCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IndicesCopyOut() failed: %w", err)
@@ -24817,8 +24817,8 @@ func (ts *Tensor) InfinitelyDifferentiableGeluBackward(grad *Tensor, del bool) (
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgInfinitelyDifferentiableGeluBackward(ptr, grad.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("InfinitelyDifferentiableGeluBackward() failed: %w", err)
@@ -24836,8 +24836,8 @@ func (ts *Tensor) Inner(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgInner(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Inner() failed: %w", err)
@@ -24855,8 +24855,8 @@ func (ts *Tensor) InnerOut(out *Tensor, other *Tensor, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgInnerOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("InnerOut() failed: %w", err)
@@ -24871,8 +24871,8 @@ func (ts *Tensor) InnerOut(out *Tensor, other *Tensor, del bool) (retVal *Tensor
 // --------------------------
 
 func InstanceNorm(input *Tensor, weight *Tensor, bias *Tensor, runningMean *Tensor, runningVar *Tensor, useInputStats bool, momentum float64, eps float64, cudnnEnabled bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cuseInputStats := int32(0)
 	if useInputStats {
 		cuseInputStats = int32(1)
@@ -24898,8 +24898,8 @@ func (ts *Tensor) IntRepr(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIntRepr(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IntRepr() failed: %w", err)
@@ -24917,8 +24917,8 @@ func (ts *Tensor) IntReprOut(out *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIntReprOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IntReprOut() failed: %w", err)
@@ -24936,8 +24936,8 @@ func (ts *Tensor) Inverse(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgInverse(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Inverse() failed: %w", err)
@@ -24955,8 +24955,8 @@ func (ts *Tensor) InverseOut(out *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgInverseOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("InverseOut() failed: %w", err)
@@ -25181,8 +25181,8 @@ func (ts *Tensor) Isclose(other *Tensor, rtol float64, atol float64, equalNan bo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cequalNan := int32(0)
 	if equalNan {
 		cequalNan = int32(1)
@@ -25204,8 +25204,8 @@ func (ts *Tensor) Isfinite(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIsfinite(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Isfinite() failed: %w", err)
@@ -25220,8 +25220,8 @@ func (ts *Tensor) Isfinite(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func Isin(elements *Tensor, testElements *Tensor, assumeUnique bool, invert bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cassumeUnique := int32(0)
 	if assumeUnique {
 		cassumeUnique = int32(1)
@@ -25244,8 +25244,8 @@ func Isin(elements *Tensor, testElements *Tensor, assumeUnique bool, invert bool
 // --------------------------
 
 func IsinScalarTensor(element *Scalar, testElements *Tensor, assumeUnique bool, invert bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cassumeUnique := int32(0)
 	if assumeUnique {
 		cassumeUnique = int32(1)
@@ -25268,8 +25268,8 @@ func IsinScalarTensor(element *Scalar, testElements *Tensor, assumeUnique bool, 
 // --------------------------
 
 func IsinScalarTensorOut(out *Tensor, element *Scalar, testElements *Tensor, assumeUnique bool, invert bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cassumeUnique := int32(0)
 	if assumeUnique {
 		cassumeUnique = int32(1)
@@ -25292,8 +25292,8 @@ func IsinScalarTensorOut(out *Tensor, element *Scalar, testElements *Tensor, ass
 // --------------------------
 
 func IsinTensorScalar(elements *Tensor, testElement *Scalar, assumeUnique bool, invert bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cassumeUnique := int32(0)
 	if assumeUnique {
 		cassumeUnique = int32(1)
@@ -25316,8 +25316,8 @@ func IsinTensorScalar(elements *Tensor, testElement *Scalar, assumeUnique bool, 
 // --------------------------
 
 func IsinTensorScalarOut(out *Tensor, elements *Tensor, testElement *Scalar, assumeUnique bool, invert bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cassumeUnique := int32(0)
 	if assumeUnique {
 		cassumeUnique = int32(1)
@@ -25340,8 +25340,8 @@ func IsinTensorScalarOut(out *Tensor, elements *Tensor, testElement *Scalar, ass
 // --------------------------
 
 func IsinTensorTensorOut(out *Tensor, elements *Tensor, testElements *Tensor, assumeUnique bool, invert bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cassumeUnique := int32(0)
 	if assumeUnique {
 		cassumeUnique = int32(1)
@@ -25367,8 +25367,8 @@ func (ts *Tensor) Isinf(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIsinf(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Isinf() failed: %w", err)
@@ -25386,8 +25386,8 @@ func (ts *Tensor) IsinfOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIsinfOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IsinfOut() failed: %w", err)
@@ -25405,8 +25405,8 @@ func (ts *Tensor) Isnan(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIsnan(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Isnan() failed: %w", err)
@@ -25424,8 +25424,8 @@ func (ts *Tensor) IsnanOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIsnanOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IsnanOut() failed: %w", err)
@@ -25443,8 +25443,8 @@ func (ts *Tensor) Isneginf(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIsneginf(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Isneginf() failed: %w", err)
@@ -25462,8 +25462,8 @@ func (ts *Tensor) IsneginfOut(out *Tensor, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIsneginfOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IsneginfOut() failed: %w", err)
@@ -25481,8 +25481,8 @@ func (ts *Tensor) Isposinf(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIsposinf(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Isposinf() failed: %w", err)
@@ -25500,8 +25500,8 @@ func (ts *Tensor) IsposinfOut(out *Tensor, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIsposinfOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("IsposinfOut() failed: %w", err)
@@ -25519,8 +25519,8 @@ func (ts *Tensor) Isreal(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgIsreal(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Isreal() failed: %w", err)
@@ -25538,8 +25538,8 @@ func (ts *Tensor) Istft(nFft int64, hopLength []int64, winLength []int64, window
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var chopLengthVal int64 = 0
 	var chopLengthNull int = 1
 	if len(hopLength) > 0 {
@@ -25588,8 +25588,8 @@ func (ts *Tensor) Istft(nFft int64, hopLength []int64, winLength []int64, window
 // --------------------------
 
 func KaiserWindow(windowLength int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgKaiserWindow(ptr, windowLength, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("KaiserWindow() failed: %w", err)
@@ -25604,8 +25604,8 @@ func KaiserWindow(windowLength int64, optionsKind gotch.DType, optionsDevice got
 // --------------------------
 
 func KaiserWindowBeta(windowLength int64, periodic bool, beta float64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cperiodic := int32(0)
 	if periodic {
 		cperiodic = int32(1)
@@ -25624,8 +25624,8 @@ func KaiserWindowBeta(windowLength int64, periodic bool, beta float64, optionsKi
 // --------------------------
 
 func KaiserWindowBetaOut(out *Tensor, windowLength int64, periodic bool, beta float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cperiodic := int32(0)
 	if periodic {
 		cperiodic = int32(1)
@@ -25644,8 +25644,8 @@ func KaiserWindowBetaOut(out *Tensor, windowLength int64, periodic bool, beta fl
 // --------------------------
 
 func KaiserWindowOut(out *Tensor, windowLength int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgKaiserWindowOut(ptr, out.ctensor, windowLength)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("KaiserWindowOut() failed: %w", err)
@@ -25660,8 +25660,8 @@ func KaiserWindowOut(out *Tensor, windowLength int64) (retVal *Tensor, err error
 // --------------------------
 
 func KaiserWindowPeriodic(windowLength int64, periodic bool, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cperiodic := int32(0)
 	if periodic {
 		cperiodic = int32(1)
@@ -25680,8 +25680,8 @@ func KaiserWindowPeriodic(windowLength int64, periodic bool, optionsKind gotch.D
 // --------------------------
 
 func KaiserWindowPeriodicOut(out *Tensor, windowLength int64, periodic bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cperiodic := int32(0)
 	if periodic {
 		cperiodic = int32(1)
@@ -25703,8 +25703,8 @@ func (ts *Tensor) KlDiv(target *Tensor, reduction int64, logTarget bool, del boo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	clogTarget := int32(0)
 	if logTarget {
 		clogTarget = int32(1)
@@ -25726,8 +25726,8 @@ func (ts *Tensor) Kron(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgKron(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Kron() failed: %w", err)
@@ -25745,8 +25745,8 @@ func (ts *Tensor) KronOut(out *Tensor, other *Tensor, del bool) (retVal *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgKronOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("KronOut() failed: %w", err)
@@ -25812,8 +25812,8 @@ func (ts *Tensor) L1Loss(target *Tensor, reduction int64, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgL1Loss(ptr, ts.ctensor, target.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("L1Loss() failed: %w", err)
@@ -25828,8 +25828,8 @@ func (ts *Tensor) L1Loss(target *Tensor, reduction int64, del bool) (retVal *Ten
 // --------------------------
 
 func LayerNorm(input *Tensor, normalizedShape []int64, weight *Tensor, bias *Tensor, eps float64, cudnnEnable bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	normalizedShapeLen := len(normalizedShape)
 	ccudnnEnable := int32(0)
 	if cudnnEnable {
@@ -25852,8 +25852,8 @@ func (ts *Tensor) Lcm(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLcm(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Lcm() failed: %w", err)
@@ -25868,8 +25868,8 @@ func (ts *Tensor) Lcm(other *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Lcm_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLcm_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Lcm_() failed: %w", err)
@@ -25887,8 +25887,8 @@ func (ts *Tensor) LcmOut(out *Tensor, other *Tensor, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLcmOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LcmOut() failed: %w", err)
@@ -25906,8 +25906,8 @@ func (ts *Tensor) Ldexp(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLdexp(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Ldexp() failed: %w", err)
@@ -25922,8 +25922,8 @@ func (ts *Tensor) Ldexp(other *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Ldexp_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLdexp_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Ldexp_() failed: %w", err)
@@ -25941,8 +25941,8 @@ func (ts *Tensor) LdexpOut(out *Tensor, other *Tensor, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLdexpOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LdexpOut() failed: %w", err)
@@ -25960,8 +25960,8 @@ func (ts *Tensor) Le(other *Scalar, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLe(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Le() failed: %w", err)
@@ -25976,8 +25976,8 @@ func (ts *Tensor) Le(other *Scalar, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Le_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLe_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Le_() failed: %w", err)
@@ -25995,8 +25995,8 @@ func (ts *Tensor) LeScalarOut(out *Tensor, other *Scalar, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLeScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LeScalarOut() failed: %w", err)
@@ -26014,8 +26014,8 @@ func (ts *Tensor) LeTensor(other *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLeTensor(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LeTensor() failed: %w", err)
@@ -26030,8 +26030,8 @@ func (ts *Tensor) LeTensor(other *Tensor, del bool) (retVal *Tensor, err error) 
 // --------------------------
 
 func (ts *Tensor) LeTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLeTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LeTensor_() failed: %w", err)
@@ -26049,8 +26049,8 @@ func (ts *Tensor) LeTensorOut(out *Tensor, other *Tensor, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLeTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LeTensorOut() failed: %w", err)
@@ -26068,8 +26068,8 @@ func (ts *Tensor) LeakyRelu(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLeakyRelu(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LeakyRelu() failed: %w", err)
@@ -26084,8 +26084,8 @@ func (ts *Tensor) LeakyRelu(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) LeakyRelu_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLeakyRelu_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LeakyRelu_() failed: %w", err)
@@ -26103,8 +26103,8 @@ func (ts *Tensor) LeakyReluBackward(gradOutput *Tensor, negativeSlope *Scalar, s
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cselfIsResult := int32(0)
 	if selfIsResult {
 		cselfIsResult = int32(1)
@@ -26126,8 +26126,8 @@ func (ts *Tensor) LeakyReluBackwardGradInput(gradInput *Tensor, gradOutput *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cselfIsResult := int32(0)
 	if selfIsResult {
 		cselfIsResult = int32(1)
@@ -26149,8 +26149,8 @@ func (ts *Tensor) LeakyReluOut(out *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLeakyReluOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LeakyReluOut() failed: %w", err)
@@ -26168,8 +26168,8 @@ func (ts *Tensor) Lerp(end *Tensor, weight *Scalar, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLerp(ptr, ts.ctensor, end.ctensor, weight.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Lerp() failed: %w", err)
@@ -26184,8 +26184,8 @@ func (ts *Tensor) Lerp(end *Tensor, weight *Scalar, del bool) (retVal *Tensor, e
 // --------------------------
 
 func (ts *Tensor) Lerp_(end *Tensor, weight *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLerp_(ptr, ts.ctensor, end.ctensor, weight.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Lerp_() failed: %w", err)
@@ -26203,8 +26203,8 @@ func (ts *Tensor) LerpScalarOut(out *Tensor, end *Tensor, weight *Scalar, del bo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLerpScalarOut(ptr, out.ctensor, ts.ctensor, end.ctensor, weight.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LerpScalarOut() failed: %w", err)
@@ -26222,8 +26222,8 @@ func (ts *Tensor) LerpTensor(end *Tensor, weight *Tensor, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLerpTensor(ptr, ts.ctensor, end.ctensor, weight.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LerpTensor() failed: %w", err)
@@ -26238,8 +26238,8 @@ func (ts *Tensor) LerpTensor(end *Tensor, weight *Tensor, del bool) (retVal *Ten
 // --------------------------
 
 func (ts *Tensor) LerpTensor_(end *Tensor, weight *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLerpTensor_(ptr, ts.ctensor, end.ctensor, weight.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LerpTensor_() failed: %w", err)
@@ -26257,8 +26257,8 @@ func (ts *Tensor) LerpTensorOut(out *Tensor, end *Tensor, weight *Tensor, del bo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLerpTensorOut(ptr, out.ctensor, ts.ctensor, end.ctensor, weight.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LerpTensorOut() failed: %w", err)
@@ -26276,8 +26276,8 @@ func (ts *Tensor) Less(other *Scalar, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLess(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Less() failed: %w", err)
@@ -26292,8 +26292,8 @@ func (ts *Tensor) Less(other *Scalar, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Less_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLess_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Less_() failed: %w", err)
@@ -26311,8 +26311,8 @@ func (ts *Tensor) LessEqual(other *Scalar, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLessEqual(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LessEqual() failed: %w", err)
@@ -26327,8 +26327,8 @@ func (ts *Tensor) LessEqual(other *Scalar, del bool) (retVal *Tensor, err error)
 // --------------------------
 
 func (ts *Tensor) LessEqual_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLessEqual_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LessEqual_() failed: %w", err)
@@ -26346,8 +26346,8 @@ func (ts *Tensor) LessEqualScalarOut(out *Tensor, other *Scalar, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLessEqualScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LessEqualScalarOut() failed: %w", err)
@@ -26365,8 +26365,8 @@ func (ts *Tensor) LessEqualTensor(other *Tensor, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLessEqualTensor(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LessEqualTensor() failed: %w", err)
@@ -26381,8 +26381,8 @@ func (ts *Tensor) LessEqualTensor(other *Tensor, del bool) (retVal *Tensor, err 
 // --------------------------
 
 func (ts *Tensor) LessEqualTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLessEqualTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LessEqualTensor_() failed: %w", err)
@@ -26400,8 +26400,8 @@ func (ts *Tensor) LessEqualTensorOut(out *Tensor, other *Tensor, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLessEqualTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LessEqualTensorOut() failed: %w", err)
@@ -26419,8 +26419,8 @@ func (ts *Tensor) LessScalarOut(out *Tensor, other *Scalar, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLessScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LessScalarOut() failed: %w", err)
@@ -26438,8 +26438,8 @@ func (ts *Tensor) LessTensor(other *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLessTensor(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LessTensor() failed: %w", err)
@@ -26454,8 +26454,8 @@ func (ts *Tensor) LessTensor(other *Tensor, del bool) (retVal *Tensor, err error
 // --------------------------
 
 func (ts *Tensor) LessTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLessTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LessTensor_() failed: %w", err)
@@ -26473,8 +26473,8 @@ func (ts *Tensor) LessTensorOut(out *Tensor, other *Tensor, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLessTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LessTensorOut() failed: %w", err)
@@ -26492,8 +26492,8 @@ func (ts *Tensor) Lgamma(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLgamma(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Lgamma() failed: %w", err)
@@ -26508,8 +26508,8 @@ func (ts *Tensor) Lgamma(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Lgamma_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLgamma_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Lgamma_() failed: %w", err)
@@ -26527,8 +26527,8 @@ func (ts *Tensor) LgammaOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLgammaOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LgammaOut() failed: %w", err)
@@ -26546,8 +26546,8 @@ func (ts *Tensor) Lift(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLift(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Lift() failed: %w", err)
@@ -26565,8 +26565,8 @@ func (ts *Tensor) LiftFresh(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLiftFresh(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LiftFresh() failed: %w", err)
@@ -26584,8 +26584,8 @@ func (ts *Tensor) LiftFreshCopy(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLiftFreshCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LiftFreshCopy() failed: %w", err)
@@ -26603,8 +26603,8 @@ func (ts *Tensor) LiftFreshCopyOut(out *Tensor, del bool) (retVal *Tensor, err e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLiftFreshCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LiftFreshCopyOut() failed: %w", err)
@@ -26622,8 +26622,8 @@ func (ts *Tensor) LiftOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLiftOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LiftOut() failed: %w", err)
@@ -26641,8 +26641,8 @@ func (ts *Tensor) LinalgCholesky(upper bool, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cupper := int32(0)
 	if upper {
 		cupper = int32(1)
@@ -26720,8 +26720,8 @@ func (ts *Tensor) LinalgCholeskyOut(out *Tensor, upper bool, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cupper := int32(0)
 	if upper {
 		cupper = int32(1)
@@ -26743,8 +26743,8 @@ func (ts *Tensor) LinalgCond(p *Scalar, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgCond(ptr, ts.ctensor, p.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgCond() failed: %w", err)
@@ -26762,8 +26762,8 @@ func (ts *Tensor) LinalgCondOut(out *Tensor, p *Scalar, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgCondOut(ptr, out.ctensor, ts.ctensor, p.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgCondOut() failed: %w", err)
@@ -26781,8 +26781,8 @@ func (ts *Tensor) LinalgCondPStr(p string, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgCondPStr(ptr, ts.ctensor, p)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgCondPStr() failed: %w", err)
@@ -26800,8 +26800,8 @@ func (ts *Tensor) LinalgCondPStrOut(out *Tensor, p string, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgCondPStrOut(ptr, out.ctensor, ts.ctensor, p)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgCondPStrOut() failed: %w", err)
@@ -26819,8 +26819,8 @@ func (ts *Tensor) LinalgCross(other *Tensor, dim int64, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgCross(ptr, ts.ctensor, other.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgCross() failed: %w", err)
@@ -26838,8 +26838,8 @@ func (ts *Tensor) LinalgCrossOut(out *Tensor, other *Tensor, dim int64, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgCrossOut(ptr, out.ctensor, ts.ctensor, other.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgCrossOut() failed: %w", err)
@@ -26854,8 +26854,8 @@ func (ts *Tensor) LinalgCrossOut(out *Tensor, other *Tensor, dim int64, del bool
 // --------------------------
 
 func LinalgDet(a *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgDet(ptr, a.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgDet() failed: %w", err)
@@ -26870,8 +26870,8 @@ func LinalgDet(a *Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func LinalgDetOut(out *Tensor, a *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgDetOut(ptr, out.ctensor, a.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgDetOut() failed: %w", err)
@@ -26886,8 +26886,8 @@ func LinalgDetOut(out *Tensor, a *Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func LinalgDiagonal(a *Tensor, offset int64, dim1 int64, dim2 int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgDiagonal(ptr, a.ctensor, offset, dim1, dim2)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgDiagonal() failed: %w", err)
@@ -26985,8 +26985,8 @@ func (ts *Tensor) LinalgEigvals(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgEigvals(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgEigvals() failed: %w", err)
@@ -27004,8 +27004,8 @@ func (ts *Tensor) LinalgEigvalsOut(out *Tensor, del bool) (retVal *Tensor, err e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgEigvalsOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgEigvalsOut() failed: %w", err)
@@ -27023,8 +27023,8 @@ func (ts *Tensor) LinalgEigvalsh(uPLO string, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgEigvalsh(ptr, ts.ctensor, uPLO)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgEigvalsh() failed: %w", err)
@@ -27042,8 +27042,8 @@ func (ts *Tensor) LinalgEigvalshOut(out *Tensor, uPLO string, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgEigvalshOut(ptr, out.ctensor, ts.ctensor, uPLO)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgEigvalshOut() failed: %w", err)
@@ -27058,8 +27058,8 @@ func (ts *Tensor) LinalgEigvalshOut(out *Tensor, uPLO string, del bool) (retVal 
 // --------------------------
 
 func LinalgHouseholderProduct(input *Tensor, tau *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgHouseholderProduct(ptr, input.ctensor, tau.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgHouseholderProduct() failed: %w", err)
@@ -27074,8 +27074,8 @@ func LinalgHouseholderProduct(input *Tensor, tau *Tensor) (retVal *Tensor, err e
 // --------------------------
 
 func LinalgHouseholderProductOut(out *Tensor, input *Tensor, tau *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgHouseholderProductOut(ptr, out.ctensor, input.ctensor, tau.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgHouseholderProductOut() failed: %w", err)
@@ -27090,8 +27090,8 @@ func LinalgHouseholderProductOut(out *Tensor, input *Tensor, tau *Tensor) (retVa
 // --------------------------
 
 func LinalgInv(a *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgInv(ptr, a.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgInv() failed: %w", err)
@@ -27148,8 +27148,8 @@ func LinalgInvExInverse(inverse *Tensor, info *Tensor, a *Tensor, checkErrors bo
 // --------------------------
 
 func LinalgInvOut(out *Tensor, a *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgInvOut(ptr, out.ctensor, a.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgInvOut() failed: %w", err)
@@ -27272,8 +27272,8 @@ func (ts *Tensor) LinalgLdlFactorOut(lD *Tensor, pivots *Tensor, hermitian bool,
 // --------------------------
 
 func LinalgLdlSolve(lD *Tensor, pivots *Tensor, b *Tensor, hermitian bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chermitian := int32(0)
 	if hermitian {
 		chermitian = int32(1)
@@ -27292,8 +27292,8 @@ func LinalgLdlSolve(lD *Tensor, pivots *Tensor, b *Tensor, hermitian bool) (retV
 // --------------------------
 
 func LinalgLdlSolveOut(out *Tensor, lD *Tensor, pivots *Tensor, b *Tensor, hermitian bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chermitian := int32(0)
 	if hermitian {
 		chermitian = int32(1)
@@ -27514,8 +27514,8 @@ func LinalgLuOut(p *Tensor, l *Tensor, u *Tensor, a *Tensor, pivot bool) (retVal
 // --------------------------
 
 func LinalgLuSolve(lU *Tensor, pivots *Tensor, b *Tensor, left bool, adjoint bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cleft := int32(0)
 	if left {
 		cleft = int32(1)
@@ -27538,8 +27538,8 @@ func LinalgLuSolve(lU *Tensor, pivots *Tensor, b *Tensor, left bool, adjoint boo
 // --------------------------
 
 func LinalgLuSolveOut(out *Tensor, lU *Tensor, pivots *Tensor, b *Tensor, left bool, adjoint bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cleft := int32(0)
 	if left {
 		cleft = int32(1)
@@ -27565,8 +27565,8 @@ func (ts *Tensor) LinalgMatmul(other *Tensor, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgMatmul(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgMatmul() failed: %w", err)
@@ -27584,8 +27584,8 @@ func (ts *Tensor) LinalgMatmulOut(out *Tensor, other *Tensor, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgMatmulOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgMatmulOut() failed: %w", err)
@@ -27603,8 +27603,8 @@ func (ts *Tensor) LinalgMatrixExp(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgMatrixExp(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgMatrixExp() failed: %w", err)
@@ -27622,8 +27622,8 @@ func (ts *Tensor) LinalgMatrixExpOut(out *Tensor, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgMatrixExpOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgMatrixExpOut() failed: %w", err)
@@ -27641,8 +27641,8 @@ func (ts *Tensor) LinalgMatrixPower(n int64, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgMatrixPower(ptr, ts.ctensor, n)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgMatrixPower() failed: %w", err)
@@ -27660,8 +27660,8 @@ func (ts *Tensor) LinalgMatrixPowerOut(out *Tensor, n int64, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgMatrixPowerOut(ptr, out.ctensor, ts.ctensor, n)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgMatrixPowerOut() failed: %w", err)
@@ -27679,8 +27679,8 @@ func (ts *Tensor) LinalgMatrixRank(tol float64, hermitian bool, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chermitian := int32(0)
 	if hermitian {
 		chermitian = int32(1)
@@ -27702,8 +27702,8 @@ func (ts *Tensor) LinalgMatrixRankAtolRtolFloat(atol []float64, rtol []float64, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var catolVal float64 = 0.0
 	var catolNull int = 1
 	if len(atol) > 0 {
@@ -27737,8 +27737,8 @@ func (ts *Tensor) LinalgMatrixRankAtolRtolFloatOut(out *Tensor, atol []float64, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var catolVal float64 = 0.0
 	var catolNull int = 1
 	if len(atol) > 0 {
@@ -27769,8 +27769,8 @@ func (ts *Tensor) LinalgMatrixRankAtolRtolFloatOut(out *Tensor, atol []float64, 
 // --------------------------
 
 func LinalgMatrixRankAtolRtolTensor(input *Tensor, atol *Tensor, rtol *Tensor, hermitian bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chermitian := int32(0)
 	if hermitian {
 		chermitian = int32(1)
@@ -27789,8 +27789,8 @@ func LinalgMatrixRankAtolRtolTensor(input *Tensor, atol *Tensor, rtol *Tensor, h
 // --------------------------
 
 func LinalgMatrixRankAtolRtolTensorOut(out *Tensor, input *Tensor, atol *Tensor, rtol *Tensor, hermitian bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chermitian := int32(0)
 	if hermitian {
 		chermitian = int32(1)
@@ -27812,8 +27812,8 @@ func (ts *Tensor) LinalgMatrixRankOut(out *Tensor, tol float64, hermitian bool, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chermitian := int32(0)
 	if hermitian {
 		chermitian = int32(1)
@@ -27832,8 +27832,8 @@ func (ts *Tensor) LinalgMatrixRankOut(out *Tensor, tol float64, hermitian bool, 
 // --------------------------
 
 func LinalgMatrixRankOutTolTensor(out *Tensor, input *Tensor, tol *Tensor, hermitian bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chermitian := int32(0)
 	if hermitian {
 		chermitian = int32(1)
@@ -27852,8 +27852,8 @@ func LinalgMatrixRankOutTolTensor(out *Tensor, input *Tensor, tol *Tensor, hermi
 // --------------------------
 
 func LinalgMatrixRankTolTensor(input *Tensor, tol *Tensor, hermitian bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chermitian := int32(0)
 	if hermitian {
 		chermitian = int32(1)
@@ -27872,8 +27872,8 @@ func LinalgMatrixRankTolTensor(input *Tensor, tol *Tensor, hermitian bool) (retV
 // --------------------------
 
 func LinalgMultiDot(tensors []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -27892,8 +27892,8 @@ func LinalgMultiDot(tensors []*Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func LinalgMultiDotOut(out *Tensor, tensors []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -27915,8 +27915,8 @@ func (ts *Tensor) LinalgNorm(ord *Scalar, dim []int64, keepdim bool, dtype gotch
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -27939,8 +27939,8 @@ func (ts *Tensor) LinalgNormOrdStr(ord string, dim []int64, keepdim bool, dtype 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -27963,8 +27963,8 @@ func (ts *Tensor) LinalgNormOrdStrOut(out *Tensor, ord string, dim []int64, keep
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -27987,8 +27987,8 @@ func (ts *Tensor) LinalgNormOut(out *Tensor, ord *Scalar, dim []int64, keepdim b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -28011,8 +28011,8 @@ func (ts *Tensor) LinalgPinv(rcond float64, hermitian bool, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chermitian := int32(0)
 	if hermitian {
 		chermitian = int32(1)
@@ -28034,8 +28034,8 @@ func (ts *Tensor) LinalgPinvAtolRtolFloat(atol []float64, rtol []float64, hermit
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var catolVal float64 = 0.0
 	var catolNull int = 1
 	if len(atol) > 0 {
@@ -28069,8 +28069,8 @@ func (ts *Tensor) LinalgPinvAtolRtolFloatOut(out *Tensor, atol []float64, rtol [
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var catolVal float64 = 0.0
 	var catolNull int = 1
 	if len(atol) > 0 {
@@ -28104,8 +28104,8 @@ func (ts *Tensor) LinalgPinvAtolRtolTensor(atol *Tensor, rtol *Tensor, hermitian
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chermitian := int32(0)
 	if hermitian {
 		chermitian = int32(1)
@@ -28127,8 +28127,8 @@ func (ts *Tensor) LinalgPinvAtolRtolTensorOut(out *Tensor, atol *Tensor, rtol *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chermitian := int32(0)
 	if hermitian {
 		chermitian = int32(1)
@@ -28150,8 +28150,8 @@ func (ts *Tensor) LinalgPinvOut(out *Tensor, rcond float64, hermitian bool, del 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chermitian := int32(0)
 	if hermitian {
 		chermitian = int32(1)
@@ -28173,8 +28173,8 @@ func (ts *Tensor) LinalgPinvOutRcondTensor(out *Tensor, rcond *Tensor, hermitian
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chermitian := int32(0)
 	if hermitian {
 		chermitian = int32(1)
@@ -28196,8 +28196,8 @@ func (ts *Tensor) LinalgPinvRcondTensor(rcond *Tensor, hermitian bool, del bool)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	chermitian := int32(0)
 	if hermitian {
 		chermitian = int32(1)
@@ -28284,8 +28284,8 @@ func LinalgSlogdetOut(sign *Tensor, logabsdet *Tensor, a *Tensor) (retVal0 *Tens
 // --------------------------
 
 func LinalgSolve(a *Tensor, b *Tensor, left bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cleft := int32(0)
 	if left {
 		cleft = int32(1)
@@ -28354,8 +28354,8 @@ func LinalgSolveExOut(result *Tensor, info *Tensor, a *Tensor, b *Tensor, left b
 // --------------------------
 
 func LinalgSolveOut(out *Tensor, a *Tensor, b *Tensor, left bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cleft := int32(0)
 	if left {
 		cleft = int32(1)
@@ -28377,8 +28377,8 @@ func (ts *Tensor) LinalgSolveTriangular(b *Tensor, upper bool, left bool, unitri
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cupper := int32(0)
 	if upper {
 		cupper = int32(1)
@@ -28408,8 +28408,8 @@ func (ts *Tensor) LinalgSolveTriangularOut(out *Tensor, b *Tensor, upper bool, l
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cupper := int32(0)
 	if upper {
 		cupper = int32(1)
@@ -28482,8 +28482,8 @@ func LinalgSvdU(u *Tensor, s *Tensor, vh *Tensor, a *Tensor, fullMatrices bool, 
 // --------------------------
 
 func LinalgSvdvals(a *Tensor, driver string) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgSvdvals(ptr, a.ctensor, driver)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgSvdvals() failed: %w", err)
@@ -28498,8 +28498,8 @@ func LinalgSvdvals(a *Tensor, driver string) (retVal *Tensor, err error) {
 // --------------------------
 
 func LinalgSvdvalsOut(out *Tensor, a *Tensor, driver string) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgSvdvalsOut(ptr, out.ctensor, a.ctensor, driver)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgSvdvalsOut() failed: %w", err)
@@ -28517,8 +28517,8 @@ func (ts *Tensor) LinalgTensorinv(ind int64, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgTensorinv(ptr, ts.ctensor, ind)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgTensorinv() failed: %w", err)
@@ -28536,8 +28536,8 @@ func (ts *Tensor) LinalgTensorinvOut(out *Tensor, ind int64, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgTensorinvOut(ptr, out.ctensor, ts.ctensor, ind)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgTensorinvOut() failed: %w", err)
@@ -28555,8 +28555,8 @@ func (ts *Tensor) LinalgTensorsolve(other *Tensor, dims []int64, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimsLen := len(dims)
 	lib.AtgLinalgTensorsolve(ptr, ts.ctensor, other.ctensor, dims, dimsLen)
 	if err = TorchErr(); err != nil {
@@ -28575,8 +28575,8 @@ func (ts *Tensor) LinalgTensorsolveOut(out *Tensor, other *Tensor, dims []int64,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimsLen := len(dims)
 	lib.AtgLinalgTensorsolveOut(ptr, out.ctensor, ts.ctensor, other.ctensor, dims, dimsLen)
 	if err = TorchErr(); err != nil {
@@ -28592,8 +28592,8 @@ func (ts *Tensor) LinalgTensorsolveOut(out *Tensor, other *Tensor, dims []int64,
 // --------------------------
 
 func LinalgVander(x *Tensor, n []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cnVal int64 = 0
 	var cnNull int = 1
 	if len(n) > 0 {
@@ -28614,8 +28614,8 @@ func LinalgVander(x *Tensor, n []int64) (retVal *Tensor, err error) {
 // --------------------------
 
 func LinalgVecdot(x *Tensor, y *Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgVecdot(ptr, x.ctensor, y.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgVecdot() failed: %w", err)
@@ -28630,8 +28630,8 @@ func LinalgVecdot(x *Tensor, y *Tensor, dim int64) (retVal *Tensor, err error) {
 // --------------------------
 
 func LinalgVecdotOut(out *Tensor, x *Tensor, y *Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinalgVecdotOut(ptr, out.ctensor, x.ctensor, y.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinalgVecdotOut() failed: %w", err)
@@ -28646,8 +28646,8 @@ func LinalgVecdotOut(out *Tensor, x *Tensor, y *Tensor, dim int64) (retVal *Tens
 // --------------------------
 
 func Linear(input *Tensor, weight *Tensor, bias *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinear(ptr, input.ctensor, weight.ctensor, bias.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Linear() failed: %w", err)
@@ -28662,8 +28662,8 @@ func Linear(input *Tensor, weight *Tensor, bias *Tensor) (retVal *Tensor, err er
 // --------------------------
 
 func LinearOut(out *Tensor, input *Tensor, weight *Tensor, bias *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinearOut(ptr, out.ctensor, input.ctensor, weight.ctensor, bias.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinearOut() failed: %w", err)
@@ -28678,8 +28678,8 @@ func LinearOut(out *Tensor, input *Tensor, weight *Tensor, bias *Tensor) (retVal
 // --------------------------
 
 func Linspace(start *Scalar, end *Scalar, steps int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinspace(ptr, start.cscalar, end.cscalar, steps, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Linspace() failed: %w", err)
@@ -28694,8 +28694,8 @@ func Linspace(start *Scalar, end *Scalar, steps int64, optionsKind gotch.DType, 
 // --------------------------
 
 func LinspaceOut(out *Tensor, start *Scalar, end *Scalar, steps int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLinspaceOut(ptr, out.ctensor, start.cscalar, end.cscalar, steps)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LinspaceOut() failed: %w", err)
@@ -28713,8 +28713,8 @@ func (ts *Tensor) Log(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLog(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Log() failed: %w", err)
@@ -28732,8 +28732,8 @@ func (ts *Tensor) Log10(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLog10(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Log10() failed: %w", err)
@@ -28748,8 +28748,8 @@ func (ts *Tensor) Log10(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Log10_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLog10_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Log10_() failed: %w", err)
@@ -28767,8 +28767,8 @@ func (ts *Tensor) Log10Out(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLog10Out(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Log10Out() failed: %w", err)
@@ -28786,8 +28786,8 @@ func (ts *Tensor) Log1p(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLog1p(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Log1p() failed: %w", err)
@@ -28802,8 +28802,8 @@ func (ts *Tensor) Log1p(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Log1p_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLog1p_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Log1p_() failed: %w", err)
@@ -28821,8 +28821,8 @@ func (ts *Tensor) Log1pOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLog1pOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Log1pOut() failed: %w", err)
@@ -28840,8 +28840,8 @@ func (ts *Tensor) Log2(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLog2(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Log2() failed: %w", err)
@@ -28856,8 +28856,8 @@ func (ts *Tensor) Log2(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Log2_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLog2_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Log2_() failed: %w", err)
@@ -28875,8 +28875,8 @@ func (ts *Tensor) Log2Out(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLog2Out(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Log2Out() failed: %w", err)
@@ -28891,8 +28891,8 @@ func (ts *Tensor) Log2Out(out *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Log_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLog_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Log_() failed: %w", err)
@@ -28910,8 +28910,8 @@ func (ts *Tensor) LogNormal(mean float64, std float64, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogNormal(ptr, ts.ctensor, mean, std)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogNormal() failed: %w", err)
@@ -28926,8 +28926,8 @@ func (ts *Tensor) LogNormal(mean float64, std float64, del bool) (retVal *Tensor
 // --------------------------
 
 func (ts *Tensor) LogNormal_(mean float64, std float64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogNormal_(ptr, ts.ctensor, mean, std)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogNormal_() failed: %w", err)
@@ -28945,8 +28945,8 @@ func (ts *Tensor) LogNormalOut(out *Tensor, mean float64, std float64, del bool)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogNormalOut(ptr, out.ctensor, ts.ctensor, mean, std)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogNormalOut() failed: %w", err)
@@ -28964,8 +28964,8 @@ func (ts *Tensor) LogOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogOut() failed: %w", err)
@@ -28983,8 +28983,8 @@ func (ts *Tensor) LogSigmoid(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogSigmoid(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogSigmoid() failed: %w", err)
@@ -29002,8 +29002,8 @@ func (ts *Tensor) LogSigmoidBackward(gradOutput *Tensor, buffer *Tensor, del boo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogSigmoidBackward(ptr, gradOutput.ctensor, ts.ctensor, buffer.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogSigmoidBackward() failed: %w", err)
@@ -29021,8 +29021,8 @@ func (ts *Tensor) LogSigmoidBackwardGradInput(gradInput *Tensor, gradOutput *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogSigmoidBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, buffer.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogSigmoidBackwardGradInput() failed: %w", err)
@@ -29040,8 +29040,8 @@ func (ts *Tensor) LogSigmoidOut(out *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogSigmoidOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogSigmoidOut() failed: %w", err)
@@ -29059,8 +29059,8 @@ func (ts *Tensor) LogSoftmax(dim int64, dtype gotch.DType, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogSoftmax(ptr, ts.ctensor, dim, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogSoftmax() failed: %w", err)
@@ -29078,8 +29078,8 @@ func (ts *Tensor) LogSoftmaxIntOut(out *Tensor, dim int64, dtype gotch.DType, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogSoftmaxIntOut(ptr, out.ctensor, ts.ctensor, dim, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogSoftmaxIntOut() failed: %w", err)
@@ -29097,8 +29097,8 @@ func (ts *Tensor) Logaddexp(other *Tensor, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogaddexp(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Logaddexp() failed: %w", err)
@@ -29116,8 +29116,8 @@ func (ts *Tensor) Logaddexp2(other *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogaddexp2(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Logaddexp2() failed: %w", err)
@@ -29135,8 +29135,8 @@ func (ts *Tensor) Logaddexp2Out(out *Tensor, other *Tensor, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogaddexp2Out(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Logaddexp2Out() failed: %w", err)
@@ -29154,8 +29154,8 @@ func (ts *Tensor) LogaddexpOut(out *Tensor, other *Tensor, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogaddexpOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogaddexpOut() failed: %w", err)
@@ -29173,8 +29173,8 @@ func (ts *Tensor) Logcumsumexp(dim int64, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogcumsumexp(ptr, ts.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Logcumsumexp() failed: %w", err)
@@ -29192,8 +29192,8 @@ func (ts *Tensor) LogcumsumexpOut(out *Tensor, dim int64, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogcumsumexpOut(ptr, out.ctensor, ts.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogcumsumexpOut() failed: %w", err)
@@ -29211,8 +29211,8 @@ func (ts *Tensor) Logdet(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogdet(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Logdet() failed: %w", err)
@@ -29230,8 +29230,8 @@ func (ts *Tensor) LogicalAnd(other *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogicalAnd(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogicalAnd() failed: %w", err)
@@ -29246,8 +29246,8 @@ func (ts *Tensor) LogicalAnd(other *Tensor, del bool) (retVal *Tensor, err error
 // --------------------------
 
 func (ts *Tensor) LogicalAnd_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogicalAnd_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogicalAnd_() failed: %w", err)
@@ -29265,8 +29265,8 @@ func (ts *Tensor) LogicalAndOut(out *Tensor, other *Tensor, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogicalAndOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogicalAndOut() failed: %w", err)
@@ -29284,8 +29284,8 @@ func (ts *Tensor) LogicalNot(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogicalNot(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogicalNot() failed: %w", err)
@@ -29300,8 +29300,8 @@ func (ts *Tensor) LogicalNot(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) LogicalNot_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogicalNot_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogicalNot_() failed: %w", err)
@@ -29319,8 +29319,8 @@ func (ts *Tensor) LogicalNotOut(out *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogicalNotOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogicalNotOut() failed: %w", err)
@@ -29338,8 +29338,8 @@ func (ts *Tensor) LogicalOr(other *Tensor, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogicalOr(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogicalOr() failed: %w", err)
@@ -29354,8 +29354,8 @@ func (ts *Tensor) LogicalOr(other *Tensor, del bool) (retVal *Tensor, err error)
 // --------------------------
 
 func (ts *Tensor) LogicalOr_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogicalOr_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogicalOr_() failed: %w", err)
@@ -29373,8 +29373,8 @@ func (ts *Tensor) LogicalOrOut(out *Tensor, other *Tensor, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogicalOrOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogicalOrOut() failed: %w", err)
@@ -29392,8 +29392,8 @@ func (ts *Tensor) LogicalXor(other *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogicalXor(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogicalXor() failed: %w", err)
@@ -29408,8 +29408,8 @@ func (ts *Tensor) LogicalXor(other *Tensor, del bool) (retVal *Tensor, err error
 // --------------------------
 
 func (ts *Tensor) LogicalXor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogicalXor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogicalXor_() failed: %w", err)
@@ -29427,8 +29427,8 @@ func (ts *Tensor) LogicalXorOut(out *Tensor, other *Tensor, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogicalXorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogicalXorOut() failed: %w", err)
@@ -29446,8 +29446,8 @@ func (ts *Tensor) Logit(eps []float64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cepsVal float64 = 0.0
 	var cepsNull int = 1
 	if len(eps) > 0 {
@@ -29468,8 +29468,8 @@ func (ts *Tensor) Logit(eps []float64, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Logit_(eps []float64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cepsVal float64 = 0.0
 	var cepsNull int = 1
 	if len(eps) > 0 {
@@ -29493,8 +29493,8 @@ func (ts *Tensor) LogitBackward(gradOutput *Tensor, eps []float64, del bool) (re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cepsVal float64 = 0.0
 	var cepsNull int = 1
 	if len(eps) > 0 {
@@ -29518,8 +29518,8 @@ func (ts *Tensor) LogitBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cepsVal float64 = 0.0
 	var cepsNull int = 1
 	if len(eps) > 0 {
@@ -29543,8 +29543,8 @@ func (ts *Tensor) LogitOut(out *Tensor, eps []float64, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cepsVal float64 = 0.0
 	var cepsNull int = 1
 	if len(eps) > 0 {
@@ -29565,8 +29565,8 @@ func (ts *Tensor) LogitOut(out *Tensor, eps []float64, del bool) (retVal *Tensor
 // --------------------------
 
 func Logspace(start *Scalar, end *Scalar, steps int64, base float64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogspace(ptr, start.cscalar, end.cscalar, steps, base, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Logspace() failed: %w", err)
@@ -29581,8 +29581,8 @@ func Logspace(start *Scalar, end *Scalar, steps int64, base float64, optionsKind
 // --------------------------
 
 func LogspaceOut(out *Tensor, start *Scalar, end *Scalar, steps int64, base float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLogspaceOut(ptr, out.ctensor, start.cscalar, end.cscalar, steps, base)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LogspaceOut() failed: %w", err)
@@ -29600,8 +29600,8 @@ func (ts *Tensor) Logsumexp(dim []int64, keepdim bool, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -29624,8 +29624,8 @@ func (ts *Tensor) LogsumexpOut(out *Tensor, dim []int64, keepdim bool, del bool)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -29751,8 +29751,8 @@ func (ts *Tensor) Lt(other *Scalar, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLt(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Lt() failed: %w", err)
@@ -29767,8 +29767,8 @@ func (ts *Tensor) Lt(other *Scalar, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Lt_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLt_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Lt_() failed: %w", err)
@@ -29786,8 +29786,8 @@ func (ts *Tensor) LtScalarOut(out *Tensor, other *Scalar, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLtScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LtScalarOut() failed: %w", err)
@@ -29805,8 +29805,8 @@ func (ts *Tensor) LtTensor(other *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLtTensor(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LtTensor() failed: %w", err)
@@ -29821,8 +29821,8 @@ func (ts *Tensor) LtTensor(other *Tensor, del bool) (retVal *Tensor, err error) 
 // --------------------------
 
 func (ts *Tensor) LtTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLtTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LtTensor_() failed: %w", err)
@@ -29840,8 +29840,8 @@ func (ts *Tensor) LtTensorOut(out *Tensor, other *Tensor, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLtTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LtTensorOut() failed: %w", err)
@@ -29859,8 +29859,8 @@ func (ts *Tensor) LuSolve(lUData *Tensor, lUPivots *Tensor, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLuSolve(ptr, ts.ctensor, lUData.ctensor, lUPivots.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LuSolve() failed: %w", err)
@@ -29878,8 +29878,8 @@ func (ts *Tensor) LuSolveOut(out *Tensor, lUData *Tensor, lUPivots *Tensor, del 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgLuSolveOut(ptr, out.ctensor, ts.ctensor, lUData.ctensor, lUPivots.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("LuSolveOut() failed: %w", err)
@@ -29948,8 +29948,8 @@ func LuUnpackOut(p *Tensor, l *Tensor, u *Tensor, lUData *Tensor, lUPivots *Tens
 // --------------------------
 
 func MarginRankingLoss(input1 *Tensor, input2 *Tensor, target *Tensor, margin float64, reduction int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMarginRankingLoss(ptr, input1.ctensor, input2.ctensor, target.ctensor, margin, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MarginRankingLoss() failed: %w", err)
@@ -29967,8 +29967,8 @@ func (ts *Tensor) MaskedFill(mask *Tensor, value *Scalar, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMaskedFill(ptr, ts.ctensor, mask.ctensor, value.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MaskedFill() failed: %w", err)
@@ -29983,8 +29983,8 @@ func (ts *Tensor) MaskedFill(mask *Tensor, value *Scalar, del bool) (retVal *Ten
 // --------------------------
 
 func (ts *Tensor) MaskedFill_(mask *Tensor, value *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMaskedFill_(ptr, ts.ctensor, mask.ctensor, value.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MaskedFill_() failed: %w", err)
@@ -30002,8 +30002,8 @@ func (ts *Tensor) MaskedFillScalarOut(out *Tensor, mask *Tensor, value *Scalar, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMaskedFillScalarOut(ptr, out.ctensor, ts.ctensor, mask.ctensor, value.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MaskedFillScalarOut() failed: %w", err)
@@ -30021,8 +30021,8 @@ func (ts *Tensor) MaskedFillTensor(mask *Tensor, value *Tensor, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMaskedFillTensor(ptr, ts.ctensor, mask.ctensor, value.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MaskedFillTensor() failed: %w", err)
@@ -30037,8 +30037,8 @@ func (ts *Tensor) MaskedFillTensor(mask *Tensor, value *Tensor, del bool) (retVa
 // --------------------------
 
 func (ts *Tensor) MaskedFillTensor_(mask *Tensor, value *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMaskedFillTensor_(ptr, ts.ctensor, mask.ctensor, value.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MaskedFillTensor_() failed: %w", err)
@@ -30056,8 +30056,8 @@ func (ts *Tensor) MaskedFillTensorOut(out *Tensor, mask *Tensor, value *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMaskedFillTensorOut(ptr, out.ctensor, ts.ctensor, mask.ctensor, value.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MaskedFillTensorOut() failed: %w", err)
@@ -30075,8 +30075,8 @@ func (ts *Tensor) MaskedScatter(mask *Tensor, source *Tensor, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMaskedScatter(ptr, ts.ctensor, mask.ctensor, source.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MaskedScatter() failed: %w", err)
@@ -30091,8 +30091,8 @@ func (ts *Tensor) MaskedScatter(mask *Tensor, source *Tensor, del bool) (retVal 
 // --------------------------
 
 func (ts *Tensor) MaskedScatter_(mask *Tensor, source *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMaskedScatter_(ptr, ts.ctensor, mask.ctensor, source.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MaskedScatter_() failed: %w", err)
@@ -30110,8 +30110,8 @@ func (ts *Tensor) MaskedScatterOut(out *Tensor, mask *Tensor, source *Tensor, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMaskedScatterOut(ptr, out.ctensor, ts.ctensor, mask.ctensor, source.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MaskedScatterOut() failed: %w", err)
@@ -30129,8 +30129,8 @@ func (ts *Tensor) MaskedSelect(mask *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMaskedSelect(ptr, ts.ctensor, mask.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MaskedSelect() failed: %w", err)
@@ -30145,8 +30145,8 @@ func (ts *Tensor) MaskedSelect(mask *Tensor, del bool) (retVal *Tensor, err erro
 // --------------------------
 
 func MaskedSelectBackward(grad *Tensor, input *Tensor, mask *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMaskedSelectBackward(ptr, grad.ctensor, input.ctensor, mask.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MaskedSelectBackward() failed: %w", err)
@@ -30164,8 +30164,8 @@ func (ts *Tensor) MaskedSelectOut(out *Tensor, mask *Tensor, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMaskedSelectOut(ptr, out.ctensor, ts.ctensor, mask.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MaskedSelectOut() failed: %w", err)
@@ -30183,8 +30183,8 @@ func (ts *Tensor) Matmul(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMatmul(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Matmul() failed: %w", err)
@@ -30202,8 +30202,8 @@ func (ts *Tensor) MatmulOut(out *Tensor, other *Tensor, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMatmulOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MatmulOut() failed: %w", err)
@@ -30221,8 +30221,8 @@ func (ts *Tensor) MatrixExp(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMatrixExp(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MatrixExp() failed: %w", err)
@@ -30240,8 +30240,8 @@ func (ts *Tensor) MatrixExpBackward(grad *Tensor, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMatrixExpBackward(ptr, ts.ctensor, grad.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MatrixExpBackward() failed: %w", err)
@@ -30259,8 +30259,8 @@ func (ts *Tensor) MatrixH(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMatrixH(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MatrixH() failed: %w", err)
@@ -30278,8 +30278,8 @@ func (ts *Tensor) MatrixPower(n int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMatrixPower(ptr, ts.ctensor, n)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MatrixPower() failed: %w", err)
@@ -30297,8 +30297,8 @@ func (ts *Tensor) MatrixPowerOut(out *Tensor, n int64, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMatrixPowerOut(ptr, out.ctensor, ts.ctensor, n)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MatrixPowerOut() failed: %w", err)
@@ -30316,8 +30316,8 @@ func (ts *Tensor) Max(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMax(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Max() failed: %w", err)
@@ -30383,8 +30383,8 @@ func (ts *Tensor) MaxOther(other *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMaxOther(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MaxOther() failed: %w", err)
@@ -30402,8 +30402,8 @@ func (ts *Tensor) MaxOut(out *Tensor, other *Tensor, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMaxOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MaxOut() failed: %w", err)
@@ -30421,8 +30421,8 @@ func (ts *Tensor) MaxPool1d(kernelSize []int64, stride []int64, padding []int64,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -30476,8 +30476,8 @@ func (ts *Tensor) MaxPool2d(kernelSize []int64, stride []int64, padding []int64,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -30503,8 +30503,8 @@ func (ts *Tensor) MaxPool2dBackward(gradOutput *Tensor, kernelSize []int64, stri
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -30530,8 +30530,8 @@ func (ts *Tensor) MaxPool2dBackwardOut(out *Tensor, gradOutput *Tensor, kernelSi
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -30585,8 +30585,8 @@ func (ts *Tensor) MaxPool2dWithIndicesBackward(gradOutput *Tensor, kernelSize []
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -30612,8 +30612,8 @@ func (ts *Tensor) MaxPool2dWithIndicesBackwardGradInput(gradInput *Tensor, gradO
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -30667,8 +30667,8 @@ func (ts *Tensor) MaxPool3d(kernelSize []int64, stride []int64, padding []int64,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -30722,8 +30722,8 @@ func (ts *Tensor) MaxPool3dWithIndicesBackward(gradOutput *Tensor, kernelSize []
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -30749,8 +30749,8 @@ func (ts *Tensor) MaxPool3dWithIndicesBackwardGradInput(gradInput *Tensor, gradO
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -30804,8 +30804,8 @@ func (ts *Tensor) MaxUnaryOut(out *Tensor, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMaxUnaryOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MaxUnaryOut() failed: %w", err)
@@ -30823,8 +30823,8 @@ func (ts *Tensor) MaxUnpool2d(indices *Tensor, outputSize []int64, del bool) (re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	lib.AtgMaxUnpool2d(ptr, ts.ctensor, indices.ctensor, outputSize, outputSizeLen)
 	if err = TorchErr(); err != nil {
@@ -30843,8 +30843,8 @@ func (ts *Tensor) MaxUnpool2dOut(out *Tensor, indices *Tensor, outputSize []int6
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	lib.AtgMaxUnpool2dOut(ptr, out.ctensor, ts.ctensor, indices.ctensor, outputSize, outputSizeLen)
 	if err = TorchErr(); err != nil {
@@ -30863,8 +30863,8 @@ func (ts *Tensor) MaxUnpool3d(indices *Tensor, outputSize []int64, stride []int6
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -30885,8 +30885,8 @@ func (ts *Tensor) MaxUnpool3dOut(out *Tensor, indices *Tensor, outputSize []int6
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -30907,8 +30907,8 @@ func (ts *Tensor) Maximum(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMaximum(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Maximum() failed: %w", err)
@@ -30926,8 +30926,8 @@ func (ts *Tensor) MaximumOut(out *Tensor, other *Tensor, del bool) (retVal *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMaximumOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MaximumOut() failed: %w", err)
@@ -30945,8 +30945,8 @@ func (ts *Tensor) Mean(dtype gotch.DType, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMean(ptr, ts.ctensor, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Mean() failed: %w", err)
@@ -30964,8 +30964,8 @@ func (ts *Tensor) MeanDim(dim []int64, keepdim bool, dtype gotch.DType, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -30988,8 +30988,8 @@ func (ts *Tensor) MeanOut(out *Tensor, dim []int64, keepdim bool, dtype gotch.DT
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -31012,8 +31012,8 @@ func (ts *Tensor) Median(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMedian(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Median() failed: %w", err)
@@ -31079,8 +31079,8 @@ func (ts *Tensor) MedianOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMedianOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MedianOut() failed: %w", err)
@@ -31098,8 +31098,8 @@ func (ts *Tensor) Mh(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMh(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Mh() failed: %w", err)
@@ -31117,8 +31117,8 @@ func (ts *Tensor) Min(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMin(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Min() failed: %w", err)
@@ -31184,8 +31184,8 @@ func (ts *Tensor) MinOther(other *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMinOther(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MinOther() failed: %w", err)
@@ -31203,8 +31203,8 @@ func (ts *Tensor) MinOut(out *Tensor, other *Tensor, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMinOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MinOut() failed: %w", err)
@@ -31222,8 +31222,8 @@ func (ts *Tensor) MinUnaryOut(out *Tensor, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMinUnaryOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MinUnaryOut() failed: %w", err)
@@ -31241,8 +31241,8 @@ func (ts *Tensor) Minimum(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMinimum(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Minimum() failed: %w", err)
@@ -31260,8 +31260,8 @@ func (ts *Tensor) MinimumOut(out *Tensor, other *Tensor, del bool) (retVal *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMinimumOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MinimumOut() failed: %w", err)
@@ -31363,8 +31363,8 @@ func (ts *Tensor) MiopenConvolution(weight *Tensor, bias *Tensor, padding []int6
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	strideLen := len(stride)
 	dilationLen := len(dilation)
@@ -31393,8 +31393,8 @@ func (ts *Tensor) MiopenConvolutionAddRelu(weight *Tensor, z *Tensor, alpha *Sca
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	dilationLen := len(dilation)
@@ -31415,8 +31415,8 @@ func (ts *Tensor) MiopenConvolutionOut(out *Tensor, weight *Tensor, bias *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	strideLen := len(stride)
 	dilationLen := len(dilation)
@@ -31445,8 +31445,8 @@ func (ts *Tensor) MiopenConvolutionRelu(weight *Tensor, bias *Tensor, stride []i
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	strideLen := len(stride)
 	paddingLen := len(padding)
 	dilationLen := len(dilation)
@@ -31467,8 +31467,8 @@ func (ts *Tensor) MiopenConvolutionTranspose(weight *Tensor, bias *Tensor, paddi
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	outputPaddingLen := len(outputPadding)
 	strideLen := len(stride)
@@ -31498,8 +31498,8 @@ func (ts *Tensor) MiopenConvolutionTransposeOut(out *Tensor, weight *Tensor, bia
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	outputPaddingLen := len(outputPadding)
 	strideLen := len(stride)
@@ -31529,8 +31529,8 @@ func (ts *Tensor) MiopenDepthwiseConvolution(weight *Tensor, bias *Tensor, paddi
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	strideLen := len(stride)
 	dilationLen := len(dilation)
@@ -31559,8 +31559,8 @@ func (ts *Tensor) MiopenDepthwiseConvolutionOut(out *Tensor, weight *Tensor, bia
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	strideLen := len(stride)
 	dilationLen := len(dilation)
@@ -31669,8 +31669,8 @@ func (ts *Tensor) Mish(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMish(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Mish() failed: %w", err)
@@ -31685,8 +31685,8 @@ func (ts *Tensor) Mish(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Mish_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMish_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Mish_() failed: %w", err)
@@ -31704,8 +31704,8 @@ func (ts *Tensor) MishBackward(gradOutput *Tensor, del bool) (retVal *Tensor, er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMishBackward(ptr, gradOutput.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MishBackward() failed: %w", err)
@@ -31723,8 +31723,8 @@ func (ts *Tensor) MishOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMishOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MishOut() failed: %w", err)
@@ -31742,8 +31742,8 @@ func (ts *Tensor) MkldnnAdaptiveAvgPool2d(outputSize []int64, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	lib.AtgMkldnnAdaptiveAvgPool2d(ptr, ts.ctensor, outputSize, outputSizeLen)
 	if err = TorchErr(); err != nil {
@@ -31762,8 +31762,8 @@ func (ts *Tensor) MkldnnAdaptiveAvgPool2dBackward(gradOutput *Tensor, del bool) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMkldnnAdaptiveAvgPool2dBackward(ptr, gradOutput.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MkldnnAdaptiveAvgPool2dBackward() failed: %w", err)
@@ -31781,8 +31781,8 @@ func (ts *Tensor) MkldnnAdaptiveAvgPool2dBackwardOut(out *Tensor, gradOutput *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMkldnnAdaptiveAvgPool2dBackwardOut(ptr, out.ctensor, gradOutput.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MkldnnAdaptiveAvgPool2dBackwardOut() failed: %w", err)
@@ -31800,8 +31800,8 @@ func (ts *Tensor) MkldnnAdaptiveAvgPool2dOut(out *Tensor, outputSize []int64, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	lib.AtgMkldnnAdaptiveAvgPool2dOut(ptr, out.ctensor, ts.ctensor, outputSize, outputSizeLen)
 	if err = TorchErr(); err != nil {
@@ -31820,8 +31820,8 @@ func (ts *Tensor) MkldnnConvolution(weight *Tensor, bias *Tensor, padding []int6
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	strideLen := len(stride)
 	dilationLen := len(dilation)
@@ -31842,8 +31842,8 @@ func (ts *Tensor) MkldnnConvolutionOut(out *Tensor, weight *Tensor, bias *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	strideLen := len(stride)
 	dilationLen := len(dilation)
@@ -31864,8 +31864,8 @@ func (ts *Tensor) MkldnnLinear(weight *Tensor, bias *Tensor, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMkldnnLinear(ptr, ts.ctensor, weight.ctensor, bias.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MkldnnLinear() failed: %w", err)
@@ -31880,8 +31880,8 @@ func (ts *Tensor) MkldnnLinear(weight *Tensor, bias *Tensor, del bool) (retVal *
 // --------------------------
 
 func MkldnnLinearBackwardInput(inputSize []int64, gradOutput *Tensor, weight *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	inputSizeLen := len(inputSize)
 	lib.AtgMkldnnLinearBackwardInput(ptr, inputSize, inputSizeLen, gradOutput.ctensor, weight.ctensor)
 	if err = TorchErr(); err != nil {
@@ -31897,8 +31897,8 @@ func MkldnnLinearBackwardInput(inputSize []int64, gradOutput *Tensor, weight *Te
 // --------------------------
 
 func MkldnnLinearBackwardInputOut(out *Tensor, inputSize []int64, gradOutput *Tensor, weight *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	inputSizeLen := len(inputSize)
 	lib.AtgMkldnnLinearBackwardInputOut(ptr, out.ctensor, inputSize, inputSizeLen, gradOutput.ctensor, weight.ctensor)
 	if err = TorchErr(); err != nil {
@@ -31959,8 +31959,8 @@ func (ts *Tensor) MkldnnLinearOut(out *Tensor, weight *Tensor, bias *Tensor, del
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMkldnnLinearOut(ptr, out.ctensor, ts.ctensor, weight.ctensor, bias.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MkldnnLinearOut() failed: %w", err)
@@ -31978,8 +31978,8 @@ func (ts *Tensor) MkldnnMaxPool2d(kernelSize []int64, stride []int64, padding []
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -32002,8 +32002,8 @@ func (ts *Tensor) MkldnnMaxPool2d(kernelSize []int64, stride []int64, padding []
 // --------------------------
 
 func MkldnnMaxPool2dBackward(gradOutput *Tensor, output *Tensor, input *Tensor, kernelSize []int64, stride []int64, padding []int64, dilation []int64, ceilMode bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -32026,8 +32026,8 @@ func MkldnnMaxPool2dBackward(gradOutput *Tensor, output *Tensor, input *Tensor, 
 // --------------------------
 
 func MkldnnMaxPool2dBackwardOut(out *Tensor, gradOutput *Tensor, output *Tensor, input *Tensor, kernelSize []int64, stride []int64, padding []int64, dilation []int64, ceilMode bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -32053,8 +32053,8 @@ func (ts *Tensor) MkldnnMaxPool2dOut(out *Tensor, kernelSize []int64, stride []i
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -32080,8 +32080,8 @@ func (ts *Tensor) MkldnnMaxPool3d(kernelSize []int64, stride []int64, padding []
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -32104,8 +32104,8 @@ func (ts *Tensor) MkldnnMaxPool3d(kernelSize []int64, stride []int64, padding []
 // --------------------------
 
 func MkldnnMaxPool3dBackward(gradOutput *Tensor, output *Tensor, input *Tensor, kernelSize []int64, stride []int64, padding []int64, dilation []int64, ceilMode bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -32128,8 +32128,8 @@ func MkldnnMaxPool3dBackward(gradOutput *Tensor, output *Tensor, input *Tensor, 
 // --------------------------
 
 func MkldnnMaxPool3dBackwardOut(out *Tensor, gradOutput *Tensor, output *Tensor, input *Tensor, kernelSize []int64, stride []int64, padding []int64, dilation []int64, ceilMode bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -32155,8 +32155,8 @@ func (ts *Tensor) MkldnnMaxPool3dOut(out *Tensor, kernelSize []int64, stride []i
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -32182,8 +32182,8 @@ func (ts *Tensor) MkldnnReorderConv2dWeight(padding []int64, stride []int64, dil
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	strideLen := len(stride)
 	dilationLen := len(dilation)
@@ -32205,8 +32205,8 @@ func (ts *Tensor) MkldnnReorderConv2dWeightOut(out *Tensor, padding []int64, str
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	strideLen := len(stride)
 	dilationLen := len(dilation)
@@ -32228,8 +32228,8 @@ func (ts *Tensor) MkldnnReorderConv3dWeight(padding []int64, stride []int64, dil
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	strideLen := len(stride)
 	dilationLen := len(dilation)
@@ -32250,8 +32250,8 @@ func (ts *Tensor) MkldnnReorderConv3dWeightOut(out *Tensor, padding []int64, str
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	strideLen := len(stride)
 	dilationLen := len(dilation)
@@ -32452,8 +32452,8 @@ func (ts *Tensor) Mm(mat2 *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMm(ptr, ts.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Mm() failed: %w", err)
@@ -32471,8 +32471,8 @@ func (ts *Tensor) MmOut(out *Tensor, mat2 *Tensor, del bool) (retVal *Tensor, er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMmOut(ptr, out.ctensor, ts.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MmOut() failed: %w", err)
@@ -32538,8 +32538,8 @@ func (ts *Tensor) Moveaxis(source []int64, destination []int64, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sourceLen := len(source)
 	destinationLen := len(destination)
 	lib.AtgMoveaxis(ptr, ts.ctensor, source, sourceLen, destination, destinationLen)
@@ -32559,8 +32559,8 @@ func (ts *Tensor) MoveaxisInt(source int64, destination int64, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMoveaxisInt(ptr, ts.ctensor, source, destination)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MoveaxisInt() failed: %w", err)
@@ -32578,8 +32578,8 @@ func (ts *Tensor) Movedim(source []int64, destination []int64, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sourceLen := len(source)
 	destinationLen := len(destination)
 	lib.AtgMovedim(ptr, ts.ctensor, source, sourceLen, destination, destinationLen)
@@ -32599,8 +32599,8 @@ func (ts *Tensor) MovedimInt(source int64, destination int64, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMovedimInt(ptr, ts.ctensor, source, destination)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MovedimInt() failed: %w", err)
@@ -32618,8 +32618,8 @@ func (ts *Tensor) MseLoss(target *Tensor, reduction int64, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMseLoss(ptr, ts.ctensor, target.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MseLoss() failed: %w", err)
@@ -32637,8 +32637,8 @@ func (ts *Tensor) MseLossBackward(gradOutput *Tensor, target *Tensor, reduction 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMseLossBackward(ptr, gradOutput.ctensor, ts.ctensor, target.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MseLossBackward() failed: %w", err)
@@ -32656,8 +32656,8 @@ func (ts *Tensor) MseLossBackwardGradInput(gradInput *Tensor, gradOutput *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMseLossBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, target.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MseLossBackwardGradInput() failed: %w", err)
@@ -32675,8 +32675,8 @@ func (ts *Tensor) MseLossOut(out *Tensor, target *Tensor, reduction int64, del b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMseLossOut(ptr, out.ctensor, ts.ctensor, target.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MseLossOut() failed: %w", err)
@@ -32694,8 +32694,8 @@ func (ts *Tensor) Msort(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMsort(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Msort() failed: %w", err)
@@ -32713,8 +32713,8 @@ func (ts *Tensor) MsortOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMsortOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MsortOut() failed: %w", err)
@@ -32732,8 +32732,8 @@ func (ts *Tensor) Mt(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMt(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Mt() failed: %w", err)
@@ -32751,8 +32751,8 @@ func (ts *Tensor) Mul(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMul(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Mul() failed: %w", err)
@@ -32767,8 +32767,8 @@ func (ts *Tensor) Mul(other *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Mul_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMul_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Mul_() failed: %w", err)
@@ -32786,8 +32786,8 @@ func (ts *Tensor) MulOut(out *Tensor, other *Tensor, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMulOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MulOut() failed: %w", err)
@@ -32805,8 +32805,8 @@ func (ts *Tensor) MulScalar(other *Scalar, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMulScalar(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MulScalar() failed: %w", err)
@@ -32821,8 +32821,8 @@ func (ts *Tensor) MulScalar(other *Scalar, del bool) (retVal *Tensor, err error)
 // --------------------------
 
 func (ts *Tensor) MulScalar_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMulScalar_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MulScalar_() failed: %w", err)
@@ -32840,8 +32840,8 @@ func (ts *Tensor) MulScalarOut(out *Tensor, other *Scalar, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMulScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MulScalarOut() failed: %w", err)
@@ -32859,8 +32859,8 @@ func (ts *Tensor) MultiMarginLossBackward(gradOutput *Tensor, target *Tensor, p 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMultiMarginLossBackward(ptr, gradOutput.ctensor, ts.ctensor, target.ctensor, p.cscalar, margin.cscalar, weight.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MultiMarginLossBackward() failed: %w", err)
@@ -32878,8 +32878,8 @@ func (ts *Tensor) MultiMarginLossBackwardGradInput(gradInput *Tensor, gradOutput
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMultiMarginLossBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, target.ctensor, p.cscalar, margin.cscalar, weight.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MultiMarginLossBackwardGradInput() failed: %w", err)
@@ -32897,8 +32897,8 @@ func (ts *Tensor) MultilabelMarginLoss(target *Tensor, reduction int64, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMultilabelMarginLoss(ptr, ts.ctensor, target.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MultilabelMarginLoss() failed: %w", err)
@@ -32916,8 +32916,8 @@ func (ts *Tensor) MultilabelMarginLossBackward(gradOutput *Tensor, target *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMultilabelMarginLossBackward(ptr, gradOutput.ctensor, ts.ctensor, target.ctensor, reduction, isTarget.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MultilabelMarginLossBackward() failed: %w", err)
@@ -32935,8 +32935,8 @@ func (ts *Tensor) MultilabelMarginLossBackwardGradInput(gradInput *Tensor, gradO
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMultilabelMarginLossBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, target.ctensor, reduction, isTarget.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MultilabelMarginLossBackwardGradInput() failed: %w", err)
@@ -32954,8 +32954,8 @@ func (ts *Tensor) MultilabelMarginLossOut(out *Tensor, target *Tensor, reduction
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMultilabelMarginLossOut(ptr, out.ctensor, ts.ctensor, target.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MultilabelMarginLossOut() failed: %w", err)
@@ -32973,8 +32973,8 @@ func (ts *Tensor) Multinomial(numSamples int64, replacement bool, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	creplacement := int32(0)
 	if replacement {
 		creplacement = int32(1)
@@ -32996,8 +32996,8 @@ func (ts *Tensor) MultinomialOut(out *Tensor, numSamples int64, replacement bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	creplacement := int32(0)
 	if replacement {
 		creplacement = int32(1)
@@ -33019,8 +33019,8 @@ func (ts *Tensor) Multiply(other *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMultiply(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Multiply() failed: %w", err)
@@ -33035,8 +33035,8 @@ func (ts *Tensor) Multiply(other *Tensor, del bool) (retVal *Tensor, err error) 
 // --------------------------
 
 func (ts *Tensor) Multiply_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMultiply_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Multiply_() failed: %w", err)
@@ -33054,8 +33054,8 @@ func (ts *Tensor) MultiplyOut(out *Tensor, other *Tensor, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMultiplyOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MultiplyOut() failed: %w", err)
@@ -33073,8 +33073,8 @@ func (ts *Tensor) MultiplyScalar(other *Scalar, del bool) (retVal *Tensor, err e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMultiplyScalar(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MultiplyScalar() failed: %w", err)
@@ -33089,8 +33089,8 @@ func (ts *Tensor) MultiplyScalar(other *Scalar, del bool) (retVal *Tensor, err e
 // --------------------------
 
 func (ts *Tensor) MultiplyScalar_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMultiplyScalar_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MultiplyScalar_() failed: %w", err)
@@ -33108,8 +33108,8 @@ func (ts *Tensor) Mv(vec *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMv(ptr, ts.ctensor, vec.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Mv() failed: %w", err)
@@ -33127,8 +33127,8 @@ func (ts *Tensor) MvOut(out *Tensor, vec *Tensor, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMvOut(ptr, out.ctensor, ts.ctensor, vec.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MvOut() failed: %w", err)
@@ -33146,8 +33146,8 @@ func (ts *Tensor) Mvlgamma(p int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMvlgamma(ptr, ts.ctensor, p)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Mvlgamma() failed: %w", err)
@@ -33162,8 +33162,8 @@ func (ts *Tensor) Mvlgamma(p int64, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Mvlgamma_(p int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMvlgamma_(ptr, ts.ctensor, p)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Mvlgamma_() failed: %w", err)
@@ -33181,8 +33181,8 @@ func (ts *Tensor) MvlgammaOut(out *Tensor, p int64, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgMvlgammaOut(ptr, out.ctensor, ts.ctensor, p)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("MvlgammaOut() failed: %w", err)
@@ -33200,8 +33200,8 @@ func (ts *Tensor) NanToNum(nan []float64, posinf []float64, neginf []float64, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cnanVal float64 = 0.0
 	var cnanNull int = 1
 	if len(nan) > 0 {
@@ -33234,8 +33234,8 @@ func (ts *Tensor) NanToNum(nan []float64, posinf []float64, neginf []float64, de
 // --------------------------
 
 func (ts *Tensor) NanToNum_(nan []float64, posinf []float64, neginf []float64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cnanVal float64 = 0.0
 	var cnanNull int = 1
 	if len(nan) > 0 {
@@ -33271,8 +33271,8 @@ func (ts *Tensor) NanToNumOut(out *Tensor, nan []float64, posinf []float64, negi
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cnanVal float64 = 0.0
 	var cnanNull int = 1
 	if len(nan) > 0 {
@@ -33308,8 +33308,8 @@ func (ts *Tensor) Nanmean(dim []int64, keepdim bool, dtype gotch.DType, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -33332,8 +33332,8 @@ func (ts *Tensor) NanmeanOut(out *Tensor, dim []int64, keepdim bool, dtype gotch
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -33356,8 +33356,8 @@ func (ts *Tensor) Nanmedian(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNanmedian(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Nanmedian() failed: %w", err)
@@ -33423,8 +33423,8 @@ func (ts *Tensor) NanmedianOut(out *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNanmedianOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NanmedianOut() failed: %w", err)
@@ -33442,8 +33442,8 @@ func (ts *Tensor) Nanquantile(q *Tensor, dim []int64, keepdim bool, interpolatio
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -33471,8 +33471,8 @@ func (ts *Tensor) NanquantileOut(out *Tensor, q *Tensor, dim []int64, keepdim bo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -33500,8 +33500,8 @@ func (ts *Tensor) NanquantileScalar(q float64, dim []int64, keepdim bool, interp
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -33529,8 +33529,8 @@ func (ts *Tensor) NanquantileScalarOut(out *Tensor, q float64, dim []int64, keep
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -33558,8 +33558,8 @@ func (ts *Tensor) Nansum(dim []int64, keepdim bool, dtype gotch.DType, del bool)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -33582,8 +33582,8 @@ func (ts *Tensor) NansumOut(out *Tensor, dim []int64, keepdim bool, dtype gotch.
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -33606,8 +33606,8 @@ func (ts *Tensor) Narrow(dim int64, start int64, length int64, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNarrow(ptr, ts.ctensor, dim, start, length)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Narrow() failed: %w", err)
@@ -33625,8 +33625,8 @@ func (ts *Tensor) NarrowCopy(dim int64, start int64, length int64, del bool) (re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNarrowCopy(ptr, ts.ctensor, dim, start, length)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NarrowCopy() failed: %w", err)
@@ -33644,8 +33644,8 @@ func (ts *Tensor) NarrowCopyOut(out *Tensor, dim int64, start int64, length int6
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNarrowCopyOut(ptr, out.ctensor, ts.ctensor, dim, start, length)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NarrowCopyOut() failed: %w", err)
@@ -33663,8 +33663,8 @@ func (ts *Tensor) NarrowTensor(dim int64, start *Tensor, length int64, del bool)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNarrowTensor(ptr, ts.ctensor, dim, start.ctensor, length)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NarrowTensor() failed: %w", err)
@@ -33728,8 +33728,8 @@ func (ts *Tensor) NativeChannelShuffle(groups int64, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNativeChannelShuffle(ptr, ts.ctensor, groups)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NativeChannelShuffle() failed: %w", err)
@@ -33765,8 +33765,8 @@ func NativeDropout(input *Tensor, p float64, train bool) (retVal0 *Tensor, retVa
 // --------------------------
 
 func NativeDropoutBackward(gradOutput *Tensor, mask *Tensor, scale float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNativeDropoutBackward(ptr, gradOutput.ctensor, mask.ctensor, scale)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NativeDropoutBackward() failed: %w", err)
@@ -33781,8 +33781,8 @@ func NativeDropoutBackward(gradOutput *Tensor, mask *Tensor, scale float64) (ret
 // --------------------------
 
 func NativeDropoutBackwardOut(out *Tensor, gradOutput *Tensor, mask *Tensor, scale float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNativeDropoutBackwardOut(ptr, out.ctensor, gradOutput.ctensor, mask.ctensor, scale)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NativeDropoutBackwardOut() failed: %w", err)
@@ -33899,8 +33899,8 @@ func (ts *Tensor) NativeNorm(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNativeNorm(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NativeNorm() failed: %w", err)
@@ -33918,8 +33918,8 @@ func (ts *Tensor) NativeNormOut(out *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNativeNormOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NativeNormOut() failed: %w", err)
@@ -33937,8 +33937,8 @@ func (ts *Tensor) NativeNormScalaroptDimDtype(p *Scalar, dim []int64, keepdim bo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -33961,8 +33961,8 @@ func (ts *Tensor) NativeNormScalaroptDimDtypeOut(out *Tensor, p *Scalar, dim []i
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -33985,8 +33985,8 @@ func (ts *Tensor) Ne(other *Scalar, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNe(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Ne() failed: %w", err)
@@ -34001,8 +34001,8 @@ func (ts *Tensor) Ne(other *Scalar, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Ne_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNe_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Ne_() failed: %w", err)
@@ -34020,8 +34020,8 @@ func (ts *Tensor) NeScalarOut(out *Tensor, other *Scalar, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNeScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NeScalarOut() failed: %w", err)
@@ -34039,8 +34039,8 @@ func (ts *Tensor) NeTensor(other *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNeTensor(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NeTensor() failed: %w", err)
@@ -34055,8 +34055,8 @@ func (ts *Tensor) NeTensor(other *Tensor, del bool) (retVal *Tensor, err error) 
 // --------------------------
 
 func (ts *Tensor) NeTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNeTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NeTensor_() failed: %w", err)
@@ -34074,8 +34074,8 @@ func (ts *Tensor) NeTensorOut(out *Tensor, other *Tensor, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNeTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NeTensorOut() failed: %w", err)
@@ -34093,8 +34093,8 @@ func (ts *Tensor) Neg(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNeg(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Neg() failed: %w", err)
@@ -34109,8 +34109,8 @@ func (ts *Tensor) Neg(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Neg_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNeg_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Neg_() failed: %w", err)
@@ -34128,8 +34128,8 @@ func (ts *Tensor) NegOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNegOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NegOut() failed: %w", err)
@@ -34147,8 +34147,8 @@ func (ts *Tensor) Negative(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNegative(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Negative() failed: %w", err)
@@ -34163,8 +34163,8 @@ func (ts *Tensor) Negative(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Negative_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNegative_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Negative_() failed: %w", err)
@@ -34182,8 +34182,8 @@ func (ts *Tensor) NegativeOut(out *Tensor, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNegativeOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NegativeOut() failed: %w", err)
@@ -34201,8 +34201,8 @@ func (ts *Tensor) NestedToPaddedTensor(padding float64, outputSize []int64, del 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	lib.AtgNestedToPaddedTensor(ptr, ts.ctensor, padding, outputSize, outputSizeLen)
 	if err = TorchErr(); err != nil {
@@ -34221,8 +34221,8 @@ func (ts *Tensor) NewEmpty(size []int64, optionsKind gotch.DType, optionsDevice 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgNewEmpty(ptr, ts.ctensor, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -34241,8 +34241,8 @@ func (ts *Tensor) NewEmptyOut(out *Tensor, size []int64, del bool) (retVal *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgNewEmptyOut(ptr, out.ctensor, ts.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -34261,8 +34261,8 @@ func (ts *Tensor) NewEmptyStrided(size []int64, stride []int64, optionsKind gotc
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	strideLen := len(stride)
 	lib.AtgNewEmptyStrided(ptr, ts.ctensor, size, sizeLen, stride, strideLen, optionsKind.CInt(), optionsDevice.CInt())
@@ -34282,8 +34282,8 @@ func (ts *Tensor) NewEmptyStridedOut(out *Tensor, size []int64, stride []int64, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	strideLen := len(stride)
 	lib.AtgNewEmptyStridedOut(ptr, out.ctensor, ts.ctensor, size, sizeLen, stride, strideLen)
@@ -34303,8 +34303,8 @@ func (ts *Tensor) NewFull(size []int64, fillValue *Scalar, optionsKind gotch.DTy
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgNewFull(ptr, ts.ctensor, size, sizeLen, fillValue.cscalar, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -34323,8 +34323,8 @@ func (ts *Tensor) NewFullOut(out *Tensor, size []int64, fillValue *Scalar, del b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgNewFullOut(ptr, out.ctensor, ts.ctensor, size, sizeLen, fillValue.cscalar)
 	if err = TorchErr(); err != nil {
@@ -34343,8 +34343,8 @@ func (ts *Tensor) NewOnes(size []int64, optionsKind gotch.DType, optionsDevice g
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgNewOnes(ptr, ts.ctensor, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -34363,8 +34363,8 @@ func (ts *Tensor) NewOnesOut(out *Tensor, size []int64, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgNewOnesOut(ptr, out.ctensor, ts.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -34383,8 +34383,8 @@ func (ts *Tensor) NewZeros(size []int64, optionsKind gotch.DType, optionsDevice 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgNewZeros(ptr, ts.ctensor, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -34403,8 +34403,8 @@ func (ts *Tensor) NewZerosOut(out *Tensor, size []int64, del bool) (retVal *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgNewZerosOut(ptr, out.ctensor, ts.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -34423,8 +34423,8 @@ func (ts *Tensor) Nextafter(other *Tensor, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNextafter(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Nextafter() failed: %w", err)
@@ -34439,8 +34439,8 @@ func (ts *Tensor) Nextafter(other *Tensor, del bool) (retVal *Tensor, err error)
 // --------------------------
 
 func (ts *Tensor) Nextafter_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNextafter_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Nextafter_() failed: %w", err)
@@ -34458,8 +34458,8 @@ func (ts *Tensor) NextafterOut(out *Tensor, other *Tensor, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNextafterOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NextafterOut() failed: %w", err)
@@ -34477,8 +34477,8 @@ func (ts *Tensor) NllLoss(target *Tensor, weight *Tensor, reduction int64, ignor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNllLoss(ptr, ts.ctensor, target.ctensor, weight.ctensor, reduction, ignoreIndex)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NllLoss() failed: %w", err)
@@ -34496,8 +34496,8 @@ func (ts *Tensor) NllLoss2d(target *Tensor, weight *Tensor, reduction int64, ign
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNllLoss2d(ptr, ts.ctensor, target.ctensor, weight.ctensor, reduction, ignoreIndex)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NllLoss2d() failed: %w", err)
@@ -34515,8 +34515,8 @@ func (ts *Tensor) NllLoss2dBackward(gradOutput *Tensor, target *Tensor, weight *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNllLoss2dBackward(ptr, gradOutput.ctensor, ts.ctensor, target.ctensor, weight.ctensor, reduction, ignoreIndex, totalWeight.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NllLoss2dBackward() failed: %w", err)
@@ -34534,8 +34534,8 @@ func (ts *Tensor) NllLoss2dBackwardGradInput(gradInput *Tensor, gradOutput *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNllLoss2dBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, target.ctensor, weight.ctensor, reduction, ignoreIndex, totalWeight.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NllLoss2dBackwardGradInput() failed: %w", err)
@@ -34553,8 +34553,8 @@ func (ts *Tensor) NllLoss2dOut(out *Tensor, target *Tensor, weight *Tensor, redu
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNllLoss2dOut(ptr, out.ctensor, ts.ctensor, target.ctensor, weight.ctensor, reduction, ignoreIndex)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NllLoss2dOut() failed: %w", err)
@@ -34572,8 +34572,8 @@ func (ts *Tensor) NllLossBackward(gradOutput *Tensor, target *Tensor, weight *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNllLossBackward(ptr, gradOutput.ctensor, ts.ctensor, target.ctensor, weight.ctensor, reduction, ignoreIndex, totalWeight.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NllLossBackward() failed: %w", err)
@@ -34591,8 +34591,8 @@ func (ts *Tensor) NllLossBackwardGradInput(gradInput *Tensor, gradOutput *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNllLossBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, target.ctensor, weight.ctensor, reduction, ignoreIndex, totalWeight.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NllLossBackwardGradInput() failed: %w", err)
@@ -34610,8 +34610,8 @@ func (ts *Tensor) NllLossNd(target *Tensor, weight *Tensor, reduction int64, ign
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNllLossNd(ptr, ts.ctensor, target.ctensor, weight.ctensor, reduction, ignoreIndex)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NllLossNd() failed: %w", err)
@@ -34629,8 +34629,8 @@ func (ts *Tensor) NllLossOut(out *Tensor, target *Tensor, weight *Tensor, reduct
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNllLossOut(ptr, out.ctensor, ts.ctensor, target.ctensor, weight.ctensor, reduction, ignoreIndex)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NllLossOut() failed: %w", err)
@@ -34648,8 +34648,8 @@ func (ts *Tensor) Nonzero(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNonzero(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Nonzero() failed: %w", err)
@@ -34667,8 +34667,8 @@ func (ts *Tensor) NonzeroOut(out *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNonzeroOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NonzeroOut() failed: %w", err)
@@ -34686,8 +34686,8 @@ func (ts *Tensor) NonzeroStatic(size int64, fillValue int64, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNonzeroStatic(ptr, ts.ctensor, size, fillValue)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NonzeroStatic() failed: %w", err)
@@ -34705,8 +34705,8 @@ func (ts *Tensor) NonzeroStaticOut(out *Tensor, size int64, fillValue int64, del
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNonzeroStaticOut(ptr, out.ctensor, ts.ctensor, size, fillValue)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NonzeroStaticOut() failed: %w", err)
@@ -34724,8 +34724,8 @@ func (ts *Tensor) Norm(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNorm(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Norm() failed: %w", err)
@@ -34743,8 +34743,8 @@ func (ts *Tensor) NormDtypeOut(out *Tensor, p *Scalar, dim []int64, keepdim bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -34764,8 +34764,8 @@ func (ts *Tensor) NormDtypeOut(out *Tensor, p *Scalar, dim []int64, keepdim bool
 // --------------------------
 
 func NormExceptDim(v *Tensor, pow int64, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNormExceptDim(ptr, v.ctensor, pow, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NormExceptDim() failed: %w", err)
@@ -34783,8 +34783,8 @@ func (ts *Tensor) NormOut(out *Tensor, p *Scalar, dim []int64, keepdim bool, del
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -34807,8 +34807,8 @@ func (ts *Tensor) NormScalarOut(out *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNormScalarOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NormScalarOut() failed: %w", err)
@@ -34826,8 +34826,8 @@ func (ts *Tensor) NormScalaroptDim(p *Scalar, dim []int64, keepdim bool, del boo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -34850,8 +34850,8 @@ func (ts *Tensor) NormScalaroptDimDtype(p *Scalar, dim []int64, keepdim bool, dt
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -34874,8 +34874,8 @@ func (ts *Tensor) NormScalaroptDtype(p *Scalar, dtype gotch.DType, del bool) (re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNormScalaroptDtype(ptr, ts.ctensor, p.cscalar, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NormScalaroptDtype() failed: %w", err)
@@ -34893,8 +34893,8 @@ func (ts *Tensor) NormScalaroptDtypeOut(out *Tensor, p *Scalar, dtype gotch.DTyp
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNormScalaroptDtypeOut(ptr, out.ctensor, ts.ctensor, p.cscalar, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NormScalaroptDtypeOut() failed: %w", err)
@@ -34909,8 +34909,8 @@ func (ts *Tensor) NormScalaroptDtypeOut(out *Tensor, p *Scalar, dtype gotch.DTyp
 // --------------------------
 
 func (ts *Tensor) Normal_(mean float64, std float64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNormal_(ptr, ts.ctensor, mean, std)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Normal_() failed: %w", err)
@@ -34928,8 +34928,8 @@ func (ts *Tensor) NormalFunctional(mean float64, std float64, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNormalFunctional(ptr, ts.ctensor, mean, std)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NormalFunctional() failed: %w", err)
@@ -34947,8 +34947,8 @@ func (ts *Tensor) NotEqual(other *Scalar, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNotEqual(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NotEqual() failed: %w", err)
@@ -34963,8 +34963,8 @@ func (ts *Tensor) NotEqual(other *Scalar, del bool) (retVal *Tensor, err error) 
 // --------------------------
 
 func (ts *Tensor) NotEqual_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNotEqual_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NotEqual_() failed: %w", err)
@@ -34982,8 +34982,8 @@ func (ts *Tensor) NotEqualScalarOut(out *Tensor, other *Scalar, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNotEqualScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NotEqualScalarOut() failed: %w", err)
@@ -35001,8 +35001,8 @@ func (ts *Tensor) NotEqualTensor(other *Tensor, del bool) (retVal *Tensor, err e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNotEqualTensor(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NotEqualTensor() failed: %w", err)
@@ -35017,8 +35017,8 @@ func (ts *Tensor) NotEqualTensor(other *Tensor, del bool) (retVal *Tensor, err e
 // --------------------------
 
 func (ts *Tensor) NotEqualTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNotEqualTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NotEqualTensor_() failed: %w", err)
@@ -35036,8 +35036,8 @@ func (ts *Tensor) NotEqualTensorOut(out *Tensor, other *Tensor, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNotEqualTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NotEqualTensorOut() failed: %w", err)
@@ -35055,8 +35055,8 @@ func (ts *Tensor) NuclearNorm(keepdim bool, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ckeepdim := int32(0)
 	if keepdim {
 		ckeepdim = int32(1)
@@ -35078,8 +35078,8 @@ func (ts *Tensor) NuclearNormDim(dim []int64, keepdim bool, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -35102,8 +35102,8 @@ func (ts *Tensor) NuclearNormDimOut(out *Tensor, dim []int64, keepdim bool, del 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -35126,8 +35126,8 @@ func (ts *Tensor) NuclearNormOut(out *Tensor, keepdim bool, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ckeepdim := int32(0)
 	if keepdim {
 		ckeepdim = int32(1)
@@ -35149,8 +35149,8 @@ func (ts *Tensor) NumpyT(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgNumpyT(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("NumpyT() failed: %w", err)
@@ -35168,8 +35168,8 @@ func (ts *Tensor) OneHot(numClasses int64, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgOneHot(ptr, ts.ctensor, numClasses)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("OneHot() failed: %w", err)
@@ -35184,8 +35184,8 @@ func (ts *Tensor) OneHot(numClasses int64, del bool) (retVal *Tensor, err error)
 // --------------------------
 
 func Ones(size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgOnes(ptr, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -35204,8 +35204,8 @@ func (ts *Tensor) OnesLike(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgOnesLike(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("OnesLike() failed: %w", err)
@@ -35223,8 +35223,8 @@ func (ts *Tensor) OnesLikeOut(out *Tensor, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgOnesLikeOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("OnesLikeOut() failed: %w", err)
@@ -35239,8 +35239,8 @@ func (ts *Tensor) OnesLikeOut(out *Tensor, del bool) (retVal *Tensor, err error)
 // --------------------------
 
 func OnesOut(out *Tensor, size []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgOnesOut(ptr, out.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -35259,8 +35259,8 @@ func (ts *Tensor) Orgqr(input2 *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgOrgqr(ptr, ts.ctensor, input2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Orgqr() failed: %w", err)
@@ -35278,8 +35278,8 @@ func (ts *Tensor) OrgqrOut(out *Tensor, input2 *Tensor, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgOrgqrOut(ptr, out.ctensor, ts.ctensor, input2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("OrgqrOut() failed: %w", err)
@@ -35297,8 +35297,8 @@ func (ts *Tensor) Ormqr(input2 *Tensor, input3 *Tensor, left bool, transpose boo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cleft := int32(0)
 	if left {
 		cleft = int32(1)
@@ -35324,8 +35324,8 @@ func (ts *Tensor) OrmqrOut(out *Tensor, input2 *Tensor, input3 *Tensor, left boo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cleft := int32(0)
 	if left {
 		cleft = int32(1)
@@ -35351,8 +35351,8 @@ func (ts *Tensor) Outer(vec2 *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgOuter(ptr, ts.ctensor, vec2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Outer() failed: %w", err)
@@ -35370,8 +35370,8 @@ func (ts *Tensor) OuterOut(out *Tensor, vec2 *Tensor, del bool) (retVal *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgOuterOut(ptr, out.ctensor, ts.ctensor, vec2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("OuterOut() failed: %w", err)
@@ -35404,8 +35404,8 @@ func (ts *Tensor) Pad(pad []int64, mode string, value []float64, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	padLen := len(pad)
 	var cvalueVal float64 = 0.0
 	var cvalueNull int = 1
@@ -35427,8 +35427,8 @@ func (ts *Tensor) Pad(pad []int64, mode string, value []float64, del bool) (retV
 // --------------------------
 
 func PadSequence(sequences []*Tensor, batchFirst bool, paddingValue float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var csequences []lib.Ctensor
 	for _, t := range sequences {
 		csequences = append(csequences, t.ctensor)
@@ -35451,8 +35451,8 @@ func PadSequence(sequences []*Tensor, batchFirst bool, paddingValue float64) (re
 // --------------------------
 
 func PairwiseDistance(x1 *Tensor, x2 *Tensor, p float64, eps float64, keepdim bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ckeepdim := int32(0)
 	if keepdim {
 		ckeepdim = int32(1)
@@ -35474,8 +35474,8 @@ func (ts *Tensor) Pdist(p float64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPdist(ptr, ts.ctensor, p)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Pdist() failed: %w", err)
@@ -35493,8 +35493,8 @@ func (ts *Tensor) Permute(dims []int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimsLen := len(dims)
 	lib.AtgPermute(ptr, ts.ctensor, dims, dimsLen)
 	if err = TorchErr(); err != nil {
@@ -35513,8 +35513,8 @@ func (ts *Tensor) PermuteCopy(dims []int64, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimsLen := len(dims)
 	lib.AtgPermuteCopy(ptr, ts.ctensor, dims, dimsLen)
 	if err = TorchErr(); err != nil {
@@ -35533,8 +35533,8 @@ func (ts *Tensor) PermuteCopyOut(out *Tensor, dims []int64, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimsLen := len(dims)
 	lib.AtgPermuteCopyOut(ptr, out.ctensor, ts.ctensor, dims, dimsLen)
 	if err = TorchErr(); err != nil {
@@ -35553,8 +35553,8 @@ func (ts *Tensor) PinMemory(device gotch.Device, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPinMemory(ptr, ts.ctensor, device.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("PinMemory() failed: %w", err)
@@ -35572,8 +35572,8 @@ func (ts *Tensor) Pinverse(rcond float64, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPinverse(ptr, ts.ctensor, rcond)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Pinverse() failed: %w", err)
@@ -35591,8 +35591,8 @@ func (ts *Tensor) PixelShuffle(upscaleFactor int64, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPixelShuffle(ptr, ts.ctensor, upscaleFactor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("PixelShuffle() failed: %w", err)
@@ -35610,8 +35610,8 @@ func (ts *Tensor) PixelShuffleOut(out *Tensor, upscaleFactor int64, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPixelShuffleOut(ptr, out.ctensor, ts.ctensor, upscaleFactor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("PixelShuffleOut() failed: %w", err)
@@ -35629,8 +35629,8 @@ func (ts *Tensor) PixelUnshuffle(downscaleFactor int64, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPixelUnshuffle(ptr, ts.ctensor, downscaleFactor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("PixelUnshuffle() failed: %w", err)
@@ -35648,8 +35648,8 @@ func (ts *Tensor) PixelUnshuffleOut(out *Tensor, downscaleFactor int64, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPixelUnshuffleOut(ptr, out.ctensor, ts.ctensor, downscaleFactor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("PixelUnshuffleOut() failed: %w", err)
@@ -35667,8 +35667,8 @@ func (ts *Tensor) Poisson(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPoisson(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Poisson() failed: %w", err)
@@ -35683,8 +35683,8 @@ func (ts *Tensor) Poisson(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func PoissonNllLoss(input *Tensor, target *Tensor, logInput bool, full bool, eps float64, reduction int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	clogInput := int32(0)
 	if logInput {
 		clogInput = int32(1)
@@ -35710,8 +35710,8 @@ func (ts *Tensor) PoissonOut(out *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPoissonOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("PoissonOut() failed: %w", err)
@@ -35726,8 +35726,8 @@ func (ts *Tensor) PoissonOut(out *Tensor, del bool) (retVal *Tensor, err error) 
 // --------------------------
 
 func Polar(abs *Tensor, angle *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPolar(ptr, abs.ctensor, angle.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Polar() failed: %w", err)
@@ -35742,8 +35742,8 @@ func Polar(abs *Tensor, angle *Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func PolarOut(out *Tensor, abs *Tensor, angle *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPolarOut(ptr, out.ctensor, abs.ctensor, angle.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("PolarOut() failed: %w", err)
@@ -35761,8 +35761,8 @@ func (ts *Tensor) Polygamma(n int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPolygamma(ptr, n, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Polygamma() failed: %w", err)
@@ -35777,8 +35777,8 @@ func (ts *Tensor) Polygamma(n int64, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Polygamma_(n int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPolygamma_(ptr, ts.ctensor, n)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Polygamma_() failed: %w", err)
@@ -35796,8 +35796,8 @@ func (ts *Tensor) PolygammaOut(out *Tensor, n int64, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPolygammaOut(ptr, out.ctensor, n, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("PolygammaOut() failed: %w", err)
@@ -35815,8 +35815,8 @@ func (ts *Tensor) Positive(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPositive(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Positive() failed: %w", err)
@@ -35834,8 +35834,8 @@ func (ts *Tensor) Pow(exponent *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPow(ptr, ts.ctensor, exponent.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Pow() failed: %w", err)
@@ -35850,8 +35850,8 @@ func (ts *Tensor) Pow(exponent *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Pow_(exponent *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPow_(ptr, ts.ctensor, exponent.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Pow_() failed: %w", err)
@@ -35866,8 +35866,8 @@ func (ts *Tensor) Pow_(exponent *Scalar) (err error) {
 // --------------------------
 
 func PowScalar(selfScalar *Scalar, exponent *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPowScalar(ptr, selfScalar.cscalar, exponent.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("PowScalar() failed: %w", err)
@@ -35882,8 +35882,8 @@ func PowScalar(selfScalar *Scalar, exponent *Tensor) (retVal *Tensor, err error)
 // --------------------------
 
 func PowScalarOut(out *Tensor, selfScalar *Scalar, exponent *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPowScalarOut(ptr, out.ctensor, selfScalar.cscalar, exponent.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("PowScalarOut() failed: %w", err)
@@ -35898,8 +35898,8 @@ func PowScalarOut(out *Tensor, selfScalar *Scalar, exponent *Tensor) (retVal *Te
 // --------------------------
 
 func (ts *Tensor) PowTensor_(exponent *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPowTensor_(ptr, ts.ctensor, exponent.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("PowTensor_() failed: %w", err)
@@ -35917,8 +35917,8 @@ func (ts *Tensor) PowTensorScalar(exponent *Scalar, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPowTensorScalar(ptr, ts.ctensor, exponent.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("PowTensorScalar() failed: %w", err)
@@ -35936,8 +35936,8 @@ func (ts *Tensor) PowTensorScalarOut(out *Tensor, exponent *Scalar, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPowTensorScalarOut(ptr, out.ctensor, ts.ctensor, exponent.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("PowTensorScalarOut() failed: %w", err)
@@ -35955,8 +35955,8 @@ func (ts *Tensor) PowTensorTensorOut(out *Tensor, exponent *Tensor, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPowTensorTensorOut(ptr, out.ctensor, ts.ctensor, exponent.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("PowTensorTensorOut() failed: %w", err)
@@ -35974,8 +35974,8 @@ func (ts *Tensor) Prelu(weight *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgPrelu(ptr, ts.ctensor, weight.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Prelu() failed: %w", err)
@@ -35993,8 +35993,8 @@ func (ts *Tensor) Prod(dtype gotch.DType, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgProd(ptr, ts.ctensor, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Prod() failed: %w", err)
@@ -36012,8 +36012,8 @@ func (ts *Tensor) ProdDimInt(dim int64, keepdim bool, dtype gotch.DType, del boo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ckeepdim := int32(0)
 	if keepdim {
 		ckeepdim = int32(1)
@@ -36035,8 +36035,8 @@ func (ts *Tensor) ProdIntOut(out *Tensor, dim int64, keepdim bool, dtype gotch.D
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ckeepdim := int32(0)
 	if keepdim {
 		ckeepdim = int32(1)
@@ -36058,8 +36058,8 @@ func (ts *Tensor) ProdOut(out *Tensor, dtype gotch.DType, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgProdOut(ptr, out.ctensor, ts.ctensor, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ProdOut() failed: %w", err)
@@ -36077,8 +36077,8 @@ func (ts *Tensor) Put(index *Tensor, source *Tensor, accumulate bool, del bool) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	caccumulate := int32(0)
 	if accumulate {
 		caccumulate = int32(1)
@@ -36097,8 +36097,8 @@ func (ts *Tensor) Put(index *Tensor, source *Tensor, accumulate bool, del bool) 
 // --------------------------
 
 func (ts *Tensor) Put_(index *Tensor, source *Tensor, accumulate bool) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	caccumulate := int32(0)
 	if accumulate {
 		caccumulate = int32(1)
@@ -36120,8 +36120,8 @@ func (ts *Tensor) PutOut(out *Tensor, index *Tensor, source *Tensor, accumulate 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	caccumulate := int32(0)
 	if accumulate {
 		caccumulate = int32(1)
@@ -36158,8 +36158,8 @@ func (ts *Tensor) QPerChannelScales(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgQPerChannelScales(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("QPerChannelScales() failed: %w", err)
@@ -36177,8 +36177,8 @@ func (ts *Tensor) QPerChannelScalesOut(out *Tensor, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgQPerChannelScalesOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("QPerChannelScalesOut() failed: %w", err)
@@ -36196,8 +36196,8 @@ func (ts *Tensor) QPerChannelZeroPoints(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgQPerChannelZeroPoints(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("QPerChannelZeroPoints() failed: %w", err)
@@ -36215,8 +36215,8 @@ func (ts *Tensor) QPerChannelZeroPointsOut(out *Tensor, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgQPerChannelZeroPointsOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("QPerChannelZeroPointsOut() failed: %w", err)
@@ -36313,8 +36313,8 @@ func (ts *Tensor) Quantile(q *Tensor, dim []int64, keepdim bool, interpolation s
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -36342,8 +36342,8 @@ func (ts *Tensor) QuantileOut(out *Tensor, q *Tensor, dim []int64, keepdim bool,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -36371,8 +36371,8 @@ func (ts *Tensor) QuantileScalar(q float64, dim []int64, keepdim bool, interpola
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -36400,8 +36400,8 @@ func (ts *Tensor) QuantileScalarOut(out *Tensor, q float64, dim []int64, keepdim
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -36429,8 +36429,8 @@ func (ts *Tensor) QuantizePerChannel(scales *Tensor, zeroPoints *Tensor, axis in
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgQuantizePerChannel(ptr, ts.ctensor, scales.ctensor, zeroPoints.ctensor, axis, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("QuantizePerChannel() failed: %w", err)
@@ -36448,8 +36448,8 @@ func (ts *Tensor) QuantizePerChannelOut(out *Tensor, scales *Tensor, zeroPoints 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgQuantizePerChannelOut(ptr, out.ctensor, ts.ctensor, scales.ctensor, zeroPoints.ctensor, axis, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("QuantizePerChannelOut() failed: %w", err)
@@ -36467,8 +36467,8 @@ func (ts *Tensor) QuantizePerTensor(scale float64, zeroPoint int64, dtype gotch.
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgQuantizePerTensor(ptr, ts.ctensor, scale, zeroPoint, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("QuantizePerTensor() failed: %w", err)
@@ -36486,8 +36486,8 @@ func (ts *Tensor) QuantizePerTensorDynamic(dtype gotch.DType, reduceRange bool, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	creduceRange := int32(0)
 	if reduceRange {
 		creduceRange = int32(1)
@@ -36509,8 +36509,8 @@ func (ts *Tensor) QuantizePerTensorDynamicOut(out *Tensor, dtype gotch.DType, re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	creduceRange := int32(0)
 	if reduceRange {
 		creduceRange = int32(1)
@@ -36532,8 +36532,8 @@ func (ts *Tensor) QuantizePerTensorTensorQparams(scale *Tensor, zeroPoint *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgQuantizePerTensorTensorQparams(ptr, ts.ctensor, scale.ctensor, zeroPoint.ctensor, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("QuantizePerTensorTensorQparams() failed: %w", err)
@@ -36548,8 +36548,8 @@ func (ts *Tensor) QuantizePerTensorTensorQparams(scale *Tensor, zeroPoint *Tenso
 // --------------------------
 
 func QuantizedBatchNorm(input *Tensor, weight *Tensor, bias *Tensor, mean *Tensor, vari *Tensor, eps float64, outputScale float64, outputZeroPoint int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgQuantizedBatchNorm(ptr, input.ctensor, weight.ctensor, bias.ctensor, mean.ctensor, vari.ctensor, eps, outputScale, outputZeroPoint)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("QuantizedBatchNorm() failed: %w", err)
@@ -36564,8 +36564,8 @@ func QuantizedBatchNorm(input *Tensor, weight *Tensor, bias *Tensor, mean *Tenso
 // --------------------------
 
 func QuantizedBatchNormOut(out *Tensor, input *Tensor, weight *Tensor, bias *Tensor, mean *Tensor, vari *Tensor, eps float64, outputScale float64, outputZeroPoint int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgQuantizedBatchNormOut(ptr, out.ctensor, input.ctensor, weight.ctensor, bias.ctensor, mean.ctensor, vari.ctensor, eps, outputScale, outputZeroPoint)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("QuantizedBatchNormOut() failed: %w", err)
@@ -36580,8 +36580,8 @@ func QuantizedBatchNormOut(out *Tensor, input *Tensor, weight *Tensor, bias *Ten
 // --------------------------
 
 func QuantizedGruCell(input *Tensor, hx *Tensor, wIh *Tensor, wHh *Tensor, bIh *Tensor, bHh *Tensor, packedIh *Tensor, packedHh *Tensor, colOffsetsIh *Tensor, colOffsetsHh *Tensor, scaleIh *Scalar, scaleHh *Scalar, zeroPointIh *Scalar, zeroPointHh *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgQuantizedGruCell(ptr, input.ctensor, hx.ctensor, wIh.ctensor, wHh.ctensor, bIh.ctensor, bHh.ctensor, packedIh.ctensor, packedHh.ctensor, colOffsetsIh.ctensor, colOffsetsHh.ctensor, scaleIh.cscalar, scaleHh.cscalar, zeroPointIh.cscalar, zeroPointHh.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("QuantizedGruCell() failed: %w", err)
@@ -36620,8 +36620,8 @@ func (ts *Tensor) QuantizedMaxPool1d(kernelSize []int64, stride []int64, padding
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -36647,8 +36647,8 @@ func (ts *Tensor) QuantizedMaxPool1dOut(out *Tensor, kernelSize []int64, stride 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -36674,8 +36674,8 @@ func (ts *Tensor) QuantizedMaxPool2d(kernelSize []int64, stride []int64, padding
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -36701,8 +36701,8 @@ func (ts *Tensor) QuantizedMaxPool2dOut(out *Tensor, kernelSize []int64, stride 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -36728,8 +36728,8 @@ func (ts *Tensor) QuantizedMaxPool3d(kernelSize []int64, stride []int64, padding
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -36755,8 +36755,8 @@ func (ts *Tensor) QuantizedMaxPool3dOut(out *Tensor, kernelSize []int64, stride 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -36779,8 +36779,8 @@ func (ts *Tensor) QuantizedMaxPool3dOut(out *Tensor, kernelSize []int64, stride 
 // --------------------------
 
 func QuantizedRnnReluCell(input *Tensor, hx *Tensor, wIh *Tensor, wHh *Tensor, bIh *Tensor, bHh *Tensor, packedIh *Tensor, packedHh *Tensor, colOffsetsIh *Tensor, colOffsetsHh *Tensor, scaleIh *Scalar, scaleHh *Scalar, zeroPointIh *Scalar, zeroPointHh *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgQuantizedRnnReluCell(ptr, input.ctensor, hx.ctensor, wIh.ctensor, wHh.ctensor, bIh.ctensor, bHh.ctensor, packedIh.ctensor, packedHh.ctensor, colOffsetsIh.ctensor, colOffsetsHh.ctensor, scaleIh.cscalar, scaleHh.cscalar, zeroPointIh.cscalar, zeroPointHh.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("QuantizedRnnReluCell() failed: %w", err)
@@ -36795,8 +36795,8 @@ func QuantizedRnnReluCell(input *Tensor, hx *Tensor, wIh *Tensor, wHh *Tensor, b
 // --------------------------
 
 func QuantizedRnnTanhCell(input *Tensor, hx *Tensor, wIh *Tensor, wHh *Tensor, bIh *Tensor, bHh *Tensor, packedIh *Tensor, packedHh *Tensor, colOffsetsIh *Tensor, colOffsetsHh *Tensor, scaleIh *Scalar, scaleHh *Scalar, zeroPointIh *Scalar, zeroPointHh *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgQuantizedRnnTanhCell(ptr, input.ctensor, hx.ctensor, wIh.ctensor, wHh.ctensor, bIh.ctensor, bHh.ctensor, packedIh.ctensor, packedHh.ctensor, colOffsetsIh.ctensor, colOffsetsHh.ctensor, scaleIh.cscalar, scaleHh.cscalar, zeroPointIh.cscalar, zeroPointHh.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("QuantizedRnnTanhCell() failed: %w", err)
@@ -36814,8 +36814,8 @@ func (ts *Tensor) Rad2deg(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRad2deg(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Rad2deg() failed: %w", err)
@@ -36830,8 +36830,8 @@ func (ts *Tensor) Rad2deg(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Rad2deg_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRad2deg_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Rad2deg_() failed: %w", err)
@@ -36849,8 +36849,8 @@ func (ts *Tensor) Rad2degOut(out *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRad2degOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Rad2degOut() failed: %w", err)
@@ -36887,8 +36887,8 @@ func (ts *Tensor) RandLike(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRandLike(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RandLike() failed: %w", err)
@@ -36906,8 +36906,8 @@ func (ts *Tensor) RandLikeOut(out *Tensor, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRandLikeOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RandLikeOut() failed: %w", err)
@@ -36922,8 +36922,8 @@ func (ts *Tensor) RandLikeOut(out *Tensor, del bool) (retVal *Tensor, err error)
 // --------------------------
 
 func RandOut(out *Tensor, size []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgRandOut(ptr, out.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -36939,8 +36939,8 @@ func RandOut(out *Tensor, size []int64) (retVal *Tensor, err error) {
 // --------------------------
 
 func Randint(high int64, size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgRandint(ptr, high, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -36959,8 +36959,8 @@ func (ts *Tensor) RandintLike(high int64, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRandintLike(ptr, ts.ctensor, high)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RandintLike() failed: %w", err)
@@ -36978,8 +36978,8 @@ func (ts *Tensor) RandintLikeLowDtype(low int64, high int64, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRandintLikeLowDtype(ptr, ts.ctensor, low, high)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RandintLikeLowDtype() failed: %w", err)
@@ -36997,8 +36997,8 @@ func (ts *Tensor) RandintLikeLowDtypeOut(out *Tensor, low int64, high int64, del
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRandintLikeLowDtypeOut(ptr, out.ctensor, ts.ctensor, low, high)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RandintLikeLowDtypeOut() failed: %w", err)
@@ -37016,8 +37016,8 @@ func (ts *Tensor) RandintLikeOut(out *Tensor, high int64, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRandintLikeOut(ptr, out.ctensor, ts.ctensor, high)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RandintLikeOut() failed: %w", err)
@@ -37032,8 +37032,8 @@ func (ts *Tensor) RandintLikeOut(out *Tensor, high int64, del bool) (retVal *Ten
 // --------------------------
 
 func RandintLow(low int64, high int64, size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgRandintLow(ptr, low, high, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -37049,8 +37049,8 @@ func RandintLow(low int64, high int64, size []int64, optionsKind gotch.DType, op
 // --------------------------
 
 func RandintLowOut(out *Tensor, low int64, high int64, size []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgRandintLowOut(ptr, out.ctensor, low, high, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -37066,8 +37066,8 @@ func RandintLowOut(out *Tensor, low int64, high int64, size []int64) (retVal *Te
 // --------------------------
 
 func RandintOut(out *Tensor, high int64, size []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgRandintOut(ptr, out.ctensor, high, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -37083,8 +37083,8 @@ func RandintOut(out *Tensor, high int64, size []int64) (retVal *Tensor, err erro
 // --------------------------
 
 func Randn(size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgRandn(ptr, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -37103,8 +37103,8 @@ func (ts *Tensor) RandnLike(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRandnLike(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RandnLike() failed: %w", err)
@@ -37122,8 +37122,8 @@ func (ts *Tensor) RandnLikeOut(out *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRandnLikeOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RandnLikeOut() failed: %w", err)
@@ -37138,8 +37138,8 @@ func (ts *Tensor) RandnLikeOut(out *Tensor, del bool) (retVal *Tensor, err error
 // --------------------------
 
 func RandnOut(out *Tensor, size []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgRandnOut(ptr, out.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -37158,8 +37158,8 @@ func (ts *Tensor) Random(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRandom(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Random() failed: %w", err)
@@ -37174,8 +37174,8 @@ func (ts *Tensor) Random(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Random_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRandom_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Random_() failed: %w", err)
@@ -37193,8 +37193,8 @@ func (ts *Tensor) RandomFrom(from int64, to []int64, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctoVal int64 = 0
 	var ctoNull int = 1
 	if len(to) > 0 {
@@ -37215,8 +37215,8 @@ func (ts *Tensor) RandomFrom(from int64, to []int64, del bool) (retVal *Tensor, 
 // --------------------------
 
 func (ts *Tensor) RandomFrom_(from int64, to []int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctoVal int64 = 0
 	var ctoNull int = 1
 	if len(to) > 0 {
@@ -37240,8 +37240,8 @@ func (ts *Tensor) RandomFromOut(out *Tensor, from int64, to []int64, del bool) (
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctoVal int64 = 0
 	var ctoNull int = 1
 	if len(to) > 0 {
@@ -37265,8 +37265,8 @@ func (ts *Tensor) RandomOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRandomOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RandomOut() failed: %w", err)
@@ -37284,8 +37284,8 @@ func (ts *Tensor) RandomTo(to int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRandomTo(ptr, ts.ctensor, to)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RandomTo() failed: %w", err)
@@ -37300,8 +37300,8 @@ func (ts *Tensor) RandomTo(to int64, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) RandomTo_(to int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRandomTo_(ptr, ts.ctensor, to)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RandomTo_() failed: %w", err)
@@ -37319,8 +37319,8 @@ func (ts *Tensor) RandomToOut(out *Tensor, to int64, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRandomToOut(ptr, out.ctensor, ts.ctensor, to)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RandomToOut() failed: %w", err)
@@ -37335,8 +37335,8 @@ func (ts *Tensor) RandomToOut(out *Tensor, to int64, del bool) (retVal *Tensor, 
 // --------------------------
 
 func Randperm(n int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRandperm(ptr, n, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Randperm() failed: %w", err)
@@ -37351,8 +37351,8 @@ func Randperm(n int64, optionsKind gotch.DType, optionsDevice gotch.Device) (ret
 // --------------------------
 
 func RandpermOut(out *Tensor, n int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRandpermOut(ptr, out.ctensor, n)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RandpermOut() failed: %w", err)
@@ -37367,8 +37367,8 @@ func RandpermOut(out *Tensor, n int64) (retVal *Tensor, err error) {
 // --------------------------
 
 func Range(start *Scalar, end *Scalar, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRange(ptr, start.cscalar, end.cscalar, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Range() failed: %w", err)
@@ -37383,8 +37383,8 @@ func Range(start *Scalar, end *Scalar, optionsKind gotch.DType, optionsDevice go
 // --------------------------
 
 func RangeOut(out *Tensor, start *Scalar, end *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRangeOut(ptr, out.ctensor, start.cscalar, end.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RangeOut() failed: %w", err)
@@ -37399,8 +37399,8 @@ func RangeOut(out *Tensor, start *Scalar, end *Scalar) (retVal *Tensor, err erro
 // --------------------------
 
 func RangeOut_(out *Tensor, start *Scalar, end *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRangeOut_(ptr, out.ctensor, start.cscalar, end.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RangeOut_() failed: %w", err)
@@ -37415,8 +37415,8 @@ func RangeOut_(out *Tensor, start *Scalar, end *Scalar) (retVal *Tensor, err err
 // --------------------------
 
 func RangeStep(start *Scalar, end *Scalar, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRangeStep(ptr, start.cscalar, end.cscalar, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RangeStep() failed: %w", err)
@@ -37434,8 +37434,8 @@ func (ts *Tensor) Ravel(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRavel(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Ravel() failed: %w", err)
@@ -37453,8 +37453,8 @@ func (ts *Tensor) Real(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgReal(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Real() failed: %w", err)
@@ -37472,8 +37472,8 @@ func (ts *Tensor) Reciprocal(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgReciprocal(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Reciprocal() failed: %w", err)
@@ -37488,8 +37488,8 @@ func (ts *Tensor) Reciprocal(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Reciprocal_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgReciprocal_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Reciprocal_() failed: %w", err)
@@ -37507,8 +37507,8 @@ func (ts *Tensor) ReciprocalOut(out *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgReciprocalOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ReciprocalOut() failed: %w", err)
@@ -37526,8 +37526,8 @@ func (ts *Tensor) ReflectionPad1d(padding []int64, del bool) (retVal *Tensor, er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReflectionPad1d(ptr, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -37546,8 +37546,8 @@ func (ts *Tensor) ReflectionPad1dBackward(gradOutput *Tensor, padding []int64, d
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReflectionPad1dBackward(ptr, gradOutput.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -37566,8 +37566,8 @@ func (ts *Tensor) ReflectionPad1dBackwardGradInput(gradInput *Tensor, gradOutput
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReflectionPad1dBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -37586,8 +37586,8 @@ func (ts *Tensor) ReflectionPad1dOut(out *Tensor, padding []int64, del bool) (re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReflectionPad1dOut(ptr, out.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -37606,8 +37606,8 @@ func (ts *Tensor) ReflectionPad2d(padding []int64, del bool) (retVal *Tensor, er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReflectionPad2d(ptr, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -37626,8 +37626,8 @@ func (ts *Tensor) ReflectionPad2dBackward(gradOutput *Tensor, padding []int64, d
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReflectionPad2dBackward(ptr, gradOutput.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -37646,8 +37646,8 @@ func (ts *Tensor) ReflectionPad2dBackwardGradInput(gradInput *Tensor, gradOutput
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReflectionPad2dBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -37666,8 +37666,8 @@ func (ts *Tensor) ReflectionPad2dOut(out *Tensor, padding []int64, del bool) (re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReflectionPad2dOut(ptr, out.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -37686,8 +37686,8 @@ func (ts *Tensor) ReflectionPad3d(padding []int64, del bool) (retVal *Tensor, er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReflectionPad3d(ptr, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -37706,8 +37706,8 @@ func (ts *Tensor) ReflectionPad3dBackward(gradOutput *Tensor, padding []int64, d
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReflectionPad3dBackward(ptr, gradOutput.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -37726,8 +37726,8 @@ func (ts *Tensor) ReflectionPad3dBackwardGradInput(gradInput *Tensor, gradOutput
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReflectionPad3dBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -37746,8 +37746,8 @@ func (ts *Tensor) ReflectionPad3dOut(out *Tensor, padding []int64, del bool) (re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReflectionPad3dOut(ptr, out.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -37766,8 +37766,8 @@ func (ts *Tensor) Relu(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRelu(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Relu() failed: %w", err)
@@ -37785,8 +37785,8 @@ func (ts *Tensor) Relu6(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRelu6(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Relu6() failed: %w", err)
@@ -37801,8 +37801,8 @@ func (ts *Tensor) Relu6(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Relu6_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRelu6_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Relu6_() failed: %w", err)
@@ -37817,8 +37817,8 @@ func (ts *Tensor) Relu6_() (err error) {
 // --------------------------
 
 func (ts *Tensor) Relu_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRelu_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Relu_() failed: %w", err)
@@ -37836,8 +37836,8 @@ func (ts *Tensor) ReluOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgReluOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ReluOut() failed: %w", err)
@@ -37855,8 +37855,8 @@ func (ts *Tensor) Remainder(other *Scalar, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRemainder(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Remainder() failed: %w", err)
@@ -37871,8 +37871,8 @@ func (ts *Tensor) Remainder(other *Scalar, del bool) (retVal *Tensor, err error)
 // --------------------------
 
 func (ts *Tensor) Remainder_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRemainder_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Remainder_() failed: %w", err)
@@ -37890,8 +37890,8 @@ func (ts *Tensor) RemainderScalarOut(out *Tensor, other *Scalar, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRemainderScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RemainderScalarOut() failed: %w", err)
@@ -37906,8 +37906,8 @@ func (ts *Tensor) RemainderScalarOut(out *Tensor, other *Scalar, del bool) (retV
 // --------------------------
 
 func RemainderScalarTensor(selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRemainderScalarTensor(ptr, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RemainderScalarTensor() failed: %w", err)
@@ -37922,8 +37922,8 @@ func RemainderScalarTensor(selfScalar *Scalar, other *Tensor) (retVal *Tensor, e
 // --------------------------
 
 func RemainderScalarTensorOut(out *Tensor, selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRemainderScalarTensorOut(ptr, out.ctensor, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RemainderScalarTensorOut() failed: %w", err)
@@ -37941,8 +37941,8 @@ func (ts *Tensor) RemainderTensor(other *Tensor, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRemainderTensor(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RemainderTensor() failed: %w", err)
@@ -37957,8 +37957,8 @@ func (ts *Tensor) RemainderTensor(other *Tensor, del bool) (retVal *Tensor, err 
 // --------------------------
 
 func (ts *Tensor) RemainderTensor_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRemainderTensor_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RemainderTensor_() failed: %w", err)
@@ -37976,8 +37976,8 @@ func (ts *Tensor) RemainderTensorOut(out *Tensor, other *Tensor, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRemainderTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RemainderTensorOut() failed: %w", err)
@@ -37995,8 +37995,8 @@ func (ts *Tensor) Renorm(p *Scalar, dim int64, maxnorm *Scalar, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRenorm(ptr, ts.ctensor, p.cscalar, dim, maxnorm.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Renorm() failed: %w", err)
@@ -38011,8 +38011,8 @@ func (ts *Tensor) Renorm(p *Scalar, dim int64, maxnorm *Scalar, del bool) (retVa
 // --------------------------
 
 func (ts *Tensor) Renorm_(p *Scalar, dim int64, maxnorm *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRenorm_(ptr, ts.ctensor, p.cscalar, dim, maxnorm.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Renorm_() failed: %w", err)
@@ -38030,8 +38030,8 @@ func (ts *Tensor) RenormOut(out *Tensor, p *Scalar, dim int64, maxnorm *Scalar, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRenormOut(ptr, out.ctensor, ts.ctensor, p.cscalar, dim, maxnorm.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RenormOut() failed: %w", err)
@@ -38049,8 +38049,8 @@ func (ts *Tensor) Repeat(repeats []int64, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	repeatsLen := len(repeats)
 	lib.AtgRepeat(ptr, ts.ctensor, repeats, repeatsLen)
 	if err = TorchErr(); err != nil {
@@ -38066,8 +38066,8 @@ func (ts *Tensor) Repeat(repeats []int64, del bool) (retVal *Tensor, err error) 
 // --------------------------
 
 func RepeatInterleave(repeats *Tensor, outputSize []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var coutputSizeVal int64 = 0
 	var coutputSizeNull int = 1
 	if len(outputSize) > 0 {
@@ -38091,8 +38091,8 @@ func (ts *Tensor) RepeatInterleaveSelfInt(repeats int64, dim []int64, outputSize
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -38122,8 +38122,8 @@ func (ts *Tensor) RepeatInterleaveSelfTensor(repeats *Tensor, dim []int64, outpu
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -38150,8 +38150,8 @@ func (ts *Tensor) RepeatInterleaveSelfTensor(repeats *Tensor, dim []int64, outpu
 // --------------------------
 
 func RepeatInterleaveTensorOut(out *Tensor, repeats *Tensor, outputSize []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var coutputSizeVal int64 = 0
 	var coutputSizeNull int = 1
 	if len(outputSize) > 0 {
@@ -38175,8 +38175,8 @@ func (ts *Tensor) RepeatOut(out *Tensor, repeats []int64, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	repeatsLen := len(repeats)
 	lib.AtgRepeatOut(ptr, out.ctensor, ts.ctensor, repeats, repeatsLen)
 	if err = TorchErr(); err != nil {
@@ -38195,8 +38195,8 @@ func (ts *Tensor) ReplicationPad1d(padding []int64, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReplicationPad1d(ptr, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -38215,8 +38215,8 @@ func (ts *Tensor) ReplicationPad1dBackward(gradOutput *Tensor, padding []int64, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReplicationPad1dBackward(ptr, gradOutput.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -38235,8 +38235,8 @@ func (ts *Tensor) ReplicationPad1dBackwardGradInput(gradInput *Tensor, gradOutpu
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReplicationPad1dBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -38255,8 +38255,8 @@ func (ts *Tensor) ReplicationPad1dOut(out *Tensor, padding []int64, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReplicationPad1dOut(ptr, out.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -38275,8 +38275,8 @@ func (ts *Tensor) ReplicationPad2d(padding []int64, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReplicationPad2d(ptr, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -38295,8 +38295,8 @@ func (ts *Tensor) ReplicationPad2dBackward(gradOutput *Tensor, padding []int64, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReplicationPad2dBackward(ptr, gradOutput.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -38315,8 +38315,8 @@ func (ts *Tensor) ReplicationPad2dBackwardGradInput(gradInput *Tensor, gradOutpu
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReplicationPad2dBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -38335,8 +38335,8 @@ func (ts *Tensor) ReplicationPad2dOut(out *Tensor, padding []int64, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReplicationPad2dOut(ptr, out.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -38355,8 +38355,8 @@ func (ts *Tensor) ReplicationPad3d(padding []int64, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReplicationPad3d(ptr, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -38375,8 +38375,8 @@ func (ts *Tensor) ReplicationPad3dBackward(gradOutput *Tensor, padding []int64, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReplicationPad3dBackward(ptr, gradOutput.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -38395,8 +38395,8 @@ func (ts *Tensor) ReplicationPad3dBackwardGradInput(gradInput *Tensor, gradOutpu
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReplicationPad3dBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -38415,8 +38415,8 @@ func (ts *Tensor) ReplicationPad3dOut(out *Tensor, padding []int64, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	paddingLen := len(padding)
 	lib.AtgReplicationPad3dOut(ptr, out.ctensor, ts.ctensor, padding, paddingLen)
 	if err = TorchErr(); err != nil {
@@ -38432,8 +38432,8 @@ func (ts *Tensor) ReplicationPad3dOut(out *Tensor, padding []int64, del bool) (r
 // --------------------------
 
 func (ts *Tensor) RequiresGrad_(requiresGrad bool) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	crequiresGrad := int32(0)
 	if requiresGrad {
 		crequiresGrad = int32(1)
@@ -38455,8 +38455,8 @@ func (ts *Tensor) Reshape(shape []int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	shapeLen := len(shape)
 	lib.AtgReshape(ptr, ts.ctensor, shape, shapeLen)
 	if err = TorchErr(); err != nil {
@@ -38475,8 +38475,8 @@ func (ts *Tensor) ReshapeAs(other *Tensor, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgReshapeAs(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ReshapeAs() failed: %w", err)
@@ -38494,8 +38494,8 @@ func (ts *Tensor) Resize(size []int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgResize(ptr, ts.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -38511,8 +38511,8 @@ func (ts *Tensor) Resize(size []int64, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Resize_(size []int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgResize_(ptr, ts.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -38531,8 +38531,8 @@ func (ts *Tensor) ResizeAs(theTemplate *Tensor, del bool) (retVal *Tensor, err e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgResizeAs(ptr, ts.ctensor, theTemplate.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ResizeAs() failed: %w", err)
@@ -38547,8 +38547,8 @@ func (ts *Tensor) ResizeAs(theTemplate *Tensor, del bool) (retVal *Tensor, err e
 // --------------------------
 
 func (ts *Tensor) ResizeAs_(theTemplate *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgResizeAs_(ptr, ts.ctensor, theTemplate.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ResizeAs_() failed: %w", err)
@@ -38566,8 +38566,8 @@ func (ts *Tensor) ResizeAsOut(out *Tensor, theTemplate *Tensor, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgResizeAsOut(ptr, out.ctensor, ts.ctensor, theTemplate.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ResizeAsOut() failed: %w", err)
@@ -38585,8 +38585,8 @@ func (ts *Tensor) ResizeAsSparse(theTemplate *Tensor, del bool) (retVal *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgResizeAsSparse(ptr, ts.ctensor, theTemplate.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ResizeAsSparse() failed: %w", err)
@@ -38601,8 +38601,8 @@ func (ts *Tensor) ResizeAsSparse(theTemplate *Tensor, del bool) (retVal *Tensor,
 // --------------------------
 
 func (ts *Tensor) ResizeAsSparse_(theTemplate *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgResizeAsSparse_(ptr, ts.ctensor, theTemplate.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ResizeAsSparse_() failed: %w", err)
@@ -38620,8 +38620,8 @@ func (ts *Tensor) ResizeAsSparseOut(out *Tensor, theTemplate *Tensor, del bool) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgResizeAsSparseOut(ptr, out.ctensor, ts.ctensor, theTemplate.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ResizeAsSparseOut() failed: %w", err)
@@ -38639,8 +38639,8 @@ func (ts *Tensor) ResizeOut(out *Tensor, size []int64, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgResizeOut(ptr, out.ctensor, ts.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -38659,8 +38659,8 @@ func (ts *Tensor) ResolveConj(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgResolveConj(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ResolveConj() failed: %w", err)
@@ -38678,8 +38678,8 @@ func (ts *Tensor) ResolveNeg(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgResolveNeg(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ResolveNeg() failed: %w", err)
@@ -38746,8 +38746,8 @@ func RnnRelu(input *Tensor, hx *Tensor, params []*Tensor, hasBiases bool, numLay
 // --------------------------
 
 func RnnReluCell(input *Tensor, hx *Tensor, wIh *Tensor, wHh *Tensor, bIh *Tensor, bHh *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRnnReluCell(ptr, input.ctensor, hx.ctensor, wIh.ctensor, wHh.ctensor, bIh.ctensor, bHh.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RnnReluCell() failed: %w", err)
@@ -38832,8 +38832,8 @@ func RnnTanh(input *Tensor, hx *Tensor, params []*Tensor, hasBiases bool, numLay
 // --------------------------
 
 func RnnTanhCell(input *Tensor, hx *Tensor, wIh *Tensor, wHh *Tensor, bIh *Tensor, bHh *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRnnTanhCell(ptr, input.ctensor, hx.ctensor, wIh.ctensor, wHh.ctensor, bIh.ctensor, bHh.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RnnTanhCell() failed: %w", err)
@@ -38884,8 +38884,8 @@ func (ts *Tensor) Roll(shifts []int64, dims []int64, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	shiftsLen := len(shifts)
 	dimsLen := len(dims)
 	lib.AtgRoll(ptr, ts.ctensor, shifts, shiftsLen, dims, dimsLen)
@@ -38905,8 +38905,8 @@ func (ts *Tensor) RollOut(out *Tensor, shifts []int64, dims []int64, del bool) (
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	shiftsLen := len(shifts)
 	dimsLen := len(dims)
 	lib.AtgRollOut(ptr, out.ctensor, ts.ctensor, shifts, shiftsLen, dims, dimsLen)
@@ -38926,8 +38926,8 @@ func (ts *Tensor) Rot90(k int64, dims []int64, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimsLen := len(dims)
 	lib.AtgRot90(ptr, ts.ctensor, k, dims, dimsLen)
 	if err = TorchErr(); err != nil {
@@ -38946,8 +38946,8 @@ func (ts *Tensor) Rot90Out(out *Tensor, k int64, dims []int64, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimsLen := len(dims)
 	lib.AtgRot90Out(ptr, out.ctensor, ts.ctensor, k, dims, dimsLen)
 	if err = TorchErr(); err != nil {
@@ -38966,8 +38966,8 @@ func (ts *Tensor) Round(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRound(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Round() failed: %w", err)
@@ -38982,8 +38982,8 @@ func (ts *Tensor) Round(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Round_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRound_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Round_() failed: %w", err)
@@ -39001,8 +39001,8 @@ func (ts *Tensor) RoundDecimals(decimals int64, del bool) (retVal *Tensor, err e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRoundDecimals(ptr, ts.ctensor, decimals)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RoundDecimals() failed: %w", err)
@@ -39017,8 +39017,8 @@ func (ts *Tensor) RoundDecimals(decimals int64, del bool) (retVal *Tensor, err e
 // --------------------------
 
 func (ts *Tensor) RoundDecimals_(decimals int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRoundDecimals_(ptr, ts.ctensor, decimals)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RoundDecimals_() failed: %w", err)
@@ -39036,8 +39036,8 @@ func (ts *Tensor) RoundDecimalsOut(out *Tensor, decimals int64, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRoundDecimalsOut(ptr, out.ctensor, ts.ctensor, decimals)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RoundDecimalsOut() failed: %w", err)
@@ -39055,8 +39055,8 @@ func (ts *Tensor) RoundOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRoundOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RoundOut() failed: %w", err)
@@ -39074,8 +39074,8 @@ func (ts *Tensor) RowIndices(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRowIndices(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RowIndices() failed: %w", err)
@@ -39093,8 +39093,8 @@ func (ts *Tensor) RowIndicesCopy(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRowIndicesCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RowIndicesCopy() failed: %w", err)
@@ -39112,8 +39112,8 @@ func (ts *Tensor) RowIndicesCopyOut(out *Tensor, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRowIndicesCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RowIndicesCopyOut() failed: %w", err)
@@ -39128,8 +39128,8 @@ func (ts *Tensor) RowIndicesCopyOut(out *Tensor, del bool) (retVal *Tensor, err 
 // --------------------------
 
 func RowStack(tensors []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -39148,8 +39148,8 @@ func RowStack(tensors []*Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func RowStackOut(out *Tensor, tensors []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -39171,8 +39171,8 @@ func (ts *Tensor) Rrelu(training bool, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctraining := int32(0)
 	if training {
 		ctraining = int32(1)
@@ -39191,8 +39191,8 @@ func (ts *Tensor) Rrelu(training bool, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Rrelu_(training bool) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctraining := int32(0)
 	if training {
 		ctraining = int32(1)
@@ -39214,8 +39214,8 @@ func (ts *Tensor) RreluWithNoise(noise *Tensor, training bool, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctraining := int32(0)
 	if training {
 		ctraining = int32(1)
@@ -39234,8 +39234,8 @@ func (ts *Tensor) RreluWithNoise(noise *Tensor, training bool, del bool) (retVal
 // --------------------------
 
 func (ts *Tensor) RreluWithNoise_(noise *Tensor, training bool) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctraining := int32(0)
 	if training {
 		ctraining = int32(1)
@@ -39257,8 +39257,8 @@ func (ts *Tensor) RreluWithNoiseBackward(gradOutput *Tensor, noise *Tensor, lowe
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctraining := int32(0)
 	if training {
 		ctraining = int32(1)
@@ -39284,8 +39284,8 @@ func (ts *Tensor) RreluWithNoiseBackwardOut(out *Tensor, gradOutput *Tensor, noi
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctraining := int32(0)
 	if training {
 		ctraining = int32(1)
@@ -39311,8 +39311,8 @@ func (ts *Tensor) RreluWithNoiseOut(out *Tensor, noise *Tensor, training bool, d
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	ctraining := int32(0)
 	if training {
 		ctraining = int32(1)
@@ -39334,8 +39334,8 @@ func (ts *Tensor) Rsqrt(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRsqrt(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Rsqrt() failed: %w", err)
@@ -39350,8 +39350,8 @@ func (ts *Tensor) Rsqrt(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Rsqrt_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRsqrt_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Rsqrt_() failed: %w", err)
@@ -39369,8 +39369,8 @@ func (ts *Tensor) RsqrtOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRsqrtOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RsqrtOut() failed: %w", err)
@@ -39388,8 +39388,8 @@ func (ts *Tensor) Rsub(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRsub(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Rsub() failed: %w", err)
@@ -39407,8 +39407,8 @@ func (ts *Tensor) RsubScalar(other *Scalar, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRsubScalar(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RsubScalar() failed: %w", err)
@@ -39426,8 +39426,8 @@ func (ts *Tensor) RsubScalarOut(out *Tensor, other *Scalar, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRsubScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RsubScalarOut() failed: %w", err)
@@ -39445,8 +39445,8 @@ func (ts *Tensor) RsubTensorOut(out *Tensor, other *Tensor, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgRsubTensorOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("RsubTensorOut() failed: %w", err)
@@ -39461,8 +39461,8 @@ func (ts *Tensor) RsubTensorOut(out *Tensor, other *Tensor, del bool) (retVal *T
 // --------------------------
 
 func ScalarTensor(s *Scalar, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgScalarTensor(ptr, s.cscalar, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ScalarTensor() failed: %w", err)
@@ -39477,8 +39477,8 @@ func ScalarTensor(s *Scalar, optionsKind gotch.DType, optionsDevice gotch.Device
 // --------------------------
 
 func ScalarTensorOut(out *Tensor, s *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgScalarTensorOut(ptr, out.ctensor, s.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ScalarTensorOut() failed: %w", err)
@@ -39493,8 +39493,8 @@ func ScalarTensorOut(out *Tensor, s *Scalar) (retVal *Tensor, err error) {
 // --------------------------
 
 func ScaledDotProductAttention(query *Tensor, key *Tensor, value *Tensor, attnMask *Tensor, dropoutP float64, isCausal bool, scale []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cisCausal := int32(0)
 	if isCausal {
 		cisCausal = int32(1)
@@ -39522,8 +39522,8 @@ func (ts *Tensor) Scatter(dim int64, index *Tensor, src *Tensor, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgScatter(ptr, ts.ctensor, dim, index.ctensor, src.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Scatter() failed: %w", err)
@@ -39538,8 +39538,8 @@ func (ts *Tensor) Scatter(dim int64, index *Tensor, src *Tensor, del bool) (retV
 // --------------------------
 
 func (ts *Tensor) Scatter_(dim int64, index *Tensor, src *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgScatter_(ptr, ts.ctensor, dim, index.ctensor, src.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Scatter_() failed: %w", err)
@@ -39557,8 +39557,8 @@ func (ts *Tensor) ScatterAdd(dim int64, index *Tensor, src *Tensor, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgScatterAdd(ptr, ts.ctensor, dim, index.ctensor, src.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ScatterAdd() failed: %w", err)
@@ -39573,8 +39573,8 @@ func (ts *Tensor) ScatterAdd(dim int64, index *Tensor, src *Tensor, del bool) (r
 // --------------------------
 
 func (ts *Tensor) ScatterAdd_(dim int64, index *Tensor, src *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgScatterAdd_(ptr, ts.ctensor, dim, index.ctensor, src.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ScatterAdd_() failed: %w", err)
@@ -39592,8 +39592,8 @@ func (ts *Tensor) ScatterAddOut(out *Tensor, dim int64, index *Tensor, src *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgScatterAddOut(ptr, out.ctensor, ts.ctensor, dim, index.ctensor, src.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ScatterAddOut() failed: %w", err)
@@ -39611,8 +39611,8 @@ func (ts *Tensor) ScatterReduce(dim int64, index *Tensor, src *Tensor, reduce st
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgScatterReduce(ptr, ts.ctensor, dim, index.ctensor, src.ctensor, reduce)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ScatterReduce() failed: %w", err)
@@ -39627,8 +39627,8 @@ func (ts *Tensor) ScatterReduce(dim int64, index *Tensor, src *Tensor, reduce st
 // --------------------------
 
 func (ts *Tensor) ScatterReduce_(dim int64, index *Tensor, src *Tensor, reduce string) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgScatterReduce_(ptr, ts.ctensor, dim, index.ctensor, src.ctensor, reduce)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ScatterReduce_() failed: %w", err)
@@ -39646,8 +39646,8 @@ func (ts *Tensor) ScatterReduceOut(out *Tensor, dim int64, index *Tensor, src *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgScatterReduceOut(ptr, out.ctensor, ts.ctensor, dim, index.ctensor, src.ctensor, reduce)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ScatterReduceOut() failed: %w", err)
@@ -39665,8 +39665,8 @@ func (ts *Tensor) ScatterSrcOut(out *Tensor, dim int64, index *Tensor, src *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgScatterSrcOut(ptr, out.ctensor, ts.ctensor, dim, index.ctensor, src.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ScatterSrcOut() failed: %w", err)
@@ -39684,8 +39684,8 @@ func (ts *Tensor) ScatterValue(dim int64, index *Tensor, value *Scalar, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgScatterValue(ptr, ts.ctensor, dim, index.ctensor, value.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ScatterValue() failed: %w", err)
@@ -39700,8 +39700,8 @@ func (ts *Tensor) ScatterValue(dim int64, index *Tensor, value *Scalar, del bool
 // --------------------------
 
 func (ts *Tensor) ScatterValue_(dim int64, index *Tensor, value *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgScatterValue_(ptr, ts.ctensor, dim, index.ctensor, value.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ScatterValue_() failed: %w", err)
@@ -39719,8 +39719,8 @@ func (ts *Tensor) ScatterValueOut(out *Tensor, dim int64, index *Tensor, value *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgScatterValueOut(ptr, out.ctensor, ts.ctensor, dim, index.ctensor, value.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ScatterValueOut() failed: %w", err)
@@ -39738,8 +39738,8 @@ func (ts *Tensor) ScatterValueReduce(dim int64, index *Tensor, value *Scalar, re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgScatterValueReduce(ptr, ts.ctensor, dim, index.ctensor, value.cscalar, reduce)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ScatterValueReduce() failed: %w", err)
@@ -39754,8 +39754,8 @@ func (ts *Tensor) ScatterValueReduce(dim int64, index *Tensor, value *Scalar, re
 // --------------------------
 
 func (ts *Tensor) ScatterValueReduce_(dim int64, index *Tensor, value *Scalar, reduce string) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgScatterValueReduce_(ptr, ts.ctensor, dim, index.ctensor, value.cscalar, reduce)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ScatterValueReduce_() failed: %w", err)
@@ -39773,8 +39773,8 @@ func (ts *Tensor) ScatterValueReduceOut(out *Tensor, dim int64, index *Tensor, v
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgScatterValueReduceOut(ptr, out.ctensor, ts.ctensor, dim, index.ctensor, value.cscalar, reduce)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ScatterValueReduceOut() failed: %w", err)
@@ -39792,8 +39792,8 @@ func (ts *Tensor) Searchsorted(sortedSequence *Tensor, outInt32 bool, right bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	coutInt32 := int32(0)
 	if outInt32 {
 		coutInt32 = int32(1)
@@ -39816,8 +39816,8 @@ func (ts *Tensor) Searchsorted(sortedSequence *Tensor, outInt32 bool, right bool
 // --------------------------
 
 func SearchsortedScalar(sortedSequence *Tensor, selfScalar *Scalar, outInt32 bool, right bool, side string, sorter *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	coutInt32 := int32(0)
 	if outInt32 {
 		coutInt32 = int32(1)
@@ -39840,8 +39840,8 @@ func SearchsortedScalar(sortedSequence *Tensor, selfScalar *Scalar, outInt32 boo
 // --------------------------
 
 func SearchsortedScalarOut(out *Tensor, sortedSequence *Tensor, selfScalar *Scalar, outInt32 bool, right bool, side string, sorter *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	coutInt32 := int32(0)
 	if outInt32 {
 		coutInt32 = int32(1)
@@ -39867,8 +39867,8 @@ func (ts *Tensor) SearchsortedTensorOut(out *Tensor, sortedSequence *Tensor, out
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	coutInt32 := int32(0)
 	if outInt32 {
 		coutInt32 = int32(1)
@@ -39891,8 +39891,8 @@ func (ts *Tensor) SearchsortedTensorOut(out *Tensor, sortedSequence *Tensor, out
 // --------------------------
 
 func SegmentReduce(data *Tensor, reduce string, lengths *Tensor, indices *Tensor, offsets *Tensor, axis int64, unsafety bool, initial *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cunsafety := int32(0)
 	if unsafety {
 		cunsafety = int32(1)
@@ -39911,8 +39911,8 @@ func SegmentReduce(data *Tensor, reduce string, lengths *Tensor, indices *Tensor
 // --------------------------
 
 func SegmentReduceOut(out *Tensor, data *Tensor, reduce string, lengths *Tensor, indices *Tensor, offsets *Tensor, axis int64, unsafety bool, initial *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cunsafety := int32(0)
 	if unsafety {
 		cunsafety = int32(1)
@@ -39934,8 +39934,8 @@ func (ts *Tensor) Select(dim int64, index int64, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSelect(ptr, ts.ctensor, dim, index)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Select() failed: %w", err)
@@ -39950,8 +39950,8 @@ func (ts *Tensor) Select(dim int64, index int64, del bool) (retVal *Tensor, err 
 // --------------------------
 
 func SelectBackward(gradOutput *Tensor, inputSizes []int64, dim int64, index int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	inputSizesLen := len(inputSizes)
 	lib.AtgSelectBackward(ptr, gradOutput.ctensor, inputSizes, inputSizesLen, dim, index)
 	if err = TorchErr(); err != nil {
@@ -39967,8 +39967,8 @@ func SelectBackward(gradOutput *Tensor, inputSizes []int64, dim int64, index int
 // --------------------------
 
 func SelectBackwardOut(out *Tensor, gradOutput *Tensor, inputSizes []int64, dim int64, index int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	inputSizesLen := len(inputSizes)
 	lib.AtgSelectBackwardOut(ptr, out.ctensor, gradOutput.ctensor, inputSizes, inputSizesLen, dim, index)
 	if err = TorchErr(); err != nil {
@@ -39987,8 +39987,8 @@ func (ts *Tensor) SelectCopy(dim int64, index int64, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSelectCopy(ptr, ts.ctensor, dim, index)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SelectCopy() failed: %w", err)
@@ -40006,8 +40006,8 @@ func (ts *Tensor) SelectCopyIntOut(out *Tensor, dim int64, index int64, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSelectCopyIntOut(ptr, out.ctensor, ts.ctensor, dim, index)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SelectCopyIntOut() failed: %w", err)
@@ -40025,8 +40025,8 @@ func (ts *Tensor) SelectScatter(src *Tensor, dim int64, index int64, del bool) (
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSelectScatter(ptr, ts.ctensor, src.ctensor, dim, index)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SelectScatter() failed: %w", err)
@@ -40044,8 +40044,8 @@ func (ts *Tensor) SelectScatterOut(out *Tensor, src *Tensor, dim int64, index in
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSelectScatterOut(ptr, out.ctensor, ts.ctensor, src.ctensor, dim, index)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SelectScatterOut() failed: %w", err)
@@ -40063,8 +40063,8 @@ func (ts *Tensor) Selu(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSelu(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Selu() failed: %w", err)
@@ -40079,8 +40079,8 @@ func (ts *Tensor) Selu(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Selu_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSelu_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Selu_() failed: %w", err)
@@ -40098,8 +40098,8 @@ func (ts *Tensor) Set(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSet(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Set() failed: %w", err)
@@ -40114,8 +40114,8 @@ func (ts *Tensor) Set(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Set_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSet_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Set_() failed: %w", err)
@@ -40133,8 +40133,8 @@ func (ts *Tensor) SetOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSetOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SetOut() failed: %w", err)
@@ -40152,8 +40152,8 @@ func (ts *Tensor) SetRequiresGrad(r bool, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cr := int32(0)
 	if r {
 		cr = int32(1)
@@ -40175,8 +40175,8 @@ func (ts *Tensor) SetSourceTensor(source *Tensor, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSetSourceTensor(ptr, ts.ctensor, source.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SetSourceTensor() failed: %w", err)
@@ -40191,8 +40191,8 @@ func (ts *Tensor) SetSourceTensor(source *Tensor, del bool) (retVal *Tensor, err
 // --------------------------
 
 func (ts *Tensor) SetSourceTensor_(source *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSetSourceTensor_(ptr, ts.ctensor, source.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SetSourceTensor_() failed: %w", err)
@@ -40210,8 +40210,8 @@ func (ts *Tensor) SetSourceTensorOut(out *Tensor, source *Tensor, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSetSourceTensorOut(ptr, out.ctensor, ts.ctensor, source.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SetSourceTensorOut() failed: %w", err)
@@ -40226,8 +40226,8 @@ func (ts *Tensor) SetSourceTensorOut(out *Tensor, source *Tensor, del bool) (ret
 // --------------------------
 
 func (ts *Tensor) SetSourceTensorStorageOffset_(source *Tensor, storageOffset int64, size []int64, stride []int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	strideLen := len(stride)
 	lib.AtgSetSourceTensorStorageOffset_(ptr, ts.ctensor, source.ctensor, storageOffset, size, sizeLen, stride, strideLen)
@@ -40247,8 +40247,8 @@ func (ts *Tensor) Sgn(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSgn(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sgn() failed: %w", err)
@@ -40263,8 +40263,8 @@ func (ts *Tensor) Sgn(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Sgn_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSgn_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sgn_() failed: %w", err)
@@ -40282,8 +40282,8 @@ func (ts *Tensor) SgnOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSgnOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SgnOut() failed: %w", err)
@@ -40301,8 +40301,8 @@ func (ts *Tensor) Sigmoid(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSigmoid(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sigmoid() failed: %w", err)
@@ -40317,8 +40317,8 @@ func (ts *Tensor) Sigmoid(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Sigmoid_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSigmoid_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sigmoid_() failed: %w", err)
@@ -40333,8 +40333,8 @@ func (ts *Tensor) Sigmoid_() (err error) {
 // --------------------------
 
 func SigmoidBackward(gradOutput *Tensor, output *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSigmoidBackward(ptr, gradOutput.ctensor, output.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SigmoidBackward() failed: %w", err)
@@ -40349,8 +40349,8 @@ func SigmoidBackward(gradOutput *Tensor, output *Tensor) (retVal *Tensor, err er
 // --------------------------
 
 func SigmoidBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, output *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSigmoidBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, output.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SigmoidBackwardGradInput() failed: %w", err)
@@ -40368,8 +40368,8 @@ func (ts *Tensor) SigmoidOut(out *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSigmoidOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SigmoidOut() failed: %w", err)
@@ -40387,8 +40387,8 @@ func (ts *Tensor) Sign(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSign(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sign() failed: %w", err)
@@ -40403,8 +40403,8 @@ func (ts *Tensor) Sign(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Sign_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSign_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sign_() failed: %w", err)
@@ -40422,8 +40422,8 @@ func (ts *Tensor) SignOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSignOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SignOut() failed: %w", err)
@@ -40441,8 +40441,8 @@ func (ts *Tensor) Signbit(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSignbit(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Signbit() failed: %w", err)
@@ -40460,8 +40460,8 @@ func (ts *Tensor) SignbitOut(out *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSignbitOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SignbitOut() failed: %w", err)
@@ -40479,8 +40479,8 @@ func (ts *Tensor) Silu(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSilu(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Silu() failed: %w", err)
@@ -40495,8 +40495,8 @@ func (ts *Tensor) Silu(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Silu_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSilu_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Silu_() failed: %w", err)
@@ -40514,8 +40514,8 @@ func (ts *Tensor) SiluBackward(gradOutput *Tensor, del bool) (retVal *Tensor, er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSiluBackward(ptr, gradOutput.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SiluBackward() failed: %w", err)
@@ -40533,8 +40533,8 @@ func (ts *Tensor) SiluBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, d
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSiluBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SiluBackwardGradInput() failed: %w", err)
@@ -40552,8 +40552,8 @@ func (ts *Tensor) SiluOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSiluOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SiluOut() failed: %w", err)
@@ -40571,8 +40571,8 @@ func (ts *Tensor) Sin(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSin(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sin() failed: %w", err)
@@ -40587,8 +40587,8 @@ func (ts *Tensor) Sin(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Sin_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSin_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sin_() failed: %w", err)
@@ -40606,8 +40606,8 @@ func (ts *Tensor) SinOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSinOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SinOut() failed: %w", err)
@@ -40625,8 +40625,8 @@ func (ts *Tensor) Sinc(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSinc(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sinc() failed: %w", err)
@@ -40641,8 +40641,8 @@ func (ts *Tensor) Sinc(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Sinc_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSinc_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sinc_() failed: %w", err)
@@ -40660,8 +40660,8 @@ func (ts *Tensor) SincOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSincOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SincOut() failed: %w", err)
@@ -40679,8 +40679,8 @@ func (ts *Tensor) Sinh(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSinh(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sinh() failed: %w", err)
@@ -40695,8 +40695,8 @@ func (ts *Tensor) Sinh(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Sinh_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSinh_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sinh_() failed: %w", err)
@@ -40714,8 +40714,8 @@ func (ts *Tensor) SinhOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSinhOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SinhOut() failed: %w", err)
@@ -40733,8 +40733,8 @@ func (ts *Tensor) Slice(dim int64, start []int64, end []int64, step int64, del b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cstartVal int64 = 0
 	var cstartNull int = 1
 	if len(start) > 0 {
@@ -40761,8 +40761,8 @@ func (ts *Tensor) Slice(dim int64, start []int64, end []int64, step int64, del b
 // --------------------------
 
 func SliceBackward(gradOutput *Tensor, inputSizes []int64, dim int64, start int64, end int64, step int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	inputSizesLen := len(inputSizes)
 	lib.AtgSliceBackward(ptr, gradOutput.ctensor, inputSizes, inputSizesLen, dim, start, end, step)
 	if err = TorchErr(); err != nil {
@@ -40778,8 +40778,8 @@ func SliceBackward(gradOutput *Tensor, inputSizes []int64, dim int64, start int6
 // --------------------------
 
 func SliceBackwardOut(out *Tensor, gradOutput *Tensor, inputSizes []int64, dim int64, start int64, end int64, step int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	inputSizesLen := len(inputSizes)
 	lib.AtgSliceBackwardOut(ptr, out.ctensor, gradOutput.ctensor, inputSizes, inputSizesLen, dim, start, end, step)
 	if err = TorchErr(); err != nil {
@@ -40798,8 +40798,8 @@ func (ts *Tensor) SliceCopy(dim int64, start []int64, end []int64, step int64, d
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cstartVal int64 = 0
 	var cstartNull int = 1
 	if len(start) > 0 {
@@ -40829,8 +40829,8 @@ func (ts *Tensor) SliceCopyTensorOut(out *Tensor, dim int64, start []int64, end 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cstartVal int64 = 0
 	var cstartNull int = 1
 	if len(start) > 0 {
@@ -40860,8 +40860,8 @@ func (ts *Tensor) SliceScatter(src *Tensor, dim int64, start []int64, end []int6
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cstartVal int64 = 0
 	var cstartNull int = 1
 	if len(start) > 0 {
@@ -40891,8 +40891,8 @@ func (ts *Tensor) SliceScatterOut(out *Tensor, src *Tensor, dim int64, start []i
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cstartVal int64 = 0
 	var cstartNull int = 1
 	if len(start) > 0 {
@@ -40962,8 +40962,8 @@ func (ts *Tensor) SlowConv3d(weight *Tensor, kernelSize []int64, bias *Tensor, s
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -40984,8 +40984,8 @@ func (ts *Tensor) SlowConv3dOut(out *Tensor, weight *Tensor, kernelSize []int64,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -41006,8 +41006,8 @@ func (ts *Tensor) SlowConvDilated2d(weight *Tensor, kernelSize []int64, bias *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -41029,8 +41029,8 @@ func (ts *Tensor) SlowConvDilated2dOut(out *Tensor, weight *Tensor, kernelSize [
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -41052,8 +41052,8 @@ func (ts *Tensor) SlowConvDilated3d(weight *Tensor, kernelSize []int64, bias *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -41075,8 +41075,8 @@ func (ts *Tensor) SlowConvDilated3dOut(out *Tensor, weight *Tensor, kernelSize [
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -41098,8 +41098,8 @@ func (ts *Tensor) SlowConvTranspose2d(weight *Tensor, kernelSize []int64, bias *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -41122,8 +41122,8 @@ func (ts *Tensor) SlowConvTranspose2dOut(out *Tensor, weight *Tensor, kernelSize
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -41146,8 +41146,8 @@ func (ts *Tensor) SlowConvTranspose3d(weight *Tensor, kernelSize []int64, bias *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -41170,8 +41170,8 @@ func (ts *Tensor) SlowConvTranspose3dOut(out *Tensor, weight *Tensor, kernelSize
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	kernelSizeLen := len(kernelSize)
 	strideLen := len(stride)
 	paddingLen := len(padding)
@@ -41194,8 +41194,8 @@ func (ts *Tensor) Smm(mat2 *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSmm(ptr, ts.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Smm() failed: %w", err)
@@ -41213,8 +41213,8 @@ func (ts *Tensor) SmoothL1Loss(target *Tensor, reduction int64, beta float64, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSmoothL1Loss(ptr, ts.ctensor, target.ctensor, reduction, beta)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SmoothL1Loss() failed: %w", err)
@@ -41232,8 +41232,8 @@ func (ts *Tensor) SmoothL1LossBackward(gradOutput *Tensor, target *Tensor, reduc
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSmoothL1LossBackward(ptr, gradOutput.ctensor, ts.ctensor, target.ctensor, reduction, beta)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SmoothL1LossBackward() failed: %w", err)
@@ -41251,8 +41251,8 @@ func (ts *Tensor) SmoothL1LossBackwardGradInput(gradInput *Tensor, gradOutput *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSmoothL1LossBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, target.ctensor, reduction, beta)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SmoothL1LossBackwardGradInput() failed: %w", err)
@@ -41270,8 +41270,8 @@ func (ts *Tensor) SmoothL1LossOut(out *Tensor, target *Tensor, reduction int64, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSmoothL1LossOut(ptr, out.ctensor, ts.ctensor, target.ctensor, reduction, beta)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SmoothL1LossOut() failed: %w", err)
@@ -41289,8 +41289,8 @@ func (ts *Tensor) SoftMarginLoss(target *Tensor, reduction int64, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSoftMarginLoss(ptr, ts.ctensor, target.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SoftMarginLoss() failed: %w", err)
@@ -41308,8 +41308,8 @@ func (ts *Tensor) SoftMarginLossBackward(gradOutput *Tensor, target *Tensor, red
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSoftMarginLossBackward(ptr, gradOutput.ctensor, ts.ctensor, target.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SoftMarginLossBackward() failed: %w", err)
@@ -41327,8 +41327,8 @@ func (ts *Tensor) SoftMarginLossBackwardGradInput(gradInput *Tensor, gradOutput 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSoftMarginLossBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, target.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SoftMarginLossBackwardGradInput() failed: %w", err)
@@ -41346,8 +41346,8 @@ func (ts *Tensor) SoftMarginLossOut(out *Tensor, target *Tensor, reduction int64
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSoftMarginLossOut(ptr, out.ctensor, ts.ctensor, target.ctensor, reduction)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SoftMarginLossOut() failed: %w", err)
@@ -41365,8 +41365,8 @@ func (ts *Tensor) Softmax(dim int64, dtype gotch.DType, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSoftmax(ptr, ts.ctensor, dim, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Softmax() failed: %w", err)
@@ -41384,8 +41384,8 @@ func (ts *Tensor) SoftmaxIntOut(out *Tensor, dim int64, dtype gotch.DType, del b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSoftmaxIntOut(ptr, out.ctensor, ts.ctensor, dim, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SoftmaxIntOut() failed: %w", err)
@@ -41403,8 +41403,8 @@ func (ts *Tensor) Softplus(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSoftplus(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Softplus() failed: %w", err)
@@ -41422,8 +41422,8 @@ func (ts *Tensor) SoftplusBackward(gradOutput *Tensor, beta *Scalar, threshold *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSoftplusBackward(ptr, gradOutput.ctensor, ts.ctensor, beta.cscalar, threshold.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SoftplusBackward() failed: %w", err)
@@ -41441,8 +41441,8 @@ func (ts *Tensor) SoftplusBackwardGradInput(gradInput *Tensor, gradOutput *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSoftplusBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, beta.cscalar, threshold.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SoftplusBackwardGradInput() failed: %w", err)
@@ -41460,8 +41460,8 @@ func (ts *Tensor) SoftplusOut(out *Tensor, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSoftplusOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SoftplusOut() failed: %w", err)
@@ -41479,8 +41479,8 @@ func (ts *Tensor) Softshrink(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSoftshrink(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Softshrink() failed: %w", err)
@@ -41498,8 +41498,8 @@ func (ts *Tensor) SoftshrinkBackward(gradOutput *Tensor, lambd *Scalar, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSoftshrinkBackward(ptr, gradOutput.ctensor, ts.ctensor, lambd.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SoftshrinkBackward() failed: %w", err)
@@ -41517,8 +41517,8 @@ func (ts *Tensor) SoftshrinkBackwardGradInput(gradInput *Tensor, gradOutput *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSoftshrinkBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, lambd.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SoftshrinkBackwardGradInput() failed: %w", err)
@@ -41536,8 +41536,8 @@ func (ts *Tensor) SoftshrinkOut(out *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSoftshrinkOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SoftshrinkOut() failed: %w", err)
@@ -41656,8 +41656,8 @@ func (ts *Tensor) SortValuesStable(values *Tensor, indices *Tensor, stable bool,
 // --------------------------
 
 func SparseBscTensor(ccolIndices *Tensor, rowIndices *Tensor, values *Tensor, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSparseBscTensor(ptr, ccolIndices.ctensor, rowIndices.ctensor, values.ctensor, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SparseBscTensor() failed: %w", err)
@@ -41672,8 +41672,8 @@ func SparseBscTensor(ccolIndices *Tensor, rowIndices *Tensor, values *Tensor, op
 // --------------------------
 
 func SparseBscTensorCcolRowValueSize(ccolIndices *Tensor, rowIndices *Tensor, values *Tensor, size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgSparseBscTensorCcolRowValueSize(ptr, ccolIndices.ctensor, rowIndices.ctensor, values.ctensor, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -41689,8 +41689,8 @@ func SparseBscTensorCcolRowValueSize(ccolIndices *Tensor, rowIndices *Tensor, va
 // --------------------------
 
 func SparseBsrTensor(crowIndices *Tensor, colIndices *Tensor, values *Tensor, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSparseBsrTensor(ptr, crowIndices.ctensor, colIndices.ctensor, values.ctensor, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SparseBsrTensor() failed: %w", err)
@@ -41705,8 +41705,8 @@ func SparseBsrTensor(crowIndices *Tensor, colIndices *Tensor, values *Tensor, op
 // --------------------------
 
 func SparseBsrTensorCrowColValueSize(crowIndices *Tensor, colIndices *Tensor, values *Tensor, size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgSparseBsrTensorCrowColValueSize(ptr, crowIndices.ctensor, colIndices.ctensor, values.ctensor, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -41722,8 +41722,8 @@ func SparseBsrTensorCrowColValueSize(crowIndices *Tensor, colIndices *Tensor, va
 // --------------------------
 
 func SparseCompressedTensor(compressedIndices *Tensor, plainIndices *Tensor, values *Tensor, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSparseCompressedTensor(ptr, compressedIndices.ctensor, plainIndices.ctensor, values.ctensor, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SparseCompressedTensor() failed: %w", err)
@@ -41738,8 +41738,8 @@ func SparseCompressedTensor(compressedIndices *Tensor, plainIndices *Tensor, val
 // --------------------------
 
 func SparseCompressedTensorCompPlainValueSize(compressedIndices *Tensor, plainIndices *Tensor, values *Tensor, size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgSparseCompressedTensorCompPlainValueSize(ptr, compressedIndices.ctensor, plainIndices.ctensor, values.ctensor, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -41755,8 +41755,8 @@ func SparseCompressedTensorCompPlainValueSize(compressedIndices *Tensor, plainIn
 // --------------------------
 
 func SparseCooTensor(size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgSparseCooTensor(ptr, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -41772,8 +41772,8 @@ func SparseCooTensor(size []int64, optionsKind gotch.DType, optionsDevice gotch.
 // --------------------------
 
 func SparseCooTensorIndices(indices *Tensor, values *Tensor, optionsKind gotch.DType, optionsDevice gotch.Device, isCoalesced bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cisCoalesced := int32(0)
 	if isCoalesced {
 		cisCoalesced = int32(1)
@@ -41792,8 +41792,8 @@ func SparseCooTensorIndices(indices *Tensor, values *Tensor, optionsKind gotch.D
 // --------------------------
 
 func SparseCooTensorIndicesSize(indices *Tensor, values *Tensor, size []int64, optionsKind gotch.DType, optionsDevice gotch.Device, isCoalesced bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	cisCoalesced := int32(0)
 	if isCoalesced {
@@ -41813,8 +41813,8 @@ func SparseCooTensorIndicesSize(indices *Tensor, values *Tensor, size []int64, o
 // --------------------------
 
 func SparseCooTensorSizeOut(out *Tensor, size []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgSparseCooTensorSizeOut(ptr, out.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -41830,8 +41830,8 @@ func SparseCooTensorSizeOut(out *Tensor, size []int64) (retVal *Tensor, err erro
 // --------------------------
 
 func SparseCscTensor(ccolIndices *Tensor, rowIndices *Tensor, values *Tensor, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSparseCscTensor(ptr, ccolIndices.ctensor, rowIndices.ctensor, values.ctensor, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SparseCscTensor() failed: %w", err)
@@ -41846,8 +41846,8 @@ func SparseCscTensor(ccolIndices *Tensor, rowIndices *Tensor, values *Tensor, op
 // --------------------------
 
 func SparseCscTensorCcolRowValueSize(ccolIndices *Tensor, rowIndices *Tensor, values *Tensor, size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgSparseCscTensorCcolRowValueSize(ptr, ccolIndices.ctensor, rowIndices.ctensor, values.ctensor, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -41863,8 +41863,8 @@ func SparseCscTensorCcolRowValueSize(ccolIndices *Tensor, rowIndices *Tensor, va
 // --------------------------
 
 func SparseCsrTensor(crowIndices *Tensor, colIndices *Tensor, values *Tensor, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSparseCsrTensor(ptr, crowIndices.ctensor, colIndices.ctensor, values.ctensor, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SparseCsrTensor() failed: %w", err)
@@ -41879,8 +41879,8 @@ func SparseCsrTensor(crowIndices *Tensor, colIndices *Tensor, values *Tensor, op
 // --------------------------
 
 func SparseCsrTensorCrowColValueSize(crowIndices *Tensor, colIndices *Tensor, values *Tensor, size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgSparseCsrTensorCrowColValueSize(ptr, crowIndices.ctensor, colIndices.ctensor, values.ctensor, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -41914,8 +41914,8 @@ func (ts *Tensor) SparseMask(mask *Tensor, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSparseMask(ptr, ts.ctensor, mask.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SparseMask() failed: %w", err)
@@ -41933,8 +41933,8 @@ func (ts *Tensor) SparseMaskOut(out *Tensor, mask *Tensor, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSparseMaskOut(ptr, out.ctensor, ts.ctensor, mask.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SparseMaskOut() failed: %w", err)
@@ -41952,8 +41952,8 @@ func (ts *Tensor) SparseResize(size []int64, sparseDim int64, denseDim int64, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgSparseResize(ptr, ts.ctensor, size, sizeLen, sparseDim, denseDim)
 	if err = TorchErr(); err != nil {
@@ -41969,8 +41969,8 @@ func (ts *Tensor) SparseResize(size []int64, sparseDim int64, denseDim int64, de
 // --------------------------
 
 func (ts *Tensor) SparseResize_(size []int64, sparseDim int64, denseDim int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgSparseResize_(ptr, ts.ctensor, size, sizeLen, sparseDim, denseDim)
 	if err = TorchErr(); err != nil {
@@ -41989,8 +41989,8 @@ func (ts *Tensor) SparseResizeAndClear(size []int64, sparseDim int64, denseDim i
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgSparseResizeAndClear(ptr, ts.ctensor, size, sizeLen, sparseDim, denseDim)
 	if err = TorchErr(); err != nil {
@@ -42006,8 +42006,8 @@ func (ts *Tensor) SparseResizeAndClear(size []int64, sparseDim int64, denseDim i
 // --------------------------
 
 func (ts *Tensor) SparseResizeAndClear_(size []int64, sparseDim int64, denseDim int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgSparseResizeAndClear_(ptr, ts.ctensor, size, sizeLen, sparseDim, denseDim)
 	if err = TorchErr(); err != nil {
@@ -42026,8 +42026,8 @@ func (ts *Tensor) SparseResizeAndClearOut(out *Tensor, size []int64, sparseDim i
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgSparseResizeAndClearOut(ptr, out.ctensor, ts.ctensor, size, sizeLen, sparseDim, denseDim)
 	if err = TorchErr(); err != nil {
@@ -42046,8 +42046,8 @@ func (ts *Tensor) SparseResizeOut(out *Tensor, size []int64, sparseDim int64, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgSparseResizeOut(ptr, out.ctensor, ts.ctensor, size, sizeLen, sparseDim, denseDim)
 	if err = TorchErr(); err != nil {
@@ -42066,8 +42066,8 @@ func (ts *Tensor) SparseSampledAddmm(mat1 *Tensor, mat2 *Tensor, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSparseSampledAddmm(ptr, ts.ctensor, mat1.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SparseSampledAddmm() failed: %w", err)
@@ -42085,8 +42085,8 @@ func (ts *Tensor) SparseSampledAddmmOut(out *Tensor, mat1 *Tensor, mat2 *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSparseSampledAddmmOut(ptr, out.ctensor, ts.ctensor, mat1.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SparseSampledAddmmOut() failed: %w", err)
@@ -42101,8 +42101,8 @@ func (ts *Tensor) SparseSampledAddmmOut(out *Tensor, mat1 *Tensor, mat2 *Tensor,
 // --------------------------
 
 func SpecialAiryAi(x *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialAiryAi(ptr, x.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialAiryAi() failed: %w", err)
@@ -42117,8 +42117,8 @@ func SpecialAiryAi(x *Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func SpecialAiryAiOut(out *Tensor, x *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialAiryAiOut(ptr, out.ctensor, x.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialAiryAiOut() failed: %w", err)
@@ -42136,8 +42136,8 @@ func (ts *Tensor) SpecialBesselJ0(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialBesselJ0(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialBesselJ0() failed: %w", err)
@@ -42155,8 +42155,8 @@ func (ts *Tensor) SpecialBesselJ0Out(out *Tensor, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialBesselJ0Out(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialBesselJ0Out() failed: %w", err)
@@ -42174,8 +42174,8 @@ func (ts *Tensor) SpecialBesselJ1(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialBesselJ1(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialBesselJ1() failed: %w", err)
@@ -42193,8 +42193,8 @@ func (ts *Tensor) SpecialBesselJ1Out(out *Tensor, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialBesselJ1Out(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialBesselJ1Out() failed: %w", err)
@@ -42212,8 +42212,8 @@ func (ts *Tensor) SpecialBesselY0(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialBesselY0(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialBesselY0() failed: %w", err)
@@ -42231,8 +42231,8 @@ func (ts *Tensor) SpecialBesselY0Out(out *Tensor, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialBesselY0Out(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialBesselY0Out() failed: %w", err)
@@ -42250,8 +42250,8 @@ func (ts *Tensor) SpecialBesselY1(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialBesselY1(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialBesselY1() failed: %w", err)
@@ -42269,8 +42269,8 @@ func (ts *Tensor) SpecialBesselY1Out(out *Tensor, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialBesselY1Out(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialBesselY1Out() failed: %w", err)
@@ -42285,8 +42285,8 @@ func (ts *Tensor) SpecialBesselY1Out(out *Tensor, del bool) (retVal *Tensor, err
 // --------------------------
 
 func SpecialChebyshevPolynomialT(x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialT(ptr, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialT() failed: %w", err)
@@ -42301,8 +42301,8 @@ func SpecialChebyshevPolynomialT(x *Tensor, n *Tensor) (retVal *Tensor, err erro
 // --------------------------
 
 func SpecialChebyshevPolynomialTNScalar(x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialTNScalar(ptr, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialTNScalar() failed: %w", err)
@@ -42317,8 +42317,8 @@ func SpecialChebyshevPolynomialTNScalar(x *Tensor, n *Scalar) (retVal *Tensor, e
 // --------------------------
 
 func SpecialChebyshevPolynomialTNScalarOut(out *Tensor, x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialTNScalarOut(ptr, out.ctensor, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialTNScalarOut() failed: %w", err)
@@ -42333,8 +42333,8 @@ func SpecialChebyshevPolynomialTNScalarOut(out *Tensor, x *Tensor, n *Scalar) (r
 // --------------------------
 
 func SpecialChebyshevPolynomialTOut(out *Tensor, x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialTOut(ptr, out.ctensor, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialTOut() failed: %w", err)
@@ -42349,8 +42349,8 @@ func SpecialChebyshevPolynomialTOut(out *Tensor, x *Tensor, n *Tensor) (retVal *
 // --------------------------
 
 func SpecialChebyshevPolynomialTXScalar(x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialTXScalar(ptr, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialTXScalar() failed: %w", err)
@@ -42365,8 +42365,8 @@ func SpecialChebyshevPolynomialTXScalar(x *Scalar, n *Tensor) (retVal *Tensor, e
 // --------------------------
 
 func SpecialChebyshevPolynomialTXScalarOut(out *Tensor, x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialTXScalarOut(ptr, out.ctensor, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialTXScalarOut() failed: %w", err)
@@ -42381,8 +42381,8 @@ func SpecialChebyshevPolynomialTXScalarOut(out *Tensor, x *Scalar, n *Tensor) (r
 // --------------------------
 
 func SpecialChebyshevPolynomialU(x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialU(ptr, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialU() failed: %w", err)
@@ -42397,8 +42397,8 @@ func SpecialChebyshevPolynomialU(x *Tensor, n *Tensor) (retVal *Tensor, err erro
 // --------------------------
 
 func SpecialChebyshevPolynomialUNScalar(x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialUNScalar(ptr, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialUNScalar() failed: %w", err)
@@ -42413,8 +42413,8 @@ func SpecialChebyshevPolynomialUNScalar(x *Tensor, n *Scalar) (retVal *Tensor, e
 // --------------------------
 
 func SpecialChebyshevPolynomialUNScalarOut(out *Tensor, x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialUNScalarOut(ptr, out.ctensor, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialUNScalarOut() failed: %w", err)
@@ -42429,8 +42429,8 @@ func SpecialChebyshevPolynomialUNScalarOut(out *Tensor, x *Tensor, n *Scalar) (r
 // --------------------------
 
 func SpecialChebyshevPolynomialUOut(out *Tensor, x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialUOut(ptr, out.ctensor, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialUOut() failed: %w", err)
@@ -42445,8 +42445,8 @@ func SpecialChebyshevPolynomialUOut(out *Tensor, x *Tensor, n *Tensor) (retVal *
 // --------------------------
 
 func SpecialChebyshevPolynomialUXScalar(x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialUXScalar(ptr, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialUXScalar() failed: %w", err)
@@ -42461,8 +42461,8 @@ func SpecialChebyshevPolynomialUXScalar(x *Scalar, n *Tensor) (retVal *Tensor, e
 // --------------------------
 
 func SpecialChebyshevPolynomialUXScalarOut(out *Tensor, x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialUXScalarOut(ptr, out.ctensor, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialUXScalarOut() failed: %w", err)
@@ -42477,8 +42477,8 @@ func SpecialChebyshevPolynomialUXScalarOut(out *Tensor, x *Scalar, n *Tensor) (r
 // --------------------------
 
 func SpecialChebyshevPolynomialV(x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialV(ptr, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialV() failed: %w", err)
@@ -42493,8 +42493,8 @@ func SpecialChebyshevPolynomialV(x *Tensor, n *Tensor) (retVal *Tensor, err erro
 // --------------------------
 
 func SpecialChebyshevPolynomialVNScalar(x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialVNScalar(ptr, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialVNScalar() failed: %w", err)
@@ -42509,8 +42509,8 @@ func SpecialChebyshevPolynomialVNScalar(x *Tensor, n *Scalar) (retVal *Tensor, e
 // --------------------------
 
 func SpecialChebyshevPolynomialVNScalarOut(out *Tensor, x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialVNScalarOut(ptr, out.ctensor, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialVNScalarOut() failed: %w", err)
@@ -42525,8 +42525,8 @@ func SpecialChebyshevPolynomialVNScalarOut(out *Tensor, x *Tensor, n *Scalar) (r
 // --------------------------
 
 func SpecialChebyshevPolynomialVOut(out *Tensor, x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialVOut(ptr, out.ctensor, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialVOut() failed: %w", err)
@@ -42541,8 +42541,8 @@ func SpecialChebyshevPolynomialVOut(out *Tensor, x *Tensor, n *Tensor) (retVal *
 // --------------------------
 
 func SpecialChebyshevPolynomialVXScalar(x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialVXScalar(ptr, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialVXScalar() failed: %w", err)
@@ -42557,8 +42557,8 @@ func SpecialChebyshevPolynomialVXScalar(x *Scalar, n *Tensor) (retVal *Tensor, e
 // --------------------------
 
 func SpecialChebyshevPolynomialVXScalarOut(out *Tensor, x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialVXScalarOut(ptr, out.ctensor, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialVXScalarOut() failed: %w", err)
@@ -42573,8 +42573,8 @@ func SpecialChebyshevPolynomialVXScalarOut(out *Tensor, x *Scalar, n *Tensor) (r
 // --------------------------
 
 func SpecialChebyshevPolynomialW(x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialW(ptr, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialW() failed: %w", err)
@@ -42589,8 +42589,8 @@ func SpecialChebyshevPolynomialW(x *Tensor, n *Tensor) (retVal *Tensor, err erro
 // --------------------------
 
 func SpecialChebyshevPolynomialWNScalar(x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialWNScalar(ptr, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialWNScalar() failed: %w", err)
@@ -42605,8 +42605,8 @@ func SpecialChebyshevPolynomialWNScalar(x *Tensor, n *Scalar) (retVal *Tensor, e
 // --------------------------
 
 func SpecialChebyshevPolynomialWNScalarOut(out *Tensor, x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialWNScalarOut(ptr, out.ctensor, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialWNScalarOut() failed: %w", err)
@@ -42621,8 +42621,8 @@ func SpecialChebyshevPolynomialWNScalarOut(out *Tensor, x *Tensor, n *Scalar) (r
 // --------------------------
 
 func SpecialChebyshevPolynomialWOut(out *Tensor, x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialWOut(ptr, out.ctensor, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialWOut() failed: %w", err)
@@ -42637,8 +42637,8 @@ func SpecialChebyshevPolynomialWOut(out *Tensor, x *Tensor, n *Tensor) (retVal *
 // --------------------------
 
 func SpecialChebyshevPolynomialWXScalar(x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialWXScalar(ptr, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialWXScalar() failed: %w", err)
@@ -42653,8 +42653,8 @@ func SpecialChebyshevPolynomialWXScalar(x *Scalar, n *Tensor) (retVal *Tensor, e
 // --------------------------
 
 func SpecialChebyshevPolynomialWXScalarOut(out *Tensor, x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialChebyshevPolynomialWXScalarOut(ptr, out.ctensor, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialChebyshevPolynomialWXScalarOut() failed: %w", err)
@@ -42672,8 +42672,8 @@ func (ts *Tensor) SpecialDigamma(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialDigamma(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialDigamma() failed: %w", err)
@@ -42691,8 +42691,8 @@ func (ts *Tensor) SpecialDigammaOut(out *Tensor, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialDigammaOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialDigammaOut() failed: %w", err)
@@ -42710,8 +42710,8 @@ func (ts *Tensor) SpecialEntr(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialEntr(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialEntr() failed: %w", err)
@@ -42729,8 +42729,8 @@ func (ts *Tensor) SpecialEntrOut(out *Tensor, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialEntrOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialEntrOut() failed: %w", err)
@@ -42748,8 +42748,8 @@ func (ts *Tensor) SpecialErf(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialErf(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialErf() failed: %w", err)
@@ -42767,8 +42767,8 @@ func (ts *Tensor) SpecialErfOut(out *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialErfOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialErfOut() failed: %w", err)
@@ -42786,8 +42786,8 @@ func (ts *Tensor) SpecialErfc(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialErfc(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialErfc() failed: %w", err)
@@ -42805,8 +42805,8 @@ func (ts *Tensor) SpecialErfcOut(out *Tensor, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialErfcOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialErfcOut() failed: %w", err)
@@ -42824,8 +42824,8 @@ func (ts *Tensor) SpecialErfcx(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialErfcx(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialErfcx() failed: %w", err)
@@ -42843,8 +42843,8 @@ func (ts *Tensor) SpecialErfcxOut(out *Tensor, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialErfcxOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialErfcxOut() failed: %w", err)
@@ -42862,8 +42862,8 @@ func (ts *Tensor) SpecialErfinv(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialErfinv(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialErfinv() failed: %w", err)
@@ -42881,8 +42881,8 @@ func (ts *Tensor) SpecialErfinvOut(out *Tensor, del bool) (retVal *Tensor, err e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialErfinvOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialErfinvOut() failed: %w", err)
@@ -42900,8 +42900,8 @@ func (ts *Tensor) SpecialExp2(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialExp2(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialExp2() failed: %w", err)
@@ -42919,8 +42919,8 @@ func (ts *Tensor) SpecialExp2Out(out *Tensor, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialExp2Out(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialExp2Out() failed: %w", err)
@@ -42938,8 +42938,8 @@ func (ts *Tensor) SpecialExpit(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialExpit(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialExpit() failed: %w", err)
@@ -42957,8 +42957,8 @@ func (ts *Tensor) SpecialExpitOut(out *Tensor, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialExpitOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialExpitOut() failed: %w", err)
@@ -42976,8 +42976,8 @@ func (ts *Tensor) SpecialExpm1(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialExpm1(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialExpm1() failed: %w", err)
@@ -42995,8 +42995,8 @@ func (ts *Tensor) SpecialExpm1Out(out *Tensor, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialExpm1Out(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialExpm1Out() failed: %w", err)
@@ -43014,8 +43014,8 @@ func (ts *Tensor) SpecialGammainc(other *Tensor, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialGammainc(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialGammainc() failed: %w", err)
@@ -43033,8 +43033,8 @@ func (ts *Tensor) SpecialGammaincOut(out *Tensor, other *Tensor, del bool) (retV
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialGammaincOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialGammaincOut() failed: %w", err)
@@ -43052,8 +43052,8 @@ func (ts *Tensor) SpecialGammaincc(other *Tensor, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialGammaincc(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialGammaincc() failed: %w", err)
@@ -43071,8 +43071,8 @@ func (ts *Tensor) SpecialGammainccOut(out *Tensor, other *Tensor, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialGammainccOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialGammainccOut() failed: %w", err)
@@ -43090,8 +43090,8 @@ func (ts *Tensor) SpecialGammaln(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialGammaln(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialGammaln() failed: %w", err)
@@ -43109,8 +43109,8 @@ func (ts *Tensor) SpecialGammalnOut(out *Tensor, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialGammalnOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialGammalnOut() failed: %w", err)
@@ -43125,8 +43125,8 @@ func (ts *Tensor) SpecialGammalnOut(out *Tensor, del bool) (retVal *Tensor, err 
 // --------------------------
 
 func SpecialHermitePolynomialH(x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialHermitePolynomialH(ptr, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialHermitePolynomialH() failed: %w", err)
@@ -43141,8 +43141,8 @@ func SpecialHermitePolynomialH(x *Tensor, n *Tensor) (retVal *Tensor, err error)
 // --------------------------
 
 func SpecialHermitePolynomialHNScalar(x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialHermitePolynomialHNScalar(ptr, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialHermitePolynomialHNScalar() failed: %w", err)
@@ -43157,8 +43157,8 @@ func SpecialHermitePolynomialHNScalar(x *Tensor, n *Scalar) (retVal *Tensor, err
 // --------------------------
 
 func SpecialHermitePolynomialHNScalarOut(out *Tensor, x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialHermitePolynomialHNScalarOut(ptr, out.ctensor, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialHermitePolynomialHNScalarOut() failed: %w", err)
@@ -43173,8 +43173,8 @@ func SpecialHermitePolynomialHNScalarOut(out *Tensor, x *Tensor, n *Scalar) (ret
 // --------------------------
 
 func SpecialHermitePolynomialHOut(out *Tensor, x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialHermitePolynomialHOut(ptr, out.ctensor, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialHermitePolynomialHOut() failed: %w", err)
@@ -43189,8 +43189,8 @@ func SpecialHermitePolynomialHOut(out *Tensor, x *Tensor, n *Tensor) (retVal *Te
 // --------------------------
 
 func SpecialHermitePolynomialHXScalar(x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialHermitePolynomialHXScalar(ptr, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialHermitePolynomialHXScalar() failed: %w", err)
@@ -43205,8 +43205,8 @@ func SpecialHermitePolynomialHXScalar(x *Scalar, n *Tensor) (retVal *Tensor, err
 // --------------------------
 
 func SpecialHermitePolynomialHXScalarOut(out *Tensor, x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialHermitePolynomialHXScalarOut(ptr, out.ctensor, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialHermitePolynomialHXScalarOut() failed: %w", err)
@@ -43221,8 +43221,8 @@ func SpecialHermitePolynomialHXScalarOut(out *Tensor, x *Scalar, n *Tensor) (ret
 // --------------------------
 
 func SpecialHermitePolynomialHe(x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialHermitePolynomialHe(ptr, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialHermitePolynomialHe() failed: %w", err)
@@ -43237,8 +43237,8 @@ func SpecialHermitePolynomialHe(x *Tensor, n *Tensor) (retVal *Tensor, err error
 // --------------------------
 
 func SpecialHermitePolynomialHeNScalar(x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialHermitePolynomialHeNScalar(ptr, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialHermitePolynomialHeNScalar() failed: %w", err)
@@ -43253,8 +43253,8 @@ func SpecialHermitePolynomialHeNScalar(x *Tensor, n *Scalar) (retVal *Tensor, er
 // --------------------------
 
 func SpecialHermitePolynomialHeNScalarOut(out *Tensor, x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialHermitePolynomialHeNScalarOut(ptr, out.ctensor, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialHermitePolynomialHeNScalarOut() failed: %w", err)
@@ -43269,8 +43269,8 @@ func SpecialHermitePolynomialHeNScalarOut(out *Tensor, x *Tensor, n *Scalar) (re
 // --------------------------
 
 func SpecialHermitePolynomialHeOut(out *Tensor, x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialHermitePolynomialHeOut(ptr, out.ctensor, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialHermitePolynomialHeOut() failed: %w", err)
@@ -43285,8 +43285,8 @@ func SpecialHermitePolynomialHeOut(out *Tensor, x *Tensor, n *Tensor) (retVal *T
 // --------------------------
 
 func SpecialHermitePolynomialHeXScalar(x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialHermitePolynomialHeXScalar(ptr, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialHermitePolynomialHeXScalar() failed: %w", err)
@@ -43301,8 +43301,8 @@ func SpecialHermitePolynomialHeXScalar(x *Scalar, n *Tensor) (retVal *Tensor, er
 // --------------------------
 
 func SpecialHermitePolynomialHeXScalarOut(out *Tensor, x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialHermitePolynomialHeXScalarOut(ptr, out.ctensor, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialHermitePolynomialHeXScalarOut() failed: %w", err)
@@ -43320,8 +43320,8 @@ func (ts *Tensor) SpecialI0(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialI0(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialI0() failed: %w", err)
@@ -43339,8 +43339,8 @@ func (ts *Tensor) SpecialI0Out(out *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialI0Out(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialI0Out() failed: %w", err)
@@ -43358,8 +43358,8 @@ func (ts *Tensor) SpecialI0e(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialI0e(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialI0e() failed: %w", err)
@@ -43377,8 +43377,8 @@ func (ts *Tensor) SpecialI0eOut(out *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialI0eOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialI0eOut() failed: %w", err)
@@ -43396,8 +43396,8 @@ func (ts *Tensor) SpecialI1(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialI1(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialI1() failed: %w", err)
@@ -43415,8 +43415,8 @@ func (ts *Tensor) SpecialI1Out(out *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialI1Out(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialI1Out() failed: %w", err)
@@ -43434,8 +43434,8 @@ func (ts *Tensor) SpecialI1e(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialI1e(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialI1e() failed: %w", err)
@@ -43453,8 +43453,8 @@ func (ts *Tensor) SpecialI1eOut(out *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialI1eOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialI1eOut() failed: %w", err)
@@ -43469,8 +43469,8 @@ func (ts *Tensor) SpecialI1eOut(out *Tensor, del bool) (retVal *Tensor, err erro
 // --------------------------
 
 func SpecialLaguerrePolynomialL(x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialLaguerrePolynomialL(ptr, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialLaguerrePolynomialL() failed: %w", err)
@@ -43485,8 +43485,8 @@ func SpecialLaguerrePolynomialL(x *Tensor, n *Tensor) (retVal *Tensor, err error
 // --------------------------
 
 func SpecialLaguerrePolynomialLNScalar(x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialLaguerrePolynomialLNScalar(ptr, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialLaguerrePolynomialLNScalar() failed: %w", err)
@@ -43501,8 +43501,8 @@ func SpecialLaguerrePolynomialLNScalar(x *Tensor, n *Scalar) (retVal *Tensor, er
 // --------------------------
 
 func SpecialLaguerrePolynomialLNScalarOut(out *Tensor, x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialLaguerrePolynomialLNScalarOut(ptr, out.ctensor, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialLaguerrePolynomialLNScalarOut() failed: %w", err)
@@ -43517,8 +43517,8 @@ func SpecialLaguerrePolynomialLNScalarOut(out *Tensor, x *Tensor, n *Scalar) (re
 // --------------------------
 
 func SpecialLaguerrePolynomialLOut(out *Tensor, x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialLaguerrePolynomialLOut(ptr, out.ctensor, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialLaguerrePolynomialLOut() failed: %w", err)
@@ -43533,8 +43533,8 @@ func SpecialLaguerrePolynomialLOut(out *Tensor, x *Tensor, n *Tensor) (retVal *T
 // --------------------------
 
 func SpecialLaguerrePolynomialLXScalar(x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialLaguerrePolynomialLXScalar(ptr, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialLaguerrePolynomialLXScalar() failed: %w", err)
@@ -43549,8 +43549,8 @@ func SpecialLaguerrePolynomialLXScalar(x *Scalar, n *Tensor) (retVal *Tensor, er
 // --------------------------
 
 func SpecialLaguerrePolynomialLXScalarOut(out *Tensor, x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialLaguerrePolynomialLXScalarOut(ptr, out.ctensor, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialLaguerrePolynomialLXScalarOut() failed: %w", err)
@@ -43565,8 +43565,8 @@ func SpecialLaguerrePolynomialLXScalarOut(out *Tensor, x *Scalar, n *Tensor) (re
 // --------------------------
 
 func SpecialLegendrePolynomialP(x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialLegendrePolynomialP(ptr, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialLegendrePolynomialP() failed: %w", err)
@@ -43581,8 +43581,8 @@ func SpecialLegendrePolynomialP(x *Tensor, n *Tensor) (retVal *Tensor, err error
 // --------------------------
 
 func SpecialLegendrePolynomialPNScalar(x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialLegendrePolynomialPNScalar(ptr, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialLegendrePolynomialPNScalar() failed: %w", err)
@@ -43597,8 +43597,8 @@ func SpecialLegendrePolynomialPNScalar(x *Tensor, n *Scalar) (retVal *Tensor, er
 // --------------------------
 
 func SpecialLegendrePolynomialPNScalarOut(out *Tensor, x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialLegendrePolynomialPNScalarOut(ptr, out.ctensor, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialLegendrePolynomialPNScalarOut() failed: %w", err)
@@ -43613,8 +43613,8 @@ func SpecialLegendrePolynomialPNScalarOut(out *Tensor, x *Tensor, n *Scalar) (re
 // --------------------------
 
 func SpecialLegendrePolynomialPOut(out *Tensor, x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialLegendrePolynomialPOut(ptr, out.ctensor, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialLegendrePolynomialPOut() failed: %w", err)
@@ -43629,8 +43629,8 @@ func SpecialLegendrePolynomialPOut(out *Tensor, x *Tensor, n *Tensor) (retVal *T
 // --------------------------
 
 func SpecialLegendrePolynomialPXScalar(x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialLegendrePolynomialPXScalar(ptr, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialLegendrePolynomialPXScalar() failed: %w", err)
@@ -43645,8 +43645,8 @@ func SpecialLegendrePolynomialPXScalar(x *Scalar, n *Tensor) (retVal *Tensor, er
 // --------------------------
 
 func SpecialLegendrePolynomialPXScalarOut(out *Tensor, x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialLegendrePolynomialPXScalarOut(ptr, out.ctensor, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialLegendrePolynomialPXScalarOut() failed: %w", err)
@@ -43664,8 +43664,8 @@ func (ts *Tensor) SpecialLog1p(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialLog1p(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialLog1p() failed: %w", err)
@@ -43683,8 +43683,8 @@ func (ts *Tensor) SpecialLog1pOut(out *Tensor, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialLog1pOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialLog1pOut() failed: %w", err)
@@ -43702,8 +43702,8 @@ func (ts *Tensor) SpecialLogNdtr(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialLogNdtr(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialLogNdtr() failed: %w", err)
@@ -43721,8 +43721,8 @@ func (ts *Tensor) SpecialLogNdtrOut(out *Tensor, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialLogNdtrOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialLogNdtrOut() failed: %w", err)
@@ -43740,8 +43740,8 @@ func (ts *Tensor) SpecialLogSoftmax(dim int64, dtype gotch.DType, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialLogSoftmax(ptr, ts.ctensor, dim, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialLogSoftmax() failed: %w", err)
@@ -43759,8 +43759,8 @@ func (ts *Tensor) SpecialLogit(eps []float64, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cepsVal float64 = 0.0
 	var cepsNull int = 1
 	if len(eps) > 0 {
@@ -43784,8 +43784,8 @@ func (ts *Tensor) SpecialLogitOut(out *Tensor, eps []float64, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cepsVal float64 = 0.0
 	var cepsNull int = 1
 	if len(eps) > 0 {
@@ -43809,8 +43809,8 @@ func (ts *Tensor) SpecialLogsumexp(dim []int64, keepdim bool, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -43833,8 +43833,8 @@ func (ts *Tensor) SpecialLogsumexpOut(out *Tensor, dim []int64, keepdim bool, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -43857,8 +43857,8 @@ func (ts *Tensor) SpecialModifiedBesselI0(del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialModifiedBesselI0(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialModifiedBesselI0() failed: %w", err)
@@ -43876,8 +43876,8 @@ func (ts *Tensor) SpecialModifiedBesselI0Out(out *Tensor, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialModifiedBesselI0Out(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialModifiedBesselI0Out() failed: %w", err)
@@ -43895,8 +43895,8 @@ func (ts *Tensor) SpecialModifiedBesselI1(del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialModifiedBesselI1(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialModifiedBesselI1() failed: %w", err)
@@ -43914,8 +43914,8 @@ func (ts *Tensor) SpecialModifiedBesselI1Out(out *Tensor, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialModifiedBesselI1Out(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialModifiedBesselI1Out() failed: %w", err)
@@ -43933,8 +43933,8 @@ func (ts *Tensor) SpecialModifiedBesselK0(del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialModifiedBesselK0(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialModifiedBesselK0() failed: %w", err)
@@ -43952,8 +43952,8 @@ func (ts *Tensor) SpecialModifiedBesselK0Out(out *Tensor, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialModifiedBesselK0Out(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialModifiedBesselK0Out() failed: %w", err)
@@ -43971,8 +43971,8 @@ func (ts *Tensor) SpecialModifiedBesselK1(del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialModifiedBesselK1(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialModifiedBesselK1() failed: %w", err)
@@ -43990,8 +43990,8 @@ func (ts *Tensor) SpecialModifiedBesselK1Out(out *Tensor, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialModifiedBesselK1Out(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialModifiedBesselK1Out() failed: %w", err)
@@ -44009,8 +44009,8 @@ func (ts *Tensor) SpecialMultigammaln(p int64, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialMultigammaln(ptr, ts.ctensor, p)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialMultigammaln() failed: %w", err)
@@ -44028,8 +44028,8 @@ func (ts *Tensor) SpecialMultigammalnOut(out *Tensor, p int64, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialMultigammalnOut(ptr, out.ctensor, ts.ctensor, p)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialMultigammalnOut() failed: %w", err)
@@ -44047,8 +44047,8 @@ func (ts *Tensor) SpecialNdtr(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialNdtr(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialNdtr() failed: %w", err)
@@ -44066,8 +44066,8 @@ func (ts *Tensor) SpecialNdtrOut(out *Tensor, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialNdtrOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialNdtrOut() failed: %w", err)
@@ -44085,8 +44085,8 @@ func (ts *Tensor) SpecialNdtri(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialNdtri(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialNdtri() failed: %w", err)
@@ -44104,8 +44104,8 @@ func (ts *Tensor) SpecialNdtriOut(out *Tensor, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialNdtriOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialNdtriOut() failed: %w", err)
@@ -44123,8 +44123,8 @@ func (ts *Tensor) SpecialPolygamma(n int64, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialPolygamma(ptr, n, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialPolygamma() failed: %w", err)
@@ -44142,8 +44142,8 @@ func (ts *Tensor) SpecialPolygammaOut(out *Tensor, n int64, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialPolygammaOut(ptr, out.ctensor, n, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialPolygammaOut() failed: %w", err)
@@ -44161,8 +44161,8 @@ func (ts *Tensor) SpecialPsi(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialPsi(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialPsi() failed: %w", err)
@@ -44180,8 +44180,8 @@ func (ts *Tensor) SpecialPsiOut(out *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialPsiOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialPsiOut() failed: %w", err)
@@ -44199,8 +44199,8 @@ func (ts *Tensor) SpecialRound(decimals int64, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialRound(ptr, ts.ctensor, decimals)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialRound() failed: %w", err)
@@ -44218,8 +44218,8 @@ func (ts *Tensor) SpecialRoundOut(out *Tensor, decimals int64, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialRoundOut(ptr, out.ctensor, ts.ctensor, decimals)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialRoundOut() failed: %w", err)
@@ -44234,8 +44234,8 @@ func (ts *Tensor) SpecialRoundOut(out *Tensor, decimals int64, del bool) (retVal
 // --------------------------
 
 func SpecialScaledModifiedBesselK0(x *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialScaledModifiedBesselK0(ptr, x.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialScaledModifiedBesselK0() failed: %w", err)
@@ -44250,8 +44250,8 @@ func SpecialScaledModifiedBesselK0(x *Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func SpecialScaledModifiedBesselK0Out(out *Tensor, x *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialScaledModifiedBesselK0Out(ptr, out.ctensor, x.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialScaledModifiedBesselK0Out() failed: %w", err)
@@ -44266,8 +44266,8 @@ func SpecialScaledModifiedBesselK0Out(out *Tensor, x *Tensor) (retVal *Tensor, e
 // --------------------------
 
 func SpecialScaledModifiedBesselK1(x *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialScaledModifiedBesselK1(ptr, x.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialScaledModifiedBesselK1() failed: %w", err)
@@ -44282,8 +44282,8 @@ func SpecialScaledModifiedBesselK1(x *Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func SpecialScaledModifiedBesselK1Out(out *Tensor, x *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialScaledModifiedBesselK1Out(ptr, out.ctensor, x.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialScaledModifiedBesselK1Out() failed: %w", err)
@@ -44298,8 +44298,8 @@ func SpecialScaledModifiedBesselK1Out(out *Tensor, x *Tensor) (retVal *Tensor, e
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialT(x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialT(ptr, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialT() failed: %w", err)
@@ -44314,8 +44314,8 @@ func SpecialShiftedChebyshevPolynomialT(x *Tensor, n *Tensor) (retVal *Tensor, e
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialTNScalar(x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialTNScalar(ptr, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialTNScalar() failed: %w", err)
@@ -44330,8 +44330,8 @@ func SpecialShiftedChebyshevPolynomialTNScalar(x *Tensor, n *Scalar) (retVal *Te
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialTNScalarOut(out *Tensor, x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialTNScalarOut(ptr, out.ctensor, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialTNScalarOut() failed: %w", err)
@@ -44346,8 +44346,8 @@ func SpecialShiftedChebyshevPolynomialTNScalarOut(out *Tensor, x *Tensor, n *Sca
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialTOut(out *Tensor, x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialTOut(ptr, out.ctensor, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialTOut() failed: %w", err)
@@ -44362,8 +44362,8 @@ func SpecialShiftedChebyshevPolynomialTOut(out *Tensor, x *Tensor, n *Tensor) (r
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialTXScalar(x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialTXScalar(ptr, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialTXScalar() failed: %w", err)
@@ -44378,8 +44378,8 @@ func SpecialShiftedChebyshevPolynomialTXScalar(x *Scalar, n *Tensor) (retVal *Te
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialTXScalarOut(out *Tensor, x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialTXScalarOut(ptr, out.ctensor, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialTXScalarOut() failed: %w", err)
@@ -44394,8 +44394,8 @@ func SpecialShiftedChebyshevPolynomialTXScalarOut(out *Tensor, x *Scalar, n *Ten
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialU(x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialU(ptr, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialU() failed: %w", err)
@@ -44410,8 +44410,8 @@ func SpecialShiftedChebyshevPolynomialU(x *Tensor, n *Tensor) (retVal *Tensor, e
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialUNScalar(x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialUNScalar(ptr, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialUNScalar() failed: %w", err)
@@ -44426,8 +44426,8 @@ func SpecialShiftedChebyshevPolynomialUNScalar(x *Tensor, n *Scalar) (retVal *Te
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialUNScalarOut(out *Tensor, x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialUNScalarOut(ptr, out.ctensor, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialUNScalarOut() failed: %w", err)
@@ -44442,8 +44442,8 @@ func SpecialShiftedChebyshevPolynomialUNScalarOut(out *Tensor, x *Tensor, n *Sca
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialUOut(out *Tensor, x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialUOut(ptr, out.ctensor, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialUOut() failed: %w", err)
@@ -44458,8 +44458,8 @@ func SpecialShiftedChebyshevPolynomialUOut(out *Tensor, x *Tensor, n *Tensor) (r
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialUXScalar(x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialUXScalar(ptr, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialUXScalar() failed: %w", err)
@@ -44474,8 +44474,8 @@ func SpecialShiftedChebyshevPolynomialUXScalar(x *Scalar, n *Tensor) (retVal *Te
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialUXScalarOut(out *Tensor, x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialUXScalarOut(ptr, out.ctensor, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialUXScalarOut() failed: %w", err)
@@ -44490,8 +44490,8 @@ func SpecialShiftedChebyshevPolynomialUXScalarOut(out *Tensor, x *Scalar, n *Ten
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialV(x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialV(ptr, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialV() failed: %w", err)
@@ -44506,8 +44506,8 @@ func SpecialShiftedChebyshevPolynomialV(x *Tensor, n *Tensor) (retVal *Tensor, e
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialVNScalar(x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialVNScalar(ptr, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialVNScalar() failed: %w", err)
@@ -44522,8 +44522,8 @@ func SpecialShiftedChebyshevPolynomialVNScalar(x *Tensor, n *Scalar) (retVal *Te
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialVNScalarOut(out *Tensor, x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialVNScalarOut(ptr, out.ctensor, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialVNScalarOut() failed: %w", err)
@@ -44538,8 +44538,8 @@ func SpecialShiftedChebyshevPolynomialVNScalarOut(out *Tensor, x *Tensor, n *Sca
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialVOut(out *Tensor, x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialVOut(ptr, out.ctensor, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialVOut() failed: %w", err)
@@ -44554,8 +44554,8 @@ func SpecialShiftedChebyshevPolynomialVOut(out *Tensor, x *Tensor, n *Tensor) (r
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialVXScalar(x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialVXScalar(ptr, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialVXScalar() failed: %w", err)
@@ -44570,8 +44570,8 @@ func SpecialShiftedChebyshevPolynomialVXScalar(x *Scalar, n *Tensor) (retVal *Te
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialVXScalarOut(out *Tensor, x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialVXScalarOut(ptr, out.ctensor, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialVXScalarOut() failed: %w", err)
@@ -44586,8 +44586,8 @@ func SpecialShiftedChebyshevPolynomialVXScalarOut(out *Tensor, x *Scalar, n *Ten
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialW(x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialW(ptr, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialW() failed: %w", err)
@@ -44602,8 +44602,8 @@ func SpecialShiftedChebyshevPolynomialW(x *Tensor, n *Tensor) (retVal *Tensor, e
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialWNScalar(x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialWNScalar(ptr, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialWNScalar() failed: %w", err)
@@ -44618,8 +44618,8 @@ func SpecialShiftedChebyshevPolynomialWNScalar(x *Tensor, n *Scalar) (retVal *Te
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialWNScalarOut(out *Tensor, x *Tensor, n *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialWNScalarOut(ptr, out.ctensor, x.ctensor, n.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialWNScalarOut() failed: %w", err)
@@ -44634,8 +44634,8 @@ func SpecialShiftedChebyshevPolynomialWNScalarOut(out *Tensor, x *Tensor, n *Sca
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialWOut(out *Tensor, x *Tensor, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialWOut(ptr, out.ctensor, x.ctensor, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialWOut() failed: %w", err)
@@ -44650,8 +44650,8 @@ func SpecialShiftedChebyshevPolynomialWOut(out *Tensor, x *Tensor, n *Tensor) (r
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialWXScalar(x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialWXScalar(ptr, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialWXScalar() failed: %w", err)
@@ -44666,8 +44666,8 @@ func SpecialShiftedChebyshevPolynomialWXScalar(x *Scalar, n *Tensor) (retVal *Te
 // --------------------------
 
 func SpecialShiftedChebyshevPolynomialWXScalarOut(out *Tensor, x *Scalar, n *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialShiftedChebyshevPolynomialWXScalarOut(ptr, out.ctensor, x.cscalar, n.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialShiftedChebyshevPolynomialWXScalarOut() failed: %w", err)
@@ -44685,8 +44685,8 @@ func (ts *Tensor) SpecialSinc(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialSinc(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialSinc() failed: %w", err)
@@ -44704,8 +44704,8 @@ func (ts *Tensor) SpecialSincOut(out *Tensor, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialSincOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialSincOut() failed: %w", err)
@@ -44723,8 +44723,8 @@ func (ts *Tensor) SpecialSoftmax(dim int64, dtype gotch.DType, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialSoftmax(ptr, ts.ctensor, dim, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialSoftmax() failed: %w", err)
@@ -44739,8 +44739,8 @@ func (ts *Tensor) SpecialSoftmax(dim int64, dtype gotch.DType, del bool) (retVal
 // --------------------------
 
 func SpecialSphericalBesselJ0(x *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialSphericalBesselJ0(ptr, x.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialSphericalBesselJ0() failed: %w", err)
@@ -44755,8 +44755,8 @@ func SpecialSphericalBesselJ0(x *Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func SpecialSphericalBesselJ0Out(out *Tensor, x *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialSphericalBesselJ0Out(ptr, out.ctensor, x.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialSphericalBesselJ0Out() failed: %w", err)
@@ -44774,8 +44774,8 @@ func (ts *Tensor) SpecialXlog1py(other *Tensor, del bool) (retVal *Tensor, err e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialXlog1py(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialXlog1py() failed: %w", err)
@@ -44793,8 +44793,8 @@ func (ts *Tensor) SpecialXlog1pyOtherScalar(other *Scalar, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialXlog1pyOtherScalar(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialXlog1pyOtherScalar() failed: %w", err)
@@ -44812,8 +44812,8 @@ func (ts *Tensor) SpecialXlog1pyOtherScalarOut(out *Tensor, other *Scalar, del b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialXlog1pyOtherScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialXlog1pyOtherScalarOut() failed: %w", err)
@@ -44831,8 +44831,8 @@ func (ts *Tensor) SpecialXlog1pyOut(out *Tensor, other *Tensor, del bool) (retVa
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialXlog1pyOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialXlog1pyOut() failed: %w", err)
@@ -44847,8 +44847,8 @@ func (ts *Tensor) SpecialXlog1pyOut(out *Tensor, other *Tensor, del bool) (retVa
 // --------------------------
 
 func SpecialXlog1pySelfScalar(selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialXlog1pySelfScalar(ptr, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialXlog1pySelfScalar() failed: %w", err)
@@ -44863,8 +44863,8 @@ func SpecialXlog1pySelfScalar(selfScalar *Scalar, other *Tensor) (retVal *Tensor
 // --------------------------
 
 func SpecialXlog1pySelfScalarOut(out *Tensor, selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialXlog1pySelfScalarOut(ptr, out.ctensor, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialXlog1pySelfScalarOut() failed: %w", err)
@@ -44882,8 +44882,8 @@ func (ts *Tensor) SpecialXlogy(other *Tensor, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialXlogy(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialXlogy() failed: %w", err)
@@ -44901,8 +44901,8 @@ func (ts *Tensor) SpecialXlogyOtherScalar(other *Scalar, del bool) (retVal *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialXlogyOtherScalar(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialXlogyOtherScalar() failed: %w", err)
@@ -44920,8 +44920,8 @@ func (ts *Tensor) SpecialXlogyOtherScalarOut(out *Tensor, other *Scalar, del boo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialXlogyOtherScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialXlogyOtherScalarOut() failed: %w", err)
@@ -44939,8 +44939,8 @@ func (ts *Tensor) SpecialXlogyOut(out *Tensor, other *Tensor, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialXlogyOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialXlogyOut() failed: %w", err)
@@ -44955,8 +44955,8 @@ func (ts *Tensor) SpecialXlogyOut(out *Tensor, other *Tensor, del bool) (retVal 
 // --------------------------
 
 func SpecialXlogySelfScalar(selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialXlogySelfScalar(ptr, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialXlogySelfScalar() failed: %w", err)
@@ -44971,8 +44971,8 @@ func SpecialXlogySelfScalar(selfScalar *Scalar, other *Tensor) (retVal *Tensor, 
 // --------------------------
 
 func SpecialXlogySelfScalarOut(out *Tensor, selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialXlogySelfScalarOut(ptr, out.ctensor, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialXlogySelfScalarOut() failed: %w", err)
@@ -44990,8 +44990,8 @@ func (ts *Tensor) SpecialZeta(other *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialZeta(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialZeta() failed: %w", err)
@@ -45009,8 +45009,8 @@ func (ts *Tensor) SpecialZetaOtherScalar(other *Scalar, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialZetaOtherScalar(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialZetaOtherScalar() failed: %w", err)
@@ -45028,8 +45028,8 @@ func (ts *Tensor) SpecialZetaOtherScalarOut(out *Tensor, other *Scalar, del bool
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialZetaOtherScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialZetaOtherScalarOut() failed: %w", err)
@@ -45047,8 +45047,8 @@ func (ts *Tensor) SpecialZetaOut(out *Tensor, other *Tensor, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialZetaOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialZetaOut() failed: %w", err)
@@ -45063,8 +45063,8 @@ func (ts *Tensor) SpecialZetaOut(out *Tensor, other *Tensor, del bool) (retVal *
 // --------------------------
 
 func SpecialZetaSelfScalar(selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialZetaSelfScalar(ptr, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialZetaSelfScalar() failed: %w", err)
@@ -45079,8 +45079,8 @@ func SpecialZetaSelfScalar(selfScalar *Scalar, other *Tensor) (retVal *Tensor, e
 // --------------------------
 
 func SpecialZetaSelfScalarOut(out *Tensor, selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSpecialZetaSelfScalarOut(ptr, out.ctensor, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SpecialZetaSelfScalarOut() failed: %w", err)
@@ -45098,8 +45098,8 @@ func (ts *Tensor) Sqrt(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSqrt(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sqrt() failed: %w", err)
@@ -45114,8 +45114,8 @@ func (ts *Tensor) Sqrt(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Sqrt_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSqrt_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sqrt_() failed: %w", err)
@@ -45133,8 +45133,8 @@ func (ts *Tensor) SqrtOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSqrtOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SqrtOut() failed: %w", err)
@@ -45152,8 +45152,8 @@ func (ts *Tensor) Square(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSquare(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Square() failed: %w", err)
@@ -45168,8 +45168,8 @@ func (ts *Tensor) Square(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Square_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSquare_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Square_() failed: %w", err)
@@ -45187,8 +45187,8 @@ func (ts *Tensor) SquareOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSquareOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SquareOut() failed: %w", err)
@@ -45206,8 +45206,8 @@ func (ts *Tensor) Squeeze(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSqueeze(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Squeeze() failed: %w", err)
@@ -45222,8 +45222,8 @@ func (ts *Tensor) Squeeze(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Squeeze_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSqueeze_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Squeeze_() failed: %w", err)
@@ -45241,8 +45241,8 @@ func (ts *Tensor) SqueezeCopy(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSqueezeCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SqueezeCopy() failed: %w", err)
@@ -45260,8 +45260,8 @@ func (ts *Tensor) SqueezeCopyDim(dim int64, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSqueezeCopyDim(ptr, ts.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SqueezeCopyDim() failed: %w", err)
@@ -45279,8 +45279,8 @@ func (ts *Tensor) SqueezeCopyDimOut(out *Tensor, dim int64, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSqueezeCopyDimOut(ptr, out.ctensor, ts.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SqueezeCopyDimOut() failed: %w", err)
@@ -45298,8 +45298,8 @@ func (ts *Tensor) SqueezeCopyDims(dim []int64, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	lib.AtgSqueezeCopyDims(ptr, ts.ctensor, dim, dimLen)
 	if err = TorchErr(); err != nil {
@@ -45318,8 +45318,8 @@ func (ts *Tensor) SqueezeCopyDimsOut(out *Tensor, dim []int64, del bool) (retVal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	lib.AtgSqueezeCopyDimsOut(ptr, out.ctensor, ts.ctensor, dim, dimLen)
 	if err = TorchErr(); err != nil {
@@ -45338,8 +45338,8 @@ func (ts *Tensor) SqueezeCopyOut(out *Tensor, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSqueezeCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SqueezeCopyOut() failed: %w", err)
@@ -45357,8 +45357,8 @@ func (ts *Tensor) SqueezeDim(dim int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSqueezeDim(ptr, ts.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SqueezeDim() failed: %w", err)
@@ -45373,8 +45373,8 @@ func (ts *Tensor) SqueezeDim(dim int64, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) SqueezeDim_(dim int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSqueezeDim_(ptr, ts.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SqueezeDim_() failed: %w", err)
@@ -45392,8 +45392,8 @@ func (ts *Tensor) SqueezeDims(dim []int64, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	lib.AtgSqueezeDims(ptr, ts.ctensor, dim, dimLen)
 	if err = TorchErr(); err != nil {
@@ -45409,8 +45409,8 @@ func (ts *Tensor) SqueezeDims(dim []int64, del bool) (retVal *Tensor, err error)
 // --------------------------
 
 func (ts *Tensor) SqueezeDims_(dim []int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	lib.AtgSqueezeDims_(ptr, ts.ctensor, dim, dimLen)
 	if err = TorchErr(); err != nil {
@@ -45429,8 +45429,8 @@ func (ts *Tensor) Sspaddmm(mat1 *Tensor, mat2 *Tensor, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSspaddmm(ptr, ts.ctensor, mat1.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sspaddmm() failed: %w", err)
@@ -45448,8 +45448,8 @@ func (ts *Tensor) SspaddmmOut(out *Tensor, mat1 *Tensor, mat2 *Tensor, del bool)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSspaddmmOut(ptr, out.ctensor, ts.ctensor, mat1.ctensor, mat2.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SspaddmmOut() failed: %w", err)
@@ -45464,8 +45464,8 @@ func (ts *Tensor) SspaddmmOut(out *Tensor, mat1 *Tensor, mat2 *Tensor, del bool)
 // --------------------------
 
 func Stack(tensors []*Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -45484,8 +45484,8 @@ func Stack(tensors []*Tensor, dim int64) (retVal *Tensor, err error) {
 // --------------------------
 
 func StackOut(out *Tensor, tensors []*Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -45507,8 +45507,8 @@ func (ts *Tensor) Std(unbiased bool, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cunbiased := int32(0)
 	if unbiased {
 		cunbiased = int32(1)
@@ -45530,8 +45530,8 @@ func (ts *Tensor) StdCorrection(dim []int64, correction *Scalar, keepdim bool, d
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -45554,8 +45554,8 @@ func (ts *Tensor) StdCorrectionOut(out *Tensor, dim []int64, correction *Scalar,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -45578,8 +45578,8 @@ func (ts *Tensor) StdDim(dim []int64, unbiased bool, keepdim bool, del bool) (re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	cunbiased := int32(0)
 	if unbiased {
@@ -45709,8 +45709,8 @@ func (ts *Tensor) StdOut(out *Tensor, dim []int64, unbiased bool, keepdim bool, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	cunbiased := int32(0)
 	if unbiased {
@@ -45737,8 +45737,8 @@ func (ts *Tensor) Stft(nFft int64, hopLength []int64, winLength []int64, window 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var chopLengthVal int64 = 0
 	var chopLengthNull int = 1
 	if len(hopLength) > 0 {
@@ -45780,8 +45780,8 @@ func (ts *Tensor) StftCenter(nFft int64, hopLength []int64, winLength []int64, w
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var chopLengthVal int64 = 0
 	var chopLengthNull int = 1
 	if len(hopLength) > 0 {
@@ -45827,8 +45827,8 @@ func (ts *Tensor) Sub(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSub(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sub() failed: %w", err)
@@ -45843,8 +45843,8 @@ func (ts *Tensor) Sub(other *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Sub_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSub_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sub_() failed: %w", err)
@@ -45862,8 +45862,8 @@ func (ts *Tensor) SubOut(out *Tensor, other *Tensor, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSubOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SubOut() failed: %w", err)
@@ -45881,8 +45881,8 @@ func (ts *Tensor) SubScalar(other *Scalar, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSubScalar(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SubScalar() failed: %w", err)
@@ -45897,8 +45897,8 @@ func (ts *Tensor) SubScalar(other *Scalar, del bool) (retVal *Tensor, err error)
 // --------------------------
 
 func (ts *Tensor) SubScalar_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSubScalar_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SubScalar_() failed: %w", err)
@@ -45916,8 +45916,8 @@ func (ts *Tensor) SubScalarOut(out *Tensor, other *Scalar, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSubScalarOut(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SubScalarOut() failed: %w", err)
@@ -45935,8 +45935,8 @@ func (ts *Tensor) Subtract(other *Tensor, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSubtract(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Subtract() failed: %w", err)
@@ -45951,8 +45951,8 @@ func (ts *Tensor) Subtract(other *Tensor, del bool) (retVal *Tensor, err error) 
 // --------------------------
 
 func (ts *Tensor) Subtract_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSubtract_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Subtract_() failed: %w", err)
@@ -45970,8 +45970,8 @@ func (ts *Tensor) SubtractOut(out *Tensor, other *Tensor, del bool) (retVal *Ten
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSubtractOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SubtractOut() failed: %w", err)
@@ -45989,8 +45989,8 @@ func (ts *Tensor) SubtractScalar(other *Scalar, del bool) (retVal *Tensor, err e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSubtractScalar(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SubtractScalar() failed: %w", err)
@@ -46005,8 +46005,8 @@ func (ts *Tensor) SubtractScalar(other *Scalar, del bool) (retVal *Tensor, err e
 // --------------------------
 
 func (ts *Tensor) SubtractScalar_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSubtractScalar_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SubtractScalar_() failed: %w", err)
@@ -46024,8 +46024,8 @@ func (ts *Tensor) Sum(dtype gotch.DType, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSum(ptr, ts.ctensor, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Sum() failed: %w", err)
@@ -46043,8 +46043,8 @@ func (ts *Tensor) SumDimIntlist(dim []int64, keepdim bool, dtype gotch.DType, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -46067,8 +46067,8 @@ func (ts *Tensor) SumIntlistOut(out *Tensor, dim []int64, keepdim bool, dtype go
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -46091,8 +46091,8 @@ func (ts *Tensor) SumOut(out *Tensor, dtype gotch.DType, del bool) (retVal *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSumOut(ptr, out.ctensor, ts.ctensor, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("SumOut() failed: %w", err)
@@ -46110,8 +46110,8 @@ func (ts *Tensor) SumToSize(size []int64, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgSumToSize(ptr, ts.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -46190,8 +46190,8 @@ func (ts *Tensor) Swapaxes(axis0 int64, axis1 int64, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSwapaxes(ptr, ts.ctensor, axis0, axis1)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Swapaxes() failed: %w", err)
@@ -46206,8 +46206,8 @@ func (ts *Tensor) Swapaxes(axis0 int64, axis1 int64, del bool) (retVal *Tensor, 
 // --------------------------
 
 func (ts *Tensor) Swapaxes_(axis0 int64, axis1 int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSwapaxes_(ptr, ts.ctensor, axis0, axis1)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Swapaxes_() failed: %w", err)
@@ -46225,8 +46225,8 @@ func (ts *Tensor) Swapdims(dim0 int64, dim1 int64, del bool) (retVal *Tensor, er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSwapdims(ptr, ts.ctensor, dim0, dim1)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Swapdims() failed: %w", err)
@@ -46241,8 +46241,8 @@ func (ts *Tensor) Swapdims(dim0 int64, dim1 int64, del bool) (retVal *Tensor, er
 // --------------------------
 
 func (ts *Tensor) Swapdims_(dim0 int64, dim1 int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgSwapdims_(ptr, ts.ctensor, dim0, dim1)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Swapdims_() failed: %w", err)
@@ -46260,8 +46260,8 @@ func (ts *Tensor) T(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgT(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("T() failed: %w", err)
@@ -46276,8 +46276,8 @@ func (ts *Tensor) T(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) T_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgT_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("T_() failed: %w", err)
@@ -46295,8 +46295,8 @@ func (ts *Tensor) TCopy(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TCopy() failed: %w", err)
@@ -46314,8 +46314,8 @@ func (ts *Tensor) TCopyOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TCopyOut() failed: %w", err)
@@ -46333,8 +46333,8 @@ func (ts *Tensor) Take(index *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTake(ptr, ts.ctensor, index.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Take() failed: %w", err)
@@ -46352,8 +46352,8 @@ func (ts *Tensor) TakeAlongDim(indices *Tensor, dim []int64, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -46377,8 +46377,8 @@ func (ts *Tensor) TakeAlongDimOut(out *Tensor, indices *Tensor, dim []int64, del
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdimVal int64 = 0
 	var cdimNull int = 1
 	if len(dim) > 0 {
@@ -46402,8 +46402,8 @@ func (ts *Tensor) TakeOut(out *Tensor, index *Tensor, del bool) (retVal *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTakeOut(ptr, out.ctensor, ts.ctensor, index.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TakeOut() failed: %w", err)
@@ -46421,8 +46421,8 @@ func (ts *Tensor) Tan(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTan(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Tan() failed: %w", err)
@@ -46437,8 +46437,8 @@ func (ts *Tensor) Tan(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Tan_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTan_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Tan_() failed: %w", err)
@@ -46456,8 +46456,8 @@ func (ts *Tensor) TanOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTanOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TanOut() failed: %w", err)
@@ -46475,8 +46475,8 @@ func (ts *Tensor) Tanh(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTanh(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Tanh() failed: %w", err)
@@ -46491,8 +46491,8 @@ func (ts *Tensor) Tanh(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Tanh_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTanh_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Tanh_() failed: %w", err)
@@ -46507,8 +46507,8 @@ func (ts *Tensor) Tanh_() (err error) {
 // --------------------------
 
 func TanhBackward(gradOutput *Tensor, output *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTanhBackward(ptr, gradOutput.ctensor, output.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TanhBackward() failed: %w", err)
@@ -46523,8 +46523,8 @@ func TanhBackward(gradOutput *Tensor, output *Tensor) (retVal *Tensor, err error
 // --------------------------
 
 func TanhBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, output *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTanhBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, output.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TanhBackwardGradInput() failed: %w", err)
@@ -46542,8 +46542,8 @@ func (ts *Tensor) TanhOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTanhOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TanhOut() failed: %w", err)
@@ -46561,8 +46561,8 @@ func (ts *Tensor) Tensordot(other *Tensor, dimsSelf []int64, dimsOther []int64, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimsSelfLen := len(dimsSelf)
 	dimsOtherLen := len(dimsOther)
 	lib.AtgTensordot(ptr, ts.ctensor, other.ctensor, dimsSelf, dimsSelfLen, dimsOther, dimsOtherLen)
@@ -46582,8 +46582,8 @@ func (ts *Tensor) TensordotOut(out *Tensor, other *Tensor, dimsSelf []int64, dim
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimsSelfLen := len(dimsSelf)
 	dimsOtherLen := len(dimsOther)
 	lib.AtgTensordotOut(ptr, out.ctensor, ts.ctensor, other.ctensor, dimsSelf, dimsSelfLen, dimsOther, dimsOtherLen)
@@ -46603,8 +46603,8 @@ func (ts *Tensor) Threshold(threshold *Scalar, value *Scalar, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgThreshold(ptr, ts.ctensor, threshold.cscalar, value.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Threshold() failed: %w", err)
@@ -46619,8 +46619,8 @@ func (ts *Tensor) Threshold(threshold *Scalar, value *Scalar, del bool) (retVal 
 // --------------------------
 
 func (ts *Tensor) Threshold_(threshold *Scalar, value *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgThreshold_(ptr, ts.ctensor, threshold.cscalar, value.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Threshold_() failed: %w", err)
@@ -46638,8 +46638,8 @@ func (ts *Tensor) ThresholdBackward(gradOutput *Tensor, threshold *Scalar, del b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgThresholdBackward(ptr, gradOutput.ctensor, ts.ctensor, threshold.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ThresholdBackward() failed: %w", err)
@@ -46657,8 +46657,8 @@ func (ts *Tensor) ThresholdBackwardGradInput(gradInput *Tensor, gradOutput *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgThresholdBackwardGradInput(ptr, gradInput.ctensor, gradOutput.ctensor, ts.ctensor, threshold.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ThresholdBackwardGradInput() failed: %w", err)
@@ -46676,8 +46676,8 @@ func (ts *Tensor) ThresholdOut(out *Tensor, threshold *Scalar, value *Scalar, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgThresholdOut(ptr, out.ctensor, ts.ctensor, threshold.cscalar, value.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ThresholdOut() failed: %w", err)
@@ -46695,8 +46695,8 @@ func (ts *Tensor) Tile(dims []int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimsLen := len(dims)
 	lib.AtgTile(ptr, ts.ctensor, dims, dimsLen)
 	if err = TorchErr(); err != nil {
@@ -46715,8 +46715,8 @@ func (ts *Tensor) To(device gotch.Device, del bool) (retVal *Tensor, err error) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTo(ptr, ts.ctensor, device.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("To() failed: %w", err)
@@ -46734,8 +46734,8 @@ func (ts *Tensor) ToDense(dtype gotch.DType, maskedGrad bool, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cmaskedGrad := int32(0)
 	if maskedGrad {
 		cmaskedGrad = int32(1)
@@ -46754,8 +46754,8 @@ func (ts *Tensor) ToDense(dtype gotch.DType, maskedGrad bool, del bool) (retVal 
 // --------------------------
 
 func ToDenseBackward(grad *Tensor, input *Tensor, maskedGrad bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cmaskedGrad := int32(0)
 	if maskedGrad {
 		cmaskedGrad = int32(1)
@@ -46777,8 +46777,8 @@ func (ts *Tensor) ToDevice(device gotch.Device, dtype gotch.DType, nonBlocking b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -46804,8 +46804,8 @@ func (ts *Tensor) ToDtype(dtype gotch.DType, nonBlocking bool, copy bool, del bo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -46831,8 +46831,8 @@ func (ts *Tensor) ToDtypeLayout(optionsKind gotch.DType, optionsDevice gotch.Dev
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -46858,8 +46858,8 @@ func (ts *Tensor) ToMkldnn(dtype gotch.DType, del bool) (retVal *Tensor, err err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgToMkldnn(ptr, ts.ctensor, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ToMkldnn() failed: %w", err)
@@ -46874,8 +46874,8 @@ func (ts *Tensor) ToMkldnn(dtype gotch.DType, del bool) (retVal *Tensor, err err
 // --------------------------
 
 func ToMkldnnBackward(grad *Tensor, input *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgToMkldnnBackward(ptr, grad.ctensor, input.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ToMkldnnBackward() failed: %w", err)
@@ -46893,8 +46893,8 @@ func (ts *Tensor) ToMkldnnOut(out *Tensor, dtype gotch.DType, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgToMkldnnOut(ptr, out.ctensor, ts.ctensor, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ToMkldnnOut() failed: %w", err)
@@ -46912,8 +46912,8 @@ func (ts *Tensor) ToOther(other *Tensor, nonBlocking bool, copy bool, del bool) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cnonBlocking := int32(0)
 	if nonBlocking {
 		cnonBlocking = int32(1)
@@ -46939,8 +46939,8 @@ func (ts *Tensor) ToPaddedTensor(padding float64, outputSize []int64, del bool) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	lib.AtgToPaddedTensor(ptr, ts.ctensor, padding, outputSize, outputSizeLen)
 	if err = TorchErr(); err != nil {
@@ -46959,8 +46959,8 @@ func (ts *Tensor) ToPaddedTensorOut(out *Tensor, padding float64, outputSize []i
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	lib.AtgToPaddedTensorOut(ptr, out.ctensor, ts.ctensor, padding, outputSize, outputSizeLen)
 	if err = TorchErr(); err != nil {
@@ -46979,8 +46979,8 @@ func (ts *Tensor) ToSparse(layout Layout, blocksize []int64, denseDim []int64, d
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	blocksizeLen := len(blocksize)
 	var cdenseDimVal int64 = 0
 	var cdenseDimNull int = 1
@@ -47005,8 +47005,8 @@ func (ts *Tensor) ToSparseBsc(blocksize []int64, denseDim []int64, del bool) (re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	blocksizeLen := len(blocksize)
 	var cdenseDimVal int64 = 0
 	var cdenseDimNull int = 1
@@ -47031,8 +47031,8 @@ func (ts *Tensor) ToSparseBsr(blocksize []int64, denseDim []int64, del bool) (re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	blocksizeLen := len(blocksize)
 	var cdenseDimVal int64 = 0
 	var cdenseDimNull int = 1
@@ -47057,8 +47057,8 @@ func (ts *Tensor) ToSparseCsc(denseDim []int64, del bool) (retVal *Tensor, err e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdenseDimVal int64 = 0
 	var cdenseDimNull int = 1
 	if len(denseDim) > 0 {
@@ -47082,8 +47082,8 @@ func (ts *Tensor) ToSparseCsr(denseDim []int64, del bool) (retVal *Tensor, err e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cdenseDimVal int64 = 0
 	var cdenseDimNull int = 1
 	if len(denseDim) > 0 {
@@ -47107,8 +47107,8 @@ func (ts *Tensor) ToSparseSparseDim(sparseDim int64, del bool) (retVal *Tensor, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgToSparseSparseDim(ptr, ts.ctensor, sparseDim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ToSparseSparseDim() failed: %w", err)
@@ -47182,8 +47182,8 @@ func (ts *Tensor) Totype(scalarType gotch.DType, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTotype(ptr, ts.ctensor, scalarType.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Totype() failed: %w", err)
@@ -47201,8 +47201,8 @@ func (ts *Tensor) Trace(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTrace(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Trace() failed: %w", err)
@@ -47217,8 +47217,8 @@ func (ts *Tensor) Trace(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func TraceBackward(grad *Tensor, sizes []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizesLen := len(sizes)
 	lib.AtgTraceBackward(ptr, grad.ctensor, sizes, sizesLen)
 	if err = TorchErr(); err != nil {
@@ -47237,8 +47237,8 @@ func (ts *Tensor) TraceOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTraceOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TraceOut() failed: %w", err)
@@ -47256,8 +47256,8 @@ func (ts *Tensor) Transpose(dim0 int64, dim1 int64, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTranspose(ptr, ts.ctensor, dim0, dim1)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Transpose() failed: %w", err)
@@ -47272,8 +47272,8 @@ func (ts *Tensor) Transpose(dim0 int64, dim1 int64, del bool) (retVal *Tensor, e
 // --------------------------
 
 func (ts *Tensor) Transpose_(dim0 int64, dim1 int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTranspose_(ptr, ts.ctensor, dim0, dim1)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Transpose_() failed: %w", err)
@@ -47291,8 +47291,8 @@ func (ts *Tensor) TransposeCopy(dim0 int64, dim1 int64, del bool) (retVal *Tenso
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTransposeCopy(ptr, ts.ctensor, dim0, dim1)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TransposeCopy() failed: %w", err)
@@ -47310,8 +47310,8 @@ func (ts *Tensor) TransposeCopyIntOut(out *Tensor, dim0 int64, dim1 int64, del b
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTransposeCopyIntOut(ptr, out.ctensor, ts.ctensor, dim0, dim1)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TransposeCopyIntOut() failed: %w", err)
@@ -47326,8 +47326,8 @@ func (ts *Tensor) TransposeCopyIntOut(out *Tensor, dim0 int64, dim1 int64, del b
 // --------------------------
 
 func Trapezoid(y *Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTrapezoid(ptr, y.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Trapezoid() failed: %w", err)
@@ -47342,8 +47342,8 @@ func Trapezoid(y *Tensor, dim int64) (retVal *Tensor, err error) {
 // --------------------------
 
 func TrapezoidX(y *Tensor, x *Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTrapezoidX(ptr, y.ctensor, x.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TrapezoidX() failed: %w", err)
@@ -47358,8 +47358,8 @@ func TrapezoidX(y *Tensor, x *Tensor, dim int64) (retVal *Tensor, err error) {
 // --------------------------
 
 func Trapz(y *Tensor, x *Tensor, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTrapz(ptr, y.ctensor, x.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Trapz() failed: %w", err)
@@ -47374,8 +47374,8 @@ func Trapz(y *Tensor, x *Tensor, dim int64) (retVal *Tensor, err error) {
 // --------------------------
 
 func TrapzDx(y *Tensor, dx float64, dim int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTrapzDx(ptr, y.ctensor, dx, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TrapzDx() failed: %w", err)
@@ -47457,8 +47457,8 @@ func (ts *Tensor) Tril(diagonal int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTril(ptr, ts.ctensor, diagonal)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Tril() failed: %w", err)
@@ -47473,8 +47473,8 @@ func (ts *Tensor) Tril(diagonal int64, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Tril_(diagonal int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTril_(ptr, ts.ctensor, diagonal)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Tril_() failed: %w", err)
@@ -47489,8 +47489,8 @@ func (ts *Tensor) Tril_(diagonal int64) (err error) {
 // --------------------------
 
 func TrilIndices(row int64, col int64, offset int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTrilIndices(ptr, row, col, offset, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TrilIndices() failed: %w", err)
@@ -47505,8 +47505,8 @@ func TrilIndices(row int64, col int64, offset int64, optionsKind gotch.DType, op
 // --------------------------
 
 func TrilIndicesOut(out *Tensor, row int64, col int64, offset int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTrilIndicesOut(ptr, out.ctensor, row, col, offset)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TrilIndicesOut() failed: %w", err)
@@ -47524,8 +47524,8 @@ func (ts *Tensor) TrilOut(out *Tensor, diagonal int64, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTrilOut(ptr, out.ctensor, ts.ctensor, diagonal)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TrilOut() failed: %w", err)
@@ -47540,8 +47540,8 @@ func (ts *Tensor) TrilOut(out *Tensor, diagonal int64, del bool) (retVal *Tensor
 // --------------------------
 
 func TripletMarginLoss(anchor *Tensor, positive *Tensor, negative *Tensor, margin float64, p float64, eps float64, swap bool, reduction int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cswap := int32(0)
 	if swap {
 		cswap = int32(1)
@@ -47563,8 +47563,8 @@ func (ts *Tensor) Triu(diagonal int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTriu(ptr, ts.ctensor, diagonal)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Triu() failed: %w", err)
@@ -47579,8 +47579,8 @@ func (ts *Tensor) Triu(diagonal int64, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Triu_(diagonal int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTriu_(ptr, ts.ctensor, diagonal)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Triu_() failed: %w", err)
@@ -47595,8 +47595,8 @@ func (ts *Tensor) Triu_(diagonal int64) (err error) {
 // --------------------------
 
 func TriuIndices(row int64, col int64, offset int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTriuIndices(ptr, row, col, offset, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TriuIndices() failed: %w", err)
@@ -47611,8 +47611,8 @@ func TriuIndices(row int64, col int64, offset int64, optionsKind gotch.DType, op
 // --------------------------
 
 func TriuIndicesOut(out *Tensor, row int64, col int64, offset int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTriuIndicesOut(ptr, out.ctensor, row, col, offset)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TriuIndicesOut() failed: %w", err)
@@ -47630,8 +47630,8 @@ func (ts *Tensor) TriuOut(out *Tensor, diagonal int64, del bool) (retVal *Tensor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTriuOut(ptr, out.ctensor, ts.ctensor, diagonal)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TriuOut() failed: %w", err)
@@ -47649,8 +47649,8 @@ func (ts *Tensor) TrueDivide(other *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTrueDivide(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TrueDivide() failed: %w", err)
@@ -47665,8 +47665,8 @@ func (ts *Tensor) TrueDivide(other *Tensor, del bool) (retVal *Tensor, err error
 // --------------------------
 
 func (ts *Tensor) TrueDivide_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTrueDivide_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TrueDivide_() failed: %w", err)
@@ -47684,8 +47684,8 @@ func (ts *Tensor) TrueDivideOut(out *Tensor, other *Tensor, del bool) (retVal *T
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTrueDivideOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TrueDivideOut() failed: %w", err)
@@ -47703,8 +47703,8 @@ func (ts *Tensor) TrueDivideScalar(other *Scalar, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTrueDivideScalar(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TrueDivideScalar() failed: %w", err)
@@ -47719,8 +47719,8 @@ func (ts *Tensor) TrueDivideScalar(other *Scalar, del bool) (retVal *Tensor, err
 // --------------------------
 
 func (ts *Tensor) TrueDivideScalar_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTrueDivideScalar_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TrueDivideScalar_() failed: %w", err)
@@ -47738,8 +47738,8 @@ func (ts *Tensor) Trunc(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTrunc(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Trunc() failed: %w", err)
@@ -47754,8 +47754,8 @@ func (ts *Tensor) Trunc(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Trunc_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTrunc_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Trunc_() failed: %w", err)
@@ -47773,8 +47773,8 @@ func (ts *Tensor) TruncOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTruncOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TruncOut() failed: %w", err)
@@ -47792,8 +47792,8 @@ func (ts *Tensor) TypeAs(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgTypeAs(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("TypeAs() failed: %w", err)
@@ -47811,8 +47811,8 @@ func (ts *Tensor) Unflatten(dim int64, sizes []int64, del bool) (retVal *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizesLen := len(sizes)
 	lib.AtgUnflatten(ptr, ts.ctensor, dim, sizes, sizesLen)
 	if err = TorchErr(); err != nil {
@@ -47831,8 +47831,8 @@ func (ts *Tensor) Unfold(dimension int64, size int64, step int64, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgUnfold(ptr, ts.ctensor, dimension, size, step)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Unfold() failed: %w", err)
@@ -47847,8 +47847,8 @@ func (ts *Tensor) Unfold(dimension int64, size int64, step int64, del bool) (ret
 // --------------------------
 
 func UnfoldBackward(gradIn *Tensor, inputSizes []int64, dim int64, size int64, step int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	inputSizesLen := len(inputSizes)
 	lib.AtgUnfoldBackward(ptr, gradIn.ctensor, inputSizes, inputSizesLen, dim, size, step)
 	if err = TorchErr(); err != nil {
@@ -47864,8 +47864,8 @@ func UnfoldBackward(gradIn *Tensor, inputSizes []int64, dim int64, size int64, s
 // --------------------------
 
 func UnfoldBackwardOut(out *Tensor, gradIn *Tensor, inputSizes []int64, dim int64, size int64, step int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	inputSizesLen := len(inputSizes)
 	lib.AtgUnfoldBackwardOut(ptr, out.ctensor, gradIn.ctensor, inputSizes, inputSizesLen, dim, size, step)
 	if err = TorchErr(); err != nil {
@@ -47884,8 +47884,8 @@ func (ts *Tensor) UnfoldCopy(dimension int64, size int64, step int64, del bool) 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgUnfoldCopy(ptr, ts.ctensor, dimension, size, step)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("UnfoldCopy() failed: %w", err)
@@ -47903,8 +47903,8 @@ func (ts *Tensor) UnfoldCopyOut(out *Tensor, dimension int64, size int64, step i
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgUnfoldCopyOut(ptr, out.ctensor, ts.ctensor, dimension, size, step)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("UnfoldCopyOut() failed: %w", err)
@@ -47922,8 +47922,8 @@ func (ts *Tensor) Uniform(from float64, to float64, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgUniform(ptr, ts.ctensor, from, to)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Uniform() failed: %w", err)
@@ -47938,8 +47938,8 @@ func (ts *Tensor) Uniform(from float64, to float64, del bool) (retVal *Tensor, e
 // --------------------------
 
 func (ts *Tensor) Uniform_(from float64, to float64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgUniform_(ptr, ts.ctensor, from, to)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Uniform_() failed: %w", err)
@@ -47957,8 +47957,8 @@ func (ts *Tensor) UniformOut(out *Tensor, from float64, to float64, del bool) (r
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgUniformOut(ptr, out.ctensor, ts.ctensor, from, to)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("UniformOut() failed: %w", err)
@@ -48176,8 +48176,8 @@ func (ts *Tensor) Unsqueeze(dim int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgUnsqueeze(ptr, ts.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Unsqueeze() failed: %w", err)
@@ -48192,8 +48192,8 @@ func (ts *Tensor) Unsqueeze(dim int64, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Unsqueeze_(dim int64) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgUnsqueeze_(ptr, ts.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Unsqueeze_() failed: %w", err)
@@ -48211,8 +48211,8 @@ func (ts *Tensor) UnsqueezeCopy(dim int64, del bool) (retVal *Tensor, err error)
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgUnsqueezeCopy(ptr, ts.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("UnsqueezeCopy() failed: %w", err)
@@ -48230,8 +48230,8 @@ func (ts *Tensor) UnsqueezeCopyOut(out *Tensor, dim int64, del bool) (retVal *Te
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgUnsqueezeCopyOut(ptr, out.ctensor, ts.ctensor, dim)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("UnsqueezeCopyOut() failed: %w", err)
@@ -48249,8 +48249,8 @@ func (ts *Tensor) UpsampleBicubic2d(outputSize []int64, alignCorners bool, scale
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -48282,8 +48282,8 @@ func (ts *Tensor) UpsampleBicubic2d(outputSize []int64, alignCorners bool, scale
 // --------------------------
 
 func UpsampleBicubic2dBackward(gradOutput *Tensor, outputSize []int64, inputSize []int64, alignCorners bool, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	calignCorners := int32(0)
@@ -48316,8 +48316,8 @@ func UpsampleBicubic2dBackward(gradOutput *Tensor, outputSize []int64, inputSize
 // --------------------------
 
 func UpsampleBicubic2dBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, outputSize []int64, inputSize []int64, alignCorners bool, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	calignCorners := int32(0)
@@ -48353,8 +48353,8 @@ func (ts *Tensor) UpsampleBicubic2dOut(out *Tensor, outputSize []int64, alignCor
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -48386,8 +48386,8 @@ func (ts *Tensor) UpsampleBicubic2dOut(out *Tensor, outputSize []int64, alignCor
 // --------------------------
 
 func UpsampleBicubic2dVec(input *Tensor, outputSize []int64, alignCorners bool, scaleFactors []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -48411,8 +48411,8 @@ func (ts *Tensor) UpsampleBilinear2d(outputSize []int64, alignCorners bool, scal
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -48444,8 +48444,8 @@ func (ts *Tensor) UpsampleBilinear2d(outputSize []int64, alignCorners bool, scal
 // --------------------------
 
 func UpsampleBilinear2dBackward(gradOutput *Tensor, outputSize []int64, inputSize []int64, alignCorners bool, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	calignCorners := int32(0)
@@ -48478,8 +48478,8 @@ func UpsampleBilinear2dBackward(gradOutput *Tensor, outputSize []int64, inputSiz
 // --------------------------
 
 func UpsampleBilinear2dBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, outputSize []int64, inputSize []int64, alignCorners bool, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	calignCorners := int32(0)
@@ -48515,8 +48515,8 @@ func (ts *Tensor) UpsampleBilinear2dOut(out *Tensor, outputSize []int64, alignCo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -48548,8 +48548,8 @@ func (ts *Tensor) UpsampleBilinear2dOut(out *Tensor, outputSize []int64, alignCo
 // --------------------------
 
 func UpsampleBilinear2dVec(input *Tensor, outputSize []int64, alignCorners bool, scaleFactors []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -48573,8 +48573,8 @@ func (ts *Tensor) UpsampleLinear1d(outputSize []int64, alignCorners bool, scales
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -48600,8 +48600,8 @@ func (ts *Tensor) UpsampleLinear1d(outputSize []int64, alignCorners bool, scales
 // --------------------------
 
 func UpsampleLinear1dBackward(gradOutput *Tensor, outputSize []int64, inputSize []int64, alignCorners bool, scales []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	calignCorners := int32(0)
@@ -48628,8 +48628,8 @@ func UpsampleLinear1dBackward(gradOutput *Tensor, outputSize []int64, inputSize 
 // --------------------------
 
 func UpsampleLinear1dBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, outputSize []int64, inputSize []int64, alignCorners bool, scales []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	calignCorners := int32(0)
@@ -48659,8 +48659,8 @@ func (ts *Tensor) UpsampleLinear1dOut(out *Tensor, outputSize []int64, alignCorn
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -48686,8 +48686,8 @@ func (ts *Tensor) UpsampleLinear1dOut(out *Tensor, outputSize []int64, alignCorn
 // --------------------------
 
 func UpsampleLinear1dVec(input *Tensor, outputSize []int64, alignCorners bool, scaleFactors []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -48711,8 +48711,8 @@ func (ts *Tensor) UpsampleNearest1d(outputSize []int64, scales []float64, del bo
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	var cscalesVal float64 = 0.0
 	var cscalesNull int = 1
@@ -48734,8 +48734,8 @@ func (ts *Tensor) UpsampleNearest1d(outputSize []int64, scales []float64, del bo
 // --------------------------
 
 func UpsampleNearest1dBackward(gradOutput *Tensor, outputSize []int64, inputSize []int64, scales []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	var cscalesVal float64 = 0.0
@@ -48758,8 +48758,8 @@ func UpsampleNearest1dBackward(gradOutput *Tensor, outputSize []int64, inputSize
 // --------------------------
 
 func UpsampleNearest1dBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, outputSize []int64, inputSize []int64, scales []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	var cscalesVal float64 = 0.0
@@ -48785,8 +48785,8 @@ func (ts *Tensor) UpsampleNearest1dOut(out *Tensor, outputSize []int64, scales [
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	var cscalesVal float64 = 0.0
 	var cscalesNull int = 1
@@ -48808,8 +48808,8 @@ func (ts *Tensor) UpsampleNearest1dOut(out *Tensor, outputSize []int64, scales [
 // --------------------------
 
 func UpsampleNearest1dVec(input *Tensor, outputSize []int64, scaleFactors []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	scaleFactorsLen := len(scaleFactors)
 	lib.AtgUpsampleNearest1dVec(ptr, input.ctensor, outputSize, outputSizeLen, scaleFactors, scaleFactorsLen)
@@ -48829,8 +48829,8 @@ func (ts *Tensor) UpsampleNearest2d(outputSize []int64, scalesH []float64, scale
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	var cscalesHVal float64 = 0.0
 	var cscalesHNull int = 1
@@ -48858,8 +48858,8 @@ func (ts *Tensor) UpsampleNearest2d(outputSize []int64, scalesH []float64, scale
 // --------------------------
 
 func UpsampleNearest2dBackward(gradOutput *Tensor, outputSize []int64, inputSize []int64, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	var cscalesHVal float64 = 0.0
@@ -48888,8 +48888,8 @@ func UpsampleNearest2dBackward(gradOutput *Tensor, outputSize []int64, inputSize
 // --------------------------
 
 func UpsampleNearest2dBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, outputSize []int64, inputSize []int64, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	var cscalesHVal float64 = 0.0
@@ -48921,8 +48921,8 @@ func (ts *Tensor) UpsampleNearest2dOut(out *Tensor, outputSize []int64, scalesH 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	var cscalesHVal float64 = 0.0
 	var cscalesHNull int = 1
@@ -48950,8 +48950,8 @@ func (ts *Tensor) UpsampleNearest2dOut(out *Tensor, outputSize []int64, scalesH 
 // --------------------------
 
 func UpsampleNearest2dVec(input *Tensor, outputSize []int64, scaleFactors []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	scaleFactorsLen := len(scaleFactors)
 	lib.AtgUpsampleNearest2dVec(ptr, input.ctensor, outputSize, outputSizeLen, scaleFactors, scaleFactorsLen)
@@ -48971,8 +48971,8 @@ func (ts *Tensor) UpsampleNearest3d(outputSize []int64, scalesD []float64, scale
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	var cscalesDVal float64 = 0.0
 	var cscalesDNull int = 1
@@ -49006,8 +49006,8 @@ func (ts *Tensor) UpsampleNearest3d(outputSize []int64, scalesD []float64, scale
 // --------------------------
 
 func UpsampleNearest3dBackward(gradOutput *Tensor, outputSize []int64, inputSize []int64, scalesD []float64, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	var cscalesDVal float64 = 0.0
@@ -49042,8 +49042,8 @@ func UpsampleNearest3dBackward(gradOutput *Tensor, outputSize []int64, inputSize
 // --------------------------
 
 func UpsampleNearest3dBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, outputSize []int64, inputSize []int64, scalesD []float64, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	var cscalesDVal float64 = 0.0
@@ -49081,8 +49081,8 @@ func (ts *Tensor) UpsampleNearest3dOut(out *Tensor, outputSize []int64, scalesD 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	var cscalesDVal float64 = 0.0
 	var cscalesDNull int = 1
@@ -49116,8 +49116,8 @@ func (ts *Tensor) UpsampleNearest3dOut(out *Tensor, outputSize []int64, scalesD 
 // --------------------------
 
 func UpsampleNearest3dVec(input *Tensor, outputSize []int64, scaleFactors []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	scaleFactorsLen := len(scaleFactors)
 	lib.AtgUpsampleNearest3dVec(ptr, input.ctensor, outputSize, outputSizeLen, scaleFactors, scaleFactorsLen)
@@ -49137,8 +49137,8 @@ func (ts *Tensor) UpsampleTrilinear3d(outputSize []int64, alignCorners bool, sca
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -49176,8 +49176,8 @@ func (ts *Tensor) UpsampleTrilinear3d(outputSize []int64, alignCorners bool, sca
 // --------------------------
 
 func UpsampleTrilinear3dBackward(gradOutput *Tensor, outputSize []int64, inputSize []int64, alignCorners bool, scalesD []float64, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	calignCorners := int32(0)
@@ -49216,8 +49216,8 @@ func UpsampleTrilinear3dBackward(gradOutput *Tensor, outputSize []int64, inputSi
 // --------------------------
 
 func UpsampleTrilinear3dBackwardGradInput(gradInput *Tensor, gradOutput *Tensor, outputSize []int64, inputSize []int64, alignCorners bool, scalesD []float64, scalesH []float64, scalesW []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	inputSizeLen := len(inputSize)
 	calignCorners := int32(0)
@@ -49259,8 +49259,8 @@ func (ts *Tensor) UpsampleTrilinear3dOut(out *Tensor, outputSize []int64, alignC
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -49298,8 +49298,8 @@ func (ts *Tensor) UpsampleTrilinear3dOut(out *Tensor, outputSize []int64, alignC
 // --------------------------
 
 func UpsampleTrilinear3dVec(input *Tensor, outputSize []int64, alignCorners bool, scaleFactors []float64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	outputSizeLen := len(outputSize)
 	calignCorners := int32(0)
 	if alignCorners {
@@ -49320,8 +49320,8 @@ func UpsampleTrilinear3dVec(input *Tensor, outputSize []int64, alignCorners bool
 // --------------------------
 
 func ValueSelectingReductionBackward(grad *Tensor, dim int64, indices *Tensor, sizes []int64, keepdim bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizesLen := len(sizes)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -49344,8 +49344,8 @@ func (ts *Tensor) Values(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgValues(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Values() failed: %w", err)
@@ -49363,8 +49363,8 @@ func (ts *Tensor) ValuesCopy(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgValuesCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ValuesCopy() failed: %w", err)
@@ -49382,8 +49382,8 @@ func (ts *Tensor) ValuesCopyOut(out *Tensor, del bool) (retVal *Tensor, err erro
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgValuesCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ValuesCopyOut() failed: %w", err)
@@ -49398,8 +49398,8 @@ func (ts *Tensor) ValuesCopyOut(out *Tensor, del bool) (retVal *Tensor, err erro
 // --------------------------
 
 func Vander(x *Tensor, n []int64, increasing bool) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var cnVal int64 = 0
 	var cnNull int = 1
 	if len(n) > 0 {
@@ -49427,8 +49427,8 @@ func (ts *Tensor) Var(unbiased bool, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	cunbiased := int32(0)
 	if unbiased {
 		cunbiased = int32(1)
@@ -49450,8 +49450,8 @@ func (ts *Tensor) VarCorrection(dim []int64, correction *Scalar, keepdim bool, d
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -49474,8 +49474,8 @@ func (ts *Tensor) VarCorrectionOut(out *Tensor, dim []int64, correction *Scalar,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	ckeepdim := int32(0)
 	if keepdim {
@@ -49498,8 +49498,8 @@ func (ts *Tensor) VarDim(dim []int64, unbiased bool, keepdim bool, del bool) (re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	cunbiased := int32(0)
 	if unbiased {
@@ -49629,8 +49629,8 @@ func (ts *Tensor) VarOut(out *Tensor, dim []int64, unbiased bool, keepdim bool, 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	dimLen := len(dim)
 	cunbiased := int32(0)
 	if unbiased {
@@ -49657,8 +49657,8 @@ func (ts *Tensor) Vdot(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgVdot(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Vdot() failed: %w", err)
@@ -49676,8 +49676,8 @@ func (ts *Tensor) VdotOut(out *Tensor, other *Tensor, del bool) (retVal *Tensor,
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgVdotOut(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("VdotOut() failed: %w", err)
@@ -49718,8 +49718,9 @@ func (ts *Tensor) ViewAs(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
+	
 	lib.AtgViewAs(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ViewAs() failed: %w", err)
@@ -49737,8 +49738,8 @@ func (ts *Tensor) ViewAsComplex(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgViewAsComplex(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ViewAsComplex() failed: %w", err)
@@ -49756,8 +49757,8 @@ func (ts *Tensor) ViewAsComplexCopy(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgViewAsComplexCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ViewAsComplexCopy() failed: %w", err)
@@ -49775,8 +49776,8 @@ func (ts *Tensor) ViewAsComplexCopyOut(out *Tensor, del bool) (retVal *Tensor, e
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgViewAsComplexCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ViewAsComplexCopyOut() failed: %w", err)
@@ -49794,8 +49795,8 @@ func (ts *Tensor) ViewAsReal(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgViewAsReal(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ViewAsReal() failed: %w", err)
@@ -49813,8 +49814,8 @@ func (ts *Tensor) ViewAsRealCopy(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgViewAsRealCopy(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ViewAsRealCopy() failed: %w", err)
@@ -49832,8 +49833,8 @@ func (ts *Tensor) ViewAsRealCopyOut(out *Tensor, del bool) (retVal *Tensor, err 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgViewAsRealCopyOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ViewAsRealCopyOut() failed: %w", err)
@@ -49851,8 +49852,8 @@ func (ts *Tensor) ViewCopy(size []int64, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgViewCopy(ptr, ts.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -49871,8 +49872,8 @@ func (ts *Tensor) ViewCopyDtype(dtype gotch.DType, del bool) (retVal *Tensor, er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgViewCopyDtype(ptr, ts.ctensor, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ViewCopyDtype() failed: %w", err)
@@ -49890,8 +49891,8 @@ func (ts *Tensor) ViewCopyDtypeOut(out *Tensor, dtype gotch.DType, del bool) (re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgViewCopyDtypeOut(ptr, out.ctensor, ts.ctensor, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ViewCopyDtypeOut() failed: %w", err)
@@ -49909,8 +49910,8 @@ func (ts *Tensor) ViewCopyOut(out *Tensor, size []int64, del bool) (retVal *Tens
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgViewCopyOut(ptr, out.ctensor, ts.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
@@ -49929,8 +49930,8 @@ func (ts *Tensor) ViewDtype(dtype gotch.DType, del bool) (retVal *Tensor, err er
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgViewDtype(ptr, ts.ctensor, dtype.CInt())
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ViewDtype() failed: %w", err)
@@ -49945,8 +49946,8 @@ func (ts *Tensor) ViewDtype(dtype gotch.DType, del bool) (retVal *Tensor, err er
 // --------------------------
 
 func Vstack(tensors []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -49965,8 +49966,8 @@ func Vstack(tensors []*Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func VstackOut(out *Tensor, tensors []*Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	var ctensors []lib.Ctensor
 	for _, t := range tensors {
 		ctensors = append(ctensors, t.ctensor)
@@ -49985,8 +49986,8 @@ func VstackOut(out *Tensor, tensors []*Tensor) (retVal *Tensor, err error) {
 // --------------------------
 
 func WhereScalar(condition *Tensor, selfScalar *Scalar, other *Scalar) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgWhereScalar(ptr, condition.ctensor, selfScalar.cscalar, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("WhereScalar() failed: %w", err)
@@ -50004,8 +50005,8 @@ func (ts *Tensor) WhereScalarother(condition *Tensor, other *Scalar, del bool) (
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgWhereScalarother(ptr, condition.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("WhereScalarother() failed: %w", err)
@@ -50020,8 +50021,8 @@ func (ts *Tensor) WhereScalarother(condition *Tensor, other *Scalar, del bool) (
 // --------------------------
 
 func WhereScalarself(condition *Tensor, selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgWhereScalarself(ptr, condition.ctensor, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("WhereScalarself() failed: %w", err)
@@ -50039,8 +50040,8 @@ func (ts *Tensor) WhereSelf(condition *Tensor, other *Tensor, del bool) (retVal 
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgWhereSelf(ptr, condition.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("WhereSelf() failed: %w", err)
@@ -50058,8 +50059,8 @@ func (ts *Tensor) WhereSelfOut(out *Tensor, condition *Tensor, other *Tensor, de
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgWhereSelfOut(ptr, out.ctensor, condition.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("WhereSelfOut() failed: %w", err)
@@ -50077,8 +50078,8 @@ func (ts *Tensor) Xlogy(other *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgXlogy(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Xlogy() failed: %w", err)
@@ -50093,8 +50094,8 @@ func (ts *Tensor) Xlogy(other *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Xlogy_(other *Tensor) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgXlogy_(ptr, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Xlogy_() failed: %w", err)
@@ -50112,8 +50113,8 @@ func (ts *Tensor) XlogyOutscalarOther(out *Tensor, other *Scalar, del bool) (ret
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgXlogyOutscalarOther(ptr, out.ctensor, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("XlogyOutscalarOther() failed: %w", err)
@@ -50128,8 +50129,8 @@ func (ts *Tensor) XlogyOutscalarOther(out *Tensor, other *Scalar, del bool) (ret
 // --------------------------
 
 func XlogyOutscalarSelf(out *Tensor, selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgXlogyOutscalarSelf(ptr, out.ctensor, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("XlogyOutscalarSelf() failed: %w", err)
@@ -50147,8 +50148,8 @@ func (ts *Tensor) XlogyOuttensor(out *Tensor, other *Tensor, del bool) (retVal *
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgXlogyOuttensor(ptr, out.ctensor, ts.ctensor, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("XlogyOuttensor() failed: %w", err)
@@ -50166,8 +50167,8 @@ func (ts *Tensor) XlogyScalarOther(other *Scalar, del bool) (retVal *Tensor, err
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgXlogyScalarOther(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("XlogyScalarOther() failed: %w", err)
@@ -50182,8 +50183,8 @@ func (ts *Tensor) XlogyScalarOther(other *Scalar, del bool) (retVal *Tensor, err
 // --------------------------
 
 func (ts *Tensor) XlogyScalarOther_(other *Scalar) (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgXlogyScalarOther_(ptr, ts.ctensor, other.cscalar)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("XlogyScalarOther_() failed: %w", err)
@@ -50198,8 +50199,8 @@ func (ts *Tensor) XlogyScalarOther_(other *Scalar) (err error) {
 // --------------------------
 
 func XlogyScalarSelf(selfScalar *Scalar, other *Tensor) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgXlogyScalarSelf(ptr, selfScalar.cscalar, other.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("XlogyScalarSelf() failed: %w", err)
@@ -50217,8 +50218,8 @@ func (ts *Tensor) Zero(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgZero(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Zero() failed: %w", err)
@@ -50233,8 +50234,8 @@ func (ts *Tensor) Zero(del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func (ts *Tensor) Zero_() (err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgZero_(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("Zero_() failed: %w", err)
@@ -50252,8 +50253,8 @@ func (ts *Tensor) ZeroOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgZeroOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ZeroOut() failed: %w", err)
@@ -50268,8 +50269,8 @@ func (ts *Tensor) ZeroOut(out *Tensor, del bool) (retVal *Tensor, err error) {
 // --------------------------
 
 func Zeros(size []int64, optionsKind gotch.DType, optionsDevice gotch.Device) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgZeros(ptr, size, sizeLen, optionsKind.CInt(), optionsDevice.CInt())
 	if err = TorchErr(); err != nil {
@@ -50288,8 +50289,8 @@ func (ts *Tensor) ZerosLike(del bool) (retVal *Tensor, err error) {
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgZerosLike(ptr, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ZerosLike() failed: %w", err)
@@ -50307,8 +50308,8 @@ func (ts *Tensor) ZerosLikeOut(out *Tensor, del bool) (retVal *Tensor, err error
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	lib.AtgZerosLikeOut(ptr, out.ctensor, ts.ctensor)
 	if err = TorchErr(); err != nil {
 		err = fmt.Errorf("ZerosLikeOut() failed: %w", err)
@@ -50323,8 +50324,8 @@ func (ts *Tensor) ZerosLikeOut(out *Tensor, del bool) (retVal *Tensor, err error
 // --------------------------
 
 func ZerosOut(out *Tensor, size []int64) (retVal *Tensor, err error) {
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
-
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 	sizeLen := len(size)
 	lib.AtgZerosOut(ptr, out.ctensor, size, sizeLen)
 	if err = TorchErr(); err != nil {
