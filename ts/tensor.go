@@ -841,7 +841,8 @@ func RunBackward(tensors []*Tensor, inputs []*Tensor, keepGraphB bool, createGra
 	 *   }
 	 *  */
 	for i := 0; i < len(inputs); i++ {
-		outputPtr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
+		var untypedPtr uintptr
+		outputPtr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 		defer C.free(unsafe.Pointer(outputPtr))
 		outputsPtr = append(outputsPtr, outputPtr)
 	}
@@ -1485,7 +1486,8 @@ func (ts *Tensor) ConstantPadNdWithVal(pad []int64, value *Scalar, del bool) (re
 	if del {
 		defer ts.MustDrop()
 	}
-	ptr := (*lib.Ctensor)(unsafe.Pointer(C.malloc(0)))
+	var untypedPtr uintptr
+	ptr := (*lib.Ctensor)(unsafe.Pointer(&untypedPtr))
 
 	lib.AtoConstantPadNd(ptr, ts.ctensor, pad, len(pad), value.cscalar)
 	if err = TorchErr(); err != nil {
